@@ -14,39 +14,22 @@ public class AnalyzeExample : MonoBehaviour
 
     public AudioSource audioSource;
 
-    private float prevTime;
-    private List<Beat> beats;
+    private float startTime = 0;
+    public List<Beat> beats;
+    private float endTime;
     void Start()
     {
-        //Start analyzing a song.
         rhythmData = analyzer.Analyze(audioClip);
-
-        //Find a track with Beats.
-        Track<Beat> track = rhythmData.GetTrack<Beat>();
     }
     void Awake()
     {
+        endTime = audioClip.length;
+        Track<Beat> track = rhythmData.GetTrack<Beat>();
         beats = new List<Beat>();
+        rhythmData.GetFeatures<Beat>(beats, startTime, endTime);
     }
     // Update is called once per frame
     void Update()
     {
-        //Get the current playback time of the AudioSource.
-        float time = audioSource.time;
-
-        //Clear the list.
-        beats.Clear();
-
-        //Find all beats for the part of the song that is currently playing.
-        rhythmData.GetFeatures<Beat>(beats, prevTime, time);
-
-        //Do something with the Beats here.
-        foreach (Beat beat in beats)
-        {
-            Debug.Log("A beat occurred at " + beat.timestamp);
-        }
-
-        //Keep track of the previous playback time of the AudioSource.
-        prevTime = time;
     }
 }
