@@ -21,6 +21,7 @@ public class PlayerRotate : MonoBehaviour
         childObject.transform.SetParent(nextParentObject.transform);
         preParentObject.transform.SetParent(childObject.transform);
         childObject.transform.parent.SetLocalPositionAndRotation(new Vector3(parentPosition.x, 0.11f, 0), Quaternion.Euler(new Vector3(0, 0, 0)));
+        childObject.transform.SetLocalPositionAndRotation(new Vector3(-5, 5, 0), Quaternion.Euler(new Vector3(0, 0, 0)));
     }
     void SetRotation(GameObject childObject)
     {
@@ -39,7 +40,7 @@ public class PlayerRotate : MonoBehaviour
         rotation = Vector3.Lerp(new Vector3(0,0,0), new Vector3(0,0,-90), time);
         childObject.transform.parent.transform.localEulerAngles = rotation;
         time += Time.deltaTime * rotateSpeed;
-        if (time > rotateSpeed)
+        if (time / rotateSpeed >= 1)
         {
             time = 0f;
             if (childObject.transform.parent == parentObject[0].transform)
