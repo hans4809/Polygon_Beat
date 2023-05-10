@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -14,6 +15,7 @@ public class PlayerRotate : MonoBehaviour
     public AnalyzeExample analyzeExample;
     float rotateSpeed;
     float time = 0f;
+    int i = 0;
     void SwapParent(GameObject childObject, GameObject preParentObject, GameObject nextParentObject)
     {
         parentPosition.x += 1;
@@ -31,7 +33,6 @@ public class PlayerRotate : MonoBehaviour
     }
     void Start()
     {
-        int i = 0;
         parentObject[0].transform.SetParent(null);
         parentPosition = parentObject[0].transform.localPosition;
         childObject.transform.SetParent(parentObject[0].transform);
@@ -39,18 +40,32 @@ public class PlayerRotate : MonoBehaviour
         childObject.transform.localEulerAngles = Vector3.zero;
         childObject.transform.parent.localPosition = parentPosition;
         childObject.transform.localPosition = new Vector3(-5, 5, 0);
-        rotateSpeed = 1 / (analyzeExample.beats[i+1].timestamp - analyzeExample.beats[i].timestamp);
+        rotateSpeed = analyzeExample.beats[0].bpm;
+    }
+    private float GetRotateSpeed(int index)
+    {
+        return 1 / (analyzeExample.beats[index + 1].timestamp - analyzeExample.beats[index].timestamp);
     }
     void Update()
     {
-        int i = 1;
         rotation = Vector3.Lerp(new Vector3(0,0,0), new Vector3(0,0,-90), time);
         childObject.transform.parent.transform.localEulerAngles = rotation;
         time += Time.deltaTime * rotateSpeed; 
         if (time >= 1)
         {
             time = 0f;
-            rotateSpeed = 1 / (analyzeExample.beats[i+1].timestamp - analyzeExample.beats[i].timestamp); // rotate 속도 각 비트의 시간 차이에 따라 달라짐
+            if (i >= analyzeExample.beats.Count) 
+            {
+                rotateSpeed = 0;
+                Debug.Log(i);
+                Debug.Log("END");
+            }
+            else 
+            {
+                rotateSpeed = GetRotateSpeed(i);
+                i++;
+                Debug.Log(i);
+            }
             if (childObject.transform.parent == parentObject[0].transform)
             {
                 SwapParent(childObject, parentObject[0], parentObject[1]);
@@ -71,10 +86,6 @@ public class PlayerRotate : MonoBehaviour
                 SwapParent(childObject, parentObject[3], parentObject[0]);
                 SetRotation(childObject);
             }
-            i++;
-            if (i > analyzeExample.beats.Count)
-                rotateSpeed = 0;
         }
-            
     }
 }
