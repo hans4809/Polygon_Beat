@@ -64,7 +64,6 @@ public class PlayerRotate : MonoBehaviour
             {
                 rotateSpeed = GetRotateSpeed(i);
                 i++;
-                Debug.Log(i);
             }
             if (childObject.transform.parent == parentObject[0].transform)
             {

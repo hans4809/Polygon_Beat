@@ -21,7 +21,7 @@ public class GroundCreater : MonoBehaviour
         {
             CreateObject(myGameObject[0], i.ToString(), new Vector3(i, 0, 0));
         }
-        CreateObject(myGameObject[1], "flag", new Vector3(analyzeExample.beats.Count, 0.6f, 0));
+        CreateObject(myGameObject[1], "flag", new Vector3((int)analyzeExample.beats.Count / 2, 0.6f, 0));
     }
 
 
