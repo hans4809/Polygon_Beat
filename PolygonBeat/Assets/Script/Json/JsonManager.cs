@@ -19,7 +19,7 @@ public class JsonManager
 #endif
 #if UNITY_ANDROID
         savePath = Application.persistentDataPath;
-
+ 
 #endif
         StringBuilder builder = new StringBuilder(savePath);
         builder.Append(appender);
