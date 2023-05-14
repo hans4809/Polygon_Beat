@@ -9,7 +9,7 @@ public class DataManager : MonoBehaviour // 여긴 볼 거 없음
     public static DataManager singleTon;
     public PlayerData playerData;
     public JsonManager testJson;
-    public List<GameObject> gameObject;
+    public List<GameObject> gameObjects;
     public AnalyzeExample analyzeExample;
     private Vector3 savePosition;
     // Start is called before the first frame update
@@ -19,15 +19,15 @@ public class DataManager : MonoBehaviour // 여긴 볼 거 없음
         if (singleTon == null)
         {
             singleTon = this;
-            DontDestroyOnLoad(gameObject[0]);
+            DontDestroyOnLoad(gameObjects[0]);
         }
         else if (singleTon != this)
-            Destroy(singleTon.gameObject[0]);
+            Destroy(singleTon.gameObjects[0]);
         playerData = new PlayerData();
         playerData = testJson.LoadSaveData();
         if (playerData != null)
         {
-            gameObject[1].transform.SetPositionAndRotation(playerData.playerSavePosition, Quaternion.identity);
+            gameObjects[1].transform.SetPositionAndRotation(playerData.playerSavePosition, Quaternion.identity);
         }
         savePosition = new Vector3((int)(analyzeExample.beats.Count / 2), 0.6f,0);
         Debug.Log(analyzeExample.beats.Count);
@@ -37,7 +37,7 @@ public class DataManager : MonoBehaviour // 여긴 볼 거 없음
     // Update is called once per frame
     void Update()
     {
-        if (gameObject[1].transform.parent.position.x >= savePosition.x)
+        if (gameObjects[1].transform.parent.position.x >= savePosition.x)
         {
             playerData = new PlayerData(savePosition, 0);
             testJson.Save(playerData);

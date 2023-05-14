@@ -10,12 +10,11 @@ using RhythmTool;
 public class PauseManager : MonoBehaviour
 {
     // Start is called before the first frame update
-    public bool isPause;
     public GameObject pauseButton;
     public List<Button> buttonList;
     public GameObject pauseMenuCanvas;
-    //public AudioSource audioSource;
     public RhythmPlayer rhythmPlayer;
+    public bool isPause;
     public void Resume()
     {
         rhythmPlayer.UnPause();
