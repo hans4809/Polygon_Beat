@@ -37,10 +37,5 @@ public class DataManager : MonoBehaviour // 여긴 볼 거 없음
     // Update is called once per frame
     void Update()
     {
-        if (gameObjects[1].transform.parent.position.x >= savePosition.x)
-        {
-            playerData = new PlayerData(savePosition, 0);
-            testJson.Save(playerData);
-        }
     }
 }
