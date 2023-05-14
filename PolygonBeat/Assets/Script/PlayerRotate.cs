@@ -7,7 +7,7 @@ using UnityEngine;
 using static Unity.VisualScripting.AnnotationUtility;
 
 public class PlayerRotate : MonoBehaviour
-{  
+{
     public Vector3 rotation;
     public List<GameObject> parentObject;
     public Vector3 parentPosition;
@@ -16,7 +16,7 @@ public class PlayerRotate : MonoBehaviour
     float rotateSpeed;
     float time = 0f;
     int i = 0;
-    void SwapParent(GameObject childObject, GameObject preParentObject, GameObject nextParentObject) // 결론 부모를 바꿈
+    void SwapParent(GameObject preParentObject, GameObject nextParentObject) // 결론 부모를 바꿈
     {
         parentPosition.x += 1;
         nextParentObject.transform.SetParent(null); // 다음에 부모가 될 오브젝트 종속성 없게 만듬
@@ -26,12 +26,12 @@ public class PlayerRotate : MonoBehaviour
         childObject.transform.parent.SetLocalPositionAndRotation(new Vector3(parentPosition.x, 0.11f, 0), Quaternion.Euler(new Vector3(0, 0, 0))); // parent 오차 수정
         childObject.transform.SetLocalPositionAndRotation(new Vector3(-5, 5, 0), Quaternion.Euler(new Vector3(0, 0, 0))); // child 오차 수정
     }
-    void SetRotation(GameObject childObject) // 결론 오차 수정을 위한 작업
+    void SetRotation() // 결론 오차 수정을 위한 작업
     {
-        for(int i=0; i < 3; i++)
+        for (int i = 0; i < 3; i++)
             childObject.transform.GetChild(i).localEulerAngles = Vector3.zero; // 90도 돌고 오차 수정을 위해 전부 rotation 초기화
     }
-    void Start() // 처음 상태에 필요한 것들 초기화
+    void setObject()
     {
         parentObject[0].transform.SetParent(null);
         parentPosition = parentObject[0].transform.localPosition;
@@ -42,13 +42,52 @@ public class PlayerRotate : MonoBehaviour
         childObject.transform.localPosition = new Vector3(-5, 5, 0);
         rotateSpeed = analyzeExample.beats[0].bpm;
     }
+
+    public void Setting()
+    {
+        if (childObject.transform.parent == null)
+        {
+           setObject();
+        }
+        else
+        {
+           childObject.transform.SetParent(null);
+           childObject.transform.localPosition = new Vector3(0,0.6f,0);
+           for(int i = 0; i < 4; i++)
+           {
+                parentObject[i].transform.SetParent(childObject.transform);
+                childObject.transform.GetChild(i).localEulerAngles = Vector3.zero;
+                switch (i)
+                {
+                    case 0:
+                        childObject.transform.GetChild(0).localPosition = new Vector3(0.5f, -0.5f, 0);
+                        break;
+                    case 1:
+                        childObject.transform.GetChild(1).localPosition = new Vector3(0.5f, 0.5f, 0);
+                        break;
+                    case 2:
+                        childObject.transform.GetChild(2).localPosition = new Vector3(-0.5f, 0.5f, 0);
+                        break;
+                    case 3:
+                        childObject.transform.GetChild(3).localPosition = new Vector3(-0.5f, -0.5f, 0);
+                        break;
+                }
+           }
+           setObject();
+        }
+    }
+
+    void Start() // 처음 상태에 필요한 것들 초기화
+    {
+         Setting();
+    }
     private float GetRotateSpeed(int index) // 로테이션 속도 계산
     {
         return 1 / (analyzeExample.beats[index + 1].timestamp - analyzeExample.beats[index].timestamp);
     }
     void Update()
     {
-        rotation = Vector3.Lerp(new Vector3(0,0,0), new Vector3(0,0,-90), time); // time이 0 ~ 1 갈 동안 로테이션도 (0,0,0)에서 (0,0,-90)으로 변함
+        rotation = Vector3.Lerp(new Vector3(0, 0, 0), new Vector3(0, 0, -90), time); // time이 0 ~ 1 갈 동안 로테이션도 (0,0,0)에서 (0,0,-90)으로 변함
         childObject.transform.parent.transform.localEulerAngles = rotation; // 부모 오브젝트 돌림
         time += Time.deltaTime * rotateSpeed; // 한 프레임당 얼만큼 돌릴 건지 결정
         if (time >= 1) //90도 돌고나면 부모를 바꿔서 다시 돌려야 제대로 돌아감
@@ -57,34 +96,33 @@ public class PlayerRotate : MonoBehaviour
             if (i >= analyzeExample.beats.Count) // 맵 끝에 도달했을 때 멈춤
             {
                 rotateSpeed = 0;
-                Debug.Log(i);
-                Debug.Log("END");
             }
             else // 그 외에 로테이션 속도 계산
             {
-                rotateSpeed = GetRotateSpeed(i);
-                i++;
+               rotateSpeed = GetRotateSpeed(i);
+               i++;
             }
             if (childObject.transform.parent == parentObject[0].transform)
             {
-                SwapParent(childObject, parentObject[0], parentObject[1]);
-                SetRotation(childObject);
+            SwapParent(parentObject[0], parentObject[1]);
+            SetRotation();
             }
             else if (childObject.transform.parent == parentObject[1].transform)
             {
-                SwapParent(childObject, parentObject[1], parentObject[2]);
-                SetRotation(childObject);
+            SwapParent(parentObject[1], parentObject[2]);
+            SetRotation();
             }
             else if (childObject.transform.parent == parentObject[2].transform)
             {
-                SwapParent(childObject, parentObject[2], parentObject[3]);
-                SetRotation(childObject);
+            SwapParent(parentObject[2], parentObject[3]);
+            SetRotation();
             }
             else if (childObject.transform.parent == parentObject[3].transform)
             {
-                SwapParent(childObject, parentObject[3], parentObject[0]);
-                SetRotation(childObject);
+            SwapParent(parentObject[3], parentObject[0]);
+            SetRotation();
             }
         }
+
     }
 }

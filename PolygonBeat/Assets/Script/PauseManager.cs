@@ -5,6 +5,7 @@ using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEditor.UI;
 using UnityEngine.UI;
+using RhythmTool;
 
 public class PauseManager : MonoBehaviour
 {
@@ -13,10 +14,11 @@ public class PauseManager : MonoBehaviour
     public GameObject pauseButton;
     public List<Button> buttonList;
     public GameObject pauseMenuCanvas;
-    public AudioSource audioSource;
+    //public AudioSource audioSource;
+    public RhythmPlayer rhythmPlayer;
     public void Resume()
     {
-        audioSource.Play();
+        rhythmPlayer.UnPause();
         pauseMenuCanvas.SetActive(false);
         pauseButton.SetActive(true);
         isPause = false;
@@ -25,13 +27,13 @@ public class PauseManager : MonoBehaviour
 
     public void Pause()
     {
-        audioSource.Pause();
+        rhythmPlayer.Pause();
         pauseMenuCanvas.SetActive(true);
         pauseButton.SetActive(false);
         isPause = true;
         Time.timeScale = 0f;
     }
-    void Start()
+    public void Start()
     {
         isPause = false;
         pauseMenuCanvas.SetActive(false);

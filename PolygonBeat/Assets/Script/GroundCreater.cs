@@ -15,7 +15,7 @@ public class GroundCreater : MonoBehaviour
         obj.name = name;
     }
 
-    void Start()
+    public void Start()
     {
         for( int i = -10; i <= analyzeExample.beats.Count; i++)
         {
