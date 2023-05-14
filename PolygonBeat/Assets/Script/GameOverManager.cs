@@ -6,12 +6,9 @@ using UnityEngine.SceneManagement;
 public class GameOverManager : MonoBehaviour
 {
     public int life = 3;
-    bool isDie;
     // Start is called before the first frame update
     void Start()
     {
-        isDie = false;
-
     }
 
     public void GameOver()
