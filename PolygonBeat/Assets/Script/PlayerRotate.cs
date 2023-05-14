@@ -1,3 +1,4 @@
+using RhythmTool;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -8,14 +9,16 @@ using static Unity.VisualScripting.AnnotationUtility;
 
 public class PlayerRotate : MonoBehaviour
 {
-    public Vector3 rotation;
-    public List<GameObject> parentObject;
-    public Vector3 parentPosition;
-    public GameObject childObject;
     public AnalyzeExample analyzeExample;
+    public RhythmPlayer rhythmPlayer;
+    public List<GameObject> parentObject;
+    public GameObject childObject;
+    public Vector3 initParentPostion;
+    public Vector3 parentPosition;
+    public Vector3 rotation;
     float rotateSpeed;
     float time = 0f;
-    int i = 0;
+    int beatIndex = 0;
     void SwapParent(GameObject preParentObject, GameObject nextParentObject) // 결론 부모를 바꿈
     {
         parentPosition.x += 1;
@@ -25,6 +28,7 @@ public class PlayerRotate : MonoBehaviour
         preParentObject.transform.SetParent(childObject.transform); // 그 전에 부모 였던 오브젝트 자식으로 만듬
         childObject.transform.parent.SetLocalPositionAndRotation(new Vector3(parentPosition.x, 0.11f, 0), Quaternion.Euler(new Vector3(0, 0, 0))); // parent 오차 수정
         childObject.transform.SetLocalPositionAndRotation(new Vector3(-5, 5, 0), Quaternion.Euler(new Vector3(0, 0, 0))); // child 오차 수정
+        Debug.Log(childObject.transform.parent.localPosition);
     }
     void SetRotation() // 결론 오차 수정을 위한 작업
     {
@@ -52,11 +56,14 @@ public class PlayerRotate : MonoBehaviour
         else
         {
            childObject.transform.SetParent(null);
-           childObject.transform.localPosition = new Vector3(0,0.6f,0);
-           for(int i = 0; i < 4; i++)
+           childObject.transform.position = new Vector3(0,0.6f,0);
+           for (int j = 0; j < 4; j++)
+           {
+               parentObject[j].transform.localEulerAngles = Vector3.zero;
+           }
+            for (int i = 0; i < 4; i++)
            {
                 parentObject[i].transform.SetParent(childObject.transform);
-                childObject.transform.GetChild(i).localEulerAngles = Vector3.zero;
                 switch (i)
                 {
                     case 0:
@@ -72,14 +79,17 @@ public class PlayerRotate : MonoBehaviour
                         childObject.transform.GetChild(3).localPosition = new Vector3(-0.5f, -0.5f, 0);
                         break;
                 }
-           }
-           setObject();
+            }
+            setObject();
+            parentPosition = initParentPostion;
+            childObject.transform.parent.localPosition = parentPosition;
         }
     }
 
     void Start() // 처음 상태에 필요한 것들 초기화
     {
-         Setting();
+        Setting();
+        initParentPostion = childObject.transform.parent.localPosition;
     }
     private float GetRotateSpeed(int index) // 로테이션 속도 계산
     {
@@ -87,42 +97,52 @@ public class PlayerRotate : MonoBehaviour
     }
     void Update()
     {
-        rotation = Vector3.Lerp(new Vector3(0, 0, 0), new Vector3(0, 0, -90), time); // time이 0 ~ 1 갈 동안 로테이션도 (0,0,0)에서 (0,0,-90)으로 변함
-        childObject.transform.parent.transform.localEulerAngles = rotation; // 부모 오브젝트 돌림
-        time += Time.deltaTime * rotateSpeed; // 한 프레임당 얼만큼 돌릴 건지 결정
-        if (time >= 1) //90도 돌고나면 부모를 바꿔서 다시 돌려야 제대로 돌아감
+        
+        if(rhythmPlayer.time <= analyzeExample.beats[0].timestamp)
         {
-            time = 0f; // time을 0으로 초기화시켜야 Lerp가 작동함
-            if (i >= analyzeExample.beats.Count) // 맵 끝에 도달했을 때 멈춤
+            return;
+        }
+        else 
+        {
+            rotation = Vector3.Lerp(new Vector3(0, 0, 0), new Vector3(0, 0, -90), time); // time이 0 ~ 1 갈 동안 로테이션도 (0,0,0)에서 (0,0,-90)으로 변함
+            childObject.transform.parent.transform.localEulerAngles = rotation; // 부모 오브젝트 돌림
+            time += Time.deltaTime * rotateSpeed; // 한 프레임당 얼만큼 돌릴 건지 결정
+            if (time >= 1) //90도 돌고나면 부모를 바꿔서 다시 돌려야 제대로 돌아감
             {
-                rotateSpeed = 0;
-            }
-            else // 그 외에 로테이션 속도 계산
-            {
-               rotateSpeed = GetRotateSpeed(i);
-               i++;
-            }
-            if (childObject.transform.parent == parentObject[0].transform)
-            {
-            SwapParent(parentObject[0], parentObject[1]);
-            SetRotation();
-            }
-            else if (childObject.transform.parent == parentObject[1].transform)
-            {
-            SwapParent(parentObject[1], parentObject[2]);
-            SetRotation();
-            }
-            else if (childObject.transform.parent == parentObject[2].transform)
-            {
-            SwapParent(parentObject[2], parentObject[3]);
-            SetRotation();
-            }
-            else if (childObject.transform.parent == parentObject[3].transform)
-            {
-            SwapParent(parentObject[3], parentObject[0]);
-            SetRotation();
+                time = 0f; // time을 0으로 초기화시켜야 Lerp가 작동함
+                if (beatIndex >= analyzeExample.beats.Count) // 맵 끝에 도달했을 때 멈춤
+                {
+                    rotateSpeed = 0;
+                    return;
+                }
+                else // 그 외에 로테이션 속도 계산
+                {
+                    rotateSpeed = GetRotateSpeed(beatIndex);
+                    beatIndex++;
+                }
+                if (childObject.transform.parent == parentObject[0].transform)
+                {
+                    SwapParent(parentObject[0], parentObject[1]);
+                    SetRotation();
+                }
+                else if (childObject.transform.parent == parentObject[1].transform)
+                {
+                    SwapParent(parentObject[1], parentObject[2]);
+                    SetRotation();
+                }
+                else if (childObject.transform.parent == parentObject[2].transform)
+                {
+                    SwapParent(parentObject[2], parentObject[3]);
+                    SetRotation();
+                }
+                else if (childObject.transform.parent == parentObject[3].transform)
+                {
+                    SwapParent(parentObject[3], parentObject[0]);
+                    SetRotation();
+                }
             }
         }
+        
 
     }
 }
