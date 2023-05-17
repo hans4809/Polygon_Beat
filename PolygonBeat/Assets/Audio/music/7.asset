@@ -1,0 +1,9025 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8270092311078917046
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4441c1fab3119af4bb6d18cb48a9c462, type: 3}
+  m_Name: Onsets
+  m_EditorClassIdentifier: 
+  _name: Onsets
+  _features:
+  - timestamp: 0.023219954
+    length: 0
+    strength: 1.1211534
+  - timestamp: 0.55727893
+    length: 0
+    strength: 0.5143618
+  - timestamp: 0.74303854
+    length: 0
+    strength: 0.74631464
+  - timestamp: 0.998458
+    length: 0
+    strength: 0.51698226
+  - timestamp: 1.2770975
+    length: 0
+    strength: 0.5438519
+  - timestamp: 1.4628571
+    length: 0
+    strength: 1.1194707
+  - timestamp: 1.7182766
+    length: 0
+    strength: 0.5278723
+  - timestamp: 1.996916
+    length: 0
+    strength: 0.44823217
+  - timestamp: 2.554195
+    length: 0
+    strength: 0.4363304
+  - timestamp: 2.8792744
+    length: 0
+    strength: 1.7075177
+  - timestamp: 3.4133334
+    length: 0
+    strength: 0.5433455
+  - timestamp: 3.599093
+    length: 0
+    strength: 0.866213
+  - timestamp: 3.8545125
+    length: 0
+    strength: 0.5502142
+  - timestamp: 4.133152
+    length: 0
+    strength: 0.5956385
+  - timestamp: 4.3421316
+    length: 0
+    strength: 1.3107657
+  - timestamp: 5.01551
+    length: 0
+    strength: 0.33646804
+  - timestamp: 5.572789
+    length: 0
+    strength: 1.0124321
+  - timestamp: 5.7585487
+    length: 0
+    strength: 1.8478795
+  - timestamp: 6.1068482
+    length: 0
+    strength: 0.92938286
+  - timestamp: 6.292608
+    length: 0
+    strength: 0.6744312
+  - timestamp: 6.4783673
+    length: 0
+    strength: 1.7223014
+  - timestamp: 6.9892063
+    length: 0
+    strength: 0.9956914
+  - timestamp: 7.174966
+    length: 0
+    strength: 1.5743222
+  - timestamp: 7.5232654
+    length: 0
+    strength: 1.0629817
+  - timestamp: 7.8947845
+    length: 0
+    strength: 1.6923742
+  - timestamp: 8.057324
+    length: 0
+    strength: 1.1879151
+  - timestamp: 8.243084
+    length: 0
+    strength: 0.9527456
+  - timestamp: 8.614603
+    length: 0
+    strength: 1.7530614
+  - timestamp: 8.962902
+    length: 0
+    strength: 1.3660223
+  - timestamp: 9.1254425
+    length: 0
+    strength: 1.1127114
+  - timestamp: 9.334422
+    length: 0
+    strength: 1.5936102
+  - timestamp: 9.868481
+    length: 0
+    strength: 1.8633307
+  - timestamp: 10.402539
+    length: 0
+    strength: 1.5851511
+  - timestamp: 10.750839
+    length: 0
+    strength: 1.5778829
+  - timestamp: 10.913379
+    length: 0
+    strength: 1.5649018
+  - timestamp: 11.099138
+    length: 0
+    strength: 1.7384858
+  - timestamp: 11.447437
+    length: 0
+    strength: 2.6526752
+  - timestamp: 11.633197
+    length: 0
+    strength: 1.9312733
+  - timestamp: 11.818957
+    length: 0
+    strength: 1.9285748
+  - timestamp: 11.981497
+    length: 0
+    strength: 1.973582
+  - timestamp: 12.190476
+    length: 0
+    strength: 2.3251684
+  - timestamp: 12.376236
+    length: 0
+    strength: 1.8663774
+  - timestamp: 12.538775
+    length: 0
+    strength: 1.6533555
+  - timestamp: 12.910295
+    length: 0
+    strength: 2.1921144
+  - timestamp: 13.072834
+    length: 0
+    strength: 2.108428
+  - timestamp: 13.2585945
+    length: 0
+    strength: 1.5703263
+  - timestamp: 13.606894
+    length: 0
+    strength: 1.9434454
+  - timestamp: 13.792653
+    length: 0
+    strength: 2.308137
+  - timestamp: 13.978413
+    length: 0
+    strength: 1.7207148
+  - timestamp: 14.140952
+    length: 0
+    strength: 1.6608477
+  - timestamp: 14.326712
+    length: 0
+    strength: 2.359178
+  - timestamp: 14.675012
+    length: 0
+    strength: 2.3012767
+  - timestamp: 14.837551
+    length: 0
+    strength: 1.6358246
+  - timestamp: 15.046531
+    length: 0
+    strength: 2.279973
+  - timestamp: 15.23229
+    length: 0
+    strength: 1.9197341
+  - timestamp: 15.48771
+    length: 0
+    strength: 2.3747427
+  - timestamp: 16.114649
+    length: 0
+    strength: 2.1786025
+  - timestamp: 16.300407
+    length: 0
+    strength: 1.7281004
+  - timestamp: 16.486168
+    length: 0
+    strength: 2.4541721
+  - timestamp: 16.648708
+    length: 0
+    strength: 2.14718
+  - timestamp: 16.811247
+    length: 0
+    strength: 2.2334435
+  - timestamp: 17.182766
+    length: 0
+    strength: 2.804045
+  - timestamp: 17.345306
+    length: 0
+    strength: 1.9358145
+  - timestamp: 17.531065
+    length: 0
+    strength: 1.9606949
+  - timestamp: 17.902586
+    length: 0
+    strength: 2.5404828
+  - timestamp: 18.250885
+    length: 0
+    strength: 2.0572925
+  - timestamp: 18.622404
+    length: 0
+    strength: 2.4665837
+  - timestamp: 18.784943
+    length: 0
+    strength: 1.9178425
+  - timestamp: 18.970703
+    length: 0
+    strength: 2.208716
+  - timestamp: 19.319002
+    length: 0
+    strength: 2.2274837
+  - timestamp: 19.504763
+    length: 0
+    strength: 2.555205
+  - timestamp: 20.03882
+    length: 0
+    strength: 2.6365192
+  - timestamp: 20.38712
+    length: 0
+    strength: 2.4962904
+  - timestamp: 20.73542
+    length: 0
+    strength: 2.5013416
+  - timestamp: 20.944399
+    length: 0
+    strength: 2.0245829
+  - timestamp: 21.292698
+    length: 0
+    strength: 2.431273
+  - timestamp: 21.478458
+    length: 0
+    strength: 2.2240899
+  - timestamp: 21.733877
+    length: 0
+    strength: 2.3860111
+  - timestamp: 21.989298
+    length: 0
+    strength: 2.2602825
+  - timestamp: 22.198277
+    length: 0
+    strength: 2.467141
+  - timestamp: 22.360817
+    length: 0
+    strength: 2.4802003
+  - timestamp: 22.546576
+    length: 0
+    strength: 2.8600156
+  - timestamp: 22.709116
+    length: 0
+    strength: 2.221232
+  - timestamp: 22.894875
+    length: 0
+    strength: 2.4052966
+  - timestamp: 23.080635
+    length: 0
+    strength: 2.0658822
+  - timestamp: 23.266394
+    length: 0
+    strength: 2.2850237
+  - timestamp: 23.428934
+    length: 0
+    strength: 2.7302668
+  - timestamp: 23.986214
+    length: 0
+    strength: 2.6442711
+  - timestamp: 24.334513
+    length: 0
+    strength: 2.3975604
+  - timestamp: 24.497051
+    length: 0
+    strength: 2.1806345
+  - timestamp: 24.682812
+    length: 0
+    strength: 2.806458
+  - timestamp: 24.868572
+    length: 0
+    strength: 3.051185
+  - timestamp: 25.216871
+    length: 0
+    strength: 1.9777498
+  - timestamp: 25.37941
+    length: 0
+    strength: 3.2188926
+  - timestamp: 25.56517
+    length: 0
+    strength: 2.2485874
+  - timestamp: 25.750929
+    length: 0
+    strength: 2.7718368
+  - timestamp: 26.12245
+    length: 0
+    strength: 2.6509562
+  - timestamp: 26.284988
+    length: 0
+    strength: 2.6869907
+  - timestamp: 26.633287
+    length: 0
+    strength: 1.9037923
+  - timestamp: 27.004807
+    length: 0
+    strength: 2.673095
+  - timestamp: 27.190567
+    length: 0
+    strength: 2.3839703
+  - timestamp: 27.376326
+    length: 0
+    strength: 2.2218583
+  - timestamp: 27.724627
+    length: 0
+    strength: 3.1552098
+  - timestamp: 27.910385
+    length: 0
+    strength: 2.6314251
+  - timestamp: 28.072926
+    length: 0
+    strength: 1.9398
+  - timestamp: 28.258684
+    length: 0
+    strength: 2.8701396
+  - timestamp: 28.444445
+    length: 0
+    strength: 2.6227014
+  - timestamp: 28.606983
+    length: 0
+    strength: 1.9771847
+  - timestamp: 28.769524
+    length: 0
+    strength: 1.8506292
+  - timestamp: 28.955284
+    length: 0
+    strength: 2.378194
+  - timestamp: 29.164263
+    length: 0
+    strength: 2.4501626
+  - timestamp: 29.698322
+    length: 0
+    strength: 2.677313
+  - timestamp: 30.046621
+    length: 0
+    strength: 2.4221046
+  - timestamp: 30.209162
+    length: 0
+    strength: 2.056726
+  - timestamp: 30.39492
+    length: 0
+    strength: 2.4942117
+  - timestamp: 30.55746
+    length: 0
+    strength: 2.8675594
+  - timestamp: 30.92898
+    length: 0
+    strength: 1.7039105
+  - timestamp: 31.114738
+    length: 0
+    strength: 3.192661
+  - timestamp: 31.46304
+    length: 0
+    strength: 2.3792584
+  - timestamp: 31.834558
+    length: 0
+    strength: 2.430176
+  - timestamp: 31.997097
+    length: 0
+    strength: 2.4874604
+  - timestamp: 32.182858
+    length: 0
+    strength: 1.975061
+  - timestamp: 32.345398
+    length: 0
+    strength: 1.8830258
+  - timestamp: 32.554375
+    length: 0
+    strength: 2.5869215
+  - timestamp: 32.716915
+    length: 0
+    strength: 2.7490568
+  - timestamp: 32.902676
+    length: 0
+    strength: 2.4265594
+  - timestamp: 33.065216
+    length: 0
+    strength: 2.1201022
+  - timestamp: 33.250977
+    length: 0
+    strength: 2.2776713
+  - timestamp: 33.436733
+    length: 0
+    strength: 3.1036227
+  - timestamp: 33.622494
+    length: 0
+    strength: 2.7615306
+  - timestamp: 33.785034
+    length: 0
+    strength: 1.81822
+  - timestamp: 33.970795
+    length: 0
+    strength: 2.805908
+  - timestamp: 34.156555
+    length: 0
+    strength: 2.625591
+  - timestamp: 34.31909
+    length: 0
+    strength: 2.0135546
+  - timestamp: 34.690613
+    length: 0
+    strength: 2.1691325
+  - timestamp: 34.876373
+    length: 0
+    strength: 2.4346507
+  - timestamp: 35.22467
+    length: 0
+    strength: 1.7482077
+  - timestamp: 35.41043
+    length: 0
+    strength: 2.595254
+  - timestamp: 35.75873
+    length: 0
+    strength: 2.3479657
+  - timestamp: 35.92127
+    length: 0
+    strength: 2.1290536
+  - timestamp: 36.10703
+    length: 0
+    strength: 2.4799833
+  - timestamp: 36.29279
+    length: 0
+    strength: 2.873094
+  - timestamp: 36.803627
+    length: 0
+    strength: 3.0522017
+  - timestamp: 36.989388
+    length: 0
+    strength: 2.1575785
+  - timestamp: 37.198368
+    length: 0
+    strength: 2.3128717
+  - timestamp: 37.546665
+    length: 0
+    strength: 2.6302717
+  - timestamp: 37.732426
+    length: 0
+    strength: 2.3551183
+  - timestamp: 38.080727
+    length: 0
+    strength: 1.7439982
+  - timestamp: 38.266487
+    length: 0
+    strength: 2.6555378
+  - timestamp: 38.429024
+    length: 0
+    strength: 2.55532
+  - timestamp: 38.614784
+    length: 0
+    strength: 2.0874434
+  - timestamp: 38.777325
+    length: 0
+    strength: 1.9892212
+  - timestamp: 38.963085
+    length: 0
+    strength: 2.1742377
+  - timestamp: 39.14884
+    length: 0
+    strength: 2.9623923
+  - timestamp: 39.334602
+    length: 0
+    strength: 2.705717
+  - timestamp: 39.497143
+    length: 0
+    strength: 2.0102828
+  - timestamp: 39.682903
+    length: 0
+    strength: 2.5948594
+  - timestamp: 39.868664
+    length: 0
+    strength: 2.308378
+  - timestamp: 40.05442
+    length: 0
+    strength: 1.933747
+  - timestamp: 40.40272
+    length: 0
+    strength: 2.2078283
+  - timestamp: 40.58848
+    length: 0
+    strength: 2.6057491
+  - timestamp: 40.93678
+    length: 0
+    strength: 1.5960054
+  - timestamp: 41.12254
+    length: 0
+    strength: 2.8849697
+  - timestamp: 41.47084
+    length: 0
+    strength: 2.4590857
+  - timestamp: 41.633377
+    length: 0
+    strength: 2.1476805
+  - timestamp: 42.004898
+    length: 0
+    strength: 2.8144486
+  - timestamp: 42.538956
+    length: 0
+    strength: 2.7348642
+  - timestamp: 42.910477
+    length: 0
+    strength: 2.4794
+  - timestamp: 43.073017
+    length: 0
+    strength: 1.9884236
+  - timestamp: 43.258774
+    length: 0
+    strength: 2.6462603
+  - timestamp: 43.444534
+    length: 0
+    strength: 2.4393451
+  - timestamp: 43.978596
+    length: 0
+    strength: 2.7724628
+  - timestamp: 44.141132
+    length: 0
+    strength: 2.473647
+  - timestamp: 44.326893
+    length: 0
+    strength: 2.3701348
+  - timestamp: 44.675194
+    length: 0
+    strength: 2.0354717
+  - timestamp: 44.860954
+    length: 0
+    strength: 2.824527
+  - timestamp: 45.02349
+    length: 0
+    strength: 2.950711
+  - timestamp: 45.39501
+    length: 0
+    strength: 2.5815108
+  - timestamp: 45.580772
+    length: 0
+    strength: 2.7210498
+  - timestamp: 45.76653
+    length: 0
+    strength: 2.369618
+  - timestamp: 46.04517
+    length: 0
+    strength: 2.517131
+  - timestamp: 46.30059
+    length: 0
+    strength: 2.755755
+  - timestamp: 46.811428
+    length: 0
+    strength: 3.0788937
+  - timestamp: 47.18295
+    length: 0
+    strength: 2.2988799
+  - timestamp: 47.531246
+    length: 0
+    strength: 2.460277
+  - timestamp: 47.717007
+    length: 0
+    strength: 2.823099
+  - timestamp: 48.065308
+    length: 0
+    strength: 1.9043641
+  - timestamp: 48.251064
+    length: 0
+    strength: 2.8132946
+  - timestamp: 48.622585
+    length: 0
+    strength: 2.5806854
+  - timestamp: 48.947666
+    length: 0
+    strength: 2.7997584
+  - timestamp: 49.156643
+    length: 0
+    strength: 2.6407046
+  - timestamp: 49.667484
+    length: 0
+    strength: 2.941843
+  - timestamp: 49.87646
+    length: 0
+    strength: 2.5011833
+  - timestamp: 50.039
+    length: 0
+    strength: 2.4409704
+  - timestamp: 50.573063
+    length: 0
+    strength: 3.024949
+  - timestamp: 50.7356
+    length: 0
+    strength: 3.0615208
+  - timestamp: 51.10712
+    length: 0
+    strength: 2.886882
+  - timestamp: 51.29288
+    length: 0
+    strength: 2.8295226
+  - timestamp: 51.455418
+    length: 0
+    strength: 2.2216349
+  - timestamp: 51.75728
+    length: 0
+    strength: 2.3318684
+  - timestamp: 52.0127
+    length: 0
+    strength: 2.9701104
+  - timestamp: 52.360996
+    length: 0
+    strength: 2.0472195
+  - timestamp: 52.546757
+    length: 0
+    strength: 2.8594189
+  - timestamp: 52.709297
+    length: 0
+    strength: 2.4005759
+  - timestamp: 52.895058
+    length: 0
+    strength: 2.640151
+  - timestamp: 53.243355
+    length: 0
+    strength: 2.6807933
+  - timestamp: 53.429115
+    length: 0
+    strength: 2.6175826
+  - timestamp: 53.614876
+    length: 0
+    strength: 1.742483
+  - timestamp: 53.963173
+    length: 0
+    strength: 2.6889796
+  - timestamp: 54.311474
+    length: 0
+    strength: 2.6611946
+  - timestamp: 54.497234
+    length: 0
+    strength: 2.5295599
+  - timestamp: 54.659775
+    length: 0
+    strength: 2.7960105
+  - timestamp: 54.84553
+    length: 0
+    strength: 2.6410544
+  - timestamp: 55.031292
+    length: 0
+    strength: 2.550458
+  - timestamp: 55.217052
+    length: 0
+    strength: 2.536584
+  - timestamp: 55.402813
+    length: 0
+    strength: 2.8433733
+  - timestamp: 55.56535
+    length: 0
+    strength: 2.8637345
+  - timestamp: 55.75111
+    length: 0
+    strength: 2.7408595
+  - timestamp: 56.02975
+    length: 0
+    strength: 2.992874
+  - timestamp: 56.28517
+    length: 0
+    strength: 2.6738799
+  - timestamp: 56.44771
+    length: 0
+    strength: 2.96001
+  - timestamp: 56.81923
+    length: 0
+    strength: 2.6755922
+  - timestamp: 57.00499
+    length: 0
+    strength: 2.898173
+  - timestamp: 57.16753
+    length: 0
+    strength: 2.5983706
+  - timestamp: 57.446167
+    length: 0
+    strength: 2.355455
+  - timestamp: 57.724808
+    length: 0
+    strength: 2.8772848
+  - timestamp: 57.88735
+    length: 0
+    strength: 2.0303636
+  - timestamp: 58.235645
+    length: 0
+    strength: 3.2075405
+  - timestamp: 58.607166
+    length: 0
+    strength: 2.2592766
+  - timestamp: 58.978683
+    length: 0
+    strength: 2.7307994
+  - timestamp: 59.141224
+    length: 0
+    strength: 2.8247952
+  - timestamp: 59.489525
+    length: 0
+    strength: 2.007725
+  - timestamp: 59.6985
+    length: 0
+    strength: 2.7655787
+  - timestamp: 60.046803
+    length: 0
+    strength: 2.7306743
+  - timestamp: 60.395103
+    length: 0
+    strength: 2.564147
+  - timestamp: 60.55764
+    length: 0
+    strength: 2.6596906
+  - timestamp: 60.76662
+    length: 0
+    strength: 2.0817022
+  - timestamp: 61.0917
+    length: 0
+    strength: 3.0866697
+  - timestamp: 61.277462
+    length: 0
+    strength: 2.8279169
+  - timestamp: 61.48644
+    length: 0
+    strength: 2.2866304
+  - timestamp: 61.64898
+    length: 0
+    strength: 2.2193906
+  - timestamp: 62.159817
+    length: 0
+    strength: 3.001244
+  - timestamp: 62.531338
+    length: 0
+    strength: 2.6781213
+  - timestamp: 62.7171
+    length: 0
+    strength: 2.73859
+  - timestamp: 62.90286
+    length: 0
+    strength: 2.5407658
+  - timestamp: 63.158276
+    length: 0
+    strength: 1.990023
+  - timestamp: 63.436916
+    length: 0
+    strength: 1.9422815
+  - timestamp: 63.622677
+    length: 0
+    strength: 2.0332847
+  - timestamp: 63.970974
+    length: 0
+    strength: 2.274939
+  - timestamp: 64.319275
+    length: 0
+    strength: 2.6474543
+  - timestamp: 64.505035
+    length: 0
+    strength: 3.015526
+  - timestamp: 64.690796
+    length: 0
+    strength: 3.145571
+  - timestamp: 65.20163
+    length: 0
+    strength: 2.1116376
+  - timestamp: 65.38739
+    length: 0
+    strength: 2.2395856
+  - timestamp: 65.75891
+    length: 0
+    strength: 2.6345723
+  - timestamp: 66.10721
+    length: 0
+    strength: 2.6376197
+  - timestamp: 66.47873
+    length: 0
+    strength: 2.5466604
+  - timestamp: 66.82703
+    length: 0
+    strength: 2.5458357
+  - timestamp: 67.17533
+    length: 0
+    strength: 2.5260348
+  - timestamp: 67.45397
+    length: 0
+    strength: 2.4940574
+  - timestamp: 67.70939
+    length: 0
+    strength: 2.6530008
+  - timestamp: 67.89515
+    length: 0
+    strength: 2.7648304
+  - timestamp: 68.08091
+    length: 0
+    strength: 2.9190464
+  - timestamp: 68.24345
+    length: 0
+    strength: 3.1824932
+  - timestamp: 68.42921
+    length: 0
+    strength: 2.6143234
+  - timestamp: 68.61497
+    length: 0
+    strength: 2.6725416
+  - timestamp: 68.777504
+    length: 0
+    strength: 1.9369981
+  - timestamp: 68.963264
+    length: 0
+    strength: 2.3867602
+  - timestamp: 69.334785
+    length: 0
+    strength: 2.5958974
+  - timestamp: 69.68308
+    length: 0
+    strength: 3.239537
+  - timestamp: 70.0546
+    length: 0
+    strength: 2.1131408
+  - timestamp: 70.21714
+    length: 0
+    strength: 2.0548432
+  - timestamp: 70.4029
+    length: 0
+    strength: 2.8820674
+  - timestamp: 70.751205
+    length: 0
+    strength: 1.7813897
+  - timestamp: 70.91374
+    length: 0
+    strength: 2.9751172
+  - timestamp: 71.12272
+    length: 0
+    strength: 2.5422642
+  - timestamp: 71.47102
+    length: 0
+    strength: 2.5883176
+  - timestamp: 71.63356
+    length: 0
+    strength: 2.2041895
+  - timestamp: 71.84254
+    length: 0
+    strength: 2.3294694
+  - timestamp: 72.16762
+    length: 0
+    strength: 2.4358654
+  - timestamp: 72.53914
+    length: 0
+    strength: 3.0100915
+  - timestamp: 72.91066
+    length: 0
+    strength: 2.4582074
+  - timestamp: 73.0732
+    length: 0
+    strength: 2.009884
+  - timestamp: 73.25896
+    length: 0
+    strength: 2.9619322
+  - timestamp: 73.607254
+    length: 0
+    strength: 2.1101453
+  - timestamp: 73.793015
+    length: 0
+    strength: 2.5516875
+  - timestamp: 73.978775
+    length: 0
+    strength: 2.9491844
+  - timestamp: 74.32707
+    length: 0
+    strength: 2.6621358
+  - timestamp: 74.48962
+    length: 0
+    strength: 2.1012292
+  - timestamp: 74.72182
+    length: 0
+    strength: 2.6437914
+  - timestamp: 75.023674
+    length: 0
+    strength: 2.6202285
+  - timestamp: 75.395195
+    length: 0
+    strength: 2.9039102
+  - timestamp: 75.580956
+    length: 0
+    strength: 2.24055
+  - timestamp: 75.76671
+    length: 0
+    strength: 2.173912
+  - timestamp: 75.92925
+    length: 0
+    strength: 1.9760048
+  - timestamp: 76.11501
+    length: 0
+    strength: 2.8058388
+  - timestamp: 76.62585
+    length: 0
+    strength: 2.854674
+  - timestamp: 76.83483
+    length: 0
+    strength: 2.8409424
+  - timestamp: 77.18313
+    length: 0
+    strength: 2.1064944
+  - timestamp: 77.34567
+    length: 0
+    strength: 2.1246216
+  - timestamp: 77.55465
+    length: 0
+    strength: 2.5928502
+  - timestamp: 77.90295
+    length: 0
+    strength: 2.400914
+  - timestamp: 78.25124
+    length: 0
+    strength: 2.9065757
+  - timestamp: 78.59955
+    length: 0
+    strength: 2.3711584
+  - timestamp: 78.78531
+    length: 0
+    strength: 2.1592536
+  - timestamp: 78.947845
+    length: 0
+    strength: 2.87421
+  - timestamp: 79.15682
+    length: 0
+    strength: 2.1359284
+  - timestamp: 79.31937
+    length: 0
+    strength: 2.1675293
+  - timestamp: 79.50513
+    length: 0
+    strength: 2.3105547
+  - timestamp: 79.69089
+    length: 0
+    strength: 2.7974365
+  - timestamp: 80.039185
+    length: 0
+    strength: 2.4287033
+  - timestamp: 80.38748
+    length: 0
+    strength: 2.5163977
+  - timestamp: 80.759
+    length: 0
+    strength: 2.4983497
+  - timestamp: 81.1073
+    length: 0
+    strength: 2.9902859
+  - timestamp: 81.29306
+    length: 0
+    strength: 2.6638174
+  - timestamp: 81.455605
+    length: 0
+    strength: 2.60924
+  - timestamp: 81.8039
+    length: 0
+    strength: 2.8071716
+  - timestamp: 82.361176
+    length: 0
+    strength: 2.9818258
+  - timestamp: 82.546936
+    length: 0
+    strength: 2.962003
+  - timestamp: 82.70948
+    length: 0
+    strength: 2.4700375
+  - timestamp: 82.89524
+    length: 0
+    strength: 2.492819
+  - timestamp: 83.266754
+    length: 0
+    strength: 2.7191184
+  - timestamp: 83.4293
+    length: 0
+    strength: 2.55592
+  - timestamp: 83.638275
+    length: 0
+    strength: 2.490249
+  - timestamp: 83.80082
+    length: 0
+    strength: 2.1087267
+  - timestamp: 83.963356
+    length: 0
+    strength: 2.8324387
+  - timestamp: 84.14912
+    length: 0
+    strength: 2.0135605
+  - timestamp: 84.31165
+    length: 0
+    strength: 2.594628
+  - timestamp: 84.49741
+    length: 0
+    strength: 2.549175
+  - timestamp: 84.683174
+    length: 0
+    strength: 2.817346
+  - timestamp: 84.868935
+    length: 0
+    strength: 2.5158117
+  - timestamp: 85.03147
+    length: 0
+    strength: 2.501833
+  - timestamp: 85.21723
+    length: 0
+    strength: 2.7660458
+  - timestamp: 85.40299
+    length: 0
+    strength: 3.0641556
+  - timestamp: 85.75129
+    length: 0
+    strength: 3.9385831
+  - timestamp: 85.91383
+    length: 0
+    strength: 2.780852
+  - timestamp: 86.12281
+    length: 0
+    strength: 3.944223
+  - timestamp: 86.47111
+    length: 0
+    strength: 3.6286583
+  - timestamp: 86.81941
+    length: 0
+    strength: 3.7792473
+  - timestamp: 87.00517
+    length: 0
+    strength: 2.6055436
+  - timestamp: 87.16771
+    length: 0
+    strength: 3.5857413
+  - timestamp: 87.53923
+    length: 0
+    strength: 3.6169193
+  - timestamp: 88.07329
+    length: 0
+    strength: 2.9814763
+  - timestamp: 88.235825
+    length: 0
+    strength: 3.9383407
+  - timestamp: 88.421585
+    length: 0
+    strength: 3.2099109
+  - timestamp: 88.607346
+    length: 0
+    strength: 3.486834
+  - timestamp: 88.793106
+    length: 0
+    strength: 3.0594566
+  - timestamp: 88.95564
+    length: 0
+    strength: 3.4325638
+  - timestamp: 89.1414
+    length: 0
+    strength: 2.707156
+  - timestamp: 89.30395
+    length: 0
+    strength: 3.7225006
+  - timestamp: 89.67547
+    length: 0
+    strength: 3.6182323
+  - timestamp: 90.023766
+    length: 0
+    strength: 3.8538833
+  - timestamp: 90.39529
+    length: 0
+    strength: 3.1710436
+  - timestamp: 90.55782
+    length: 0
+    strength: 3.850838
+  - timestamp: 90.929344
+    length: 0
+    strength: 3.5988142
+  - timestamp: 91.115105
+    length: 0
+    strength: 4.2784023
+  - timestamp: 91.27764
+    length: 0
+    strength: 3.4818265
+  - timestamp: 91.4634
+    length: 0
+    strength: 3.1755896
+  - timestamp: 91.64916
+    length: 0
+    strength: 2.9055822
+  - timestamp: 91.83492
+    length: 0
+    strength: 3.126627
+  - timestamp: 91.99746
+    length: 0
+    strength: 3.0925074
+  - timestamp: 92.18322
+    length: 0
+    strength: 2.9764175
+  - timestamp: 92.53152
+    length: 0
+    strength: 3.230306
+  - timestamp: 92.71728
+    length: 0
+    strength: 2.9287674
+  - timestamp: 92.87982
+    length: 0
+    strength: 2.8527596
+  - timestamp: 93.065575
+    length: 0
+    strength: 3.307435
+  - timestamp: 93.27456
+    length: 0
+    strength: 3.066466
+  - timestamp: 93.59964
+    length: 0
+    strength: 2.7962499
+  - timestamp: 93.97115
+    length: 0
+    strength: 3.265659
+  - timestamp: 94.15691
+    length: 0
+    strength: 3.351878
+  - timestamp: 94.31946
+    length: 0
+    strength: 3.810414
+  - timestamp: 94.481995
+    length: 0
+    strength: 3.1627722
+  - timestamp: 94.69097
+    length: 0
+    strength: 3.4297624
+  - timestamp: 95.039276
+    length: 0
+    strength: 3.0823536
+  - timestamp: 95.38757
+    length: 0
+    strength: 3.422218
+  - timestamp: 95.57333
+    length: 0
+    strength: 2.6872
+  - timestamp: 95.73587
+    length: 0
+    strength: 3.2181158
+  - timestamp: 95.944855
+    length: 0
+    strength: 3.0975966
+  - timestamp: 96.130615
+    length: 0
+    strength: 3.0260465
+  - timestamp: 96.269936
+    length: 0
+    strength: 2.895989
+  - timestamp: 96.82721
+    length: 0
+    strength: 3.4244099
+  - timestamp: 96.98975
+    length: 0
+    strength: 3.541598
+  - timestamp: 97.17551
+    length: 0
+    strength: 3.1308897
+  - timestamp: 97.36127
+    length: 0
+    strength: 3.1828032
+  - timestamp: 97.54703
+    length: 0
+    strength: 3.4138706
+  - timestamp: 97.70957
+    length: 0
+    strength: 3.6330118
+  - timestamp: 97.89533
+    length: 0
+    strength: 3.532466
+  - timestamp: 98.081085
+    length: 0
+    strength: 2.8093982
+  - timestamp: 98.24363
+    length: 0
+    strength: 3.61314
+  - timestamp: 98.42939
+    length: 0
+    strength: 3.197186
+  - timestamp: 98.61515
+    length: 0
+    strength: 2.9554582
+  - timestamp: 98.8009
+    length: 0
+    strength: 3.1800184
+  - timestamp: 98.96345
+    length: 0
+    strength: 3.273122
+  - timestamp: 99.14921
+    length: 0
+    strength: 3.292724
+  - timestamp: 99.497505
+    length: 0
+    strength: 2.878846
+  - timestamp: 99.683266
+    length: 0
+    strength: 3.310538
+  - timestamp: 99.8458
+    length: 0
+    strength: 3.1993558
+  - timestamp: 100.03156
+    length: 0
+    strength: 3.66363
+  - timestamp: 100.21732
+    length: 0
+    strength: 2.9432063
+  - timestamp: 100.40308
+    length: 0
+    strength: 3.175996
+  - timestamp: 100.56562
+    length: 0
+    strength: 3.500844
+  - timestamp: 100.75138
+    length: 0
+    strength: 3.6323965
+  - timestamp: 100.913925
+    length: 0
+    strength: 2.788312
+  - timestamp: 101.099686
+    length: 0
+    strength: 3.2731726
+  - timestamp: 101.28544
+    length: 0
+    strength: 2.8373375
+  - timestamp: 101.4712
+    length: 0
+    strength: 3.32912
+  - timestamp: 101.65696
+    length: 0
+    strength: 3.045453
+  - timestamp: 102.005264
+    length: 0
+    strength: 2.8751667
+  - timestamp: 102.1678
+    length: 0
+    strength: 2.6928034
+  - timestamp: 102.35356
+    length: 0
+    strength: 2.9542632
+  - timestamp: 102.53932
+    length: 0
+    strength: 3.162413
+  - timestamp: 102.70186
+    length: 0
+    strength: 3.0153797
+  - timestamp: 102.88762
+    length: 0
+    strength: 3.5759902
+  - timestamp: 103.07338
+    length: 0
+    strength: 2.9431853
+  - timestamp: 103.25914
+    length: 0
+    strength: 2.869434
+  - timestamp: 103.42168
+    length: 0
+    strength: 3.0628176
+  - timestamp: 103.63066
+    length: 0
+    strength: 3.1891325
+  - timestamp: 103.955734
+    length: 0
+    strength: 3.5153546
+  - timestamp: 104.327255
+    length: 0
+    strength: 3.050094
+  - timestamp: 104.4898
+    length: 0
+    strength: 2.954173
+  - timestamp: 104.67555
+    length: 0
+    strength: 2.853368
+  - timestamp: 104.86131
+    length: 0
+    strength: 2.7642732
+  - timestamp: 105.04707
+    length: 0
+    strength: 2.56334
+  - timestamp: 105.39537
+    length: 0
+    strength: 3.3185725
+  - timestamp: 105.557915
+    length: 0
+    strength: 3.0951648
+  - timestamp: 105.743675
+    length: 0
+    strength: 3.6103814
+  - timestamp: 105.929436
+    length: 0
+    strength: 2.9125378
+  - timestamp: 106.1152
+    length: 0
+    strength: 3.2082107
+  - timestamp: 106.27773
+    length: 0
+    strength: 2.9305224
+  - timestamp: 106.48671
+    length: 0
+    strength: 3.1384654
+  - timestamp: 106.81179
+    length: 0
+    strength: 3.4796925
+  - timestamp: 106.99755
+    length: 0
+    strength: 2.5269387
+  - timestamp: 107.18331
+    length: 0
+    strength: 3.0735643
+  - timestamp: 107.36907
+    length: 0
+    strength: 2.8773916
+  - timestamp: 107.53161
+    length: 0
+    strength: 3.2555707
+  - timestamp: 107.71737
+    length: 0
+    strength: 2.9116623
+  - timestamp: 107.90313
+    length: 0
+    strength: 2.3154006
+  - timestamp: 108.06567
+    length: 0
+    strength: 2.1707182
+  - timestamp: 108.25143
+    length: 0
+    strength: 3.2135775
+  - timestamp: 108.41397
+    length: 0
+    strength: 3.0347934
+  - timestamp: 108.59973
+    length: 0
+    strength: 3.4652247
+  - timestamp: 108.785484
+    length: 0
+    strength: 3.440122
+  - timestamp: 108.971245
+    length: 0
+    strength: 3.3504028
+  - timestamp: 109.13379
+    length: 0
+    strength: 2.9696858
+  - timestamp: 109.31955
+    length: 0
+    strength: 3.412205
+  - timestamp: 109.5053
+    length: 0
+    strength: 3.0069187
+  - timestamp: 109.66785
+    length: 0
+    strength: 3.508531
+  - timestamp: 110.03937
+    length: 0
+    strength: 3.0538597
+  - timestamp: 110.22513
+    length: 0
+    strength: 3.4068332
+  - timestamp: 110.387665
+    length: 0
+    strength: 3.2169166
+  - timestamp: 110.573425
+    length: 0
+    strength: 3.176196
+  - timestamp: 110.759186
+    length: 0
+    strength: 2.472658
+  - timestamp: 110.92172
+    length: 0
+    strength: 2.8694115
+  - timestamp: 111.10748
+    length: 0
+    strength: 3.4662712
+  - timestamp: 111.27002
+    length: 0
+    strength: 3.067359
+  - timestamp: 111.45578
+    length: 0
+    strength: 3.0163693
+  - timestamp: 111.64154
+    length: 0
+    strength: 2.7352026
+  - timestamp: 111.8273
+    length: 0
+    strength: 3.0996804
+  - timestamp: 111.98984
+    length: 0
+    strength: 3.5116549
+  - timestamp: 112.1756
+    length: 0
+    strength: 3.2514877
+  - timestamp: 112.36136
+    length: 0
+    strength: 2.6087155
+  - timestamp: 112.5239
+    length: 0
+    strength: 3.4570076
+  - timestamp: 112.70966
+    length: 0
+    strength: 2.7680175
+  - timestamp: 112.89542
+    length: 0
+    strength: 2.985978
+  - timestamp: 113.05796
+    length: 0
+    strength: 2.881877
+  - timestamp: 113.24372
+    length: 0
+    strength: 2.879956
+  - timestamp: 113.42948
+    length: 0
+    strength: 2.8694038
+  - timestamp: 113.59202
+    length: 0
+    strength: 2.666074
+  - timestamp: 113.77778
+    length: 0
+    strength: 2.5897346
+  - timestamp: 113.96354
+    length: 0
+    strength: 3.0610075
+  - timestamp: 114.1493
+    length: 0
+    strength: 3.1677969
+  - timestamp: 114.31184
+    length: 0
+    strength: 3.7052119
+  - timestamp: 114.4976
+    length: 0
+    strength: 3.0943267
+  - timestamp: 114.68336
+    length: 0
+    strength: 3.4653654
+  - timestamp: 114.845894
+    length: 0
+    strength: 3.0886343
+  - timestamp: 115.031654
+    length: 0
+    strength: 3.4092185
+  - timestamp: 115.403175
+    length: 0
+    strength: 3.410722
+  - timestamp: 115.56571
+    length: 0
+    strength: 2.852281
+  - timestamp: 115.75147
+    length: 0
+    strength: 3.0800824
+  - timestamp: 115.91402
+    length: 0
+    strength: 3.138997
+  - timestamp: 116.12299
+    length: 0
+    strength: 3.23249
+  - timestamp: 116.28553
+    length: 0
+    strength: 3.109936
+  - timestamp: 116.448074
+    length: 0
+    strength: 2.8331778
+  - timestamp: 116.633835
+    length: 0
+    strength: 2.4599118
+  - timestamp: 116.819595
+    length: 0
+    strength: 3.1897967
+  - timestamp: 117.00535
+    length: 0
+    strength: 3.1810791
+  - timestamp: 117.19111
+    length: 0
+    strength: 3.6740496
+  - timestamp: 117.35365
+    length: 0
+    strength: 3.1583126
+  - timestamp: 117.53941
+    length: 0
+    strength: 3.4306304
+  - timestamp: 117.72517
+    length: 0
+    strength: 3.0667188
+  - timestamp: 117.91093
+    length: 0
+    strength: 3.307913
+  - timestamp: 118.23601
+    length: 0
+    strength: 3.1869872
+  - timestamp: 118.42177
+    length: 0
+    strength: 3.0001037
+  - timestamp: 118.60753
+    length: 0
+    strength: 3.7346816
+  - timestamp: 118.770065
+    length: 0
+    strength: 3.1290743
+  - timestamp: 118.955826
+    length: 0
+    strength: 3.1084247
+  - timestamp: 119.14159
+    length: 0
+    strength: 2.9721034
+  - timestamp: 119.32735
+    length: 0
+    strength: 2.779638
+  - timestamp: 119.48988
+    length: 0
+    strength: 2.744297
+  - timestamp: 119.675644
+    length: 0
+    strength: 3.391363
+  - timestamp: 119.861404
+    length: 0
+    strength: 3.2691135
+  - timestamp: 120.02395
+    length: 0
+    strength: 3.661913
+  - timestamp: 120.2097
+    length: 0
+    strength: 3.0079849
+  - timestamp: 120.39546
+    length: 0
+    strength: 3.0554702
+  - timestamp: 120.55801
+    length: 0
+    strength: 3.2275264
+  - timestamp: 120.74377
+    length: 0
+    strength: 3.2718601
+  - timestamp: 121.11528
+    length: 0
+    strength: 3.5715525
+  - timestamp: 121.277824
+    length: 0
+    strength: 3.0915713
+  - timestamp: 121.463585
+    length: 0
+    strength: 3.0153217
+  - timestamp: 121.81188
+    length: 0
+    strength: 2.9780207
+  - timestamp: 121.99764
+    length: 0
+    strength: 2.7812238
+  - timestamp: 122.1834
+    length: 0
+    strength: 2.7351284
+  - timestamp: 122.36916
+    length: 0
+    strength: 2.3397677
+  - timestamp: 122.5317
+    length: 0
+    strength: 3.2312655
+  - timestamp: 122.69424
+    length: 0
+    strength: 3.0272686
+  - timestamp: 122.90322
+    length: 0
+    strength: 3.2870102
+  - timestamp: 123.08898
+    length: 0
+    strength: 2.8058362
+  - timestamp: 123.25152
+    length: 0
+    strength: 2.823252
+  - timestamp: 123.43728
+    length: 0
+    strength: 2.620304
+  - timestamp: 123.599815
+    length: 0
+    strength: 3.182711
+  - timestamp: 123.785576
+    length: 0
+    strength: 2.4761689
+  - timestamp: 123.94812
+    length: 0
+    strength: 3.2482846
+  - timestamp: 124.13388
+    length: 0
+    strength: 2.7754037
+  - timestamp: 124.31963
+    length: 0
+    strength: 2.9992905
+  - timestamp: 124.505394
+    length: 0
+    strength: 2.5681207
+  - timestamp: 124.66794
+    length: 0
+    strength: 3.3538485
+  - timestamp: 124.8537
+    length: 0
+    strength: 3.1203299
+  - timestamp: 125.016235
+    length: 0
+    strength: 2.7478313
+  - timestamp: 125.201996
+    length: 0
+    strength: 3.0230002
+  - timestamp: 125.38776
+    length: 0
+    strength: 3.711396
+  - timestamp: 125.57352
+    length: 0
+    strength: 3.172434
+  - timestamp: 125.73605
+    length: 0
+    strength: 4.072063
+  - timestamp: 125.921814
+    length: 0
+    strength: 3.0913715
+  - timestamp: 126.107574
+    length: 0
+    strength: 2.9611285
+  - timestamp: 126.293335
+    length: 0
+    strength: 3.022096
+  - timestamp: 126.45587
+    length: 0
+    strength: 3.4939854
+  - timestamp: 126.82739
+    length: 0
+    strength: 3.4017222
+  - timestamp: 127.17569
+    length: 0
+    strength: 2.9166827
+  - timestamp: 127.36145
+    length: 0
+    strength: 3.0575774
+  - timestamp: 127.523994
+    length: 0
+    strength: 2.9730973
+  - timestamp: 127.70975
+    length: 0
+    strength: 3.082665
+  - timestamp: 127.89551
+    length: 0
+    strength: 2.5642912
+  - timestamp: 128.05804
+    length: 0
+    strength: 2.8110464
+  - timestamp: 128.2438
+    length: 0
+    strength: 2.947374
+  - timestamp: 128.42957
+    length: 0
+    strength: 2.8242989
+  - timestamp: 128.5921
+    length: 0
+    strength: 3.4670784
+  - timestamp: 128.77786
+    length: 0
+    strength: 3.2201788
+  - timestamp: 128.94041
+    length: 0
+    strength: 2.9319518
+  - timestamp: 129.14938
+    length: 0
+    strength: 3.234842
+  - timestamp: 129.31192
+    length: 0
+    strength: 3.5798686
+  - timestamp: 129.68344
+    length: 0
+    strength: 3.1922061
+  - timestamp: 129.846
+    length: 0
+    strength: 2.584213
+  - timestamp: 130.03175
+    length: 0
+    strength: 3.124995
+  - timestamp: 130.40326
+    length: 0
+    strength: 2.8218894
+  - timestamp: 130.56581
+    length: 0
+    strength: 2.9532502
+  - timestamp: 130.75157
+    length: 0
+    strength: 2.8255699
+  - timestamp: 130.93732
+    length: 0
+    strength: 2.5963078
+  - timestamp: 131.12308
+    length: 0
+    strength: 3.443649
+  - timestamp: 131.28563
+    length: 0
+    strength: 3.1976786
+  - timestamp: 131.47139
+    length: 0
+    strength: 3.5210752
+  - timestamp: 131.63393
+    length: 0
+    strength: 3.198969
+  - timestamp: 131.81969
+    length: 0
+    strength: 3.1394854
+  - timestamp: 132.00545
+    length: 0
+    strength: 3.0438488
+  - timestamp: 132.16798
+    length: 0
+    strength: 3.2602131
+  - timestamp: 132.33052
+    length: 0
+    strength: 2.5202594
+  - timestamp: 132.5395
+    length: 0
+    strength: 3.2893882
+  - timestamp: 132.70204
+    length: 0
+    strength: 2.7513137
+  - timestamp: 132.8878
+    length: 0
+    strength: 2.9516454
+  - timestamp: 133.07356
+    length: 0
+    strength: 2.4951112
+  - timestamp: 133.2361
+    length: 0
+    strength: 2.7560303
+  - timestamp: 133.42186
+    length: 0
+    strength: 2.7300715
+  - timestamp: 133.60762
+    length: 0
+    strength: 2.7908041
+  - timestamp: 133.77016
+    length: 0
+    strength: 2.8096206
+  - timestamp: 133.95592
+    length: 0
+    strength: 3.0095594
+  - timestamp: 134.14168
+    length: 0
+    strength: 2.8992088
+  - timestamp: 134.32744
+    length: 0
+    strength: 3.4124475
+  - timestamp: 134.48997
+    length: 0
+    strength: 3.1298895
+  - timestamp: 134.67574
+    length: 0
+    strength: 3.0401533
+  - timestamp: 134.8615
+    length: 0
+    strength: 2.9084826
+  - timestamp: 135.02403
+    length: 0
+    strength: 3.4861326
+  - timestamp: 135.39555
+    length: 0
+    strength: 2.8495054
+  - timestamp: 135.55809
+    length: 0
+    strength: 2.930403
+  - timestamp: 135.74385
+    length: 0
+    strength: 2.918299
+  - timestamp: 135.92961
+    length: 0
+    strength: 2.897479
+  - timestamp: 136.09215
+    length: 0
+    strength: 3.1995296
+  - timestamp: 136.27791
+    length: 0
+    strength: 2.941069
+  - timestamp: 136.46367
+    length: 0
+    strength: 2.7231386
+  - timestamp: 136.62622
+    length: 0
+    strength: 2.9078825
+  - timestamp: 136.81197
+    length: 0
+    strength: 3.3434072
+  - timestamp: 137.02095
+    length: 0
+    strength: 2.5375133
+  - timestamp: 137.18349
+    length: 0
+    strength: 2.5292623
+  - timestamp: 137.55501
+    length: 0
+    strength: 2.4284153
+  - timestamp: 137.9033
+    length: 0
+    strength: 2.6458952
+  - timestamp: 138.25162
+    length: 0
+    strength: 2.9048884
+  - timestamp: 138.62312
+    length: 0
+    strength: 1.4917046
+  - timestamp: 138.78568
+    length: 0
+    strength: 2.0249448
+  - timestamp: 138.97144
+    length: 0
+    strength: 2.6552272
+  - timestamp: 139.5055
+    length: 0
+    strength: 2.9070208
+  - timestamp: 139.69125
+    length: 0
+    strength: 2.6114964
+  - timestamp: 140.03955
+    length: 0
+    strength: 1.8438245
+  - timestamp: 140.41107
+    length: 0
+    strength: 2.6586778
+  - timestamp: 140.75937
+    length: 0
+    strength: 2.7010663
+  - timestamp: 141.10767
+    length: 0
+    strength: 2.6865144
+  - timestamp: 141.2702
+    length: 0
+    strength: 2.211803
+  - timestamp: 141.45596
+    length: 0
+    strength: 1.8350525
+  - timestamp: 141.64172
+    length: 0
+    strength: 2.2213233
+  - timestamp: 141.82748
+    length: 0
+    strength: 2.3486147
+  - timestamp: 141.99002
+    length: 0
+    strength: 2.4723399
+  - timestamp: 142.17578
+    length: 0
+    strength: 2.2140965
+  - timestamp: 142.36154
+    length: 0
+    strength: 2.5690553
+  - timestamp: 142.5473
+    length: 0
+    strength: 2.8919897
+  - timestamp: 142.91882
+    length: 0
+    strength: 2.2574387
+  - timestamp: 143.26712
+    length: 0
+    strength: 2.5486503
+  - timestamp: 143.61542
+    length: 0
+    strength: 2.6677997
+  - timestamp: 143.96371
+    length: 0
+    strength: 2.576082
+  - timestamp: 144.14948
+    length: 0
+    strength: 2.3282511
+  - timestamp: 144.33524
+    length: 0
+    strength: 1.559275
+  - timestamp: 144.49777
+    length: 0
+    strength: 1.8331594
+  - timestamp: 144.68353
+    length: 0
+    strength: 2.657479
+  - timestamp: 145.21759
+    length: 0
+    strength: 2.7177048
+  - timestamp: 145.40335
+    length: 0
+    strength: 2.7830622
+  - timestamp: 145.5659
+    length: 0
+    strength: 2.097967
+  - timestamp: 145.75165
+    length: 0
+    strength: 2.023387
+  - timestamp: 146.12317
+    length: 0
+    strength: 2.763415
+  - timestamp: 146.47148
+    length: 0
+    strength: 2.4358628
+  - timestamp: 146.81978
+    length: 0
+    strength: 2.5052173
+  - timestamp: 147.16808
+    length: 0
+    strength: 2.6553588
+  - timestamp: 147.35384
+    length: 0
+    strength: 2.452734
+  - timestamp: 147.5396
+    length: 0
+    strength: 2.7794368
+  - timestamp: 147.72536
+    length: 0
+    strength: 2.5489802
+  - timestamp: 147.8879
+    length: 0
+    strength: 2.4251716
+  - timestamp: 148.07365
+    length: 0
+    strength: 2.6232169
+  - timestamp: 148.25941
+    length: 0
+    strength: 2.8896437
+  - timestamp: 148.42195
+    length: 0
+    strength: 2.6785533
+  - timestamp: 148.60771
+    length: 0
+    strength: 3.1468542
+  - timestamp: 148.97923
+    length: 0
+    strength: 3.379675
+  - timestamp: 149.32753
+    length: 0
+    strength: 3.6960902
+  - timestamp: 149.67583
+    length: 0
+    strength: 3.1466994
+  - timestamp: 149.86159
+    length: 0
+    strength: 2.484083
+  - timestamp: 150.02412
+    length: 0
+    strength: 2.7965224
+  - timestamp: 150.20988
+    length: 0
+    strength: 2.1730967
+  - timestamp: 150.39565
+    length: 0
+    strength: 3.3611448
+  - timestamp: 150.76717
+    length: 0
+    strength: 2.6710255
+  - timestamp: 150.9297
+    length: 0
+    strength: 2.5389485
+  - timestamp: 151.11546
+    length: 0
+    strength: 3.1282551
+  - timestamp: 151.30122
+    length: 0
+    strength: 2.715276
+  - timestamp: 151.46376
+    length: 0
+    strength: 3.21475
+  - timestamp: 151.83528
+    length: 0
+    strength: 3.3351715
+  - timestamp: 152.18358
+    length: 0
+    strength: 3.5235214
+  - timestamp: 152.5551
+    length: 0
+    strength: 3.2570446
+  - timestamp: 152.71764
+    length: 0
+    strength: 2.4447072
+  - timestamp: 152.9034
+    length: 0
+    strength: 3.0302448
+  - timestamp: 153.1356
+    length: 0
+    strength: 2.8148134
+  - timestamp: 153.41425
+    length: 0
+    strength: 3.3361185
+  - timestamp: 153.62321
+    length: 0
+    strength: 3.4849894
+  - timestamp: 153.78577
+    length: 0
+    strength: 3.1523242
+  - timestamp: 153.97151
+    length: 0
+    strength: 3.6664855
+  - timestamp: 154.13406
+    length: 0
+    strength: 2.771524
+  - timestamp: 154.31982
+    length: 0
+    strength: 3.5882053
+  - timestamp: 154.50558
+    length: 0
+    strength: 2.7505138
+  - timestamp: 154.69135
+    length: 0
+    strength: 3.7623558
+  - timestamp: 155.03964
+    length: 0
+    strength: 3.398034
+  - timestamp: 155.41116
+    length: 0
+    strength: 3.5221653
+  - timestamp: 155.5737
+    length: 0
+    strength: 2.7167177
+  - timestamp: 155.73624
+    length: 0
+    strength: 3.2390373
+  - timestamp: 155.922
+    length: 0
+    strength: 2.5767617
+  - timestamp: 156.10776
+    length: 0
+    strength: 3.468818
+  - timestamp: 156.45605
+    length: 0
+    strength: 3.216281
+  - timestamp: 156.82758
+    length: 0
+    strength: 3.2203426
+  - timestamp: 157.01334
+    length: 0
+    strength: 2.3111105
+  - timestamp: 157.17587
+    length: 0
+    strength: 3.0798335
+  - timestamp: 157.52417
+    length: 0
+    strength: 3.8189018
+  - timestamp: 157.89569
+    length: 0
+    strength: 3.5823233
+  - timestamp: 158.26721
+    length: 0
+    strength: 3.4060166
+  - timestamp: 158.61551
+    length: 0
+    strength: 3.3534799
+  - timestamp: 158.9638
+    length: 0
+    strength: 4.0053124
+--- !u!114 &-7462614176059741344
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e985e164af1f8741bc82ddddd616c42, type: 3}
+  m_Name: Segments
+  m_EditorClassIdentifier: 
+  _name: Segments
+  _features:
+  - timestamp: 9.520182
+    length: 0
+    value: 3.3619752
+  - timestamp: 137.0674
+    length: 0
+    value: 5.056678
+--- !u!114 &-2157632205068606702
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a7ca50998ed68c4da19ad81f9ca0e6f, type: 3}
+  m_Name: Chroma
+  m_EditorClassIdentifier: 
+  _name: Chroma
+  _features:
+  - timestamp: -0.27863947
+    length: 0.4643991
+    note: 3
+  - timestamp: 0.18575963
+    length: 0.37151927
+    note: 8
+  - timestamp: 0.55727893
+    length: 0.18575963
+    note: 3
+  - timestamp: 0.74303854
+    length: 0.27863947
+    note: 1
+  - timestamp: 0.9287982
+    length: 0.27863947
+    note: 6
+  - timestamp: 1.2074376
+    length: 0.27863947
+    note: 1
+  - timestamp: 1.4860771
+    length: 0.18575963
+    note: 10
+  - timestamp: 1.6718367
+    length: 0.4643991
+    note: 11
+  - timestamp: 2.1362357
+    length: 0.37151927
+    note: 6
+  - timestamp: 2.507755
+    length: 0.37151927
+    note: 1
+  - timestamp: 2.7863946
+    length: 0.27863947
+    note: 3
+  - timestamp: 3.065034
+    length: 0.37151927
+    note: 8
+  - timestamp: 3.4365532
+    length: 0.18575963
+    note: 3
+  - timestamp: 3.622313
+    length: 0.18575963
+    note: 1
+  - timestamp: 3.8080726
+    length: 0.27863947
+    note: 6
+  - timestamp: 4.086712
+    length: 0.27863947
+    note: 1
+  - timestamp: 4.3653517
+    length: 0.18575963
+    note: 3
+  - timestamp: 4.4582314
+    length: 0.37151927
+    note: 8
+  - timestamp: 4.8297505
+    length: 0.6501587
+    note: 11
+  - timestamp: 5.4799094
+    length: 0.37151927
+    note: 3
+  - timestamp: 5.8514285
+    length: 0.27863947
+    note: 8
+  - timestamp: 6.037188
+    length: 0.27863947
+    note: 11
+  - timestamp: 6.5015874
+    length: 0.37151927
+    note: 10
+  - timestamp: 6.9659863
+    length: 0.18575963
+    note: 3
+  - timestamp: 7.244626
+    length: 0.37151927
+    note: 11
+  - timestamp: 7.616145
+    length: 0.18575963
+    note: 3
+  - timestamp: 7.8019047
+    length: 0.27863947
+    note: 6
+  - timestamp: 7.987664
+    length: 0.27863947
+    note: 11
+  - timestamp: 8.359183
+    length: 0.27863947
+    note: 6
+  - timestamp: 8.544943
+    length: 0.18575963
+    note: 4
+  - timestamp: 8.730703
+    length: 0.55727893
+    note: 8
+  - timestamp: 9.287982
+    length: 0.18575963
+    note: 10
+  - timestamp: 9.473742
+    length: 0.37151927
+    note: 6
+  - timestamp: 9.845261
+    length: 1.8575964
+    note: 8
+  - timestamp: 11.609978
+    length: 0.27863947
+    note: 11
+  - timestamp: 11.888617
+    length: 1.7647165
+    note: 8
+  - timestamp: 13.653334
+    length: 0.37151927
+    note: 11
+  - timestamp: 14.024853
+    length: 0.55727893
+    note: 8
+  - timestamp: 14.582131
+    length: 0.18575963
+    note: 11
+  - timestamp: 14.675012
+    length: 0.27863947
+    note: 5
+  - timestamp: 14.860771
+    length: 0.27863947
+    note: 11
+  - timestamp: 15.13941
+    length: 0.37151927
+    note: 8
+  - timestamp: 15.51093
+    length: 0.37151927
+    note: 0
+  - timestamp: 15.882449
+    length: 0.9287982
+    note: 11
+  - timestamp: 16.718367
+    length: 0.4643991
+    note: 8
+  - timestamp: 16.904127
+    length: 0.18575963
+    note: 4
+  - timestamp: 17.182766
+    length: 0.27863947
+    note: 5
+  - timestamp: 17.368526
+    length: 3.529433
+    note: 8
+  - timestamp: 20.06204
+    length: 0.18575963
+    note: 5
+  - timestamp: 20.805079
+    length: 0.55727893
+    note: 5
+  - timestamp: 21.269478
+    length: 0.27863947
+    note: 0
+  - timestamp: 21.548119
+    length: 0.9287982
+    note: 8
+  - timestamp: 22.384037
+    length: 0.27863947
+    note: 11
+  - timestamp: 22.569796
+    length: 0.37151927
+    note: 8
+  - timestamp: 22.848434
+    length: 1.4860771
+    note: 4
+  - timestamp: 24.334513
+    length: 1.3931973
+    note: 6
+  - timestamp: 25.727709
+    length: 1.4860771
+    note: 8
+  - timestamp: 27.213787
+    length: 0.6501587
+    note: 11
+  - timestamp: 27.771067
+    length: 0.37151927
+    note: 6
+  - timestamp: 28.049706
+    length: 0.18575963
+    note: 11
+  - timestamp: 28.235464
+    length: 0.37151927
+    note: 6
+  - timestamp: 28.606983
+    length: 1.4860771
+    note: 4
+  - timestamp: 28.606983
+    length: 0.18575963
+    note: 11
+  - timestamp: 30.093061
+    length: 1.3931973
+    note: 6
+  - timestamp: 31.39338
+    length: 1.2074376
+    note: 8
+  - timestamp: 32.693695
+    length: 0.18575963
+    note: 3
+  - timestamp: 32.786575
+    length: 1.578957
+    note: 6
+  - timestamp: 34.365532
+    length: 0.9287982
+    note: 4
+  - timestamp: 35.29433
+    length: 0.27863947
+    note: 11
+  - timestamp: 35.57297
+    length: 0.18575963
+    note: 4
+  - timestamp: 35.75873
+    length: 1.3931973
+    note: 6
+  - timestamp: 37.151928
+    length: 1.2074376
+    note: 8
+  - timestamp: 38.266487
+    length: 0.27863947
+    note: 6
+  - timestamp: 38.545124
+    length: 0.6501587
+    note: 11
+  - timestamp: 39.195282
+    length: 0.9287982
+    note: 6
+  - timestamp: 40.12408
+    length: 1.021678
+    note: 4
+  - timestamp: 40.58848
+    length: 0.18575963
+    note: 3
+  - timestamp: 41.14576
+    length: 0.18575963
+    note: 11
+  - timestamp: 41.33152
+    length: 0.18575963
+    note: 4
+  - timestamp: 41.51728
+    length: 1.3931973
+    note: 6
+  - timestamp: 42.910477
+    length: 1.1145579
+    note: 8
+  - timestamp: 44.117912
+    length: 0.18575963
+    note: 3
+  - timestamp: 44.210793
+    length: 1.578957
+    note: 6
+  - timestamp: 45.78975
+    length: 1.021678
+    note: 4
+  - timestamp: 46.532787
+    length: 0.18575963
+    note: 1
+  - timestamp: 46.718548
+    length: 0.37151927
+    note: 11
+  - timestamp: 47.09007
+    length: 0.4643991
+    note: 10
+  - timestamp: 47.461586
+    length: 0.27863947
+    note: 6
+  - timestamp: 47.740227
+    length: 0.37151927
+    note: 11
+  - timestamp: 48.018867
+    length: 0.55727893
+    note: 6
+  - timestamp: 48.576145
+    length: 0.6501587
+    note: 8
+  - timestamp: 49.226303
+    length: 0.4643991
+    note: 1
+  - timestamp: 49.690704
+    length: 0.18575963
+    note: 11
+  - timestamp: 50.06222
+    length: 0.6501587
+    note: 11
+  - timestamp: 50.619503
+    length: 0.83591837
+    note: 6
+  - timestamp: 50.89814
+    length: 0.18575963
+    note: 11
+  - timestamp: 51.455418
+    length: 0.4643991
+    note: 4
+  - timestamp: 51.91982
+    length: 0.27863947
+    note: 3
+  - timestamp: 52.19846
+    length: 0.74303854
+    note: 4
+  - timestamp: 52.848618
+    length: 0.6501587
+    note: 6
+  - timestamp: 53.498775
+    length: 0.27863947
+    note: 1
+  - timestamp: 53.777416
+    length: 0.55727893
+    note: 6
+  - timestamp: 54.334694
+    length: 0.55727893
+    note: 8
+  - timestamp: 54.89197
+    length: 0.18575963
+    note: 11
+  - timestamp: 55.077732
+    length: 0.37151927
+    note: 8
+  - timestamp: 55.449253
+    length: 0.18575963
+    note: 11
+  - timestamp: 55.63501
+    length: 1.4860771
+    note: 6
+  - timestamp: 57.12109
+    length: 0.18575963
+    note: 3
+  - timestamp: 57.213966
+    length: 0.83591837
+    note: 4
+  - timestamp: 57.95701
+    length: 0.27863947
+    note: 1
+  - timestamp: 58.142765
+    length: 0.4643991
+    note: 4
+  - timestamp: 58.328526
+    length: 0.18575963
+    note: 3
+  - timestamp: 58.607166
+    length: 0.55727893
+    note: 6
+  - timestamp: 58.607166
+    length: 0.18575963
+    note: 10
+  - timestamp: 59.164444
+    length: 0.37151927
+    note: 11
+  - timestamp: 59.535965
+    length: 0.55727893
+    note: 6
+  - timestamp: 60.093243
+    length: 0.74303854
+    note: 8
+  - timestamp: 60.7434
+    length: 0.4643991
+    note: 1
+  - timestamp: 61.11492
+    length: 0.27863947
+    note: 6
+  - timestamp: 61.39356
+    length: 0.27863947
+    note: 3
+  - timestamp: 61.57932
+    length: 0.55727893
+    note: 11
+  - timestamp: 62.04372
+    length: 0.83591837
+    note: 6
+  - timestamp: 62.87964
+    length: 1.1145579
+    note: 4
+  - timestamp: 63.994194
+    length: 0.18575963
+    note: 3
+  - timestamp: 64.179955
+    length: 0.18575963
+    note: 4
+  - timestamp: 64.365715
+    length: 1.3931973
+    note: 6
+  - timestamp: 65.75891
+    length: 1.9504762
+    note: 8
+  - timestamp: 67.70939
+    length: 0.4643991
+    note: 3
+  - timestamp: 67.98803
+    length: 0.18575963
+    note: 8
+  - timestamp: 68.17379
+    length: 0.55727893
+    note: 10
+  - timestamp: 68.63818
+    length: 1.021678
+    note: 8
+  - timestamp: 69.65987
+    length: 0.18575963
+    note: 6
+  - timestamp: 69.84563
+    length: 1.021678
+    note: 8
+  - timestamp: 70.21714
+    length: 0.27863947
+    note: 3
+  - timestamp: 70.8673
+    length: 0.27863947
+    note: 11
+  - timestamp: 71.05306
+    length: 0.27863947
+    note: 10
+  - timestamp: 71.3317
+    length: 0.37151927
+    note: 8
+  - timestamp: 71.610344
+    length: 0.27863947
+    note: 3
+  - timestamp: 71.7961
+    length: 0.6501587
+    note: 8
+  - timestamp: 72.44626
+    length: 0.4643991
+    note: 6
+  - timestamp: 72.91066
+    length: 0.83591837
+    note: 8
+  - timestamp: 73.746574
+    length: 0.37151927
+    note: 11
+  - timestamp: 74.118095
+    length: 0.18575963
+    note: 10
+  - timestamp: 74.303856
+    length: 1.021678
+    note: 8
+  - timestamp: 74.86114
+    length: 0.27863947
+    note: 3
+  - timestamp: 75.32553
+    length: 0.27863947
+    note: 6
+  - timestamp: 75.60417
+    length: 0.9287982
+    note: 8
+  - timestamp: 76.532974
+    length: 0.37151927
+    note: 11
+  - timestamp: 76.81161
+    length: 0.27863947
+    note: 10
+  - timestamp: 77.09025
+    length: 0.18575963
+    note: 8
+  - timestamp: 77.18313
+    length: 0.6501587
+    note: 3
+  - timestamp: 77.74041
+    length: 0.55727893
+    note: 8
+  - timestamp: 78.29768
+    length: 0.27863947
+    note: 6
+  - timestamp: 78.576324
+    length: 0.18575963
+    note: 3
+  - timestamp: 78.669205
+    length: 0.6501587
+    note: 8
+  - timestamp: 79.31937
+    length: 0.4643991
+    note: 11
+  - timestamp: 79.78377
+    length: 0.55727893
+    note: 3
+  - timestamp: 80.34104
+    length: 0.55727893
+    note: 8
+  - timestamp: 80.89832
+    length: 0.27863947
+    note: 1
+  - timestamp: 81.08408
+    length: 0.27863947
+    note: 6
+  - timestamp: 81.362724
+    length: 0.18575963
+    note: 8
+  - timestamp: 81.455605
+    length: 0.27863947
+    note: 10
+  - timestamp: 81.73424
+    length: 0.27863947
+    note: 8
+  - timestamp: 81.92
+    length: 0.27863947
+    note: 3
+  - timestamp: 82.10576
+    length: 0.55727893
+    note: 11
+  - timestamp: 82.57016
+    length: 0.27863947
+    note: 10
+  - timestamp: 82.8488
+    length: 1.021678
+    note: 8
+  - timestamp: 83.870476
+    length: 0.4643991
+    note: 6
+  - timestamp: 84.33488
+    length: 0.18575963
+    note: 8
+  - timestamp: 84.42776
+    length: 0.4643991
+    note: 3
+  - timestamp: 84.98503
+    length: 0.55727893
+    note: 11
+  - timestamp: 85.72807
+    length: 0.27863947
+    note: 6
+  - timestamp: 86.006714
+    length: 0.74303854
+    note: 8
+  - timestamp: 86.74975
+    length: 0.37151927
+    note: 6
+  - timestamp: 87.12127
+    length: 0.9287982
+    note: 8
+  - timestamp: 87.95719
+    length: 0.37151927
+    note: 11
+  - timestamp: 88.235825
+    length: 0.27863947
+    note: 10
+  - timestamp: 88.514465
+    length: 1.1145579
+    note: 8
+  - timestamp: 89.62903
+    length: 0.37151927
+    note: 6
+  - timestamp: 90.00054
+    length: 0.55727893
+    note: 8
+  - timestamp: 90.55782
+    length: 0.18575963
+    note: 10
+  - timestamp: 90.74358
+    length: 0.27863947
+    note: 11
+  - timestamp: 91.115105
+    length: 0.18575963
+    note: 3
+  - timestamp: 91.207985
+    length: 0.37151927
+    note: 6
+  - timestamp: 91.48662
+    length: 2.8792744
+    note: 4
+  - timestamp: 94.3659
+    length: 0.37151927
+    note: 10
+  - timestamp: 94.55166
+    length: 2.6935148
+    note: 6
+  - timestamp: 95.944855
+    length: 0.18575963
+    note: 10
+  - timestamp: 97.24517
+    length: 2.6935148
+    note: 8
+  - timestamp: 99.93868
+    length: 2.9721541
+    note: 11
+  - timestamp: 102.910835
+    length: 2.8792744
+    note: 4
+  - timestamp: 105.697235
+    length: 0.37151927
+    note: 10
+  - timestamp: 106.068756
+    length: 2.507755
+    note: 6
+  - timestamp: 108.39075
+    length: 0.18575963
+    note: 10
+  - timestamp: 108.57651
+    length: 2.9721541
+    note: 8
+  - timestamp: 111.45578
+    length: 2.7863946
+    note: 11
+  - timestamp: 114.33506
+    length: 2.8792744
+    note: 4
+  - timestamp: 117.12145
+    length: 0.27863947
+    note: 10
+  - timestamp: 117.30721
+    length: 1.3931973
+    note: 6
+  - timestamp: 118.60753
+    length: 0.37151927
+    note: 10
+  - timestamp: 118.70041
+    length: 1.3931973
+    note: 7
+  - timestamp: 120.093605
+    length: 2.7863946
+    note: 8
+  - timestamp: 122.88
+    length: 2.8792744
+    note: 11
+  - timestamp: 125.75928
+    length: 2.8792744
+    note: 4
+  - timestamp: 128.63855
+    length: 1.3931973
+    note: 6
+  - timestamp: 130.03175
+    length: 1.3931973
+    note: 7
+  - timestamp: 131.33206
+    length: 0.18575963
+    note: 10
+  - timestamp: 131.51782
+    length: 6.687347
+    note: 8
+  - timestamp: 137.64789
+    length: 0.27863947
+    note: 3
+  - timestamp: 138.20517
+    length: 0.27863947
+    note: 6
+  - timestamp: 138.39093
+    length: 1.021678
+    note: 8
+  - timestamp: 139.41261
+    length: 0.37151927
+    note: 11
+  - timestamp: 139.69125
+    length: 0.27863947
+    note: 10
+  - timestamp: 139.87701
+    length: 1.1145579
+    note: 8
+  - timestamp: 140.99156
+    length: 0.37151927
+    note: 6
+  - timestamp: 141.36308
+    length: 0.83591837
+    note: 8
+  - timestamp: 142.199
+    length: 0.4643991
+    note: 4
+  - timestamp: 142.57053
+    length: 0.37151927
+    note: 3
+  - timestamp: 142.6634
+    length: 0.18575963
+    note: 10
+  - timestamp: 142.84917
+    length: 0.27863947
+    note: 6
+  - timestamp: 143.1278
+    length: 0.18575963
+    note: 8
+  - timestamp: 143.22069
+    length: 0.55727893
+    note: 3
+  - timestamp: 143.87083
+    length: 0.27863947
+    note: 6
+  - timestamp: 144.14948
+    length: 0.9287982
+    note: 8
+  - timestamp: 145.07828
+    length: 0.37151927
+    note: 11
+  - timestamp: 145.4498
+    length: 0.18575963
+    note: 10
+  - timestamp: 145.63556
+    length: 0.27863947
+    note: 8
+  - timestamp: 145.82132
+    length: 0.18575963
+    note: 3
+  - timestamp: 146.09996
+    length: 0.37151927
+    note: 9
+  - timestamp: 146.3786
+    length: 0.4643991
+    note: 10
+  - timestamp: 146.84299
+    length: 0.27863947
+    note: 11
+  - timestamp: 147.12163
+    length: 0.37151927
+    note: 0
+  - timestamp: 147.40027
+    length: 0.18575963
+    note: 1
+  - timestamp: 147.58603
+    length: 0.27863947
+    note: 2
+  - timestamp: 147.86467
+    length: 0.27863947
+    note: 4
+  - timestamp: 148.05043
+    length: 0.27863947
+    note: 5
+  - timestamp: 148.32907
+    length: 0.18575963
+    note: 6
+  - timestamp: 148.60771
+    length: 1.1145579
+    note: 8
+  - timestamp: 149.72227
+    length: 0.18575963
+    note: 6
+  - timestamp: 149.81514
+    length: 0.4643991
+    note: 8
+  - timestamp: 150.18666
+    length: 0.27863947
+    note: 10
+  - timestamp: 150.37242
+    length: 0.4643991
+    note: 8
+  - timestamp: 150.83682
+    length: 0.27863947
+    note: 11
+  - timestamp: 151.11546
+    length: 0.27863947
+    note: 10
+  - timestamp: 151.3941
+    length: 2.2291157
+    note: 8
+  - timestamp: 153.62321
+    length: 0.37151927
+    note: 4
+  - timestamp: 153.99474
+    length: 0.37151927
+    note: 3
+  - timestamp: 154.45914
+    length: 0.9287982
+    note: 8
+  - timestamp: 155.38794
+    length: 0.18575963
+    note: 6
+  - timestamp: 155.5737
+    length: 0.6501587
+    note: 8
+  - timestamp: 156.13098
+    length: 0.18575963
+    note: 6
+  - timestamp: 156.31674
+    length: 0.18575963
+    note: 8
+  - timestamp: 156.4096
+    length: 0.37151927
+    note: 11
+  - timestamp: 156.78113
+    length: 0.4643991
+    note: 10
+  - timestamp: 157.24553
+    length: 0.9287982
+    note: 8
+  - timestamp: 157.98857
+    length: 0.18575963
+    note: 1
+  - timestamp: 158.17433
+    length: 0.27863947
+    note: 6
+  - timestamp: 158.45297
+    length: 6.5015874
+    note: 8
+  - timestamp: 164.95456
+    length: 0.18575963
+    note: 9
+  - timestamp: 165.14032
+    length: 0.27863947
+    note: 0
+  - timestamp: 165.41896
+    length: 0.37151927
+    note: 8
+  - timestamp: 165.6976
+    length: 0.27863947
+    note: 2
+  - timestamp: 165.88336
+    length: 0.18575963
+    note: 1
+  - timestamp: 166.06912
+    length: 0.18575963
+    note: 0
+  - timestamp: 166.25488
+    length: 0.37151927
+    note: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3897cfcf026eb848b3be5b9a80f84af, type: 3}
+  m_Name: 7
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: d32b58b27dfdffe4ca7bf6998017a056, type: 3}
+  _tracks:
+  - {fileID: 2927114700291038711}
+  - {fileID: -8270092311078917046}
+  - {fileID: -7462614176059741344}
+  - {fileID: 7139461258397734818}
+  - {fileID: -2157632205068606702}
+--- !u!114 &2927114700291038711
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 205664eb0975819479c74d7135dea8de, type: 3}
+  m_Name: Beats
+  m_EditorClassIdentifier: 
+  _name: Beats
+  _features:
+  - timestamp: 1.0681179
+    length: 0
+    bpm: 112.34715
+  - timestamp: 1.6950567
+    length: 0
+    bpm: 120.185326
+  - timestamp: 1.9504762
+    length: 0
+    bpm: 123.046875
+  - timestamp: 2.4380953
+    length: 0
+    bpm: 123.046875
+  - timestamp: 2.9257143
+    length: 0
+    bpm: 123.046875
+  - timestamp: 3.3901134
+    length: 0
+    bpm: 124.23003
+  - timestamp: 3.8545125
+    length: 0
+    bpm: 125.43613
+  - timestamp: 4.3189116
+    length: 0
+    bpm: 125.43613
+  - timestamp: 5.01551
+    length: 0
+    bpm: 83.8956
+  - timestamp: 5.7121086
+    length: 0
+    bpm: 83.8956
+  - timestamp: 6.431927
+    length: 0
+    bpm: 83.8956
+  - timestamp: 7.151746
+    length: 0
+    bpm: 83.8956
+  - timestamp: 7.8715644
+    length: 0
+    bpm: 83.8956
+  - timestamp: 8.591383
+    length: 0
+    bpm: 83.8956
+  - timestamp: 9.311202
+    length: 0
+    bpm: 83.8956
+  - timestamp: 10.03102
+    length: 0
+    bpm: 83.8956
+  - timestamp: 10.750839
+    length: 0
+    bpm: 83.8956
+  - timestamp: 11.470657
+    length: 0
+    bpm: 83.8956
+  - timestamp: 12.167256
+    length: 0
+    bpm: 83.8956
+  - timestamp: 12.863854
+    length: 0
+    bpm: 83.8956
+  - timestamp: 13.5836735
+    length: 0
+    bpm: 83.8956
+  - timestamp: 14.303492
+    length: 0
+    bpm: 83.8956
+  - timestamp: 15.023311
+    length: 0
+    bpm: 83.8956
+  - timestamp: 15.743129
+    length: 0
+    bpm: 83.8956
+  - timestamp: 16.462948
+    length: 0
+    bpm: 83.8956
+  - timestamp: 17.159546
+    length: 0
+    bpm: 83.8956
+  - timestamp: 17.856146
+    length: 0
+    bpm: 83.8956
+  - timestamp: 18.575964
+    length: 0
+    bpm: 83.8956
+  - timestamp: 19.295782
+    length: 0
+    bpm: 83.8956
+  - timestamp: 20.0156
+    length: 0
+    bpm: 83.8956
+  - timestamp: 20.73542
+    length: 0
+    bpm: 83.8956
+  - timestamp: 21.455238
+    length: 0
+    bpm: 83.8956
+  - timestamp: 22.175056
+    length: 0
+    bpm: 83.8956
+  - timestamp: 22.894875
+    length: 0
+    bpm: 83.8956
+  - timestamp: 23.591475
+    length: 0
+    bpm: 83.8956
+  - timestamp: 24.288073
+    length: 0
+    bpm: 83.8956
+  - timestamp: 25.00789
+    length: 0
+    bpm: 83.8956
+  - timestamp: 25.727709
+    length: 0
+    bpm: 83.8956
+  - timestamp: 26.447529
+    length: 0
+    bpm: 83.8956
+  - timestamp: 27.167347
+    length: 0
+    bpm: 83.8956
+  - timestamp: 27.887165
+    length: 0
+    bpm: 83.8956
+  - timestamp: 28.606983
+    length: 0
+    bpm: 83.8956
+  - timestamp: 29.326803
+    length: 0
+    bpm: 83.8956
+  - timestamp: 30.023401
+    length: 0
+    bpm: 83.8956
+  - timestamp: 30.74322
+    length: 0
+    bpm: 83.8956
+  - timestamp: 31.46304
+    length: 0
+    bpm: 83.8956
+  - timestamp: 32.159637
+    length: 0
+    bpm: 83.8956
+  - timestamp: 32.879456
+    length: 0
+    bpm: 83.8956
+  - timestamp: 33.599274
+    length: 0
+    bpm: 83.8956
+  - timestamp: 34.31909
+    length: 0
+    bpm: 83.8956
+  - timestamp: 35.03891
+    length: 0
+    bpm: 83.8956
+  - timestamp: 35.73551
+    length: 0
+    bpm: 83.8956
+  - timestamp: 36.43211
+    length: 0
+    bpm: 83.8956
+  - timestamp: 37.151928
+    length: 0
+    bpm: 83.8956
+  - timestamp: 37.871746
+    length: 0
+    bpm: 83.8956
+  - timestamp: 38.591564
+    length: 0
+    bpm: 83.8956
+  - timestamp: 39.311382
+    length: 0
+    bpm: 83.8956
+  - timestamp: 40.0312
+    length: 0
+    bpm: 83.8956
+  - timestamp: 40.75102
+    length: 0
+    bpm: 83.8956
+  - timestamp: 41.47084
+    length: 0
+    bpm: 83.8956
+  - timestamp: 42.19066
+    length: 0
+    bpm: 83.8956
+  - timestamp: 42.887257
+    length: 0
+    bpm: 83.8956
+  - timestamp: 43.583855
+    length: 0
+    bpm: 83.8956
+  - timestamp: 44.303673
+    length: 0
+    bpm: 83.8956
+  - timestamp: 45.02349
+    length: 0
+    bpm: 83.8956
+  - timestamp: 45.74331
+    length: 0
+    bpm: 83.8956
+  - timestamp: 46.46313
+    length: 0
+    bpm: 83.8956
+  - timestamp: 47.18295
+    length: 0
+    bpm: 83.8956
+  - timestamp: 47.879547
+    length: 0
+    bpm: 83.8956
+  - timestamp: 48.576145
+    length: 0
+    bpm: 83.8956
+  - timestamp: 49.295963
+    length: 0
+    bpm: 83.8956
+  - timestamp: 50.01578
+    length: 0
+    bpm: 83.8956
+  - timestamp: 50.7356
+    length: 0
+    bpm: 83.8956
+  - timestamp: 51.455418
+    length: 0
+    bpm: 83.8956
+  - timestamp: 52.17524
+    length: 0
+    bpm: 83.8956
+  - timestamp: 52.895058
+    length: 0
+    bpm: 83.8956
+  - timestamp: 53.614876
+    length: 0
+    bpm: 83.8956
+  - timestamp: 54.148933
+    length: 0
+    bpm: 83.8956
+  - timestamp: 54.84553
+    length: 0
+    bpm: 83.8956
+  - timestamp: 55.542133
+    length: 0
+    bpm: 83.8956
+  - timestamp: 56.26195
+    length: 0
+    bpm: 83.8956
+  - timestamp: 56.98177
+    length: 0
+    bpm: 83.8956
+  - timestamp: 57.701588
+    length: 0
+    bpm: 83.8956
+  - timestamp: 58.421406
+    length: 0
+    bpm: 83.8956
+  - timestamp: 59.141224
+    length: 0
+    bpm: 83.8956
+  - timestamp: 59.861042
+    length: 0
+    bpm: 83.8956
+  - timestamp: 60.58086
+    length: 0
+    bpm: 83.8956
+  - timestamp: 61.277462
+    length: 0
+    bpm: 83.8956
+  - timestamp: 61.97406
+    length: 0
+    bpm: 83.8956
+  - timestamp: 62.69388
+    length: 0
+    bpm: 83.8956
+  - timestamp: 63.413696
+    length: 0
+    bpm: 83.8956
+  - timestamp: 64.133514
+    length: 0
+    bpm: 83.8956
+  - timestamp: 64.85333
+    length: 0
+    bpm: 83.8956
+  - timestamp: 65.57315
+    length: 0
+    bpm: 83.8956
+  - timestamp: 66.29297
+    length: 0
+    bpm: 83.8956
+  - timestamp: 67.01279
+    length: 0
+    bpm: 83.8956
+  - timestamp: 67.70939
+    length: 0
+    bpm: 83.8956
+  - timestamp: 68.40598
+    length: 0
+    bpm: 83.8956
+  - timestamp: 69.12581
+    length: 0
+    bpm: 83.8956
+  - timestamp: 69.84563
+    length: 0
+    bpm: 83.8956
+  - timestamp: 70.565445
+    length: 0
+    bpm: 83.8956
+  - timestamp: 71.28526
+    length: 0
+    bpm: 83.8956
+  - timestamp: 72.00508
+    length: 0
+    bpm: 83.8956
+  - timestamp: 72.7249
+    length: 0
+    bpm: 83.8956
+  - timestamp: 73.23574
+    length: 0
+    bpm: 83.8956
+  - timestamp: 73.932335
+    length: 0
+    bpm: 83.8956
+  - timestamp: 74.65215
+    length: 0
+    bpm: 83.8956
+  - timestamp: 75.37197
+    length: 0
+    bpm: 83.8956
+  - timestamp: 76.09179
+    length: 0
+    bpm: 83.8956
+  - timestamp: 76.81161
+    length: 0
+    bpm: 83.8956
+  - timestamp: 77.531425
+    length: 0
+    bpm: 83.8956
+  - timestamp: 78.25124
+    length: 0
+    bpm: 83.8956
+  - timestamp: 78.97107
+    length: 0
+    bpm: 83.8956
+  - timestamp: 79.66766
+    length: 0
+    bpm: 83.8956
+  - timestamp: 80.364265
+    length: 0
+    bpm: 83.8956
+  - timestamp: 81.08408
+    length: 0
+    bpm: 83.8956
+  - timestamp: 81.8039
+    length: 0
+    bpm: 83.8956
+  - timestamp: 82.52372
+    length: 0
+    bpm: 83.8956
+  - timestamp: 83.24354
+    length: 0
+    bpm: 83.8956
+  - timestamp: 83.963356
+    length: 0
+    bpm: 83.8956
+  - timestamp: 84.683174
+    length: 0
+    bpm: 83.8956
+  - timestamp: 85.379776
+    length: 0
+    bpm: 83.8956
+  - timestamp: 86.07637
+    length: 0
+    bpm: 83.8956
+  - timestamp: 86.79619
+    length: 0
+    bpm: 83.8956
+  - timestamp: 87.51601
+    length: 0
+    bpm: 83.8956
+  - timestamp: 88.235825
+    length: 0
+    bpm: 83.8956
+  - timestamp: 88.95564
+    length: 0
+    bpm: 83.8956
+  - timestamp: 89.67547
+    length: 0
+    bpm: 83.8956
+  - timestamp: 90.39529
+    length: 0
+    bpm: 83.8956
+  - timestamp: 91.115105
+    length: 0
+    bpm: 83.8956
+  - timestamp: 91.8117
+    length: 0
+    bpm: 83.8956
+  - timestamp: 92.5083
+    length: 0
+    bpm: 83.8956
+  - timestamp: 93.22812
+    length: 0
+    bpm: 83.8956
+  - timestamp: 93.94794
+    length: 0
+    bpm: 83.8956
+  - timestamp: 94.667755
+    length: 0
+    bpm: 83.8956
+  - timestamp: 95.38757
+    length: 0
+    bpm: 83.8956
+  - timestamp: 96.10739
+    length: 0
+    bpm: 83.8956
+  - timestamp: 96.82721
+    length: 0
+    bpm: 83.8956
+  - timestamp: 97.52381
+    length: 0
+    bpm: 83.8956
+  - timestamp: 98.24363
+    length: 0
+    bpm: 83.8956
+  - timestamp: 98.96345
+    length: 0
+    bpm: 83.8956
+  - timestamp: 99.66004
+    length: 0
+    bpm: 83.8956
+  - timestamp: 100.37987
+    length: 0
+    bpm: 83.8956
+  - timestamp: 101.099686
+    length: 0
+    bpm: 83.8956
+  - timestamp: 101.8195
+    length: 0
+    bpm: 83.8956
+  - timestamp: 102.53932
+    length: 0
+    bpm: 83.8956
+  - timestamp: 103.235916
+    length: 0
+    bpm: 83.8956
+  - timestamp: 103.93252
+    length: 0
+    bpm: 83.8956
+  - timestamp: 104.652336
+    length: 0
+    bpm: 83.8956
+  - timestamp: 105.372154
+    length: 0
+    bpm: 83.8956
+  - timestamp: 106.09197
+    length: 0
+    bpm: 83.8956
+  - timestamp: 106.81179
+    length: 0
+    bpm: 83.8956
+  - timestamp: 107.53161
+    length: 0
+    bpm: 83.8956
+  - timestamp: 108.25143
+    length: 0
+    bpm: 83.8956
+  - timestamp: 108.971245
+    length: 0
+    bpm: 83.8956
+  - timestamp: 109.66785
+    length: 0
+    bpm: 83.8956
+  - timestamp: 110.387665
+    length: 0
+    bpm: 83.8956
+  - timestamp: 111.08427
+    length: 0
+    bpm: 83.8956
+  - timestamp: 111.804085
+    length: 0
+    bpm: 83.8956
+  - timestamp: 112.5239
+    length: 0
+    bpm: 83.8956
+  - timestamp: 113.24372
+    length: 0
+    bpm: 83.8956
+  - timestamp: 113.96354
+    length: 0
+    bpm: 83.8956
+  - timestamp: 114.68336
+    length: 0
+    bpm: 83.8956
+  - timestamp: 115.37995
+    length: 0
+    bpm: 83.8956
+  - timestamp: 116.07655
+    length: 0
+    bpm: 83.8956
+  - timestamp: 116.79637
+    length: 0
+    bpm: 83.8956
+  - timestamp: 117.51619
+    length: 0
+    bpm: 83.8956
+  - timestamp: 118.23601
+    length: 0
+    bpm: 83.8956
+  - timestamp: 118.955826
+    length: 0
+    bpm: 83.8956
+  - timestamp: 119.675644
+    length: 0
+    bpm: 83.8956
+  - timestamp: 120.39546
+    length: 0
+    bpm: 83.8956
+  - timestamp: 121.11528
+    length: 0
+    bpm: 83.8956
+  - timestamp: 121.81188
+    length: 0
+    bpm: 83.8956
+  - timestamp: 122.508484
+    length: 0
+    bpm: 83.8956
+  - timestamp: 123.2283
+    length: 0
+    bpm: 83.8956
+  - timestamp: 123.94812
+    length: 0
+    bpm: 83.8956
+  - timestamp: 124.66794
+    length: 0
+    bpm: 83.8956
+  - timestamp: 125.38776
+    length: 0
+    bpm: 83.8956
+  - timestamp: 126.107574
+    length: 0
+    bpm: 83.8956
+  - timestamp: 126.80417
+    length: 0
+    bpm: 83.8956
+  - timestamp: 127.523994
+    length: 0
+    bpm: 83.8956
+  - timestamp: 128.2438
+    length: 0
+    bpm: 83.8956
+  - timestamp: 128.96362
+    length: 0
+    bpm: 83.8956
+  - timestamp: 129.66023
+    length: 0
+    bpm: 83.8956
+  - timestamp: 130.38005
+    length: 0
+    bpm: 83.8956
+  - timestamp: 131.09987
+    length: 0
+    bpm: 83.8956
+  - timestamp: 131.81969
+    length: 0
+    bpm: 83.8956
+  - timestamp: 132.51628
+    length: 0
+    bpm: 83.8956
+  - timestamp: 133.2361
+    length: 0
+    bpm: 83.8956
+  - timestamp: 133.95592
+    length: 0
+    bpm: 83.8956
+  - timestamp: 134.67574
+    length: 0
+    bpm: 83.8956
+  - timestamp: 135.37233
+    length: 0
+    bpm: 83.8956
+  - timestamp: 136.09215
+    length: 0
+    bpm: 83.8956
+  - timestamp: 136.81197
+    length: 0
+    bpm: 83.8956
+  - timestamp: 137.53178
+    length: 0
+    bpm: 83.8956
+  - timestamp: 138.25162
+    length: 0
+    bpm: 83.8956
+  - timestamp: 138.94821
+    length: 0
+    bpm: 83.8956
+  - timestamp: 139.6448
+    length: 0
+    bpm: 83.8956
+  - timestamp: 140.36462
+    length: 0
+    bpm: 83.8956
+  - timestamp: 141.08444
+    length: 0
+    bpm: 83.8956
+  - timestamp: 141.80426
+    length: 0
+    bpm: 83.8956
+  - timestamp: 142.52408
+    length: 0
+    bpm: 83.8956
+  - timestamp: 143.2439
+    length: 0
+    bpm: 83.8956
+  - timestamp: 143.96371
+    length: 0
+    bpm: 83.8956
+  - timestamp: 144.68353
+    length: 0
+    bpm: 83.8956
+  - timestamp: 145.38014
+    length: 0
+    bpm: 83.8956
+  - timestamp: 146.09996
+    length: 0
+    bpm: 83.8956
+  - timestamp: 146.79655
+    length: 0
+    bpm: 83.8956
+  - timestamp: 147.51637
+    length: 0
+    bpm: 83.8956
+  - timestamp: 148.23619
+    length: 0
+    bpm: 83.8956
+  - timestamp: 148.95601
+    length: 0
+    bpm: 83.8956
+  - timestamp: 149.67583
+    length: 0
+    bpm: 83.8956
+  - timestamp: 150.39565
+    length: 0
+    bpm: 83.8956
+  - timestamp: 151.09224
+    length: 0
+    bpm: 83.8956
+  - timestamp: 151.78885
+    length: 0
+    bpm: 83.8956
+  - timestamp: 152.50867
+    length: 0
+    bpm: 83.8956
+  - timestamp: 153.22849
+    length: 0
+    bpm: 83.8956
+  - timestamp: 153.9483
+    length: 0
+    bpm: 83.8956
+  - timestamp: 154.66812
+    length: 0
+    bpm: 83.8956
+  - timestamp: 155.38794
+    length: 0
+    bpm: 83.8956
+  - timestamp: 156.10776
+    length: 0
+    bpm: 83.8956
+  - timestamp: 156.80435
+    length: 0
+    bpm: 83.8956
+  - timestamp: 157.50095
+    length: 0
+    bpm: 83.8956
+  - timestamp: 158.22076
+    length: 0
+    bpm: 83.8956
+  - timestamp: 158.94058
+    length: 0
+    bpm: 83.8956
+  - timestamp: 159.66042
+    length: 0
+    bpm: 83.8956
+  - timestamp: 160.38023
+    length: 0
+    bpm: 83.8956
+  - timestamp: 161.10005
+    length: 0
+    bpm: 83.8956
+  - timestamp: 161.81987
+    length: 0
+    bpm: 83.8956
+  - timestamp: 162.53969
+    length: 0
+    bpm: 83.8956
+  - timestamp: 163.2595
+    length: 0
+    bpm: 83.8956
+  - timestamp: 163.9561
+    length: 0
+    bpm: 83.8956
+  - timestamp: 164.6527
+    length: 0
+    bpm: 83.8956
+  - timestamp: 165.3493
+    length: 0
+    bpm: 83.8956
+  - timestamp: 166.06912
+    length: 0
+    bpm: 83.8956
+  - timestamp: 166.78894
+    length: 0
+    bpm: 83.8956
+--- !u!114 &7139461258397734818
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e985e164af1f8741bc82ddddd616c42, type: 3}
+  m_Name: Volume
+  m_EditorClassIdentifier: 
+  _name: Volume
+  _features:
+  - timestamp: -0.4643991
+    length: 0
+    value: 0
+  - timestamp: -0.37151927
+    length: 0
+    value: 0.0010083829
+  - timestamp: -0.27863947
+    length: 0
+    value: 0.02703524
+  - timestamp: -0.18575963
+    length: 0
+    value: 0.100804
+  - timestamp: -0.09287982
+    length: 0
+    value: 0.2079584
+  - timestamp: 0
+    length: 0
+    value: 0.31771314
+  - timestamp: 0.09287982
+    length: 0
+    value: 0.3953695
+  - timestamp: 0.18575963
+    length: 0
+    value: 0.41708618
+  - timestamp: 0.27863947
+    length: 0
+    value: 0.3891513
+  - timestamp: 0.37151927
+    length: 0
+    value: 0.34396544
+  - timestamp: 0.4643991
+    length: 0
+    value: 0.3254887
+  - timestamp: 0.55727893
+    length: 0
+    value: 0.33994624
+  - timestamp: 0.6501587
+    length: 0
+    value: 0.3622258
+  - timestamp: 0.74303854
+    length: 0
+    value: 0.37927875
+  - timestamp: 0.83591837
+    length: 0
+    value: 0.37736586
+  - timestamp: 0.9287982
+    length: 0
+    value: 0.35425633
+  - timestamp: 1.021678
+    length: 0
+    value: 0.32405558
+  - timestamp: 1.1145579
+    length: 0
+    value: 0.3086781
+  - timestamp: 1.2074376
+    length: 0
+    value: 0.32802698
+  - timestamp: 1.3003174
+    length: 0
+    value: 0.3725649
+  - timestamp: 1.3931973
+    length: 0
+    value: 0.41721088
+  - timestamp: 1.4860771
+    length: 0
+    value: 0.44105908
+  - timestamp: 1.578957
+    length: 0
+    value: 0.42665568
+  - timestamp: 1.6718367
+    length: 0
+    value: 0.3807229
+  - timestamp: 1.7647165
+    length: 0
+    value: 0.32587588
+  - timestamp: 1.8575964
+    length: 0
+    value: 0.28601196
+  - timestamp: 1.9504762
+    length: 0
+    value: 0.27066097
+  - timestamp: 2.043356
+    length: 0
+    value: 0.2651877
+  - timestamp: 2.1362357
+    length: 0
+    value: 0.25670573
+  - timestamp: 2.2291157
+    length: 0
+    value: 0.24495308
+  - timestamp: 2.3219955
+    length: 0
+    value: 0.23259449
+  - timestamp: 2.4148753
+    length: 0
+    value: 0.2218786
+  - timestamp: 2.507755
+    length: 0
+    value: 0.21811225
+  - timestamp: 2.6006348
+    length: 0
+    value: 0.24034163
+  - timestamp: 2.6935148
+    length: 0
+    value: 0.2953917
+  - timestamp: 2.7863946
+    length: 0
+    value: 0.36135978
+  - timestamp: 2.8792744
+    length: 0
+    value: 0.41618782
+  - timestamp: 2.9721541
+    length: 0
+    value: 0.44121486
+  - timestamp: 3.065034
+    length: 0
+    value: 0.42383635
+  - timestamp: 3.157914
+    length: 0
+    value: 0.37529293
+  - timestamp: 3.2507937
+    length: 0
+    value: 0.33173496
+  - timestamp: 3.3436735
+    length: 0
+    value: 0.32455814
+  - timestamp: 3.4365532
+    length: 0
+    value: 0.34512478
+  - timestamp: 3.529433
+    length: 0
+    value: 0.36916628
+  - timestamp: 3.622313
+    length: 0
+    value: 0.38355097
+  - timestamp: 3.7151928
+    length: 0
+    value: 0.3748956
+  - timestamp: 3.8080726
+    length: 0
+    value: 0.3476018
+  - timestamp: 3.9009523
+    length: 0
+    value: 0.31828535
+  - timestamp: 3.993832
+    length: 0
+    value: 0.31268302
+  - timestamp: 4.086712
+    length: 0
+    value: 0.34883696
+  - timestamp: 4.1795917
+    length: 0
+    value: 0.40728533
+  - timestamp: 4.2724714
+    length: 0
+    value: 0.4546485
+  - timestamp: 4.3653517
+    length: 0
+    value: 0.46190146
+  - timestamp: 4.4582314
+    length: 0
+    value: 0.41566458
+  - timestamp: 4.551111
+    length: 0
+    value: 0.33058697
+  - timestamp: 4.643991
+    length: 0
+    value: 0.23799181
+  - timestamp: 4.736871
+    length: 0
+    value: 0.17707081
+  - timestamp: 4.8297505
+    length: 0
+    value: 0.15967205
+  - timestamp: 4.9226303
+    length: 0
+    value: 0.16429214
+  - timestamp: 5.01551
+    length: 0
+    value: 0.1754616
+  - timestamp: 5.10839
+    length: 0
+    value: 0.19196197
+  - timestamp: 5.2012696
+    length: 0
+    value: 0.22121333
+  - timestamp: 5.29415
+    length: 0
+    value: 0.26869467
+  - timestamp: 5.3870296
+    length: 0
+    value: 0.33942017
+  - timestamp: 5.4799094
+    length: 0
+    value: 0.43335855
+  - timestamp: 5.572789
+    length: 0
+    value: 0.5279042
+  - timestamp: 5.665669
+    length: 0
+    value: 0.59342045
+  - timestamp: 5.7585487
+    length: 0
+    value: 0.6194041
+  - timestamp: 5.8514285
+    length: 0
+    value: 0.60824823
+  - timestamp: 5.9443083
+    length: 0
+    value: 0.56765515
+  - timestamp: 6.037188
+    length: 0
+    value: 0.510459
+  - timestamp: 6.130068
+    length: 0
+    value: 0.46816254
+  - timestamp: 6.222948
+    length: 0
+    value: 0.46641022
+  - timestamp: 6.315828
+    length: 0
+    value: 0.49362332
+  - timestamp: 6.4087076
+    length: 0
+    value: 0.5222904
+  - timestamp: 6.5015874
+    length: 0
+    value: 0.52999896
+  - timestamp: 6.594467
+    length: 0
+    value: 0.5094913
+  - timestamp: 6.687347
+    length: 0
+    value: 0.47324336
+  - timestamp: 6.7802267
+    length: 0
+    value: 0.44761387
+  - timestamp: 6.8731065
+    length: 0
+    value: 0.46778595
+  - timestamp: 6.9659863
+    length: 0
+    value: 0.53239864
+  - timestamp: 7.058866
+    length: 0
+    value: 0.5971423
+  - timestamp: 7.151746
+    length: 0
+    value: 0.6260441
+  - timestamp: 7.244626
+    length: 0
+    value: 0.6136828
+  - timestamp: 7.337506
+    length: 0
+    value: 0.57481307
+  - timestamp: 7.4303856
+    length: 0
+    value: 0.52510107
+  - timestamp: 7.5232654
+    length: 0
+    value: 0.48762232
+  - timestamp: 7.616145
+    length: 0
+    value: 0.4813261
+  - timestamp: 7.709025
+    length: 0
+    value: 0.49746338
+  - timestamp: 7.8019047
+    length: 0
+    value: 0.5175688
+  - timestamp: 7.8947845
+    length: 0
+    value: 0.53530794
+  - timestamp: 7.987664
+    length: 0
+    value: 0.5474076
+  - timestamp: 8.080544
+    length: 0
+    value: 0.5451714
+  - timestamp: 8.173424
+    length: 0
+    value: 0.5228456
+  - timestamp: 8.266304
+    length: 0
+    value: 0.50117636
+  - timestamp: 8.359183
+    length: 0
+    value: 0.5029938
+  - timestamp: 8.452064
+    length: 0
+    value: 0.5268824
+  - timestamp: 8.544943
+    length: 0
+    value: 0.56054103
+  - timestamp: 8.637823
+    length: 0
+    value: 0.5978408
+  - timestamp: 8.730703
+    length: 0
+    value: 0.62967074
+  - timestamp: 8.823583
+    length: 0
+    value: 0.64712185
+  - timestamp: 8.916463
+    length: 0
+    value: 0.6511847
+  - timestamp: 9.009342
+    length: 0
+    value: 0.66161436
+  - timestamp: 9.102222
+    length: 0
+    value: 0.6847341
+  - timestamp: 9.195102
+    length: 0
+    value: 0.6997535
+  - timestamp: 9.287982
+    length: 0
+    value: 0.69886136
+  - timestamp: 9.380861
+    length: 0
+    value: 0.6989204
+  - timestamp: 9.473742
+    length: 0
+    value: 0.7225187
+  - timestamp: 9.566622
+    length: 0
+    value: 0.7843941
+  - timestamp: 9.659501
+    length: 0
+    value: 0.88455844
+  - timestamp: 9.752381
+    length: 0
+    value: 1.0089992
+  - timestamp: 9.845261
+    length: 0
+    value: 1.1285317
+  - timestamp: 9.938141
+    length: 0
+    value: 1.2116283
+  - timestamp: 10.03102
+    length: 0
+    value: 1.2580104
+  - timestamp: 10.1239
+    length: 0
+    value: 1.2871159
+  - timestamp: 10.21678
+    length: 0
+    value: 1.3107666
+  - timestamp: 10.30966
+    length: 0
+    value: 1.3257573
+  - timestamp: 10.402539
+    length: 0
+    value: 1.3318049
+  - timestamp: 10.4954195
+    length: 0
+    value: 1.3349099
+  - timestamp: 10.5883
+    length: 0
+    value: 1.3408892
+  - timestamp: 10.681179
+    length: 0
+    value: 1.3482003
+  - timestamp: 10.774059
+    length: 0
+    value: 1.3508725
+  - timestamp: 10.866939
+    length: 0
+    value: 1.3338442
+  - timestamp: 10.959819
+    length: 0
+    value: 1.2844461
+  - timestamp: 11.052698
+    length: 0
+    value: 1.2024422
+  - timestamp: 11.145578
+    length: 0
+    value: 1.1221236
+  - timestamp: 11.238458
+    length: 0
+    value: 1.0863211
+  - timestamp: 11.331338
+    length: 0
+    value: 1.1155868
+  - timestamp: 11.424217
+    length: 0
+    value: 1.1972507
+  - timestamp: 11.517097
+    length: 0
+    value: 1.2902697
+  - timestamp: 11.609978
+    length: 0
+    value: 1.3566794
+  - timestamp: 11.702857
+    length: 0
+    value: 1.3803446
+  - timestamp: 11.795737
+    length: 0
+    value: 1.3685375
+  - timestamp: 11.888617
+    length: 0
+    value: 1.3397248
+  - timestamp: 11.981497
+    length: 0
+    value: 1.304006
+  - timestamp: 12.074376
+    length: 0
+    value: 1.2741017
+  - timestamp: 12.167256
+    length: 0
+    value: 1.2600245
+  - timestamp: 12.260136
+    length: 0
+    value: 1.2599789
+  - timestamp: 12.353016
+    length: 0
+    value: 1.2654912
+  - timestamp: 12.445896
+    length: 0
+    value: 1.2531731
+  - timestamp: 12.538775
+    length: 0
+    value: 1.21971
+  - timestamp: 12.631656
+    length: 0
+    value: 1.1828009
+  - timestamp: 12.724535
+    length: 0
+    value: 1.172686
+  - timestamp: 12.817415
+    length: 0
+    value: 1.2054229
+  - timestamp: 12.910295
+    length: 0
+    value: 1.2626777
+  - timestamp: 13.003175
+    length: 0
+    value: 1.314076
+  - timestamp: 13.096054
+    length: 0
+    value: 1.3402252
+  - timestamp: 13.188934
+    length: 0
+    value: 1.3375189
+  - timestamp: 13.281814
+    length: 0
+    value: 1.3250371
+  - timestamp: 13.374694
+    length: 0
+    value: 1.3074757
+  - timestamp: 13.467574
+    length: 0
+    value: 1.2924887
+  - timestamp: 13.560453
+    length: 0
+    value: 1.2864764
+  - timestamp: 13.653334
+    length: 0
+    value: 1.284145
+  - timestamp: 13.746213
+    length: 0
+    value: 1.2861502
+  - timestamp: 13.839093
+    length: 0
+    value: 1.2920767
+  - timestamp: 13.9319725
+    length: 0
+    value: 1.3029324
+  - timestamp: 14.024853
+    length: 0
+    value: 1.3157582
+  - timestamp: 14.117732
+    length: 0
+    value: 1.3233181
+  - timestamp: 14.210612
+    length: 0
+    value: 1.3301737
+  - timestamp: 14.303492
+    length: 0
+    value: 1.3440305
+  - timestamp: 14.396372
+    length: 0
+    value: 1.3661563
+  - timestamp: 14.489252
+    length: 0
+    value: 1.3922219
+  - timestamp: 14.582131
+    length: 0
+    value: 1.4096373
+  - timestamp: 14.675012
+    length: 0
+    value: 1.4120625
+  - timestamp: 14.767891
+    length: 0
+    value: 1.3924804
+  - timestamp: 14.860771
+    length: 0
+    value: 1.3595312
+  - timestamp: 14.95365
+    length: 0
+    value: 1.335633
+  - timestamp: 15.046531
+    length: 0
+    value: 1.3403516
+  - timestamp: 15.13941
+    length: 0
+    value: 1.375472
+  - timestamp: 15.23229
+    length: 0
+    value: 1.4313645
+  - timestamp: 15.3251705
+    length: 0
+    value: 1.4929826
+  - timestamp: 15.41805
+    length: 0
+    value: 1.5445335
+  - timestamp: 15.51093
+    length: 0
+    value: 1.560867
+  - timestamp: 15.603809
+    length: 0
+    value: 1.5284061
+  - timestamp: 15.69669
+    length: 0
+    value: 1.466475
+  - timestamp: 15.789569
+    length: 0
+    value: 1.4157156
+  - timestamp: 15.882449
+    length: 0
+    value: 1.4005971
+  - timestamp: 15.975328
+    length: 0
+    value: 1.4130765
+  - timestamp: 16.068209
+    length: 0
+    value: 1.4284931
+  - timestamp: 16.161089
+    length: 0
+    value: 1.4298441
+  - timestamp: 16.25397
+    length: 0
+    value: 1.4110558
+  - timestamp: 16.346848
+    length: 0
+    value: 1.3852502
+  - timestamp: 16.439728
+    length: 0
+    value: 1.3796861
+  - timestamp: 16.532608
+    length: 0
+    value: 1.4002498
+  - timestamp: 16.625488
+    length: 0
+    value: 1.4281145
+  - timestamp: 16.718367
+    length: 0
+    value: 1.4464911
+  - timestamp: 16.811247
+    length: 0
+    value: 1.4609718
+  - timestamp: 16.904127
+    length: 0
+    value: 1.4866129
+  - timestamp: 16.997007
+    length: 0
+    value: 1.5261945
+  - timestamp: 17.089886
+    length: 0
+    value: 1.5700231
+  - timestamp: 17.182766
+    length: 0
+    value: 1.610857
+  - timestamp: 17.275646
+    length: 0
+    value: 1.6351131
+  - timestamp: 17.368526
+    length: 0
+    value: 1.6335951
+  - timestamp: 17.461407
+    length: 0
+    value: 1.6102524
+  - timestamp: 17.554285
+    length: 0
+    value: 1.587266
+  - timestamp: 17.647165
+    length: 0
+    value: 1.5740387
+  - timestamp: 17.740046
+    length: 0
+    value: 1.5664498
+  - timestamp: 17.832926
+    length: 0
+    value: 1.5621
+  - timestamp: 17.925804
+    length: 0
+    value: 1.5662519
+  - timestamp: 18.018684
+    length: 0
+    value: 1.57804
+  - timestamp: 18.111565
+    length: 0
+    value: 1.5768056
+  - timestamp: 18.204445
+    length: 0
+    value: 1.5474725
+  - timestamp: 18.297325
+    length: 0
+    value: 1.5085766
+  - timestamp: 18.390203
+    length: 0
+    value: 1.4826286
+  - timestamp: 18.483084
+    length: 0
+    value: 1.4844484
+  - timestamp: 18.575964
+    length: 0
+    value: 1.522248
+  - timestamp: 18.668844
+    length: 0
+    value: 1.5868261
+  - timestamp: 18.761723
+    length: 0
+    value: 1.6486899
+  - timestamp: 18.854603
+    length: 0
+    value: 1.6733814
+  - timestamp: 18.947483
+    length: 0
+    value: 1.6668782
+  - timestamp: 19.040363
+    length: 0
+    value: 1.648623
+  - timestamp: 19.133244
+    length: 0
+    value: 1.6286834
+  - timestamp: 19.226122
+    length: 0
+    value: 1.6223931
+  - timestamp: 19.319002
+    length: 0
+    value: 1.6311609
+  - timestamp: 19.411882
+    length: 0
+    value: 1.6348644
+  - timestamp: 19.504763
+    length: 0
+    value: 1.6237149
+  - timestamp: 19.597641
+    length: 0
+    value: 1.5996976
+  - timestamp: 19.690521
+    length: 0
+    value: 1.5799638
+  - timestamp: 19.783401
+    length: 0
+    value: 1.5761627
+  - timestamp: 19.876282
+    length: 0
+    value: 1.5866399
+  - timestamp: 19.96916
+    length: 0
+    value: 1.6022029
+  - timestamp: 20.06204
+    length: 0
+    value: 1.6179273
+  - timestamp: 20.15492
+    length: 0
+    value: 1.6331536
+  - timestamp: 20.2478
+    length: 0
+    value: 1.6443799
+  - timestamp: 20.340681
+    length: 0
+    value: 1.6385487
+  - timestamp: 20.43356
+    length: 0
+    value: 1.6197747
+  - timestamp: 20.52644
+    length: 0
+    value: 1.5982994
+  - timestamp: 20.61932
+    length: 0
+    value: 1.5821662
+  - timestamp: 20.7122
+    length: 0
+    value: 1.5911024
+  - timestamp: 20.805079
+    length: 0
+    value: 1.632435
+  - timestamp: 20.897959
+    length: 0
+    value: 1.6899813
+  - timestamp: 20.990839
+    length: 0
+    value: 1.7402219
+  - timestamp: 21.08372
+    length: 0
+    value: 1.7731119
+  - timestamp: 21.1766
+    length: 0
+    value: 1.7860644
+  - timestamp: 21.269478
+    length: 0
+    value: 1.7672321
+  - timestamp: 21.362358
+    length: 0
+    value: 1.719082
+  - timestamp: 21.455238
+    length: 0
+    value: 1.6702905
+  - timestamp: 21.548119
+    length: 0
+    value: 1.638544
+  - timestamp: 21.640997
+    length: 0
+    value: 1.6308414
+  - timestamp: 21.733877
+    length: 0
+    value: 1.6394762
+  - timestamp: 21.826757
+    length: 0
+    value: 1.6585445
+  - timestamp: 21.919638
+    length: 0
+    value: 1.6769847
+  - timestamp: 22.012518
+    length: 0
+    value: 1.6892389
+  - timestamp: 22.105396
+    length: 0
+    value: 1.7044339
+  - timestamp: 22.198277
+    length: 0
+    value: 1.7303377
+  - timestamp: 22.291157
+    length: 0
+    value: 1.7593738
+  - timestamp: 22.384037
+    length: 0
+    value: 1.7896832
+  - timestamp: 22.476915
+    length: 0
+    value: 1.8194032
+  - timestamp: 22.569796
+    length: 0
+    value: 1.8463448
+  - timestamp: 22.662676
+    length: 0
+    value: 1.8702058
+  - timestamp: 22.755556
+    length: 0
+    value: 1.8940054
+  - timestamp: 22.848434
+    length: 0
+    value: 1.9195211
+  - timestamp: 22.941315
+    length: 0
+    value: 1.9416953
+  - timestamp: 23.034195
+    length: 0
+    value: 1.9539503
+  - timestamp: 23.127075
+    length: 0
+    value: 1.9604955
+  - timestamp: 23.219955
+    length: 0
+    value: 1.9653394
+  - timestamp: 23.312834
+    length: 0
+    value: 1.9587843
+  - timestamp: 23.405714
+    length: 0
+    value: 1.9315987
+  - timestamp: 23.498594
+    length: 0
+    value: 1.8763818
+  - timestamp: 23.591475
+    length: 0
+    value: 1.8080277
+  - timestamp: 23.684353
+    length: 0
+    value: 1.7573253
+  - timestamp: 23.777233
+    length: 0
+    value: 1.7359148
+  - timestamp: 23.870113
+    length: 0
+    value: 1.7269008
+  - timestamp: 23.962994
+    length: 0
+    value: 1.7071332
+  - timestamp: 24.055874
+    length: 0
+    value: 1.6688904
+  - timestamp: 24.148752
+    length: 0
+    value: 1.6377133
+  - timestamp: 24.241632
+    length: 0
+    value: 1.6417825
+  - timestamp: 24.334513
+    length: 0
+    value: 1.7017757
+  - timestamp: 24.427393
+    length: 0
+    value: 1.8041854
+  - timestamp: 24.520271
+    length: 0
+    value: 1.9090266
+  - timestamp: 24.613152
+    length: 0
+    value: 1.9875692
+  - timestamp: 24.706032
+    length: 0
+    value: 2.0223064
+  - timestamp: 24.798912
+    length: 0
+    value: 2.0003345
+  - timestamp: 24.891792
+    length: 0
+    value: 1.9308902
+  - timestamp: 24.98467
+    length: 0
+    value: 1.8310523
+  - timestamp: 25.07755
+    length: 0
+    value: 1.7428558
+  - timestamp: 25.170431
+    length: 0
+    value: 1.698818
+  - timestamp: 25.263311
+    length: 0
+    value: 1.6970279
+  - timestamp: 25.35619
+    length: 0
+    value: 1.7140728
+  - timestamp: 25.44907
+    length: 0
+    value: 1.72773
+  - timestamp: 25.54195
+    length: 0
+    value: 1.7465428
+  - timestamp: 25.63483
+    length: 0
+    value: 1.7814596
+  - timestamp: 25.727709
+    length: 0
+    value: 1.8385111
+  - timestamp: 25.82059
+    length: 0
+    value: 1.9163562
+  - timestamp: 25.91347
+    length: 0
+    value: 1.986806
+  - timestamp: 26.00635
+    length: 0
+    value: 2.0280492
+  - timestamp: 26.09923
+    length: 0
+    value: 2.0396998
+  - timestamp: 26.192108
+    length: 0
+    value: 2.020774
+  - timestamp: 26.284988
+    length: 0
+    value: 1.9738307
+  - timestamp: 26.377869
+    length: 0
+    value: 1.8950915
+  - timestamp: 26.470749
+    length: 0
+    value: 1.8094984
+  - timestamp: 26.563627
+    length: 0
+    value: 1.7452253
+  - timestamp: 26.656507
+    length: 0
+    value: 1.7229774
+  - timestamp: 26.749388
+    length: 0
+    value: 1.7462081
+  - timestamp: 26.842268
+    length: 0
+    value: 1.78409
+  - timestamp: 26.935148
+    length: 0
+    value: 1.8083006
+  - timestamp: 27.028027
+    length: 0
+    value: 1.8205618
+  - timestamp: 27.120907
+    length: 0
+    value: 1.8339858
+  - timestamp: 27.213787
+    length: 0
+    value: 1.8673412
+  - timestamp: 27.306667
+    length: 0
+    value: 1.9150329
+  - timestamp: 27.399546
+    length: 0
+    value: 1.9643836
+  - timestamp: 27.492426
+    length: 0
+    value: 2.0002162
+  - timestamp: 27.585306
+    length: 0
+    value: 2.0065079
+  - timestamp: 27.678186
+    length: 0
+    value: 1.9838657
+  - timestamp: 27.771067
+    length: 0
+    value: 1.9357153
+  - timestamp: 27.863945
+    length: 0
+    value: 1.8709941
+  - timestamp: 27.956825
+    length: 0
+    value: 1.8109629
+  - timestamp: 28.049706
+    length: 0
+    value: 1.7757992
+  - timestamp: 28.142586
+    length: 0
+    value: 1.7761335
+  - timestamp: 28.235464
+    length: 0
+    value: 1.7975633
+  - timestamp: 28.328344
+    length: 0
+    value: 1.809287
+  - timestamp: 28.421225
+    length: 0
+    value: 1.798848
+  - timestamp: 28.514105
+    length: 0
+    value: 1.7715545
+  - timestamp: 28.606983
+    length: 0
+    value: 1.7552668
+  - timestamp: 28.699863
+    length: 0
+    value: 1.7669696
+  - timestamp: 28.792744
+    length: 0
+    value: 1.8041191
+  - timestamp: 28.885624
+    length: 0
+    value: 1.8525797
+  - timestamp: 28.978504
+    length: 0
+    value: 1.8862103
+  - timestamp: 29.071383
+    length: 0
+    value: 1.8812951
+  - timestamp: 29.164263
+    length: 0
+    value: 1.8418546
+  - timestamp: 29.257143
+    length: 0
+    value: 1.7774715
+  - timestamp: 29.350023
+    length: 0
+    value: 1.7229162
+  - timestamp: 29.442902
+    length: 0
+    value: 1.7028784
+  - timestamp: 29.535782
+    length: 0
+    value: 1.7080265
+  - timestamp: 29.628662
+    length: 0
+    value: 1.7024004
+  - timestamp: 29.721542
+    length: 0
+    value: 1.6612016
+  - timestamp: 29.814423
+    length: 0
+    value: 1.6058397
+  - timestamp: 29.9073
+    length: 0
+    value: 1.5750153
+  - timestamp: 30.000181
+    length: 0
+    value: 1.6004509
+  - timestamp: 30.093061
+    length: 0
+    value: 1.689012
+  - timestamp: 30.185942
+    length: 0
+    value: 1.8033252
+  - timestamp: 30.27882
+    length: 0
+    value: 1.8963917
+  - timestamp: 30.3717
+    length: 0
+    value: 1.9427834
+  - timestamp: 30.46458
+    length: 0
+    value: 1.9370289
+  - timestamp: 30.55746
+    length: 0
+    value: 1.8870926
+  - timestamp: 30.650341
+    length: 0
+    value: 1.8032317
+  - timestamp: 30.74322
+    length: 0
+    value: 1.7208778
+  - timestamp: 30.8361
+    length: 0
+    value: 1.6742688
+  - timestamp: 30.92898
+    length: 0
+    value: 1.6719865
+  - timestamp: 31.02186
+    length: 0
+    value: 1.686151
+  - timestamp: 31.114738
+    length: 0
+    value: 1.6864684
+  - timestamp: 31.207619
+    length: 0
+    value: 1.6736227
+  - timestamp: 31.300499
+    length: 0
+    value: 1.6719346
+  - timestamp: 31.39338
+    length: 0
+    value: 1.7004192
+  - timestamp: 31.486258
+    length: 0
+    value: 1.7687985
+  - timestamp: 31.579138
+    length: 0
+    value: 1.8534715
+  - timestamp: 31.672018
+    length: 0
+    value: 1.9212098
+  - timestamp: 31.764898
+    length: 0
+    value: 1.9597602
+  - timestamp: 31.857779
+    length: 0
+    value: 1.973381
+  - timestamp: 31.950657
+    length: 0
+    value: 1.960506
+  - timestamp: 32.043537
+    length: 0
+    value: 1.9157624
+  - timestamp: 32.136417
+    length: 0
+    value: 1.843925
+  - timestamp: 32.229298
+    length: 0
+    value: 1.7745891
+  - timestamp: 32.322178
+    length: 0
+    value: 1.7360157
+  - timestamp: 32.41506
+    length: 0
+    value: 1.7428966
+  - timestamp: 32.50794
+    length: 0
+    value: 1.7820508
+  - timestamp: 32.600815
+    length: 0
+    value: 1.8138136
+  - timestamp: 32.693695
+    length: 0
+    value: 1.8254656
+  - timestamp: 32.786575
+    length: 0
+    value: 1.8304473
+  - timestamp: 32.879456
+    length: 0
+    value: 1.8476791
+  - timestamp: 32.972336
+    length: 0
+    value: 1.8846217
+  - timestamp: 33.065216
+    length: 0
+    value: 1.9343278
+  - timestamp: 33.158096
+    length: 0
+    value: 1.9807521
+  - timestamp: 33.250977
+    length: 0
+    value: 2.0078301
+  - timestamp: 33.343853
+    length: 0
+    value: 2.0036514
+  - timestamp: 33.436733
+    length: 0
+    value: 1.9726262
+  - timestamp: 33.529613
+    length: 0
+    value: 1.9145408
+  - timestamp: 33.622494
+    length: 0
+    value: 1.8444246
+  - timestamp: 33.715374
+    length: 0
+    value: 1.7847066
+  - timestamp: 33.808254
+    length: 0
+    value: 1.7570443
+  - timestamp: 33.901134
+    length: 0
+    value: 1.7600057
+  - timestamp: 33.994015
+    length: 0
+    value: 1.7762252
+  - timestamp: 34.086895
+    length: 0
+    value: 1.7900494
+  - timestamp: 34.17977
+    length: 0
+    value: 1.7941668
+  - timestamp: 34.27265
+    length: 0
+    value: 1.7978225
+  - timestamp: 34.365532
+    length: 0
+    value: 1.819976
+  - timestamp: 34.458412
+    length: 0
+    value: 1.8579534
+  - timestamp: 34.551292
+    length: 0
+    value: 1.9014422
+  - timestamp: 34.644173
+    length: 0
+    value: 1.9394003
+  - timestamp: 34.737053
+    length: 0
+    value: 1.9495447
+  - timestamp: 34.829933
+    length: 0
+    value: 1.917068
+  - timestamp: 34.922813
+    length: 0
+    value: 1.8453519
+  - timestamp: 35.01569
+    length: 0
+    value: 1.7669435
+  - timestamp: 35.10857
+    length: 0
+    value: 1.7233214
+  - timestamp: 35.20145
+    length: 0
+    value: 1.7224317
+  - timestamp: 35.29433
+    length: 0
+    value: 1.7359967
+  - timestamp: 35.38721
+    length: 0
+    value: 1.730262
+  - timestamp: 35.48009
+    length: 0
+    value: 1.6916724
+  - timestamp: 35.57297
+    length: 0
+    value: 1.6520026
+  - timestamp: 35.66585
+    length: 0
+    value: 1.6506555
+  - timestamp: 35.75873
+    length: 0
+    value: 1.7102642
+  - timestamp: 35.85161
+    length: 0
+    value: 1.8105946
+  - timestamp: 35.94449
+    length: 0
+    value: 1.9037309
+  - timestamp: 36.03737
+    length: 0
+    value: 1.9563065
+  - timestamp: 36.13025
+    length: 0
+    value: 1.9609438
+  - timestamp: 36.22313
+    length: 0
+    value: 1.9208186
+  - timestamp: 36.31601
+    length: 0
+    value: 1.8501307
+  - timestamp: 36.40889
+    length: 0
+    value: 1.7617073
+  - timestamp: 36.50177
+    length: 0
+    value: 1.6923102
+  - timestamp: 36.59465
+    length: 0
+    value: 1.666349
+  - timestamp: 36.687527
+    length: 0
+    value: 1.6725581
+  - timestamp: 36.780407
+    length: 0
+    value: 1.6819522
+  - timestamp: 36.873287
+    length: 0
+    value: 1.6802629
+  - timestamp: 36.966167
+    length: 0
+    value: 1.6890149
+  - timestamp: 37.059048
+    length: 0
+    value: 1.7272412
+  - timestamp: 37.151928
+    length: 0
+    value: 1.8022172
+  - timestamp: 37.24481
+    length: 0
+    value: 1.9087282
+  - timestamp: 37.33769
+    length: 0
+    value: 2.007932
+  - timestamp: 37.43057
+    length: 0
+    value: 2.0653927
+  - timestamp: 37.523445
+    length: 0
+    value: 2.078609
+  - timestamp: 37.616325
+    length: 0
+    value: 2.0504596
+  - timestamp: 37.709206
+    length: 0
+    value: 1.9880341
+  - timestamp: 37.802086
+    length: 0
+    value: 1.8957293
+  - timestamp: 37.894966
+    length: 0
+    value: 1.8055224
+  - timestamp: 37.987846
+    length: 0
+    value: 1.7486817
+  - timestamp: 38.080727
+    length: 0
+    value: 1.7401315
+  - timestamp: 38.173607
+    length: 0
+    value: 1.7716414
+  - timestamp: 38.266487
+    length: 0
+    value: 1.8084049
+  - timestamp: 38.359364
+    length: 0
+    value: 1.8225011
+  - timestamp: 38.452244
+    length: 0
+    value: 1.8177607
+  - timestamp: 38.545124
+    length: 0
+    value: 1.8135438
+  - timestamp: 38.638004
+    length: 0
+    value: 1.835032
+  - timestamp: 38.730885
+    length: 0
+    value: 1.8843553
+  - timestamp: 38.823765
+    length: 0
+    value: 1.9535484
+  - timestamp: 38.916645
+    length: 0
+    value: 2.0198865
+  - timestamp: 39.009525
+    length: 0
+    value: 2.057055
+  - timestamp: 39.1024
+    length: 0
+    value: 2.052851
+  - timestamp: 39.195282
+    length: 0
+    value: 2.0025263
+  - timestamp: 39.288162
+    length: 0
+    value: 1.9189835
+  - timestamp: 39.381042
+    length: 0
+    value: 1.833213
+  - timestamp: 39.473923
+    length: 0
+    value: 1.7734476
+  - timestamp: 39.566803
+    length: 0
+    value: 1.7495939
+  - timestamp: 39.659683
+    length: 0
+    value: 1.7498641
+  - timestamp: 39.752563
+    length: 0
+    value: 1.7558947
+  - timestamp: 39.845444
+    length: 0
+    value: 1.7629491
+  - timestamp: 39.93832
+    length: 0
+    value: 1.7732596
+  - timestamp: 40.0312
+    length: 0
+    value: 1.7973158
+  - timestamp: 40.12408
+    length: 0
+    value: 1.8367704
+  - timestamp: 40.21696
+    length: 0
+    value: 1.8808028
+  - timestamp: 40.30984
+    length: 0
+    value: 1.9164556
+  - timestamp: 40.40272
+    length: 0
+    value: 1.9293175
+  - timestamp: 40.4956
+    length: 0
+    value: 1.900165
+  - timestamp: 40.58848
+    length: 0
+    value: 1.8325258
+  - timestamp: 40.681362
+    length: 0
+    value: 1.7433306
+  - timestamp: 40.77424
+    length: 0
+    value: 1.6754293
+  - timestamp: 40.86712
+    length: 0
+    value: 1.6586108
+  - timestamp: 40.96
+    length: 0
+    value: 1.6839521
+  - timestamp: 41.05288
+    length: 0
+    value: 1.7112068
+  - timestamp: 41.14576
+    length: 0
+    value: 1.7058427
+  - timestamp: 41.23864
+    length: 0
+    value: 1.6762627
+  - timestamp: 41.33152
+    length: 0
+    value: 1.6582116
+  - timestamp: 41.4244
+    length: 0
+    value: 1.6836526
+  - timestamp: 41.51728
+    length: 0
+    value: 1.7580541
+  - timestamp: 41.610157
+    length: 0
+    value: 1.8446293
+  - timestamp: 41.703037
+    length: 0
+    value: 1.9052244
+  - timestamp: 41.795918
+    length: 0
+    value: 1.9244395
+  - timestamp: 41.888798
+    length: 0
+    value: 1.9008685
+  - timestamp: 41.981678
+    length: 0
+    value: 1.8445827
+  - timestamp: 42.07456
+    length: 0
+    value: 1.7662551
+  - timestamp: 42.16744
+    length: 0
+    value: 1.6932454
+  - timestamp: 42.26032
+    length: 0
+    value: 1.6538525
+  - timestamp: 42.3532
+    length: 0
+    value: 1.6555744
+  - timestamp: 42.446075
+    length: 0
+    value: 1.67255
+  - timestamp: 42.538956
+    length: 0
+    value: 1.6750942
+  - timestamp: 42.631836
+    length: 0
+    value: 1.6651349
+  - timestamp: 42.724716
+    length: 0
+    value: 1.6712053
+  - timestamp: 42.817596
+    length: 0
+    value: 1.710169
+  - timestamp: 42.910477
+    length: 0
+    value: 1.7877778
+  - timestamp: 43.003357
+    length: 0
+    value: 1.8801742
+  - timestamp: 43.096237
+    length: 0
+    value: 1.9506056
+  - timestamp: 43.189117
+    length: 0
+    value: 1.9802812
+  - timestamp: 43.281994
+    length: 0
+    value: 1.9733064
+  - timestamp: 43.374874
+    length: 0
+    value: 1.9379278
+  - timestamp: 43.467754
+    length: 0
+    value: 1.8787259
+  - timestamp: 43.560635
+    length: 0
+    value: 1.8047343
+  - timestamp: 43.653515
+    length: 0
+    value: 1.7495592
+  - timestamp: 43.746395
+    length: 0
+    value: 1.7339009
+  - timestamp: 43.839275
+    length: 0
+    value: 1.7576082
+  - timestamp: 43.932156
+    length: 0
+    value: 1.8028191
+  - timestamp: 44.025036
+    length: 0
+    value: 1.8332182
+  - timestamp: 44.117912
+    length: 0
+    value: 1.8389857
+  - timestamp: 44.210793
+    length: 0
+    value: 1.8337888
+  - timestamp: 44.303673
+    length: 0
+    value: 1.8360176
+  - timestamp: 44.396553
+    length: 0
+    value: 1.8581712
+  - timestamp: 44.489433
+    length: 0
+    value: 1.8986506
+  - timestamp: 44.582314
+    length: 0
+    value: 1.9494226
+  - timestamp: 44.675194
+    length: 0
+    value: 1.9995635
+  - timestamp: 44.768074
+    length: 0
+    value: 2.026196
+  - timestamp: 44.860954
+    length: 0
+    value: 2.0148368
+  - timestamp: 44.95383
+    length: 0
+    value: 1.9542853
+  - timestamp: 45.04671
+    length: 0
+    value: 1.8627542
+  - timestamp: 45.13959
+    length: 0
+    value: 1.7797061
+  - timestamp: 45.23247
+    length: 0
+    value: 1.7433987
+  - timestamp: 45.32535
+    length: 0
+    value: 1.7540568
+  - timestamp: 45.418232
+    length: 0
+    value: 1.7892138
+  - timestamp: 45.511112
+    length: 0
+    value: 1.8384435
+  - timestamp: 45.603992
+    length: 0
+    value: 1.9008662
+  - timestamp: 45.69687
+    length: 0
+    value: 1.9823521
+  - timestamp: 45.78975
+    length: 0
+    value: 2.0833263
+  - timestamp: 45.88263
+    length: 0
+    value: 2.1682165
+  - timestamp: 45.97551
+    length: 0
+    value: 2.2097342
+  - timestamp: 46.06839
+    length: 0
+    value: 2.200479
+  - timestamp: 46.16127
+    length: 0
+    value: 2.1499333
+  - timestamp: 46.25415
+    length: 0
+    value: 2.0886016
+  - timestamp: 46.34703
+    length: 0
+    value: 2.0374327
+  - timestamp: 46.43991
+    length: 0
+    value: 2.0233798
+  - timestamp: 46.532787
+    length: 0
+    value: 2.0495446
+  - timestamp: 46.625668
+    length: 0
+    value: 2.0774705
+  - timestamp: 46.718548
+    length: 0
+    value: 2.0739145
+  - timestamp: 46.811428
+    length: 0
+    value: 2.018034
+  - timestamp: 46.90431
+    length: 0
+    value: 1.9234422
+  - timestamp: 46.99719
+    length: 0
+    value: 1.8482573
+  - timestamp: 47.09007
+    length: 0
+    value: 1.8409121
+  - timestamp: 47.18295
+    length: 0
+    value: 1.9168088
+  - timestamp: 47.27583
+    length: 0
+    value: 2.02204
+  - timestamp: 47.368706
+    length: 0
+    value: 2.0941796
+  - timestamp: 47.461586
+    length: 0
+    value: 2.1218143
+  - timestamp: 47.554466
+    length: 0
+    value: 2.1094708
+  - timestamp: 47.647346
+    length: 0
+    value: 2.0660157
+  - timestamp: 47.740227
+    length: 0
+    value: 2.005455
+  - timestamp: 47.833107
+    length: 0
+    value: 1.9237349
+  - timestamp: 47.925987
+    length: 0
+    value: 1.8481402
+  - timestamp: 48.018867
+    length: 0
+    value: 1.8037944
+  - timestamp: 48.111748
+    length: 0
+    value: 1.7918072
+  - timestamp: 48.204624
+    length: 0
+    value: 1.791038
+  - timestamp: 48.297504
+    length: 0
+    value: 1.7844734
+  - timestamp: 48.390385
+    length: 0
+    value: 1.8010668
+  - timestamp: 48.483265
+    length: 0
+    value: 1.8628472
+  - timestamp: 48.576145
+    length: 0
+    value: 1.9722165
+  - timestamp: 48.669025
+    length: 0
+    value: 2.116301
+  - timestamp: 48.761906
+    length: 0
+    value: 2.234339
+  - timestamp: 48.854786
+    length: 0
+    value: 2.2786329
+  - timestamp: 48.947666
+    length: 0
+    value: 2.252902
+  - timestamp: 49.040543
+    length: 0
+    value: 2.1894085
+  - timestamp: 49.133423
+    length: 0
+    value: 2.1237097
+  - timestamp: 49.226303
+    length: 0
+    value: 2.0654352
+  - timestamp: 49.319183
+    length: 0
+    value: 2.037381
+  - timestamp: 49.412064
+    length: 0
+    value: 2.040176
+  - timestamp: 49.504944
+    length: 0
+    value: 2.0553982
+  - timestamp: 49.597824
+    length: 0
+    value: 2.0670893
+  - timestamp: 49.690704
+    length: 0
+    value: 2.056419
+  - timestamp: 49.783585
+    length: 0
+    value: 2.0307376
+  - timestamp: 49.87646
+    length: 0
+    value: 2.0209312
+  - timestamp: 49.96934
+    length: 0
+    value: 2.0501988
+  - timestamp: 50.06222
+    length: 0
+    value: 2.1251736
+  - timestamp: 50.1551
+    length: 0
+    value: 2.2130144
+  - timestamp: 50.247982
+    length: 0
+    value: 2.2891035
+  - timestamp: 50.340862
+    length: 0
+    value: 2.3456416
+  - timestamp: 50.433743
+    length: 0
+    value: 2.379632
+  - timestamp: 50.526623
+    length: 0
+    value: 2.3815951
+  - timestamp: 50.619503
+    length: 0
+    value: 2.327944
+  - timestamp: 50.71238
+    length: 0
+    value: 2.2142541
+  - timestamp: 50.80526
+    length: 0
+    value: 2.0804963
+  - timestamp: 50.89814
+    length: 0
+    value: 1.9828576
+  - timestamp: 50.99102
+    length: 0
+    value: 1.9548166
+  - timestamp: 51.0839
+    length: 0
+    value: 1.9857796
+  - timestamp: 51.17678
+    length: 0
+    value: 2.0330267
+  - timestamp: 51.26966
+    length: 0
+    value: 2.0605164
+  - timestamp: 51.36254
+    length: 0
+    value: 2.0649893
+  - timestamp: 51.455418
+    length: 0
+    value: 2.0761821
+  - timestamp: 51.548298
+    length: 0
+    value: 2.107698
+  - timestamp: 51.64118
+    length: 0
+    value: 2.1406484
+  - timestamp: 51.73406
+    length: 0
+    value: 2.1556692
+  - timestamp: 51.82694
+    length: 0
+    value: 2.1474595
+  - timestamp: 51.91982
+    length: 0
+    value: 2.120914
+  - timestamp: 52.0127
+    length: 0
+    value: 2.0942354
+  - timestamp: 52.10558
+    length: 0
+    value: 2.0562322
+  - timestamp: 52.19846
+    length: 0
+    value: 1.999985
+  - timestamp: 52.291336
+    length: 0
+    value: 1.9432657
+  - timestamp: 52.384216
+    length: 0
+    value: 1.9158001
+  - timestamp: 52.477097
+    length: 0
+    value: 1.9273676
+  - timestamp: 52.569977
+    length: 0
+    value: 1.9627001
+  - timestamp: 52.662857
+    length: 0
+    value: 2.010026
+  - timestamp: 52.755737
+    length: 0
+    value: 2.0544682
+  - timestamp: 52.848618
+    length: 0
+    value: 2.0856485
+  - timestamp: 52.941498
+    length: 0
+    value: 2.1129014
+  - timestamp: 53.034378
+    length: 0
+    value: 2.1305223
+  - timestamp: 53.127254
+    length: 0
+    value: 2.1265864
+  - timestamp: 53.220135
+    length: 0
+    value: 2.1024277
+  - timestamp: 53.313015
+    length: 0
+    value: 2.0653265
+  - timestamp: 53.405895
+    length: 0
+    value: 2.0221403
+  - timestamp: 53.498775
+    length: 0
+    value: 1.9656734
+  - timestamp: 53.591656
+    length: 0
+    value: 1.8995266
+  - timestamp: 53.684536
+    length: 0
+    value: 1.8456612
+  - timestamp: 53.777416
+    length: 0
+    value: 1.8255785
+  - timestamp: 53.870296
+    length: 0
+    value: 1.8436217
+  - timestamp: 53.963173
+    length: 0
+    value: 1.8861032
+  - timestamp: 54.056053
+    length: 0
+    value: 1.942336
+  - timestamp: 54.148933
+    length: 0
+    value: 2.0121014
+  - timestamp: 54.241814
+    length: 0
+    value: 2.0899584
+  - timestamp: 54.334694
+    length: 0
+    value: 2.1775556
+  - timestamp: 54.427574
+    length: 0
+    value: 2.256988
+  - timestamp: 54.520454
+    length: 0
+    value: 2.2931674
+  - timestamp: 54.613335
+    length: 0
+    value: 2.269408
+  - timestamp: 54.706215
+    length: 0
+    value: 2.2080169
+  - timestamp: 54.79909
+    length: 0
+    value: 2.1468618
+  - timestamp: 54.89197
+    length: 0
+    value: 2.1060798
+  - timestamp: 54.98485
+    length: 0
+    value: 2.0759223
+  - timestamp: 55.077732
+    length: 0
+    value: 2.0543675
+  - timestamp: 55.170612
+    length: 0
+    value: 2.0467978
+  - timestamp: 55.263493
+    length: 0
+    value: 2.064327
+  - timestamp: 55.356373
+    length: 0
+    value: 2.113442
+  - timestamp: 55.449253
+    length: 0
+    value: 2.1790907
+  - timestamp: 55.542133
+    length: 0
+    value: 2.2442927
+  - timestamp: 55.63501
+    length: 0
+    value: 2.2913775
+  - timestamp: 55.72789
+    length: 0
+    value: 2.3168726
+  - timestamp: 55.82077
+    length: 0
+    value: 2.3393178
+  - timestamp: 55.91365
+    length: 0
+    value: 2.3664045
+  - timestamp: 56.00653
+    length: 0
+    value: 2.395576
+  - timestamp: 56.09941
+    length: 0
+    value: 2.4261875
+  - timestamp: 56.19229
+    length: 0
+    value: 2.4452684
+  - timestamp: 56.28517
+    length: 0
+    value: 2.44036
+  - timestamp: 56.37805
+    length: 0
+    value: 2.4025447
+  - timestamp: 56.47093
+    length: 0
+    value: 2.3450499
+  - timestamp: 56.56381
+    length: 0
+    value: 2.2894232
+  - timestamp: 56.65669
+    length: 0
+    value: 2.259254
+  - timestamp: 56.74957
+    length: 0
+    value: 2.2602944
+  - timestamp: 56.84245
+    length: 0
+    value: 2.271482
+  - timestamp: 56.93533
+    length: 0
+    value: 2.2696447
+  - timestamp: 57.02821
+    length: 0
+    value: 2.2507594
+  - timestamp: 57.12109
+    length: 0
+    value: 2.2351065
+  - timestamp: 57.213966
+    length: 0
+    value: 2.2412524
+  - timestamp: 57.306847
+    length: 0
+    value: 2.2470088
+  - timestamp: 57.399727
+    length: 0
+    value: 2.2378592
+  - timestamp: 57.492607
+    length: 0
+    value: 2.2116807
+  - timestamp: 57.585487
+    length: 0
+    value: 2.1694176
+  - timestamp: 57.678368
+    length: 0
+    value: 2.1281512
+  - timestamp: 57.771248
+    length: 0
+    value: 2.0998218
+  - timestamp: 57.86413
+    length: 0
+    value: 2.0992482
+  - timestamp: 57.95701
+    length: 0
+    value: 2.125905
+  - timestamp: 58.049885
+    length: 0
+    value: 2.145053
+  - timestamp: 58.142765
+    length: 0
+    value: 2.1317627
+  - timestamp: 58.235645
+    length: 0
+    value: 2.0702434
+  - timestamp: 58.328526
+    length: 0
+    value: 1.9751924
+  - timestamp: 58.421406
+    length: 0
+    value: 1.9051887
+  - timestamp: 58.514286
+    length: 0
+    value: 1.9006397
+  - timestamp: 58.607166
+    length: 0
+    value: 1.9728743
+  - timestamp: 58.700047
+    length: 0
+    value: 2.076729
+  - timestamp: 58.792927
+    length: 0
+    value: 2.1486387
+  - timestamp: 58.885803
+    length: 0
+    value: 2.169338
+  - timestamp: 58.978683
+    length: 0
+    value: 2.1446557
+  - timestamp: 59.071564
+    length: 0
+    value: 2.0857406
+  - timestamp: 59.164444
+    length: 0
+    value: 2.00695
+  - timestamp: 59.257324
+    length: 0
+    value: 1.9058664
+  - timestamp: 59.350204
+    length: 0
+    value: 1.8142505
+  - timestamp: 59.443085
+    length: 0
+    value: 1.7635249
+  - timestamp: 59.535965
+    length: 0
+    value: 1.7532641
+  - timestamp: 59.628845
+    length: 0
+    value: 1.7589011
+  - timestamp: 59.72172
+    length: 0
+    value: 1.7642266
+  - timestamp: 59.8146
+    length: 0
+    value: 1.7922257
+  - timestamp: 59.907482
+    length: 0
+    value: 1.8643682
+  - timestamp: 60.000362
+    length: 0
+    value: 1.9838202
+  - timestamp: 60.093243
+    length: 0
+    value: 2.1304345
+  - timestamp: 60.186123
+    length: 0
+    value: 2.2443135
+  - timestamp: 60.279003
+    length: 0
+    value: 2.282059
+  - timestamp: 60.371883
+    length: 0
+    value: 2.2509437
+  - timestamp: 60.464764
+    length: 0
+    value: 2.1938345
+  - timestamp: 60.55764
+    length: 0
+    value: 2.1462572
+  - timestamp: 60.65052
+    length: 0
+    value: 2.1077032
+  - timestamp: 60.7434
+    length: 0
+    value: 2.0886602
+  - timestamp: 60.83628
+    length: 0
+    value: 2.0852795
+  - timestamp: 60.92916
+    length: 0
+    value: 2.0891402
+  - timestamp: 61.02204
+    length: 0
+    value: 2.0961902
+  - timestamp: 61.11492
+    length: 0
+    value: 2.0913417
+  - timestamp: 61.2078
+    length: 0
+    value: 2.0754387
+  - timestamp: 61.300682
+    length: 0
+    value: 2.0685225
+  - timestamp: 61.39356
+    length: 0
+    value: 2.0874584
+  - timestamp: 61.48644
+    length: 0
+    value: 2.1405592
+  - timestamp: 61.57932
+    length: 0
+    value: 2.2016923
+  - timestamp: 61.6722
+    length: 0
+    value: 2.25035
+  - timestamp: 61.76508
+    length: 0
+    value: 2.2815764
+  - timestamp: 61.85796
+    length: 0
+    value: 2.2974927
+  - timestamp: 61.95084
+    length: 0
+    value: 2.2933285
+  - timestamp: 62.04372
+    length: 0
+    value: 2.2511573
+  - timestamp: 62.1366
+    length: 0
+    value: 2.1588545
+  - timestamp: 62.229477
+    length: 0
+    value: 2.0468042
+  - timestamp: 62.322357
+    length: 0
+    value: 1.9742903
+  - timestamp: 62.415237
+    length: 0
+    value: 1.977663
+  - timestamp: 62.508118
+    length: 0
+    value: 2.044681
+  - timestamp: 62.600998
+    length: 0
+    value: 2.12699
+  - timestamp: 62.69388
+    length: 0
+    value: 2.1655092
+  - timestamp: 62.78676
+    length: 0
+    value: 2.1309452
+  - timestamp: 62.87964
+    length: 0
+    value: 2.0552905
+  - timestamp: 62.972515
+    length: 0
+    value: 1.9985578
+  - timestamp: 63.065395
+    length: 0
+    value: 1.9885947
+  - timestamp: 63.158276
+    length: 0
+    value: 2.0035372
+  - timestamp: 63.251156
+    length: 0
+    value: 2.0171056
+  - timestamp: 63.344036
+    length: 0
+    value: 2.0101836
+  - timestamp: 63.436916
+    length: 0
+    value: 1.965283
+  - timestamp: 63.529797
+    length: 0
+    value: 1.8743299
+  - timestamp: 63.622677
+    length: 0
+    value: 1.7616339
+  - timestamp: 63.715557
+    length: 0
+    value: 1.6635404
+  - timestamp: 63.808434
+    length: 0
+    value: 1.6103362
+  - timestamp: 63.901314
+    length: 0
+    value: 1.6155798
+  - timestamp: 63.994194
+    length: 0
+    value: 1.6874164
+  - timestamp: 64.087074
+    length: 0
+    value: 1.8137507
+  - timestamp: 64.179955
+    length: 0
+    value: 1.96638
+  - timestamp: 64.272835
+    length: 0
+    value: 2.1147833
+  - timestamp: 64.365715
+    length: 0
+    value: 2.2409263
+  - timestamp: 64.458595
+    length: 0
+    value: 2.3385432
+  - timestamp: 64.551476
+    length: 0
+    value: 2.3957987
+  - timestamp: 64.644356
+    length: 0
+    value: 2.405372
+  - timestamp: 64.737236
+    length: 0
+    value: 2.3706768
+  - timestamp: 64.83012
+    length: 0
+    value: 2.2912529
+  - timestamp: 64.923
+    length: 0
+    value: 2.1783273
+  - timestamp: 65.01588
+    length: 0
+    value: 2.0505228
+  - timestamp: 65.10875
+    length: 0
+    value: 1.9344211
+  - timestamp: 65.20163
+    length: 0
+    value: 1.84855
+  - timestamp: 65.29451
+    length: 0
+    value: 1.7793244
+  - timestamp: 65.38739
+    length: 0
+    value: 1.7192531
+  - timestamp: 65.48027
+    length: 0
+    value: 1.6817261
+  - timestamp: 65.57315
+    length: 0
+    value: 1.692424
+  - timestamp: 65.66603
+    length: 0
+    value: 1.7721908
+  - timestamp: 65.75891
+    length: 0
+    value: 1.9127216
+  - timestamp: 65.85179
+    length: 0
+    value: 2.0632334
+  - timestamp: 65.94467
+    length: 0
+    value: 2.1634068
+  - timestamp: 66.03755
+    length: 0
+    value: 2.1808298
+  - timestamp: 66.13043
+    length: 0
+    value: 2.1424265
+  - timestamp: 66.22331
+    length: 0
+    value: 2.099697
+  - timestamp: 66.31619
+    length: 0
+    value: 2.0709581
+  - timestamp: 66.40907
+    length: 0
+    value: 2.0336156
+  - timestamp: 66.50195
+    length: 0
+    value: 1.975388
+  - timestamp: 66.59483
+    length: 0
+    value: 1.9079497
+  - timestamp: 66.687706
+    length: 0
+    value: 1.8623422
+  - timestamp: 66.78059
+    length: 0
+    value: 1.8686316
+  - timestamp: 66.87347
+    length: 0
+    value: 1.9325104
+  - timestamp: 66.96635
+    length: 0
+    value: 2.0339632
+  - timestamp: 67.05923
+    length: 0
+    value: 2.1387236
+  - timestamp: 67.15211
+    length: 0
+    value: 2.230004
+  - timestamp: 67.24499
+    length: 0
+    value: 2.315011
+  - timestamp: 67.33787
+    length: 0
+    value: 2.3911054
+  - timestamp: 67.43075
+    length: 0
+    value: 2.4443772
+  - timestamp: 67.52363
+    length: 0
+    value: 2.4740686
+  - timestamp: 67.61651
+    length: 0
+    value: 2.488056
+  - timestamp: 67.70939
+    length: 0
+    value: 2.505659
+  - timestamp: 67.80227
+    length: 0
+    value: 2.536634
+  - timestamp: 67.89515
+    length: 0
+    value: 2.5745392
+  - timestamp: 67.98803
+    length: 0
+    value: 2.597116
+  - timestamp: 68.08091
+    length: 0
+    value: 2.5835366
+  - timestamp: 68.17379
+    length: 0
+    value: 2.5318568
+  - timestamp: 68.26667
+    length: 0
+    value: 2.4574242
+  - timestamp: 68.35954
+    length: 0
+    value: 2.371417
+  - timestamp: 68.45242
+    length: 0
+    value: 2.2822497
+  - timestamp: 68.5453
+    length: 0
+    value: 2.1952438
+  - timestamp: 68.63818
+    length: 0
+    value: 2.1266487
+  - timestamp: 68.731064
+    length: 0
+    value: 2.089233
+  - timestamp: 68.823944
+    length: 0
+    value: 2.081429
+  - timestamp: 68.916824
+    length: 0
+    value: 2.088135
+  - timestamp: 69.009705
+    length: 0
+    value: 2.0865495
+  - timestamp: 69.102585
+    length: 0
+    value: 2.059969
+  - timestamp: 69.195465
+    length: 0
+    value: 1.9884483
+  - timestamp: 69.288345
+    length: 0
+    value: 1.8798409
+  - timestamp: 69.381226
+    length: 0
+    value: 1.7934647
+  - timestamp: 69.474106
+    length: 0
+    value: 1.7689824
+  - timestamp: 69.566986
+    length: 0
+    value: 1.7975614
+  - timestamp: 69.65987
+    length: 0
+    value: 1.8617166
+  - timestamp: 69.75275
+    length: 0
+    value: 1.9344319
+  - timestamp: 69.84563
+    length: 0
+    value: 1.9832017
+  - timestamp: 69.93851
+    length: 0
+    value: 1.9831524
+  - timestamp: 70.03138
+    length: 0
+    value: 1.9668941
+  - timestamp: 70.12426
+    length: 0
+    value: 1.9870374
+  - timestamp: 70.21714
+    length: 0
+    value: 2.035299
+  - timestamp: 70.31002
+    length: 0
+    value: 2.0749433
+  - timestamp: 70.4029
+    length: 0
+    value: 2.0827997
+  - timestamp: 70.49578
+    length: 0
+    value: 2.0218241
+  - timestamp: 70.58866
+    length: 0
+    value: 1.8993539
+  - timestamp: 70.68154
+    length: 0
+    value: 1.7773557
+  - timestamp: 70.77442
+    length: 0
+    value: 1.7275932
+  - timestamp: 70.8673
+    length: 0
+    value: 1.780532
+  - timestamp: 70.96018
+    length: 0
+    value: 1.8998095
+  - timestamp: 71.05306
+    length: 0
+    value: 2.0216594
+  - timestamp: 71.14594
+    length: 0
+    value: 2.0947967
+  - timestamp: 71.23882
+    length: 0
+    value: 2.0942051
+  - timestamp: 71.3317
+    length: 0
+    value: 2.0494285
+  - timestamp: 71.42458
+    length: 0
+    value: 2.00571
+  - timestamp: 71.51746
+    length: 0
+    value: 1.9887443
+  - timestamp: 71.610344
+    length: 0
+    value: 2.003796
+  - timestamp: 71.70322
+    length: 0
+    value: 2.0278249
+  - timestamp: 71.7961
+    length: 0
+    value: 2.0432382
+  - timestamp: 71.88898
+    length: 0
+    value: 2.0421922
+  - timestamp: 71.98186
+    length: 0
+    value: 2.013647
+  - timestamp: 72.07474
+    length: 0
+    value: 1.9415488
+  - timestamp: 72.16762
+    length: 0
+    value: 1.8412846
+  - timestamp: 72.2605
+    length: 0
+    value: 1.7649466
+  - timestamp: 72.35338
+    length: 0
+    value: 1.7395328
+  - timestamp: 72.44626
+    length: 0
+    value: 1.7359276
+  - timestamp: 72.53914
+    length: 0
+    value: 1.7306075
+  - timestamp: 72.63202
+    length: 0
+    value: 1.7174454
+  - timestamp: 72.7249
+    length: 0
+    value: 1.6999582
+  - timestamp: 72.81778
+    length: 0
+    value: 1.6913233
+  - timestamp: 72.91066
+    length: 0
+    value: 1.7350607
+  - timestamp: 73.00354
+    length: 0
+    value: 1.8537636
+  - timestamp: 73.09642
+    length: 0
+    value: 1.9913275
+  - timestamp: 73.1893
+    length: 0
+    value: 2.0759861
+  - timestamp: 73.28217
+    length: 0
+    value: 2.0978825
+  - timestamp: 73.37505
+    length: 0
+    value: 2.0725439
+  - timestamp: 73.46793
+    length: 0
+    value: 2.0229971
+  - timestamp: 73.560814
+    length: 0
+    value: 1.9802606
+  - timestamp: 73.653694
+    length: 0
+    value: 1.9813932
+  - timestamp: 73.746574
+    length: 0
+    value: 2.033877
+  - timestamp: 73.839455
+    length: 0
+    value: 2.0936654
+  - timestamp: 73.932335
+    length: 0
+    value: 2.1273766
+  - timestamp: 74.025215
+    length: 0
+    value: 2.134847
+  - timestamp: 74.118095
+    length: 0
+    value: 2.1244648
+  - timestamp: 74.210976
+    length: 0
+    value: 2.103115
+  - timestamp: 74.303856
+    length: 0
+    value: 2.0829492
+  - timestamp: 74.396736
+    length: 0
+    value: 2.0872154
+  - timestamp: 74.48962
+    length: 0
+    value: 2.1170416
+  - timestamp: 74.5825
+    length: 0
+    value: 2.1383312
+  - timestamp: 74.67538
+    length: 0
+    value: 2.1372564
+  - timestamp: 74.76826
+    length: 0
+    value: 2.1139157
+  - timestamp: 74.86114
+    length: 0
+    value: 2.0561996
+  - timestamp: 74.95401
+    length: 0
+    value: 1.9491866
+  - timestamp: 75.04689
+    length: 0
+    value: 1.8318048
+  - timestamp: 75.13977
+    length: 0
+    value: 1.7636018
+  - timestamp: 75.23265
+    length: 0
+    value: 1.7646676
+  - timestamp: 75.32553
+    length: 0
+    value: 1.8175384
+  - timestamp: 75.41841
+    length: 0
+    value: 1.8944831
+  - timestamp: 75.51129
+    length: 0
+    value: 1.9585615
+  - timestamp: 75.60417
+    length: 0
+    value: 1.9779813
+  - timestamp: 75.69705
+    length: 0
+    value: 1.9535336
+  - timestamp: 75.78993
+    length: 0
+    value: 1.9396477
+  - timestamp: 75.88281
+    length: 0
+    value: 1.9685209
+  - timestamp: 75.97569
+    length: 0
+    value: 2.0174809
+  - timestamp: 76.06857
+    length: 0
+    value: 2.0552714
+  - timestamp: 76.16145
+    length: 0
+    value: 2.0405028
+  - timestamp: 76.25433
+    length: 0
+    value: 1.9494203
+  - timestamp: 76.34721
+    length: 0
+    value: 1.8191888
+  - timestamp: 76.440094
+    length: 0
+    value: 1.723999
+  - timestamp: 76.532974
+    length: 0
+    value: 1.7265645
+  - timestamp: 76.62585
+    length: 0
+    value: 1.8221946
+  - timestamp: 76.71873
+    length: 0
+    value: 1.9503239
+  - timestamp: 76.81161
+    length: 0
+    value: 2.0531077
+  - timestamp: 76.90449
+    length: 0
+    value: 2.0822895
+  - timestamp: 76.99737
+    length: 0
+    value: 2.0448601
+  - timestamp: 77.09025
+    length: 0
+    value: 1.9891688
+  - timestamp: 77.18313
+    length: 0
+    value: 1.9556288
+  - timestamp: 77.27601
+    length: 0
+    value: 1.9650309
+  - timestamp: 77.36889
+    length: 0
+    value: 2.0075936
+  - timestamp: 77.46177
+    length: 0
+    value: 2.0498369
+  - timestamp: 77.55465
+    length: 0
+    value: 2.070255
+  - timestamp: 77.64753
+    length: 0
+    value: 2.0580013
+  - timestamp: 77.74041
+    length: 0
+    value: 2.0043228
+  - timestamp: 77.83329
+    length: 0
+    value: 1.8978026
+  - timestamp: 77.92617
+    length: 0
+    value: 1.7835789
+  - timestamp: 78.01905
+    length: 0
+    value: 1.7262377
+  - timestamp: 78.11193
+    length: 0
+    value: 1.721746
+  - timestamp: 78.2048
+    length: 0
+    value: 1.7277685
+  - timestamp: 78.29768
+    length: 0
+    value: 1.7313787
+  - timestamp: 78.390564
+    length: 0
+    value: 1.734807
+  - timestamp: 78.483444
+    length: 0
+    value: 1.7345889
+  - timestamp: 78.576324
+    length: 0
+    value: 1.7550364
+  - timestamp: 78.669205
+    length: 0
+    value: 1.8428969
+  - timestamp: 78.762085
+    length: 0
+    value: 1.9821343
+  - timestamp: 78.854965
+    length: 0
+    value: 2.0949621
+  - timestamp: 78.947845
+    length: 0
+    value: 2.143407
+  - timestamp: 79.040726
+    length: 0
+    value: 2.1451778
+  - timestamp: 79.133606
+    length: 0
+    value: 2.123754
+  - timestamp: 79.22649
+    length: 0
+    value: 2.0979135
+  - timestamp: 79.31937
+    length: 0
+    value: 2.09382
+  - timestamp: 79.41225
+    length: 0
+    value: 2.1202714
+  - timestamp: 79.50513
+    length: 0
+    value: 2.1583905
+  - timestamp: 79.59801
+    length: 0
+    value: 2.1709933
+  - timestamp: 79.69089
+    length: 0
+    value: 2.1502852
+  - timestamp: 79.78377
+    length: 0
+    value: 2.1206474
+  - timestamp: 79.87664
+    length: 0
+    value: 2.1053343
+  - timestamp: 79.96952
+    length: 0
+    value: 2.1130095
+  - timestamp: 80.0624
+    length: 0
+    value: 2.15174
+  - timestamp: 80.15528
+    length: 0
+    value: 2.2071795
+  - timestamp: 80.24816
+    length: 0
+    value: 2.2449825
+  - timestamp: 80.34104
+    length: 0
+    value: 2.2411432
+  - timestamp: 80.43392
+    length: 0
+    value: 2.2102354
+  - timestamp: 80.5268
+    length: 0
+    value: 2.179982
+  - timestamp: 80.61968
+    length: 0
+    value: 2.1452677
+  - timestamp: 80.71256
+    length: 0
+    value: 2.1021338
+  - timestamp: 80.80544
+    length: 0
+    value: 2.0765173
+  - timestamp: 80.89832
+    length: 0
+    value: 2.0800886
+  - timestamp: 80.9912
+    length: 0
+    value: 2.1081178
+  - timestamp: 81.08408
+    length: 0
+    value: 2.1568995
+  - timestamp: 81.17696
+    length: 0
+    value: 2.2159855
+  - timestamp: 81.269844
+    length: 0
+    value: 2.2590508
+  - timestamp: 81.362724
+    length: 0
+    value: 2.2559237
+  - timestamp: 81.455605
+    length: 0
+    value: 2.2290075
+  - timestamp: 81.54848
+    length: 0
+    value: 2.2203245
+  - timestamp: 81.64136
+    length: 0
+    value: 2.2287521
+  - timestamp: 81.73424
+    length: 0
+    value: 2.2334833
+  - timestamp: 81.82712
+    length: 0
+    value: 2.2205074
+  - timestamp: 81.92
+    length: 0
+    value: 2.1663146
+  - timestamp: 82.01288
+    length: 0
+    value: 2.07704
+  - timestamp: 82.10576
+    length: 0
+    value: 1.9956632
+  - timestamp: 82.19864
+    length: 0
+    value: 1.9733126
+  - timestamp: 82.29152
+    length: 0
+    value: 2.024301
+  - timestamp: 82.3844
+    length: 0
+    value: 2.1189566
+  - timestamp: 82.47728
+    length: 0
+    value: 2.211562
+  - timestamp: 82.57016
+    length: 0
+    value: 2.2651303
+  - timestamp: 82.66304
+    length: 0
+    value: 2.2700968
+  - timestamp: 82.75592
+    length: 0
+    value: 2.2520864
+  - timestamp: 82.8488
+    length: 0
+    value: 2.241217
+  - timestamp: 82.94168
+    length: 0
+    value: 2.256567
+  - timestamp: 83.03456
+    length: 0
+    value: 2.2973366
+  - timestamp: 83.12744
+    length: 0
+    value: 2.345338
+  - timestamp: 83.220314
+    length: 0
+    value: 2.3816926
+  - timestamp: 83.313194
+    length: 0
+    value: 2.397581
+  - timestamp: 83.406075
+    length: 0
+    value: 2.3929856
+  - timestamp: 83.498955
+    length: 0
+    value: 2.3554878
+  - timestamp: 83.591835
+    length: 0
+    value: 2.2935839
+  - timestamp: 83.684715
+    length: 0
+    value: 2.2372653
+  - timestamp: 83.777596
+    length: 0
+    value: 2.1981971
+  - timestamp: 83.870476
+    length: 0
+    value: 2.160751
+  - timestamp: 83.963356
+    length: 0
+    value: 2.1087542
+  - timestamp: 84.05624
+    length: 0
+    value: 2.0497544
+  - timestamp: 84.14912
+    length: 0
+    value: 2.0131533
+  - timestamp: 84.242
+    length: 0
+    value: 2.0144918
+  - timestamp: 84.33488
+    length: 0
+    value: 2.070237
+  - timestamp: 84.42776
+    length: 0
+    value: 2.1778307
+  - timestamp: 84.52064
+    length: 0
+    value: 2.2944138
+  - timestamp: 84.61352
+    length: 0
+    value: 2.3748665
+  - timestamp: 84.7064
+    length: 0
+    value: 2.406879
+  - timestamp: 84.79927
+    length: 0
+    value: 2.3968172
+  - timestamp: 84.89215
+    length: 0
+    value: 2.3615556
+  - timestamp: 84.98503
+    length: 0
+    value: 2.3174713
+  - timestamp: 85.07791
+    length: 0
+    value: 2.2961361
+  - timestamp: 85.17079
+    length: 0
+    value: 2.3180618
+  - timestamp: 85.26367
+    length: 0
+    value: 2.362091
+  - timestamp: 85.35655
+    length: 0
+    value: 2.40664
+  - timestamp: 85.44943
+    length: 0
+    value: 2.446956
+  - timestamp: 85.54231
+    length: 0
+    value: 2.4893217
+  - timestamp: 85.63519
+    length: 0
+    value: 2.5375776
+  - timestamp: 85.72807
+    length: 0
+    value: 2.5913496
+  - timestamp: 85.82095
+    length: 0
+    value: 2.648532
+  - timestamp: 85.91383
+    length: 0
+    value: 2.6881852
+  - timestamp: 86.006714
+    length: 0
+    value: 2.6885116
+  - timestamp: 86.099594
+    length: 0
+    value: 2.6700745
+  - timestamp: 86.192474
+    length: 0
+    value: 2.6596746
+  - timestamp: 86.285355
+    length: 0
+    value: 2.6569834
+  - timestamp: 86.378235
+    length: 0
+    value: 2.6372335
+  - timestamp: 86.47111
+    length: 0
+    value: 2.6049073
+  - timestamp: 86.56399
+    length: 0
+    value: 2.5809019
+  - timestamp: 86.65687
+    length: 0
+    value: 2.5641794
+  - timestamp: 86.74975
+    length: 0
+    value: 2.548734
+  - timestamp: 86.84263
+    length: 0
+    value: 2.5468647
+  - timestamp: 86.93551
+    length: 0
+    value: 2.560731
+  - timestamp: 87.02839
+    length: 0
+    value: 2.5708969
+  - timestamp: 87.12127
+    length: 0
+    value: 2.5721092
+  - timestamp: 87.21415
+    length: 0
+    value: 2.5970602
+  - timestamp: 87.30703
+    length: 0
+    value: 2.6501443
+  - timestamp: 87.39991
+    length: 0
+    value: 2.68993
+  - timestamp: 87.49279
+    length: 0
+    value: 2.6982214
+  - timestamp: 87.58567
+    length: 0
+    value: 2.6749725
+  - timestamp: 87.67855
+    length: 0
+    value: 2.6105757
+  - timestamp: 87.77143
+    length: 0
+    value: 2.515894
+  - timestamp: 87.86431
+    length: 0
+    value: 2.4399245
+  - timestamp: 87.95719
+    length: 0
+    value: 2.427839
+  - timestamp: 88.05007
+    length: 0
+    value: 2.4786615
+  - timestamp: 88.142944
+    length: 0
+    value: 2.5599566
+  - timestamp: 88.235825
+    length: 0
+    value: 2.6482143
+  - timestamp: 88.328705
+    length: 0
+    value: 2.7158468
+  - timestamp: 88.421585
+    length: 0
+    value: 2.7468922
+  - timestamp: 88.514465
+    length: 0
+    value: 2.7497861
+  - timestamp: 88.607346
+    length: 0
+    value: 2.7436132
+  - timestamp: 88.700226
+    length: 0
+    value: 2.7375476
+  - timestamp: 88.793106
+    length: 0
+    value: 2.7265165
+  - timestamp: 88.88599
+    length: 0
+    value: 2.701822
+  - timestamp: 88.97887
+    length: 0
+    value: 2.679548
+  - timestamp: 89.07175
+    length: 0
+    value: 2.6760912
+  - timestamp: 89.16463
+    length: 0
+    value: 2.6752727
+  - timestamp: 89.25751
+    length: 0
+    value: 2.6441867
+  - timestamp: 89.35039
+    length: 0
+    value: 2.5937824
+  - timestamp: 89.44327
+    length: 0
+    value: 2.5521352
+  - timestamp: 89.53615
+    length: 0
+    value: 2.5134287
+  - timestamp: 89.62903
+    length: 0
+    value: 2.4554305
+  - timestamp: 89.72191
+    length: 0
+    value: 2.392332
+  - timestamp: 89.81478
+    length: 0
+    value: 2.353568
+  - timestamp: 89.90766
+    length: 0
+    value: 2.3497806
+  - timestamp: 90.00054
+    length: 0
+    value: 2.4043188
+  - timestamp: 90.09342
+    length: 0
+    value: 2.5303612
+  - timestamp: 90.1863
+    length: 0
+    value: 2.68502
+  - timestamp: 90.27918
+    length: 0
+    value: 2.7944307
+  - timestamp: 90.37206
+    length: 0
+    value: 2.8337982
+  - timestamp: 90.46494
+    length: 0
+    value: 2.8414583
+  - timestamp: 90.55782
+    length: 0
+    value: 2.853854
+  - timestamp: 90.6507
+    length: 0
+    value: 2.884005
+  - timestamp: 90.74358
+    length: 0
+    value: 2.9384522
+  - timestamp: 90.836464
+    length: 0
+    value: 2.9923632
+  - timestamp: 90.929344
+    length: 0
+    value: 3.015697
+  - timestamp: 91.022224
+    length: 0
+    value: 2.9889116
+  - timestamp: 91.115105
+    length: 0
+    value: 2.9191995
+  - timestamp: 91.207985
+    length: 0
+    value: 2.8520977
+  - timestamp: 91.300865
+    length: 0
+    value: 2.8424044
+  - timestamp: 91.39374
+    length: 0
+    value: 2.9057016
+  - timestamp: 91.48662
+    length: 0
+    value: 3.0205576
+  - timestamp: 91.5795
+    length: 0
+    value: 3.143449
+  - timestamp: 91.67238
+    length: 0
+    value: 3.236308
+  - timestamp: 91.76526
+    length: 0
+    value: 3.27781
+  - timestamp: 91.85814
+    length: 0
+    value: 3.2717745
+  - timestamp: 91.95102
+    length: 0
+    value: 3.2504945
+  - timestamp: 92.0439
+    length: 0
+    value: 3.2198267
+  - timestamp: 92.13678
+    length: 0
+    value: 3.1531932
+  - timestamp: 92.22966
+    length: 0
+    value: 3.0632057
+  - timestamp: 92.32254
+    length: 0
+    value: 2.992527
+  - timestamp: 92.41542
+    length: 0
+    value: 2.960036
+  - timestamp: 92.5083
+    length: 0
+    value: 2.9621575
+  - timestamp: 92.60118
+    length: 0
+    value: 2.98199
+  - timestamp: 92.69406
+    length: 0
+    value: 2.996913
+  - timestamp: 92.78694
+    length: 0
+    value: 2.9870412
+  - timestamp: 92.87982
+    length: 0
+    value: 2.9604025
+  - timestamp: 92.9727
+    length: 0
+    value: 2.9584756
+  - timestamp: 93.065575
+    length: 0
+    value: 2.9945283
+  - timestamp: 93.158455
+    length: 0
+    value: 3.028333
+  - timestamp: 93.251335
+    length: 0
+    value: 3.030126
+  - timestamp: 93.344215
+    length: 0
+    value: 2.9961703
+  - timestamp: 93.437096
+    length: 0
+    value: 2.928374
+  - timestamp: 93.529976
+    length: 0
+    value: 2.8170047
+  - timestamp: 93.622856
+    length: 0
+    value: 2.685703
+  - timestamp: 93.71574
+    length: 0
+    value: 2.600195
+  - timestamp: 93.80862
+    length: 0
+    value: 2.604884
+  - timestamp: 93.9015
+    length: 0
+    value: 2.6921546
+  - timestamp: 93.99438
+    length: 0
+    value: 2.834216
+  - timestamp: 94.08726
+    length: 0
+    value: 2.9955232
+  - timestamp: 94.18014
+    length: 0
+    value: 3.1214762
+  - timestamp: 94.27302
+    length: 0
+    value: 3.173568
+  - timestamp: 94.3659
+    length: 0
+    value: 3.1841428
+  - timestamp: 94.45878
+    length: 0
+    value: 3.197353
+  - timestamp: 94.55166
+    length: 0
+    value: 3.2108736
+  - timestamp: 94.64454
+    length: 0
+    value: 3.2137368
+  - timestamp: 94.73741
+    length: 0
+    value: 3.2206454
+  - timestamp: 94.83029
+    length: 0
+    value: 3.2461143
+  - timestamp: 94.92317
+    length: 0
+    value: 3.2514782
+  - timestamp: 95.01605
+    length: 0
+    value: 3.1982095
+  - timestamp: 95.10893
+    length: 0
+    value: 3.1118345
+  - timestamp: 95.20181
+    length: 0
+    value: 3.0340853
+  - timestamp: 95.29469
+    length: 0
+    value: 2.9778461
+  - timestamp: 95.38757
+    length: 0
+    value: 2.9519439
+  - timestamp: 95.48045
+    length: 0
+    value: 2.9533765
+  - timestamp: 95.57333
+    length: 0
+    value: 2.96054
+  - timestamp: 95.666214
+    length: 0
+    value: 2.9412715
+  - timestamp: 95.759094
+    length: 0
+    value: 2.9018703
+  - timestamp: 95.851974
+    length: 0
+    value: 2.8886366
+  - timestamp: 95.944855
+    length: 0
+    value: 2.9173088
+  - timestamp: 96.037735
+    length: 0
+    value: 2.9590685
+  - timestamp: 96.130615
+    length: 0
+    value: 2.9744778
+  - timestamp: 96.223495
+    length: 0
+    value: 2.9300582
+  - timestamp: 96.31637
+    length: 0
+    value: 2.8300264
+  - timestamp: 96.40925
+    length: 0
+    value: 2.707429
+  - timestamp: 96.50213
+    length: 0
+    value: 2.6288285
+  - timestamp: 96.59501
+    length: 0
+    value: 2.6564424
+  - timestamp: 96.68789
+    length: 0
+    value: 2.777957
+  - timestamp: 96.78077
+    length: 0
+    value: 2.936758
+  - timestamp: 96.87365
+    length: 0
+    value: 3.0683348
+  - timestamp: 96.96653
+    length: 0
+    value: 3.1320426
+  - timestamp: 97.05941
+    length: 0
+    value: 3.1377342
+  - timestamp: 97.15229
+    length: 0
+    value: 3.1177242
+  - timestamp: 97.24517
+    length: 0
+    value: 3.1052847
+  - timestamp: 97.33805
+    length: 0
+    value: 3.1153796
+  - timestamp: 97.43093
+    length: 0
+    value: 3.137954
+  - timestamp: 97.52381
+    length: 0
+    value: 3.1691027
+  - timestamp: 97.61669
+    length: 0
+    value: 3.1904464
+  - timestamp: 97.70957
+    length: 0
+    value: 3.185724
+  - timestamp: 97.80245
+    length: 0
+    value: 3.151628
+  - timestamp: 97.89533
+    length: 0
+    value: 3.0944955
+  - timestamp: 97.988205
+    length: 0
+    value: 3.0398207
+  - timestamp: 98.081085
+    length: 0
+    value: 3.0099149
+  - timestamp: 98.173965
+    length: 0
+    value: 2.994024
+  - timestamp: 98.266846
+    length: 0
+    value: 2.9697428
+  - timestamp: 98.359726
+    length: 0
+    value: 2.9180288
+  - timestamp: 98.45261
+    length: 0
+    value: 2.8463192
+  - timestamp: 98.54549
+    length: 0
+    value: 2.786703
+  - timestamp: 98.63837
+    length: 0
+    value: 2.7790728
+  - timestamp: 98.73125
+    length: 0
+    value: 2.8398423
+  - timestamp: 98.82413
+    length: 0
+    value: 2.9403896
+  - timestamp: 98.91701
+    length: 0
+    value: 3.032719
+  - timestamp: 99.00989
+    length: 0
+    value: 3.0694067
+  - timestamp: 99.10277
+    length: 0
+    value: 3.0312822
+  - timestamp: 99.19565
+    length: 0
+    value: 2.9384694
+  - timestamp: 99.28853
+    length: 0
+    value: 2.8351433
+  - timestamp: 99.38141
+    length: 0
+    value: 2.7707968
+  - timestamp: 99.47429
+    length: 0
+    value: 2.773906
+  - timestamp: 99.56717
+    length: 0
+    value: 2.833169
+  - timestamp: 99.66004
+    length: 0
+    value: 2.9088426
+  - timestamp: 99.75292
+    length: 0
+    value: 2.9662068
+  - timestamp: 99.8458
+    length: 0
+    value: 3.0064688
+  - timestamp: 99.93868
+    length: 0
+    value: 3.0378973
+  - timestamp: 100.03156
+    length: 0
+    value: 3.0705516
+  - timestamp: 100.12444
+    length: 0
+    value: 3.1042278
+  - timestamp: 100.21732
+    length: 0
+    value: 3.123529
+  - timestamp: 100.3102
+    length: 0
+    value: 3.1269033
+  - timestamp: 100.40308
+    length: 0
+    value: 3.1304233
+  - timestamp: 100.495964
+    length: 0
+    value: 3.1558907
+  - timestamp: 100.588844
+    length: 0
+    value: 3.1908927
+  - timestamp: 100.681725
+    length: 0
+    value: 3.1854837
+  - timestamp: 100.774605
+    length: 0
+    value: 3.1225507
+  - timestamp: 100.867485
+    length: 0
+    value: 3.0113041
+  - timestamp: 100.960365
+    length: 0
+    value: 2.8862045
+  - timestamp: 101.053246
+    length: 0
+    value: 2.8033762
+  - timestamp: 101.146126
+    length: 0
+    value: 2.7878337
+  - timestamp: 101.239006
+    length: 0
+    value: 2.8351564
+  - timestamp: 101.33188
+    length: 0
+    value: 2.9095674
+  - timestamp: 101.42476
+    length: 0
+    value: 2.9591725
+  - timestamp: 101.51764
+    length: 0
+    value: 2.9675713
+  - timestamp: 101.61052
+    length: 0
+    value: 2.9459853
+  - timestamp: 101.7034
+    length: 0
+    value: 2.9133844
+  - timestamp: 101.79628
+    length: 0
+    value: 2.8769798
+  - timestamp: 101.88916
+    length: 0
+    value: 2.8369591
+  - timestamp: 101.98204
+    length: 0
+    value: 2.806283
+  - timestamp: 102.07492
+    length: 0
+    value: 2.7792616
+  - timestamp: 102.1678
+    length: 0
+    value: 2.75141
+  - timestamp: 102.26068
+    length: 0
+    value: 2.7506504
+  - timestamp: 102.35356
+    length: 0
+    value: 2.794755
+  - timestamp: 102.44644
+    length: 0
+    value: 2.8541992
+  - timestamp: 102.53932
+    length: 0
+    value: 2.897588
+  - timestamp: 102.6322
+    length: 0
+    value: 2.9340944
+  - timestamp: 102.72508
+    length: 0
+    value: 2.9776373
+  - timestamp: 102.81796
+    length: 0
+    value: 3.0185666
+  - timestamp: 102.910835
+    length: 0
+    value: 3.0575185
+  - timestamp: 103.003716
+    length: 0
+    value: 3.0981412
+  - timestamp: 103.096596
+    length: 0
+    value: 3.1309533
+  - timestamp: 103.189476
+    length: 0
+    value: 3.140838
+  - timestamp: 103.28236
+    length: 0
+    value: 3.1407976
+  - timestamp: 103.37524
+    length: 0
+    value: 3.1552112
+  - timestamp: 103.46812
+    length: 0
+    value: 3.1674874
+  - timestamp: 103.561
+    length: 0
+    value: 3.1335325
+  - timestamp: 103.65388
+    length: 0
+    value: 3.0586064
+  - timestamp: 103.74676
+    length: 0
+    value: 2.989876
+  - timestamp: 103.83964
+    length: 0
+    value: 2.944705
+  - timestamp: 103.93252
+    length: 0
+    value: 2.9220452
+  - timestamp: 104.0254
+    length: 0
+    value: 2.9236994
+  - timestamp: 104.11828
+    length: 0
+    value: 2.9316008
+  - timestamp: 104.21116
+    length: 0
+    value: 2.9198334
+  - timestamp: 104.30404
+    length: 0
+    value: 2.8957875
+  - timestamp: 104.39692
+    length: 0
+    value: 2.8983183
+  - timestamp: 104.4898
+    length: 0
+    value: 2.937176
+  - timestamp: 104.58267
+    length: 0
+    value: 2.9723647
+  - timestamp: 104.67555
+    length: 0
+    value: 2.9763947
+  - timestamp: 104.76843
+    length: 0
+    value: 2.9418042
+  - timestamp: 104.86131
+    length: 0
+    value: 2.8657947
+  - timestamp: 104.95419
+    length: 0
+    value: 2.745695
+  - timestamp: 105.04707
+    length: 0
+    value: 2.611949
+  - timestamp: 105.13995
+    length: 0
+    value: 2.5242994
+  - timestamp: 105.232834
+    length: 0
+    value: 2.526267
+  - timestamp: 105.325714
+    length: 0
+    value: 2.6119347
+  - timestamp: 105.418594
+    length: 0
+    value: 2.7447102
+  - timestamp: 105.511475
+    length: 0
+    value: 2.8906388
+  - timestamp: 105.604355
+    length: 0
+    value: 3.0081842
+  - timestamp: 105.697235
+    length: 0
+    value: 3.0622358
+  - timestamp: 105.790115
+    length: 0
+    value: 3.0741165
+  - timestamp: 105.882996
+    length: 0
+    value: 3.080279
+  - timestamp: 105.975876
+    length: 0
+    value: 3.0893953
+  - timestamp: 106.068756
+    length: 0
+    value: 3.102082
+  - timestamp: 106.16164
+    length: 0
+    value: 3.1302736
+  - timestamp: 106.25451
+    length: 0
+    value: 3.183999
+  - timestamp: 106.34739
+    length: 0
+    value: 3.2178438
+  - timestamp: 106.44027
+    length: 0
+    value: 3.1829221
+  - timestamp: 106.53315
+    length: 0
+    value: 3.0916698
+  - timestamp: 106.62603
+    length: 0
+    value: 2.9807255
+  - timestamp: 106.71891
+    length: 0
+    value: 2.8757982
+  - timestamp: 106.81179
+    length: 0
+    value: 2.8019266
+  - timestamp: 106.90467
+    length: 0
+    value: 2.7800791
+  - timestamp: 106.99755
+    length: 0
+    value: 2.8023555
+  - timestamp: 107.09043
+    length: 0
+    value: 2.8317842
+  - timestamp: 107.18331
+    length: 0
+    value: 2.8631203
+  - timestamp: 107.27619
+    length: 0
+    value: 2.9169006
+  - timestamp: 107.36907
+    length: 0
+    value: 2.9843144
+  - timestamp: 107.46195
+    length: 0
+    value: 3.025733
+  - timestamp: 107.55483
+    length: 0
+    value: 3.0087578
+  - timestamp: 107.64771
+    length: 0
+    value: 2.9226809
+  - timestamp: 107.74059
+    length: 0
+    value: 2.7806664
+  - timestamp: 107.833466
+    length: 0
+    value: 2.6218467
+  - timestamp: 107.926346
+    length: 0
+    value: 2.51363
+  - timestamp: 108.019226
+    length: 0
+    value: 2.5090446
+  - timestamp: 108.11211
+    length: 0
+    value: 2.5991929
+  - timestamp: 108.20499
+    length: 0
+    value: 2.7338984
+  - timestamp: 108.29787
+    length: 0
+    value: 2.8662903
+  - timestamp: 108.39075
+    length: 0
+    value: 2.9728384
+  - timestamp: 108.48363
+    length: 0
+    value: 3.0532987
+  - timestamp: 108.57651
+    length: 0
+    value: 3.1212227
+  - timestamp: 108.66939
+    length: 0
+    value: 3.1860187
+  - timestamp: 108.76227
+    length: 0
+    value: 3.2376795
+  - timestamp: 108.85515
+    length: 0
+    value: 3.2482007
+  - timestamp: 108.94803
+    length: 0
+    value: 3.2139666
+  - timestamp: 109.04091
+    length: 0
+    value: 3.1624212
+  - timestamp: 109.13379
+    length: 0
+    value: 3.1192095
+  - timestamp: 109.22667
+    length: 0
+    value: 3.0753388
+  - timestamp: 109.31955
+    length: 0
+    value: 3.0146904
+  - timestamp: 109.41243
+    length: 0
+    value: 2.9454277
+  - timestamp: 109.5053
+    length: 0
+    value: 2.87788
+  - timestamp: 109.59818
+    length: 0
+    value: 2.8012314
+  - timestamp: 109.69106
+    length: 0
+    value: 2.723583
+  - timestamp: 109.78394
+    length: 0
+    value: 2.6717246
+  - timestamp: 109.87682
+    length: 0
+    value: 2.6627648
+  - timestamp: 109.9697
+    length: 0
+    value: 2.697223
+  - timestamp: 110.062584
+    length: 0
+    value: 2.7764158
+  - timestamp: 110.155464
+    length: 0
+    value: 2.8850343
+  - timestamp: 110.248344
+    length: 0
+    value: 2.9727943
+  - timestamp: 110.341225
+    length: 0
+    value: 2.9982955
+  - timestamp: 110.434105
+    length: 0
+    value: 2.9570038
+  - timestamp: 110.526985
+    length: 0
+    value: 2.8733912
+  - timestamp: 110.619865
+    length: 0
+    value: 2.7760088
+  - timestamp: 110.712746
+    length: 0
+    value: 2.6922534
+  - timestamp: 110.805626
+    length: 0
+    value: 2.655641
+  - timestamp: 110.898506
+    length: 0
+    value: 2.6825595
+  - timestamp: 110.99139
+    length: 0
+    value: 2.7533705
+  - timestamp: 111.08427
+    length: 0
+    value: 2.8274033
+  - timestamp: 111.17714
+    length: 0
+    value: 2.872052
+  - timestamp: 111.27002
+    length: 0
+    value: 2.888099
+  - timestamp: 111.3629
+    length: 0
+    value: 2.8809023
+  - timestamp: 111.45578
+    length: 0
+    value: 2.8649986
+  - timestamp: 111.54866
+    length: 0
+    value: 2.867653
+  - timestamp: 111.64154
+    length: 0
+    value: 2.9043512
+  - timestamp: 111.73442
+    length: 0
+    value: 2.9702065
+  - timestamp: 111.8273
+    length: 0
+    value: 3.04523
+  - timestamp: 111.92018
+    length: 0
+    value: 3.1091762
+  - timestamp: 112.01306
+    length: 0
+    value: 3.1427689
+  - timestamp: 112.10594
+    length: 0
+    value: 3.115512
+  - timestamp: 112.19882
+    length: 0
+    value: 3.0349057
+  - timestamp: 112.2917
+    length: 0
+    value: 2.9496472
+  - timestamp: 112.38458
+    length: 0
+    value: 2.8868837
+  - timestamp: 112.47746
+    length: 0
+    value: 2.846729
+  - timestamp: 112.57034
+    length: 0
+    value: 2.8322346
+  - timestamp: 112.66322
+    length: 0
+    value: 2.8402696
+  - timestamp: 112.7561
+    length: 0
+    value: 2.8439941
+  - timestamp: 112.848976
+    length: 0
+    value: 2.8215306
+  - timestamp: 112.94186
+    length: 0
+    value: 2.7914574
+  - timestamp: 113.03474
+    length: 0
+    value: 2.7692041
+  - timestamp: 113.12762
+    length: 0
+    value: 2.746441
+  - timestamp: 113.2205
+    length: 0
+    value: 2.7317553
+  - timestamp: 113.31338
+    length: 0
+    value: 2.7234488
+  - timestamp: 113.40626
+    length: 0
+    value: 2.6993976
+  - timestamp: 113.49914
+    length: 0
+    value: 2.6450918
+  - timestamp: 113.59202
+    length: 0
+    value: 2.5779648
+  - timestamp: 113.6849
+    length: 0
+    value: 2.5412781
+  - timestamp: 113.77778
+    length: 0
+    value: 2.5683405
+  - timestamp: 113.87066
+    length: 0
+    value: 2.6652408
+  - timestamp: 113.96354
+    length: 0
+    value: 2.8082876
+  - timestamp: 114.05642
+    length: 0
+    value: 2.9517894
+  - timestamp: 114.1493
+    length: 0
+    value: 3.0683405
+  - timestamp: 114.24218
+    length: 0
+    value: 3.1495888
+  - timestamp: 114.33506
+    length: 0
+    value: 3.2100527
+  - timestamp: 114.42793
+    length: 0
+    value: 3.266722
+  - timestamp: 114.52081
+    length: 0
+    value: 3.3133307
+  - timestamp: 114.61369
+    length: 0
+    value: 3.3375852
+  - timestamp: 114.70657
+    length: 0
+    value: 3.338661
+  - timestamp: 114.79945
+    length: 0
+    value: 3.322422
+  - timestamp: 114.892334
+    length: 0
+    value: 3.2854054
+  - timestamp: 114.985214
+    length: 0
+    value: 3.2148795
+  - timestamp: 115.078094
+    length: 0
+    value: 3.123392
+  - timestamp: 115.170975
+    length: 0
+    value: 3.0451372
+  - timestamp: 115.263855
+    length: 0
+    value: 2.9960797
+  - timestamp: 115.356735
+    length: 0
+    value: 2.9744158
+  - timestamp: 115.449615
+    length: 0
+    value: 2.9708757
+  - timestamp: 115.542496
+    length: 0
+    value: 2.9723942
+  - timestamp: 115.635376
+    length: 0
+    value: 2.969505
+  - timestamp: 115.72826
+    length: 0
+    value: 2.9745224
+  - timestamp: 115.82114
+    length: 0
+    value: 3.0108798
+  - timestamp: 115.91402
+    length: 0
+    value: 3.079428
+  - timestamp: 116.0069
+    length: 0
+    value: 3.1472626
+  - timestamp: 116.09977
+    length: 0
+    value: 3.1853423
+  - timestamp: 116.19265
+    length: 0
+    value: 3.173793
+  - timestamp: 116.28553
+    length: 0
+    value: 3.101444
+  - timestamp: 116.37841
+    length: 0
+    value: 2.9785364
+  - timestamp: 116.47129
+    length: 0
+    value: 2.8436632
+  - timestamp: 116.56417
+    length: 0
+    value: 2.7506568
+  - timestamp: 116.65705
+    length: 0
+    value: 2.747932
+  - timestamp: 116.74993
+    length: 0
+    value: 2.8301675
+  - timestamp: 116.84281
+    length: 0
+    value: 2.955627
+  - timestamp: 116.93569
+    length: 0
+    value: 3.080453
+  - timestamp: 117.02857
+    length: 0
+    value: 3.171132
+  - timestamp: 117.12145
+    length: 0
+    value: 3.2158175
+  - timestamp: 117.21433
+    length: 0
+    value: 3.2262094
+  - timestamp: 117.30721
+    length: 0
+    value: 3.2276073
+  - timestamp: 117.40009
+    length: 0
+    value: 3.2276032
+  - timestamp: 117.49297
+    length: 0
+    value: 3.2203863
+  - timestamp: 117.58585
+    length: 0
+    value: 3.2156794
+  - timestamp: 117.678734
+    length: 0
+    value: 3.21929
+  - timestamp: 117.77161
+    length: 0
+    value: 3.206296
+  - timestamp: 117.86449
+    length: 0
+    value: 3.1576269
+  - timestamp: 117.95737
+    length: 0
+    value: 3.0821438
+  - timestamp: 118.05025
+    length: 0
+    value: 3.0078104
+  - timestamp: 118.14313
+    length: 0
+    value: 2.9520621
+  - timestamp: 118.23601
+    length: 0
+    value: 2.926085
+  - timestamp: 118.32889
+    length: 0
+    value: 2.9313629
+  - timestamp: 118.42177
+    length: 0
+    value: 2.9503582
+  - timestamp: 118.51465
+    length: 0
+    value: 2.9602318
+  - timestamp: 118.60753
+    length: 0
+    value: 2.9688916
+  - timestamp: 118.70041
+    length: 0
+    value: 2.9951878
+  - timestamp: 118.79329
+    length: 0
+    value: 3.0383284
+  - timestamp: 118.88617
+    length: 0
+    value: 3.0812125
+  - timestamp: 118.97905
+    length: 0
+    value: 3.1052241
+  - timestamp: 119.07193
+    length: 0
+    value: 3.091039
+  - timestamp: 119.16481
+    length: 0
+    value: 3.0287533
+  - timestamp: 119.25769
+    length: 0
+    value: 2.9296331
+  - timestamp: 119.35057
+    length: 0
+    value: 2.837309
+  - timestamp: 119.44344
+    length: 0
+    value: 2.7987223
+  - timestamp: 119.53632
+    length: 0
+    value: 2.8265042
+  - timestamp: 119.6292
+    length: 0
+    value: 2.895869
+  - timestamp: 119.722084
+    length: 0
+    value: 2.9739065
+  - timestamp: 119.814964
+    length: 0
+    value: 3.0490675
+  - timestamp: 119.907845
+    length: 0
+    value: 3.1154933
+  - timestamp: 120.000725
+    length: 0
+    value: 3.1716347
+  - timestamp: 120.093605
+    length: 0
+    value: 3.2291155
+  - timestamp: 120.186485
+    length: 0
+    value: 3.2902324
+  - timestamp: 120.279366
+    length: 0
+    value: 3.333026
+  - timestamp: 120.372246
+    length: 0
+    value: 3.342105
+  - timestamp: 120.465126
+    length: 0
+    value: 3.3321369
+  - timestamp: 120.55801
+    length: 0
+    value: 3.3096402
+  - timestamp: 120.65089
+    length: 0
+    value: 3.2476044
+  - timestamp: 120.74377
+    length: 0
+    value: 3.153378
+  - timestamp: 120.83665
+    length: 0
+    value: 3.0693707
+  - timestamp: 120.92953
+    length: 0
+    value: 3.0241282
+  - timestamp: 121.0224
+    length: 0
+    value: 3.0136309
+  - timestamp: 121.11528
+    length: 0
+    value: 3.0227523
+  - timestamp: 121.20816
+    length: 0
+    value: 3.0250537
+  - timestamp: 121.30104
+    length: 0
+    value: 2.9893954
+  - timestamp: 121.39392
+    length: 0
+    value: 2.9159148
+  - timestamp: 121.4868
+    length: 0
+    value: 2.8456984
+  - timestamp: 121.57968
+    length: 0
+    value: 2.8051455
+  - timestamp: 121.67256
+    length: 0
+    value: 2.7912893
+  - timestamp: 121.76544
+    length: 0
+    value: 2.793935
+  - timestamp: 121.85832
+    length: 0
+    value: 2.7923958
+  - timestamp: 121.9512
+    length: 0
+    value: 2.7643073
+  - timestamp: 122.04408
+    length: 0
+    value: 2.7099695
+  - timestamp: 122.13696
+    length: 0
+    value: 2.6476538
+  - timestamp: 122.22984
+    length: 0
+    value: 2.6032617
+  - timestamp: 122.32272
+    length: 0
+    value: 2.6020646
+  - timestamp: 122.4156
+    length: 0
+    value: 2.650072
+  - timestamp: 122.508484
+    length: 0
+    value: 2.730529
+  - timestamp: 122.601364
+    length: 0
+    value: 2.8169749
+  - timestamp: 122.69424
+    length: 0
+    value: 2.891857
+  - timestamp: 122.78712
+    length: 0
+    value: 2.9399996
+  - timestamp: 122.88
+    length: 0
+    value: 2.9602656
+  - timestamp: 122.97288
+    length: 0
+    value: 2.9664211
+  - timestamp: 123.06576
+    length: 0
+    value: 2.966187
+  - timestamp: 123.15864
+    length: 0
+    value: 2.953202
+  - timestamp: 123.25152
+    length: 0
+    value: 2.930766
+  - timestamp: 123.3444
+    length: 0
+    value: 2.9157503
+  - timestamp: 123.43728
+    length: 0
+    value: 2.9110136
+  - timestamp: 123.53016
+    length: 0
+    value: 2.9001966
+  - timestamp: 123.62304
+    length: 0
+    value: 2.8838701
+  - timestamp: 123.71592
+    length: 0
+    value: 2.8716793
+  - timestamp: 123.8088
+    length: 0
+    value: 2.8646207
+  - timestamp: 123.90168
+    length: 0
+    value: 2.8574758
+  - timestamp: 123.99456
+    length: 0
+    value: 2.8564932
+  - timestamp: 124.08744
+    length: 0
+    value: 2.873381
+  - timestamp: 124.18032
+    length: 0
+    value: 2.8905416
+  - timestamp: 124.2732
+    length: 0
+    value: 2.8750865
+  - timestamp: 124.36607
+    length: 0
+    value: 2.839626
+  - timestamp: 124.458954
+    length: 0
+    value: 2.8212538
+  - timestamp: 124.551834
+    length: 0
+    value: 2.8191059
+  - timestamp: 124.644714
+    length: 0
+    value: 2.8083637
+  - timestamp: 124.737595
+    length: 0
+    value: 2.785179
+  - timestamp: 124.830475
+    length: 0
+    value: 2.7649262
+  - timestamp: 124.923355
+    length: 0
+    value: 2.7565234
+  - timestamp: 125.016235
+    length: 0
+    value: 2.7848845
+  - timestamp: 125.109116
+    length: 0
+    value: 2.879129
+  - timestamp: 125.201996
+    length: 0
+    value: 3.0147305
+  - timestamp: 125.294876
+    length: 0
+    value: 3.1225538
+  - timestamp: 125.38776
+    length: 0
+    value: 3.1745858
+  - timestamp: 125.48064
+    length: 0
+    value: 3.1974134
+  - timestamp: 125.57352
+    length: 0
+    value: 3.212257
+  - timestamp: 125.6664
+    length: 0
+    value: 3.2152758
+  - timestamp: 125.75928
+    length: 0
+    value: 3.2093697
+  - timestamp: 125.85216
+    length: 0
+    value: 3.193456
+  - timestamp: 125.94503
+    length: 0
+    value: 3.166263
+  - timestamp: 126.03791
+    length: 0
+    value: 3.1372042
+  - timestamp: 126.13079
+    length: 0
+    value: 3.1220067
+  - timestamp: 126.22367
+    length: 0
+    value: 3.1246462
+  - timestamp: 126.31655
+    length: 0
+    value: 3.1160426
+  - timestamp: 126.40943
+    length: 0
+    value: 3.0564454
+  - timestamp: 126.50231
+    length: 0
+    value: 2.9597185
+  - timestamp: 126.59519
+    length: 0
+    value: 2.8707955
+  - timestamp: 126.68807
+    length: 0
+    value: 2.811958
+  - timestamp: 126.78095
+    length: 0
+    value: 2.7856512
+  - timestamp: 126.87383
+    length: 0
+    value: 2.7755136
+  - timestamp: 126.96671
+    length: 0
+    value: 2.7623887
+  - timestamp: 127.05959
+    length: 0
+    value: 2.7395191
+  - timestamp: 127.15247
+    length: 0
+    value: 2.7289593
+  - timestamp: 127.24535
+    length: 0
+    value: 2.77612
+  - timestamp: 127.338234
+    length: 0
+    value: 2.884495
+  - timestamp: 127.431114
+    length: 0
+    value: 3.0034957
+  - timestamp: 127.523994
+    length: 0
+    value: 3.0871391
+  - timestamp: 127.61687
+    length: 0
+    value: 3.1011229
+  - timestamp: 127.70975
+    length: 0
+    value: 3.0417953
+  - timestamp: 127.80263
+    length: 0
+    value: 2.9292636
+  - timestamp: 127.89551
+    length: 0
+    value: 2.800919
+  - timestamp: 127.98839
+    length: 0
+    value: 2.7103138
+  - timestamp: 128.08127
+    length: 0
+    value: 2.690292
+  - timestamp: 128.17415
+    length: 0
+    value: 2.7299697
+  - timestamp: 128.26703
+    length: 0
+    value: 2.8022828
+  - timestamp: 128.35991
+    length: 0
+    value: 2.87828
+  - timestamp: 128.45279
+    length: 0
+    value: 2.9448996
+  - timestamp: 128.54567
+    length: 0
+    value: 2.994562
+  - timestamp: 128.63855
+    length: 0
+    value: 3.034228
+  - timestamp: 128.73143
+    length: 0
+    value: 3.080471
+  - timestamp: 128.82431
+    length: 0
+    value: 3.1284478
+  - timestamp: 128.91719
+    length: 0
+    value: 3.1664588
+  - timestamp: 129.01007
+    length: 0
+    value: 3.194987
+  - timestamp: 129.10295
+    length: 0
+    value: 3.2156343
+  - timestamp: 129.19583
+    length: 0
+    value: 3.2002032
+  - timestamp: 129.28871
+    length: 0
+    value: 3.116608
+  - timestamp: 129.38159
+    length: 0
+    value: 2.9882362
+  - timestamp: 129.47447
+    length: 0
+    value: 2.878456
+  - timestamp: 129.56735
+    length: 0
+    value: 2.8176677
+  - timestamp: 129.66023
+    length: 0
+    value: 2.801315
+  - timestamp: 129.75311
+    length: 0
+    value: 2.8117135
+  - timestamp: 129.846
+    length: 0
+    value: 2.8211846
+  - timestamp: 129.93887
+    length: 0
+    value: 2.8098798
+  - timestamp: 130.03175
+    length: 0
+    value: 2.8006036
+  - timestamp: 130.12462
+    length: 0
+    value: 2.828529
+  - timestamp: 130.2175
+    length: 0
+    value: 2.8924208
+  - timestamp: 130.31038
+    length: 0
+    value: 2.9522665
+  - timestamp: 130.40326
+    length: 0
+    value: 2.9788332
+  - timestamp: 130.49614
+    length: 0
+    value: 2.963804
+  - timestamp: 130.58902
+    length: 0
+    value: 2.9091651
+  - timestamp: 130.6819
+    length: 0
+    value: 2.8257039
+  - timestamp: 130.77478
+    length: 0
+    value: 2.7462525
+  - timestamp: 130.86766
+    length: 0
+    value: 2.7117138
+  - timestamp: 130.96054
+    length: 0
+    value: 2.738096
+  - timestamp: 131.05342
+    length: 0
+    value: 2.8048728
+  - timestamp: 131.1463
+    length: 0
+    value: 2.8836896
+  - timestamp: 131.23918
+    length: 0
+    value: 2.9622908
+  - timestamp: 131.33206
+    length: 0
+    value: 3.0262375
+  - timestamp: 131.42494
+    length: 0
+    value: 3.0611398
+  - timestamp: 131.51782
+    length: 0
+    value: 3.0774415
+  - timestamp: 131.6107
+    length: 0
+    value: 3.090585
+  - timestamp: 131.70358
+    length: 0
+    value: 3.0965192
+  - timestamp: 131.79646
+    length: 0
+    value: 3.0952377
+  - timestamp: 131.88934
+    length: 0
+    value: 3.1000535
+  - timestamp: 131.98222
+    length: 0
+    value: 3.1098146
+  - timestamp: 132.0751
+    length: 0
+    value: 3.0908833
+  - timestamp: 132.16798
+    length: 0
+    value: 3.033679
+  - timestamp: 132.26086
+    length: 0
+    value: 2.9693453
+  - timestamp: 132.35374
+    length: 0
+    value: 2.9216344
+  - timestamp: 132.44662
+    length: 0
+    value: 2.875346
+  - timestamp: 132.5395
+    length: 0
+    value: 2.8180234
+  - timestamp: 132.63239
+    length: 0
+    value: 2.7534158
+  - timestamp: 132.72527
+    length: 0
+    value: 2.6896818
+  - timestamp: 132.81815
+    length: 0
+    value: 2.640676
+  - timestamp: 132.91103
+    length: 0
+    value: 2.6262045
+  - timestamp: 133.0039
+    length: 0
+    value: 2.6410122
+  - timestamp: 133.09679
+    length: 0
+    value: 2.6561174
+  - timestamp: 133.18967
+    length: 0
+    value: 2.651244
+  - timestamp: 133.28255
+    length: 0
+    value: 2.6256607
+  - timestamp: 133.37541
+    length: 0
+    value: 2.5892355
+  - timestamp: 133.46829
+    length: 0
+    value: 2.554782
+  - timestamp: 133.56117
+    length: 0
+    value: 2.5305636
+  - timestamp: 133.65405
+    length: 0
+    value: 2.5255806
+  - timestamp: 133.74693
+    length: 0
+    value: 2.5476687
+  - timestamp: 133.83981
+    length: 0
+    value: 2.5950413
+  - timestamp: 133.9327
+    length: 0
+    value: 2.6587043
+  - timestamp: 134.02557
+    length: 0
+    value: 2.7321923
+  - timestamp: 134.11845
+    length: 0
+    value: 2.8229253
+  - timestamp: 134.21133
+    length: 0
+    value: 2.9191482
+  - timestamp: 134.30421
+    length: 0
+    value: 2.999442
+  - timestamp: 134.3971
+    length: 0
+    value: 3.0516212
+  - timestamp: 134.48997
+    length: 0
+    value: 3.064013
+  - timestamp: 134.58286
+    length: 0
+    value: 3.0372653
+  - timestamp: 134.67574
+    length: 0
+    value: 2.999296
+  - timestamp: 134.76862
+    length: 0
+    value: 2.9848187
+  - timestamp: 134.8615
+    length: 0
+    value: 2.9966981
+  - timestamp: 134.95438
+    length: 0
+    value: 2.9927893
+  - timestamp: 135.04726
+    length: 0
+    value: 2.9481611
+  - timestamp: 135.14014
+    length: 0
+    value: 2.866836
+  - timestamp: 135.23302
+    length: 0
+    value: 2.769112
+  - timestamp: 135.3259
+    length: 0
+    value: 2.6844275
+  - timestamp: 135.41878
+    length: 0
+    value: 2.6434083
+  - timestamp: 135.51166
+    length: 0
+    value: 2.6643493
+  - timestamp: 135.60454
+    length: 0
+    value: 2.7229784
+  - timestamp: 135.69742
+    length: 0
+    value: 2.7669437
+  - timestamp: 135.7903
+    length: 0
+    value: 2.7837265
+  - timestamp: 135.88318
+    length: 0
+    value: 2.790948
+  - timestamp: 135.97606
+    length: 0
+    value: 2.7916157
+  - timestamp: 136.06894
+    length: 0
+    value: 2.7748907
+  - timestamp: 136.16182
+    length: 0
+    value: 2.7410996
+  - timestamp: 136.2547
+    length: 0
+    value: 2.7124853
+  - timestamp: 136.34758
+    length: 0
+    value: 2.697032
+  - timestamp: 136.44046
+    length: 0
+    value: 2.703358
+  - timestamp: 136.53334
+    length: 0
+    value: 2.7451613
+  - timestamp: 136.62622
+    length: 0
+    value: 2.8055232
+  - timestamp: 136.71909
+    length: 0
+    value: 2.8410616
+  - timestamp: 136.81197
+    length: 0
+    value: 2.8281257
+  - timestamp: 136.90485
+    length: 0
+    value: 2.7899196
+  - timestamp: 136.99773
+    length: 0
+    value: 2.7502558
+  - timestamp: 137.0906
+    length: 0
+    value: 2.6759508
+  - timestamp: 137.18349
+    length: 0
+    value: 2.5446346
+  - timestamp: 137.27637
+    length: 0
+    value: 2.3795152
+  - timestamp: 137.36925
+    length: 0
+    value: 2.2117717
+  - timestamp: 137.46213
+    length: 0
+    value: 2.0536523
+  - timestamp: 137.55501
+    length: 0
+    value: 1.9266711
+  - timestamp: 137.64789
+    length: 0
+    value: 1.8548325
+  - timestamp: 137.74077
+    length: 0
+    value: 1.8072948
+  - timestamp: 137.83365
+    length: 0
+    value: 1.73989
+  - timestamp: 137.92653
+    length: 0
+    value: 1.6893896
+  - timestamp: 138.01941
+    length: 0
+    value: 1.7033987
+  - timestamp: 138.11229
+    length: 0
+    value: 1.7657683
+  - timestamp: 138.20517
+    length: 0
+    value: 1.8452383
+  - timestamp: 138.29805
+    length: 0
+    value: 1.9121622
+  - timestamp: 138.39093
+    length: 0
+    value: 1.9207425
+  - timestamp: 138.48381
+    length: 0
+    value: 1.8537924
+  - timestamp: 138.57669
+    length: 0
+    value: 1.7703923
+  - timestamp: 138.66957
+    length: 0
+    value: 1.7588233
+  - timestamp: 138.76245
+    length: 0
+    value: 1.8387012
+  - timestamp: 138.85533
+    length: 0
+    value: 1.9607944
+  - timestamp: 138.94821
+    length: 0
+    value: 2.0613315
+  - timestamp: 139.04109
+    length: 0
+    value: 2.071579
+  - timestamp: 139.13397
+    length: 0
+    value: 1.9839872
+  - timestamp: 139.22685
+    length: 0
+    value: 1.8714226
+  - timestamp: 139.31973
+    length: 0
+    value: 1.8142715
+  - timestamp: 139.41261
+    length: 0
+    value: 1.8484592
+  - timestamp: 139.5055
+    length: 0
+    value: 1.9527724
+  - timestamp: 139.59837
+    length: 0
+    value: 2.0594282
+  - timestamp: 139.69125
+    length: 0
+    value: 2.110267
+  - timestamp: 139.78413
+    length: 0
+    value: 2.0886986
+  - timestamp: 139.87701
+    length: 0
+    value: 2.0185974
+  - timestamp: 139.96988
+    length: 0
+    value: 1.9221969
+  - timestamp: 140.06276
+    length: 0
+    value: 1.8339882
+  - timestamp: 140.15564
+    length: 0
+    value: 1.7941911
+  - timestamp: 140.24852
+    length: 0
+    value: 1.792029
+  - timestamp: 140.3414
+    length: 0
+    value: 1.7787999
+  - timestamp: 140.43428
+    length: 0
+    value: 1.7487749
+  - timestamp: 140.52716
+    length: 0
+    value: 1.7268723
+  - timestamp: 140.62004
+    length: 0
+    value: 1.7004994
+  - timestamp: 140.71292
+    length: 0
+    value: 1.6623566
+  - timestamp: 140.8058
+    length: 0
+    value: 1.6612774
+  - timestamp: 140.89868
+    length: 0
+    value: 1.7190642
+  - timestamp: 140.99156
+    length: 0
+    value: 1.8011565
+  - timestamp: 141.08444
+    length: 0
+    value: 1.8891602
+  - timestamp: 141.17732
+    length: 0
+    value: 1.9716903
+  - timestamp: 141.2702
+    length: 0
+    value: 2.01044
+  - timestamp: 141.36308
+    length: 0
+    value: 1.985202
+  - timestamp: 141.45596
+    length: 0
+    value: 1.9425684
+  - timestamp: 141.54884
+    length: 0
+    value: 1.9398543
+  - timestamp: 141.64172
+    length: 0
+    value: 1.9816823
+  - timestamp: 141.7346
+    length: 0
+    value: 2.039075
+  - timestamp: 141.82748
+    length: 0
+    value: 2.0917466
+  - timestamp: 141.92036
+    length: 0
+    value: 2.1187763
+  - timestamp: 142.01324
+    length: 0
+    value: 2.1348472
+  - timestamp: 142.10612
+    length: 0
+    value: 2.174082
+  - timestamp: 142.199
+    length: 0
+    value: 2.243931
+  - timestamp: 142.29189
+    length: 0
+    value: 2.3278685
+  - timestamp: 142.38477
+    length: 0
+    value: 2.3965063
+  - timestamp: 142.47765
+    length: 0
+    value: 2.4208918
+  - timestamp: 142.57053
+    length: 0
+    value: 2.397088
+  - timestamp: 142.6634
+    length: 0
+    value: 2.3384886
+  - timestamp: 142.75629
+    length: 0
+    value: 2.2699735
+  - timestamp: 142.84917
+    length: 0
+    value: 2.2104611
+  - timestamp: 142.94205
+    length: 0
+    value: 2.1771865
+  - timestamp: 143.03493
+    length: 0
+    value: 2.1684337
+  - timestamp: 143.1278
+    length: 0
+    value: 2.1377246
+  - timestamp: 143.22069
+    length: 0
+    value: 2.0551667
+  - timestamp: 143.31355
+    length: 0
+    value: 1.9439588
+  - timestamp: 143.40643
+    length: 0
+    value: 1.840768
+  - timestamp: 143.49931
+    length: 0
+    value: 1.7534266
+  - timestamp: 143.5922
+    length: 0
+    value: 1.6931201
+  - timestamp: 143.68507
+    length: 0
+    value: 1.6896603
+  - timestamp: 143.77795
+    length: 0
+    value: 1.7424209
+  - timestamp: 143.87083
+    length: 0
+    value: 1.818421
+  - timestamp: 143.96371
+    length: 0
+    value: 1.8937005
+  - timestamp: 144.0566
+    length: 0
+    value: 1.9333973
+  - timestamp: 144.14948
+    length: 0
+    value: 1.9025667
+  - timestamp: 144.24236
+    length: 0
+    value: 1.8093395
+  - timestamp: 144.33524
+    length: 0
+    value: 1.7348962
+  - timestamp: 144.42812
+    length: 0
+    value: 1.7540251
+  - timestamp: 144.521
+    length: 0
+    value: 1.8583211
+  - timestamp: 144.61388
+    length: 0
+    value: 1.9806063
+  - timestamp: 144.70676
+    length: 0
+    value: 2.0431921
+  - timestamp: 144.79964
+    length: 0
+    value: 1.9914088
+  - timestamp: 144.89252
+    length: 0
+    value: 1.8651892
+  - timestamp: 144.9854
+    length: 0
+    value: 1.7659125
+  - timestamp: 145.07828
+    length: 0
+    value: 1.7666314
+  - timestamp: 145.17116
+    length: 0
+    value: 1.8679004
+  - timestamp: 145.26404
+    length: 0
+    value: 2.0062017
+  - timestamp: 145.35692
+    length: 0
+    value: 2.1138542
+  - timestamp: 145.4498
+    length: 0
+    value: 2.1487682
+  - timestamp: 145.54268
+    length: 0
+    value: 2.108645
+  - timestamp: 145.63556
+    length: 0
+    value: 2.025847
+  - timestamp: 145.72844
+    length: 0
+    value: 1.9284997
+  - timestamp: 145.82132
+    length: 0
+    value: 1.851678
+  - timestamp: 145.9142
+    length: 0
+    value: 1.8277798
+  - timestamp: 146.00708
+    length: 0
+    value: 1.8370944
+  - timestamp: 146.09996
+    length: 0
+    value: 1.8508165
+  - timestamp: 146.19284
+    length: 0
+    value: 1.8560759
+  - timestamp: 146.28572
+    length: 0
+    value: 1.8427196
+  - timestamp: 146.3786
+    length: 0
+    value: 1.7893157
+  - timestamp: 146.47148
+    length: 0
+    value: 1.7222313
+  - timestamp: 146.56435
+    length: 0
+    value: 1.701856
+  - timestamp: 146.65723
+    length: 0
+    value: 1.7194238
+  - timestamp: 146.7501
+    length: 0
+    value: 1.7151487
+  - timestamp: 146.84299
+    length: 0
+    value: 1.6928254
+  - timestamp: 146.93587
+    length: 0
+    value: 1.6980821
+  - timestamp: 147.02875
+    length: 0
+    value: 1.7495866
+  - timestamp: 147.12163
+    length: 0
+    value: 1.8427416
+  - timestamp: 147.21451
+    length: 0
+    value: 1.9937091
+  - timestamp: 147.30739
+    length: 0
+    value: 2.1879168
+  - timestamp: 147.40027
+    length: 0
+    value: 2.3525622
+  - timestamp: 147.49315
+    length: 0
+    value: 2.4426684
+  - timestamp: 147.58603
+    length: 0
+    value: 2.4745855
+  - timestamp: 147.67891
+    length: 0
+    value: 2.476452
+  - timestamp: 147.77179
+    length: 0
+    value: 2.4592483
+  - timestamp: 147.86467
+    length: 0
+    value: 2.4331095
+  - timestamp: 147.95755
+    length: 0
+    value: 2.4196436
+  - timestamp: 148.05043
+    length: 0
+    value: 2.424922
+  - timestamp: 148.14331
+    length: 0
+    value: 2.424687
+  - timestamp: 148.23619
+    length: 0
+    value: 2.411988
+  - timestamp: 148.32907
+    length: 0
+    value: 2.4004588
+  - timestamp: 148.42195
+    length: 0
+    value: 2.3990908
+  - timestamp: 148.51483
+    length: 0
+    value: 2.4004686
+  - timestamp: 148.60771
+    length: 0
+    value: 2.4129512
+  - timestamp: 148.70059
+    length: 0
+    value: 2.4467795
+  - timestamp: 148.79347
+    length: 0
+    value: 2.4742517
+  - timestamp: 148.88635
+    length: 0
+    value: 2.451022
+  - timestamp: 148.97923
+    length: 0
+    value: 2.3925726
+  - timestamp: 149.07211
+    length: 0
+    value: 2.3381984
+  - timestamp: 149.165
+    length: 0
+    value: 2.2932522
+  - timestamp: 149.25787
+    length: 0
+    value: 2.2545314
+  - timestamp: 149.35075
+    length: 0
+    value: 2.2518415
+  - timestamp: 149.44363
+    length: 0
+    value: 2.295301
+  - timestamp: 149.53651
+    length: 0
+    value: 2.3515444
+  - timestamp: 149.6294
+    length: 0
+    value: 2.3934178
+  - timestamp: 149.72227
+    length: 0
+    value: 2.4170372
+  - timestamp: 149.81514
+    length: 0
+    value: 2.4085665
+  - timestamp: 149.90802
+    length: 0
+    value: 2.3566046
+  - timestamp: 150.0009
+    length: 0
+    value: 2.3086865
+  - timestamp: 150.09378
+    length: 0
+    value: 2.327414
+  - timestamp: 150.18666
+    length: 0
+    value: 2.403745
+  - timestamp: 150.27954
+    length: 0
+    value: 2.4764776
+  - timestamp: 150.37242
+    length: 0
+    value: 2.5078652
+  - timestamp: 150.4653
+    length: 0
+    value: 2.486495
+  - timestamp: 150.55818
+    length: 0
+    value: 2.419168
+  - timestamp: 150.65106
+    length: 0
+    value: 2.3433838
+  - timestamp: 150.74394
+    length: 0
+    value: 2.314061
+  - timestamp: 150.83682
+    length: 0
+    value: 2.3529544
+  - timestamp: 150.9297
+    length: 0
+    value: 2.4415329
+  - timestamp: 151.02258
+    length: 0
+    value: 2.5294006
+  - timestamp: 151.11546
+    length: 0
+    value: 2.57909
+  - timestamp: 151.20834
+    length: 0
+    value: 2.5775428
+  - timestamp: 151.30122
+    length: 0
+    value: 2.5302572
+  - timestamp: 151.3941
+    length: 0
+    value: 2.4526072
+  - timestamp: 151.48698
+    length: 0
+    value: 2.3781896
+  - timestamp: 151.57986
+    length: 0
+    value: 2.3408597
+  - timestamp: 151.67274
+    length: 0
+    value: 2.3274708
+  - timestamp: 151.76562
+    length: 0
+    value: 2.2956805
+  - timestamp: 151.8585
+    length: 0
+    value: 2.2559488
+  - timestamp: 151.95139
+    length: 0
+    value: 2.2369976
+  - timestamp: 152.04427
+    length: 0
+    value: 2.2262056
+  - timestamp: 152.13715
+    length: 0
+    value: 2.2184973
+  - timestamp: 152.23003
+    length: 0
+    value: 2.2441862
+  - timestamp: 152.3229
+    length: 0
+    value: 2.3015594
+  - timestamp: 152.41579
+    length: 0
+    value: 2.3511517
+  - timestamp: 152.50867
+    length: 0
+    value: 2.3898833
+  - timestamp: 152.60155
+    length: 0
+    value: 2.4308798
+  - timestamp: 152.69443
+    length: 0
+    value: 2.4559603
+  - timestamp: 152.78731
+    length: 0
+    value: 2.4558728
+  - timestamp: 152.88019
+    length: 0
+    value: 2.4636774
+  - timestamp: 152.97307
+    length: 0
+    value: 2.4982135
+  - timestamp: 153.06595
+    length: 0
+    value: 2.5467288
+  - timestamp: 153.15881
+    length: 0
+    value: 2.5922883
+  - timestamp: 153.2517
+    length: 0
+    value: 2.6341224
+  - timestamp: 153.34457
+    length: 0
+    value: 2.6627345
+  - timestamp: 153.43745
+    length: 0
+    value: 2.6843805
+  - timestamp: 153.53033
+    length: 0
+    value: 2.7147865
+  - timestamp: 153.62321
+    length: 0
+    value: 2.7527409
+  - timestamp: 153.7161
+    length: 0
+    value: 2.7892294
+  - timestamp: 153.80898
+    length: 0
+    value: 2.8179684
+  - timestamp: 153.90186
+    length: 0
+    value: 2.8289475
+  - timestamp: 153.99474
+    length: 0
+    value: 2.8298547
+  - timestamp: 154.08762
+    length: 0
+    value: 2.831687
+  - timestamp: 154.1805
+    length: 0
+    value: 2.8388855
+  - timestamp: 154.27338
+    length: 0
+    value: 2.8440902
+  - timestamp: 154.36626
+    length: 0
+    value: 2.8430114
+  - timestamp: 154.45914
+    length: 0
+    value: 2.8310392
+  - timestamp: 154.55202
+    length: 0
+    value: 2.7793415
+  - timestamp: 154.6449
+    length: 0
+    value: 2.6785212
+  - timestamp: 154.73778
+    length: 0
+    value: 2.5643249
+  - timestamp: 154.83066
+    length: 0
+    value: 2.4757702
+  - timestamp: 154.92354
+    length: 0
+    value: 2.411442
+  - timestamp: 155.01642
+    length: 0
+    value: 2.3686528
+  - timestamp: 155.1093
+    length: 0
+    value: 2.361722
+  - timestamp: 155.20218
+    length: 0
+    value: 2.3865724
+  - timestamp: 155.29506
+    length: 0
+    value: 2.415444
+  - timestamp: 155.38794
+    length: 0
+    value: 2.4456904
+  - timestamp: 155.48082
+    length: 0
+    value: 2.4730844
+  - timestamp: 155.5737
+    length: 0
+    value: 2.4702432
+  - timestamp: 155.66658
+    length: 0
+    value: 2.4280095
+  - timestamp: 155.75946
+    length: 0
+    value: 2.4006224
+  - timestamp: 155.85234
+    length: 0
+    value: 2.4392662
+  - timestamp: 155.94522
+    length: 0
+    value: 2.5308466
+  - timestamp: 156.0381
+    length: 0
+    value: 2.627927
+  - timestamp: 156.13098
+    length: 0
+    value: 2.6993496
+  - timestamp: 156.22386
+    length: 0
+    value: 2.723405
+  - timestamp: 156.31674
+    length: 0
+    value: 2.6853259
+  - timestamp: 156.4096
+    length: 0
+    value: 2.5933073
+  - timestamp: 156.50249
+    length: 0
+    value: 2.4891977
+  - timestamp: 156.59537
+    length: 0
+    value: 2.4166791
+  - timestamp: 156.68825
+    length: 0
+    value: 2.3819733
+  - timestamp: 156.78113
+    length: 0
+    value: 2.377306
+  - timestamp: 156.87401
+    length: 0
+    value: 2.4051485
+  - timestamp: 156.96689
+    length: 0
+    value: 2.4526377
+  - timestamp: 157.05977
+    length: 0
+    value: 2.477808
+  - timestamp: 157.15265
+    length: 0
+    value: 2.4728444
+  - timestamp: 157.24553
+    length: 0
+    value: 2.4741855
+  - timestamp: 157.33841
+    length: 0
+    value: 2.4870434
+  - timestamp: 157.43129
+    length: 0
+    value: 2.4699955
+  - timestamp: 157.52417
+    length: 0
+    value: 2.4165351
+  - timestamp: 157.61705
+    length: 0
+    value: 2.3661394
+  - timestamp: 157.70993
+    length: 0
+    value: 2.3364532
+  - timestamp: 157.80281
+    length: 0
+    value: 2.3098805
+  - timestamp: 157.89569
+    length: 0
+    value: 2.303446
+  - timestamp: 157.98857
+    length: 0
+    value: 2.3459368
+  - timestamp: 158.08145
+    length: 0
+    value: 2.4173837
+  - timestamp: 158.17433
+    length: 0
+    value: 2.4771137
+  - timestamp: 158.26721
+    length: 0
+    value: 2.5201445
+  - timestamp: 158.36009
+    length: 0
+    value: 2.536707
+  - timestamp: 158.45297
+    length: 0
+    value: 2.4770632
+  - timestamp: 158.54585
+    length: 0
+    value: 2.313733
+  - timestamp: 158.63873
+    length: 0
+    value: 2.1416001
+  - timestamp: 158.73161
+    length: 0
+    value: 2.078771
+  - timestamp: 158.8245
+    length: 0
+    value: 2.1215384
+  - timestamp: 158.91737
+    length: 0
+    value: 2.197354
+  - timestamp: 159.01025
+    length: 0
+    value: 2.2155728
+  - timestamp: 159.10313
+    length: 0
+    value: 2.0950065
+  - timestamp: 159.19601
+    length: 0
+    value: 1.8258446
+  - timestamp: 159.2889
+    length: 0
+    value: 1.49985
+  - timestamp: 159.38177
+    length: 0
+    value: 1.2476023
+  - timestamp: 159.47466
+    length: 0
+    value: 1.1041929
+  - timestamp: 159.56754
+    length: 0
+    value: 1.0189948
+  - timestamp: 159.66042
+    length: 0
+    value: 0.96434677
+  - timestamp: 159.75328
+    length: 0
+    value: 0.9214013
+  - timestamp: 159.84616
+    length: 0
+    value: 0.8725098
+  - timestamp: 159.93904
+    length: 0
+    value: 0.81027967
+  - timestamp: 160.03192
+    length: 0
+    value: 0.7323484
+  - timestamp: 160.1248
+    length: 0
+    value: 0.64242285
+  - timestamp: 160.21768
+    length: 0
+    value: 0.55362546
+  - timestamp: 160.31056
+    length: 0
+    value: 0.48032522
+  - timestamp: 160.40344
+    length: 0
+    value: 0.42820442
+  - timestamp: 160.49632
+    length: 0
+    value: 0.39009422
+  - timestamp: 160.5892
+    length: 0
+    value: 0.35719633
+  - timestamp: 160.68208
+    length: 0
+    value: 0.327196
+  - timestamp: 160.77496
+    length: 0
+    value: 0.29884127
+  - timestamp: 160.86784
+    length: 0
+    value: 0.27230787
+  - timestamp: 160.96072
+    length: 0
+    value: 0.24789675
+  - timestamp: 161.0536
+    length: 0
+    value: 0.22471298
+  - timestamp: 161.14648
+    length: 0
+    value: 0.20310447
+  - timestamp: 161.23936
+    length: 0
+    value: 0.18345524
+  - timestamp: 161.33224
+    length: 0
+    value: 0.16490866
+  - timestamp: 161.42513
+    length: 0
+    value: 0.14753251
+  - timestamp: 161.518
+    length: 0
+    value: 0.13236018
+  - timestamp: 161.61089
+    length: 0
+    value: 0.12017278
+  - timestamp: 161.70377
+    length: 0
+    value: 0.11074338
+  - timestamp: 161.79665
+    length: 0
+    value: 0.10270443
+  - timestamp: 161.88953
+    length: 0
+    value: 0.094976775
+  - timestamp: 161.9824
+    length: 0
+    value: 0.08717315
+  - timestamp: 162.07529
+    length: 0
+    value: 0.079666264
+  - timestamp: 162.16817
+    length: 0
+    value: 0.07334945
+  - timestamp: 162.26105
+    length: 0
+    value: 0.068440236
+  - timestamp: 162.35393
+    length: 0
+    value: 0.06437236
+  - timestamp: 162.44681
+    length: 0
+    value: 0.06080752
+  - timestamp: 162.53969
+    length: 0
+    value: 0.05729803
+  - timestamp: 162.63257
+    length: 0
+    value: 0.053496942
+  - timestamp: 162.72545
+    length: 0
+    value: 0.049689308
+  - timestamp: 162.81833
+    length: 0
+    value: 0.046128936
+  - timestamp: 162.91121
+    length: 0
+    value: 0.043290153
+  - timestamp: 163.00407
+    length: 0
+    value: 0.041285995
+  - timestamp: 163.09695
+    length: 0
+    value: 0.039412733
+  - timestamp: 163.18983
+    length: 0
+    value: 0.037018046
+  - timestamp: 163.28271
+    length: 0
+    value: 0.033836495
+  - timestamp: 163.3756
+    length: 0
+    value: 0.030252185
+  - timestamp: 163.46848
+    length: 0
+    value: 0.026937634
+  - timestamp: 163.56136
+    length: 0
+    value: 0.024219755
+  - timestamp: 163.65424
+    length: 0
+    value: 0.021933723
+  - timestamp: 163.74712
+    length: 0
+    value: 0.019707581
+  - timestamp: 163.84
+    length: 0
+    value: 0.017548388
+  - timestamp: 163.93288
+    length: 0
+    value: 0.015672209
+  - timestamp: 164.02576
+    length: 0
+    value: 0.014151227
+  - timestamp: 164.11864
+    length: 0
+    value: 0.012810859
+  - timestamp: 164.21152
+    length: 0
+    value: 0.011462728
+  - timestamp: 164.3044
+    length: 0
+    value: 0.010128833
+  - timestamp: 164.39728
+    length: 0
+    value: 0.008793213
+  - timestamp: 164.49016
+    length: 0
+    value: 0.0073857033
+  - timestamp: 164.58304
+    length: 0
+    value: 0.0058759195
+  - timestamp: 164.67592
+    length: 0
+    value: 0.0042916727
+  - timestamp: 164.7688
+    length: 0
+    value: 0.0028465858
+  - timestamp: 164.86168
+    length: 0
+    value: 0.0017812649
+  - timestamp: 164.95456
+    length: 0
+    value: 0.001160849
+  - timestamp: 165.04744
+    length: 0
+    value: 0.00085294095
+  - timestamp: 165.14032
+    length: 0
+    value: 0.00068054936
+  - timestamp: 165.2332
+    length: 0
+    value: 0.0006067397
+  - timestamp: 165.32608
+    length: 0
+    value: 0.00061106746
+  - timestamp: 165.41896
+    length: 0
+    value: 0.00063900097
+  - timestamp: 165.51184
+    length: 0
+    value: 0.00066435273
+  - timestamp: 165.60472
+    length: 0
+    value: 0.0006681925
+  - timestamp: 165.6976
+    length: 0
+    value: 0.0006496145
+  - timestamp: 165.79048
+    length: 0
+    value: 0.0006236861
+  - timestamp: 165.88336
+    length: 0
+    value: 0.0006033613
+  - timestamp: 165.97624
+    length: 0
+    value: 0.000586271
+  - timestamp: 166.06912
+    length: 0
+    value: 0.00057016546
+  - timestamp: 166.162
+    length: 0
+    value: 0.0005574111
+  - timestamp: 166.25488
+    length: 0
+    value: 0.00054995454
+  - timestamp: 166.34775
+    length: 0
+    value: 0.00054620573
+  - timestamp: 166.44063
+    length: 0
+    value: 0.0005430068
+  - timestamp: 166.53351
+    length: 0
+    value: 0.000539861

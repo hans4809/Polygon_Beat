@@ -16,6 +16,8 @@ public class AnalyzeExample : MonoBehaviour
 
     private float startTime = 0;
     public List<Beat> beats;
+    public List<Onset> onsets;
+    public List<Chroma> chromas;
     private float endTime;
     void Start()
     {
@@ -26,7 +28,13 @@ public class AnalyzeExample : MonoBehaviour
         endTime = audioClip.length;
         Track<Beat> track = rhythmData.GetTrack<Beat>(); // 리듬 데이터에 비트 트랙 구현?
         beats = new List<Beat>(); // 비트 리스트 만듬
-        rhythmData.GetFeatures<Beat>(beats, startTime, endTime); // 비트 리스트에 비트의 특징 저장
+        rhythmData.GetFeatures<Beat>(beats, startTime, endTime);// 비트 리스트에 비트의 특징 저장
+        Track<Onset> track1 = rhythmData.GetTrack<Onset>();
+        onsets = new List<Onset>();
+        rhythmData.GetFeatures<Onset>(onsets, startTime, endTime);
+        Track<Chroma> track2 = rhythmData.GetTrack<Chroma>();
+        chromas = new List<Chroma>();
+        rhythmData.GetFeatures<Chroma>(chromas, startTime, endTime);
     }
     // Update is called once per frame
     void Update()

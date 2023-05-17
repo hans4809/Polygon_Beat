@@ -17,7 +17,7 @@ public class GroundCreater : MonoBehaviour
 
     public void Start()
     {
-        for( int i = -10; i <= analyzeExample.beats.Count; i++)
+        for( int i = 0; i <= analyzeExample.beats.Count; i++)
         {
             CreateObject(myGameObject[0], i.ToString(), new Vector3(i, 0, 0)); //ºñÆ® °¹¼ö¸¸Å­ ¹Ù´Ú¸¸µë
         }

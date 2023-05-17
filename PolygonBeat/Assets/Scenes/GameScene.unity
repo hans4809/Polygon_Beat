@@ -1112,7 +1112,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 723218140}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67e22d63cdcfcfe44b44adf1391fff3e, type: 3}
   m_Name: 
@@ -1142,7 +1142,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 26c48b4b7defb0844a2912376bed7079, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 6ccabc2b5c8bb9c46a27089af95746e3, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -2212,13 +2212,14 @@ GameObject:
   - component: {fileID: 1446677641}
   - component: {fileID: 1446677640}
   - component: {fileID: 1446677639}
+  - component: {fileID: 1446677645}
   m_Layer: 0
   m_Name: Analyzer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1446677639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2301,6 +2302,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1446677645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446677638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71075d9ebd7eb7e469c2476bb2dd5c22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1467103199
 GameObject:
   m_ObjectHideFlags: 0
@@ -2336,6 +2349,8 @@ MonoBehaviour:
   rhythmData: {fileID: 11400000, guid: 876c9933932c58a458120420904631cd, type: 2}
   audioSource: {fileID: 723218143}
   beats: []
+  onsets: []
+  chromas: []
 --- !u!4 &1467103201
 Transform:
   m_ObjectHideFlags: 0
@@ -2408,10 +2423,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   analyzer: {fileID: 1601891904}
-  audioClip: {fileID: 8300000, guid: 26c48b4b7defb0844a2912376bed7079, type: 3}
-  rhythmData: {fileID: 11400000, guid: 75b51353028ad5444bcd76a58726cf5d, type: 2}
+  audioClip: {fileID: 8300000, guid: 6ccabc2b5c8bb9c46a27089af95746e3, type: 3}
+  rhythmData: {fileID: 11400000, guid: 06625a98ca96bb145a13b58b606b302d, type: 2}
   audioSource: {fileID: 723218143}
   beats: []
+  onsets: []
+  chromas: []
 --- !u!114 &1601891906
 MonoBehaviour:
   m_ObjectHideFlags: 0
