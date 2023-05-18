@@ -661,17 +661,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2381b5c4c56976a43bdd33e018c57d63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delayTime: 0.1
   analyzeExample: {fileID: 1601891905}
   rhythmPlayer: {fileID: 723218142}
+  groundCreater: {fileID: 1601891906}
   parentObject:
   - {fileID: 199275934}
   - {fileID: 1720000920}
   - {fileID: 1145447306}
   - {fileID: 1110739450}
   childObject: {fileID: 558690951}
-  initParentPostion: {x: 0, y: 0, z: 0}
-  parentPosition: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
 --- !u!1 &570105285
 GameObject:
   m_ObjectHideFlags: 0
@@ -2445,7 +2444,11 @@ MonoBehaviour:
   myGameObject:
   - {fileID: 3917200891346524428, guid: d58822cac18437248ba3f949cafa0fc6, type: 3}
   - {fileID: 3598686883019174663, guid: bae4427250b30924fa6623c7187dd781, type: 3}
+  - {fileID: 7183752488952680985, guid: af1b5aa1a274fe74a99d131a27a4cad3, type: 3}
+  - {fileID: 8022605637148656079, guid: 3f4ff04cd317c5a40a501f54d9f02b6c, type: 3}
   transformParent: {fileID: 1601891907}
+  slowIndex: 15
+  fastIndex: 21
 --- !u!4 &1601891907
 Transform:
   m_ObjectHideFlags: 0
