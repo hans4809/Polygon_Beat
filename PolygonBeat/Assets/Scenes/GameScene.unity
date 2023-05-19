@@ -571,9 +571,12 @@ GameObject:
   - component: {fileID: 558690953}
   - component: {fileID: 558690952}
   - component: {fileID: 558690954}
+  - component: {fileID: 558690957}
+  - component: {fileID: 558690956}
+  - component: {fileID: 558690955}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -671,6 +674,67 @@ MonoBehaviour:
   - {fileID: 1145447306}
   - {fileID: 1110739450}
   childObject: {fileID: 558690951}
+--- !u!114 &558690955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 558690951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97a5ce83c7f15f94e942b5700b513ea3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myGameObject: {fileID: 8124125613654324320, guid: 590f96ca979fd184aa74cc4215a3efc1, type: 3}
+  coin: 0
+--- !u!50 &558690956
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 558690951}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!61 &558690957
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 558690951}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &570105285
 GameObject:
   m_ObjectHideFlags: 0
@@ -2446,9 +2510,11 @@ MonoBehaviour:
   - {fileID: 3598686883019174663, guid: bae4427250b30924fa6623c7187dd781, type: 3}
   - {fileID: 7183752488952680985, guid: af1b5aa1a274fe74a99d131a27a4cad3, type: 3}
   - {fileID: 8022605637148656079, guid: 3f4ff04cd317c5a40a501f54d9f02b6c, type: 3}
+  - {fileID: 8124125613654324320, guid: 590f96ca979fd184aa74cc4215a3efc1, type: 3}
   transformParent: {fileID: 1601891907}
   slowIndex: 15
   fastIndex: 21
+  coinIndex: 
 --- !u!4 &1601891907
 Transform:
   m_ObjectHideFlags: 0
