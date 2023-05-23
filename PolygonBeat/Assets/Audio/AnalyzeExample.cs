@@ -21,7 +21,7 @@ public class AnalyzeExample : MonoBehaviour
     private float endTime;
     void Start()
     {
-        rhythmData = analyzer.Analyze(audioClip); //오디오클립에 있는 노래를 분석해서 리듬데이터로 반환
+        //rhythmData = analyzer.Analyze(audioClip); //오디오클립에 있는 노래를 분석해서 리듬데이터로 반환
     }
     void Awake()
     {

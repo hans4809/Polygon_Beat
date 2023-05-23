@@ -664,7 +664,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2381b5c4c56976a43bdd33e018c57d63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delayTime: 0.1
+  delayTime: 0.01
   analyzeExample: {fileID: 1601891905}
   rhythmPlayer: {fileID: 723218142}
   groundCreater: {fileID: 1601891906}
@@ -2409,7 +2409,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   analyzer: {fileID: 1446677643}
   audioClip: {fileID: 8300000, guid: 26c48b4b7defb0844a2912376bed7079, type: 3}
-  rhythmData: {fileID: 11400000, guid: 876c9933932c58a458120420904631cd, type: 2}
+  rhythmData: {fileID: 0}
   audioSource: {fileID: 723218143}
   beats: []
   onsets: []

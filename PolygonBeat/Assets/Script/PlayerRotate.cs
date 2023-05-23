@@ -41,7 +41,9 @@ public class PlayerRotate : MonoBehaviour
     void SetRotation() // 결론 오차 수정을 위한 작업
     {
         for (int i = 0; i < 3; i++)
+        {
             childObject.transform.GetChild(i).localEulerAngles = Vector3.zero; // 90도 돌고 오차 수정을 위해 전부 rotation 초기화
+        }
     }
     void setObject()
     {
@@ -52,7 +54,7 @@ public class PlayerRotate : MonoBehaviour
         childObject.transform.localEulerAngles = Vector3.zero;
         childObject.transform.parent.localPosition = parentPosition;
         childObject.transform.localPosition = new Vector3(-5, 5, 0);
-        rotateSpeed = analyzeExample.beats[0].bpm;
+        rotateSpeed = 1 / analyzeExample.beats[0].timestamp;
     }
 
     public void Setting()
@@ -102,63 +104,61 @@ public class PlayerRotate : MonoBehaviour
     }
     private float GetRotateSpeed(int index) // 로테이션 속도 계산
     {
-        if(groundCreater.slowIndex <= index + 1  && index + 1 < groundCreater.fastIndex)
+        /*if(groundCreater.slowIndex <= index + 1  && index + 1 < groundCreater.fastIndex)
         {
             return (1 / (analyzeExample.beats[index + 1].timestamp - analyzeExample.beats[index].timestamp))/2;
-        }
-        return 1 / (analyzeExample.beats[index + 1].timestamp - analyzeExample.beats[index].timestamp);
+        }*/
+        return (analyzeExample.beats[index].bpm / 60 - delayTime/*- (analyzeExample.beats[index].timestamp - delayTime)*/);
     }
     void Update()
     {
         if (isRotate) 
         {
-            if (rhythmPlayer.time <= analyzeExample.beats[0].timestamp)
+            /*if (rhythmPlayer.time <= analyzeExample.beats[0].timestamp)
             {
                 return;
-            }
-            else
+            }*/
+            rotation = Vector3.Lerp(new Vector3(0, 0, 0), new Vector3(0, 0, -90), time); // time이 0 ~ 1 갈 동안 로테이션도 (0,0,0)에서 (0,0,-90)으로 변함
+            childObject.transform.parent.transform.localEulerAngles = rotation; // 부모 오브젝트 돌림
+            time += Time.deltaTime * rotateSpeed; // 한 프레임당 얼만큼 돌릴 건지 결정
+            if (time >= 1) //90도 돌고나면 부모를 바꿔서 다시 돌려야 제대로 돌아감
             {
-                rotation = Vector3.Lerp(new Vector3(0, 0, 0), new Vector3(0, 0, -90), time); // time이 0 ~ 1 갈 동안 로테이션도 (0,0,0)에서 (0,0,-90)으로 변함
-                childObject.transform.parent.transform.localEulerAngles = rotation; // 부모 오브젝트 돌림
-                time += Time.deltaTime * rotateSpeed; // 한 프레임당 얼만큼 돌릴 건지 결정
-                if (time >= 1) //90도 돌고나면 부모를 바꿔서 다시 돌려야 제대로 돌아감
+                isRotate = false;
+                time = 0f; // time을 0으로 초기화시켜야 Lerp가 작동함
+                if (beatIndex >= analyzeExample.beats.Count) // 맵 끝에 도달했을 때 멈춤
                 {
-                    isRotate = false;
-                    time = delayTime; // time을 0으로 초기화시켜야 Lerp가 작동함
-                    if (beatIndex >= analyzeExample.beats.Count) // 맵 끝에 도달했을 때 멈춤
-                    {
-                        rotateSpeed = 0;
-                        return;
-                    }
-                    else // 그 외에 로테이션 속도 계산
-                    {
-                        rotateSpeed = GetRotateSpeed(beatIndex);
-                        beatIndex++;
-                    }
-                    if (childObject.transform.parent == parentObject[0].transform)
-                    {
-                        SwapParent(parentObject[0], parentObject[1]);
-                        SetRotation();
-                        StartCoroutine(RotateDelay());
-                    }
-                    else if (childObject.transform.parent == parentObject[1].transform)
-                    {
-                        SwapParent(parentObject[1], parentObject[2]);
-                        SetRotation();
-                        StartCoroutine(RotateDelay());
-                    }
-                    else if (childObject.transform.parent == parentObject[2].transform)
-                    {
-                        SwapParent(parentObject[2], parentObject[3]);
-                        SetRotation();
-                        StartCoroutine(RotateDelay());
-                    }
-                    else if (childObject.transform.parent == parentObject[3].transform)
-                    {
-                        SwapParent(parentObject[3], parentObject[0]);
-                        SetRotation();
-                        StartCoroutine(RotateDelay());
-                    }
+                    rotateSpeed = 0;
+                    return;
+                }
+                else // 그 외에 로테이션 속도 계산
+                {
+                    rotateSpeed = GetRotateSpeed(beatIndex);
+                    Debug.Log("인덱스 : " + beatIndex.ToString() + "속도 : " + rotateSpeed.ToString());
+                    beatIndex++;
+                }
+                if (childObject.transform.parent == parentObject[0].transform)
+                {
+                    SwapParent(parentObject[0], parentObject[1]);
+                    SetRotation();
+                    StartCoroutine(RotateDelay());
+                }
+                else if (childObject.transform.parent == parentObject[1].transform)
+                {
+                    SwapParent(parentObject[1], parentObject[2]);
+                    SetRotation();
+                    StartCoroutine(RotateDelay());
+                }
+                else if (childObject.transform.parent == parentObject[2].transform)
+                {
+                    SwapParent(parentObject[2], parentObject[3]);
+                    SetRotation();
+                    StartCoroutine(RotateDelay());
+                }
+                else if (childObject.transform.parent == parentObject[3].transform)
+                {
+                    SwapParent(parentObject[3], parentObject[0]);
+                    SetRotation();
+                    StartCoroutine(RotateDelay());
                 }
             }
         }
