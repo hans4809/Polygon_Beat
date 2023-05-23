@@ -23,11 +23,11 @@ public class PlayerRotate : MonoBehaviour
     float rotateSpeed;
     float time = 0f;
     int beatIndex = 0;
-    IEnumerator RotateDelay()
+    /*IEnumerator RotateDelay()
     {
         yield return new WaitForSeconds(delayTime);
         isRotate = true;
-    }
+    }*/
     void SwapParent(GameObject preParentObject, GameObject nextParentObject) // 결론 부모를 바꿈
     {
         parentPosition.x += 1;
@@ -100,7 +100,7 @@ public class PlayerRotate : MonoBehaviour
     {
         Setting();
         initParentPostion = childObject.transform.parent.localPosition;
-        isRotate = true;
+        //isRotate = true;
     }
     private float GetRotateSpeed(int index) // 로테이션 속도 계산
     {
@@ -108,11 +108,11 @@ public class PlayerRotate : MonoBehaviour
         {
             return (1 / (analyzeExample.beats[index + 1].timestamp - analyzeExample.beats[index].timestamp))/2;
         }*/
-        return (analyzeExample.beats[index].bpm / 60 - delayTime/*- (analyzeExample.beats[index].timestamp - delayTime)*/);
+        return (1 / (analyzeExample.beats[index+1].timestamp - (analyzeExample.beats[index].timestamp /*- delayTime*/)));
     }
     void Update()
     {
-        if (isRotate) 
+        //if (isRotate) 
         {
             /*if (rhythmPlayer.time <= analyzeExample.beats[0].timestamp)
             {
@@ -123,7 +123,7 @@ public class PlayerRotate : MonoBehaviour
             time += Time.deltaTime * rotateSpeed; // 한 프레임당 얼만큼 돌릴 건지 결정
             if (time >= 1) //90도 돌고나면 부모를 바꿔서 다시 돌려야 제대로 돌아감
             {
-                isRotate = false;
+                //isRotate = false;
                 time = 0f; // time을 0으로 초기화시켜야 Lerp가 작동함
                 if (beatIndex >= analyzeExample.beats.Count) // 맵 끝에 도달했을 때 멈춤
                 {
@@ -140,25 +140,25 @@ public class PlayerRotate : MonoBehaviour
                 {
                     SwapParent(parentObject[0], parentObject[1]);
                     SetRotation();
-                    StartCoroutine(RotateDelay());
+                    //StartCoroutine(RotateDelay());
                 }
                 else if (childObject.transform.parent == parentObject[1].transform)
                 {
                     SwapParent(parentObject[1], parentObject[2]);
                     SetRotation();
-                    StartCoroutine(RotateDelay());
+                    //StartCoroutine(RotateDelay());
                 }
                 else if (childObject.transform.parent == parentObject[2].transform)
                 {
                     SwapParent(parentObject[2], parentObject[3]);
                     SetRotation();
-                    StartCoroutine(RotateDelay());
+                    //StartCoroutine(RotateDelay());
                 }
                 else if (childObject.transform.parent == parentObject[3].transform)
                 {
                     SwapParent(parentObject[3], parentObject[0]);
                     SetRotation();
-                    StartCoroutine(RotateDelay());
+                    //StartCoroutine(RotateDelay());
                 }
             }
         }
