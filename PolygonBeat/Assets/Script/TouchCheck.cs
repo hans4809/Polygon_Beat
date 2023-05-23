@@ -7,72 +7,82 @@ using Unity.VisualScripting;
 
 public class TouchCheck : MonoBehaviour
 {
+    Queue<float> Boundary = new Queue<float>();
+    Queue<float> CorrectArea = new Queue<float>();
+    float BeforeBoundary;
     public AnalyzeExample analyzeExample;
     int i;
     float range;
     float time;
-    Queue<float> StartArea = new Queue<float>();
-    Queue<float> EndArea = new Queue<float>();
-    float startPoint;
-    float endPoint;
-    float startarea;   
-    float endarea;    
+      
 
     private void Start()
     {
         time = 0.0f;
-        Init();
+        BeforeBoundary= 0.0f;
+        i = 0;
+        BeatTimeInform();
+        
     }
 
     private void BeatTimeInform() //비트 받아오기
     {
-        if (analyzeExample != null)
+        
+
+        for (i = 0; i < analyzeExample.beats.Count - 1; i++)
         {
-            List<Beat> beats_ = analyzeExample.beats;
-            range = analyzeExample.beats[1].timestamp - analyzeExample.beats[0].timestamp; //오차범위 설정
-            range = range * 9 / 20; 
-            
+            Boundary.Enqueue((analyzeExample.beats[i].timestamp + analyzeExample.beats[i + 1].timestamp) / 2); //경계값 설정
+        }
+
+
+        for (i = 0; i < analyzeExample.beats.Count - 1; i++)
+        {
+            CorrectArea.Enqueue((analyzeExample.beats[i].timestamp + analyzeExample.beats[i + 1].timestamp) *9 / 20); //오차허용범위
         }
     }
 
     
-    private void Init()
+    
+    private void Update()
     {
         BeatTimeInform();
 
-        for (i = 0; i < analyzeExample.beats.Count; i++)
-        {
-            startarea = analyzeExample.beats[i].timestamp-range;
-            StartArea.Enqueue(analyzeExample.beats[i].timestamp - range);
-        }
-
-        for (i = 0; i < analyzeExample.beats.Count; i++)
-        {
-            endarea = analyzeExample.beats[i].timestamp-range;
-            EndArea.Enqueue(endarea);
-        }
-    }
-    private void Update()
-    {
         time += Time.deltaTime;
-        
-        if (Input.GetMouseButtonDown(0))
+
+        while (time >= BeforeBoundary && time < Boundary.Peek()) 
         {
-            startPoint = StartArea.Dequeue();
-            endPoint = EndArea.Dequeue();
-
-            if (time >= startPoint && time <= endPoint)
+            if (Input.GetMouseButtonDown(0))
             {
-                Debug.Log(time + "clear");
-                Debug.Log(startPoint+ " " + endPoint);  
+                if (time < analyzeExample.beats[i].timestamp - CorrectArea.Peek())
+                {
+                    Debug.Log("Miss"); //-하트
+                }
+
+                else if (time >= analyzeExample.beats[i].timestamp - CorrectArea.Peek() && time <= analyzeExample.beats[i].timestamp + CorrectArea.Peek())
+                {
+                    Debug.Log("Clear");
+                }
+
+                else if (time > analyzeExample.beats[i].timestamp + CorrectArea.Peek())
+                {
+                    Debug.Log("Miss"); //-하트
+                }
+
+                BeforeBoundary = Boundary.Dequeue();
+                CorrectArea.Dequeue();
             }
 
-            else
+            else 
             {
-                Debug.Log(time + "miss"); // 하트 하나 깎임
-                Debug.Log(startPoint+ " " + endPoint);  
+                Debug.Log("Miss"); //-하트
+                BeforeBoundary = Boundary.Dequeue();
+                CorrectArea.Dequeue();
             }
+
+
         }
+        
+        
     }
 }
 
