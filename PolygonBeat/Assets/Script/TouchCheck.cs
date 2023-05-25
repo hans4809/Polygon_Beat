@@ -7,14 +7,18 @@ using Unity.VisualScripting;
 
 public class TouchCheck : MonoBehaviour
 {
-    float clickedtime;
-    bool clicked;
-    bool cleared;
-    Queue<float> Boundary = new Queue<float>();
-    float BeforeBoundary;
-    public AnalyzeExample analyzeExample;
     int i;
     float time;
+    float clickedtime;
+    float BeforeBoundary;
+    bool clicked;
+    bool cleared;
+    bool missed;
+    Queue<float> Boundary = new Queue<float>();
+    Queue<float> CorrectArea = new Queue<float>();
+    Queue<float> BeatsStamp = new Queue<float>();
+    public AnalyzeExample analyzeExample;
+    
 
 
     private void Start()
@@ -23,30 +27,34 @@ public class TouchCheck : MonoBehaviour
         BeforeBoundary = 0.0f;
         clicked = false;
         cleared = false;
+        missed = false;
         BeatTimeInform();
-        
-
-        
-
+        analyzeExample = new AnalyzeExample();
     }
 
-    private void BeatTimeInform() //비트 받아오기
-    {
-
-        
+    private void BeatTimeInform() 
+    {        
         for (i = 0; i < analyzeExample.beats.Count - 1; i++)
         {
-            Boundary.Enqueue((analyzeExample.beats[i].timestamp + analyzeExample.beats[i + 1].timestamp) / 2); //경계값 설정
+            Boundary.Enqueue((analyzeExample.beats[i].timestamp + analyzeExample.beats[i + 1].timestamp) / 2f); //경계값 설정
         }
 
-     
+        for (i = 0; i < analyzeExample.beats.Count - 1; i++)
+        {
+           CorrectArea.Enqueue((analyzeExample.beats[i+1].timestamp - analyzeExample.beats[i].timestamp) *0.45f); //오차허용범위
+        }
+
+        for (i = 0; i < analyzeExample.beats.Count; i++) 
+        {
+            BeatsStamp.Enqueue(analyzeExample.beats[i].timestamp);
+        }
     }
 
 
 
     private void Update()
     {
-        BeatTimeInform();
+        
 
         time += Time.deltaTime;
 
@@ -55,18 +63,36 @@ public class TouchCheck : MonoBehaviour
             clickedtime = time;
             if (clickedtime >= BeforeBoundary && time < Boundary.Peek()) 
             {
-                if (!clicked) 
+                if (!clicked)
                 {
-                    Debug.Log("Clear");
-                    cleared = true;
-                    clicked = true;
+                    if(clickedtime >= BeforeBoundary && clickedtime < BeatsStamp.Peek() - CorrectArea.Peek())
+                    {
+                        Debug.Log("Miss");
+                        clicked = true;
+                        missed = true;
+                    }
+
+                    else if (clickedtime >= BeatsStamp.Peek() - CorrectArea.Peek() && clickedtime < BeatsStamp.Peek() + CorrectArea.Peek())
+                    {
+                        Debug.Log("Clear");
+                        cleared = true;
+                        clicked = true;
+                    }
+                    
+
+                    else if (clickedtime >= BeatsStamp.Peek() + CorrectArea.Peek() && time < Boundary.Peek()) 
+                    {
+                        Debug.Log("Miss");
+                        clicked = true;
+                        missed = true;
+                    }
                 }
             }
         }
 
         if (time >= Boundary.Peek()) 
         {
-            if (!clicked && !cleared) 
+            if (!clicked && !cleared && !missed) 
             {
                 Debug.Log("Miss");
                 
@@ -74,14 +100,11 @@ public class TouchCheck : MonoBehaviour
 
             cleared = false;
             clicked = false;
+            missed = false;
+
             BeforeBoundary = Boundary.Dequeue();
-            Boundary.Dequeue();
+            BeatsStamp.Dequeue();
+            CorrectArea.Dequeue();
         }
-
-
-
-
-       
-
     }
 }
