@@ -4,10 +4,12 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
 
 public class TouchCheck : MonoBehaviour
 {
     int i;
+    
     float time;
     float clickedtime;
     float BeforeBoundary;
@@ -18,11 +20,13 @@ public class TouchCheck : MonoBehaviour
     Queue<float> CorrectArea = new Queue<float>();
     Queue<float> BeatsStamp = new Queue<float>();
     public AnalyzeExample analyzeExample;
+    public LifeManager lifeManager;
     
 
 
     private void Start()
     {
+        
         time = 0.0f;
         BeforeBoundary = 0.0f;
         clicked = false;
@@ -30,6 +34,8 @@ public class TouchCheck : MonoBehaviour
         missed = false;
         BeatTimeInform();
         analyzeExample = new AnalyzeExample();
+        lifeManager = new LifeManager();
+        lifeManager = FindObjectOfType<LifeManager>();
     }
 
     private void BeatTimeInform() 
@@ -41,7 +47,7 @@ public class TouchCheck : MonoBehaviour
 
         for (i = 0; i < analyzeExample.beats.Count - 1; i++)
         {
-           CorrectArea.Enqueue((analyzeExample.beats[i+1].timestamp - analyzeExample.beats[i].timestamp) *0.45f); //오차허용범위
+           CorrectArea.Enqueue((analyzeExample.beats[i+1].timestamp - analyzeExample.beats[i].timestamp) *0.45f); //오차허용범위.마지막 비트는 오차범위없음
         }
 
         for (i = 0; i < analyzeExample.beats.Count; i++) 
@@ -68,6 +74,7 @@ public class TouchCheck : MonoBehaviour
                     if(clickedtime >= BeforeBoundary && clickedtime < BeatsStamp.Peek() - CorrectArea.Peek())
                     {
                         Debug.Log("Miss");
+                        lifeManager.LifeReduce();
                         clicked = true;
                         missed = true;
                     }
@@ -83,6 +90,7 @@ public class TouchCheck : MonoBehaviour
                     else if (clickedtime >= BeatsStamp.Peek() + CorrectArea.Peek() && time < Boundary.Peek()) 
                     {
                         Debug.Log("Miss");
+                        lifeManager.LifeReduce();
                         clicked = true;
                         missed = true;
                     }
@@ -95,7 +103,7 @@ public class TouchCheck : MonoBehaviour
             if (!clicked && !cleared && !missed) 
             {
                 Debug.Log("Miss");
-                
+                lifeManager.LifeReduce();
             }
 
             cleared = false;
@@ -106,5 +114,7 @@ public class TouchCheck : MonoBehaviour
             BeatsStamp.Dequeue();
             CorrectArea.Dequeue();
         }
+
+        
     }
 }
