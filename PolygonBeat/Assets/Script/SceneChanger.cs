@@ -20,7 +20,7 @@ public class SceneChanger : MonoBehaviour
     }
     public void ChangetoSelectScene()
     {
-
+        SceneManager.LoadScene("StageSelect");
     }
     // Update is called once per frame
     void Update()

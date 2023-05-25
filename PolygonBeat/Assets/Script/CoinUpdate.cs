@@ -6,25 +6,15 @@ using UnityEngine;
 public class CoinUpdate : MonoBehaviour
 {
     [SerializeField] GameObject myGameObject;
-    GroundCreater groundCreater;
-    public int coin = 0;
+    WholeGameData wholeGameData;
+
     // Start is called before the first frame update
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.tag == "Coin")
         {
-            coin++;
+            //wholeGameData.coin++;
             other.gameObject.SetActive(false);
         }
-    }
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

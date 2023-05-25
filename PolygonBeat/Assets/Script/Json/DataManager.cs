@@ -27,7 +27,7 @@ public class DataManager : MonoBehaviour // 여긴 볼 거 없음
         playerData = testJson.LoadSaveData();
         if (playerData != null)
         {
-            gameObjects[1].transform.SetPositionAndRotation(playerData.playerSavePosition, Quaternion.identity);
+            //gameObjects[1].transform.SetPositionAndRotation(playerData.playerSavePosition, Quaternion.identity);
         }
         savePosition = new Vector3((int)(analyzeExample.beats.Count / 2), 0.6f,0);
         Debug.Log(analyzeExample.beats.Count);

@@ -7,6 +7,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
 using static Unity.VisualScripting.AnnotationUtility;
+using UnityEngine.SceneManagement;
 
 public class PlayerRotate : MonoBehaviour
 {
@@ -125,10 +126,10 @@ public class PlayerRotate : MonoBehaviour
             {
                 //isRotate = false;
                 time = 0f; // time을 0으로 초기화시켜야 Lerp가 작동함
-                if (beatIndex >= analyzeExample.beats.Count) // 맵 끝에 도달했을 때 멈춤
+                if (beatIndex >= analyzeExample.beats.Count - 1||childObject.transform.parent.localPosition.x>=analyzeExample.beats.Count - 1) // 맵 끝에 도달했을 때 멈춤
                 {
                     rotateSpeed = 0;
-                    return;
+                    SceneManager.LoadScene("ClearScene");
                 }
                 else // 그 외에 로테이션 속도 계산
                 {
