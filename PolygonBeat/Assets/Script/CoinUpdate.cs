@@ -5,16 +5,21 @@ using UnityEngine;
 
 public class CoinUpdate : MonoBehaviour
 {
-    [SerializeField] GameObject myGameObject;
-    WholeGameData wholeGameData;
+    Define.WholeGameData wholeGameData;
+    private int coinNum;
 
     // Start is called before the first frame update
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.tag == "Coin")
         {
-            //wholeGameData.coin++;
+            coinNum++;
             other.gameObject.SetActive(false);
         }
     }
+    public int GetCoinNum()
+    {
+        return coinNum;
+    }
+
 }

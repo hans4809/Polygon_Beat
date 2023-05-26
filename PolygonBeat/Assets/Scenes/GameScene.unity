@@ -660,7 +660,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 558690951}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2381b5c4c56976a43bdd33e018c57d63, type: 3}
   m_Name: 
@@ -687,8 +687,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97a5ce83c7f15f94e942b5700b513ea3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myGameObject: {fileID: 8124125613654324320, guid: 590f96ca979fd184aa74cc4215a3efc1, type: 3}
-  coin: 0
 --- !u!50 &558690956
 Rigidbody2D:
   serializedVersion: 4
@@ -743,7 +741,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 558690951}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab45b84cee4c38244b39f37a3e83744a, type: 3}
   m_Name: 
@@ -1774,13 +1772,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3dbbabe8ee814e418569c64867692b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerData:
-    playerSavePosition: {x: 0, y: 0, z: 0}
-    playerCoin: 0
+  musicData:
+    music: []
   gameObjects:
   - {fileID: 972062707}
   - {fileID: 558690951}
-  analyzeExample: {fileID: 1601891905}
 --- !u!4 &972062709
 Transform:
   m_ObjectHideFlags: 0
@@ -2488,6 +2484,7 @@ GameObject:
   - component: {fileID: 1601891906}
   - component: {fileID: 1601891905}
   - component: {fileID: 1601891904}
+  - component: {fileID: 1601891908}
   m_Layer: 0
   m_Name: GroundCreater
   m_TagString: Untagged
@@ -2533,7 +2530,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1601891903}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 389c2e1cf37cfa7489851515b986fbb1, type: 3}
   m_Name: 
@@ -2564,6 +2561,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1601891908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1601891903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d5f06ea1757bf349a9e51e0932921a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transformParent: {fileID: 1601891907}
+  currentMusic:
+    data: []
+  musicData:
+    music: []
+  ground:
+  - {fileID: 3917200891346524428, guid: d58822cac18437248ba3f949cafa0fc6, type: 3}
+  - {fileID: 3817435385734082713, guid: e4ba4d647c4889940b5f0fbf343e6e51, type: 3}
+  currentMusicIndex: 0
 --- !u!1 &1720000920
 GameObject:
   m_ObjectHideFlags: 0
