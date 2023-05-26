@@ -36,7 +36,7 @@ public class PlayerRotate : MonoBehaviour
         nextParentObject.transform.localEulerAngles = Vector3.zero;// 부모로 만들기 전에 rotation 초기화
         childObject.transform.SetParent(nextParentObject.transform); // 위에서 종속성 없엔 오브젝트 부모로 만듬
         preParentObject.transform.SetParent(childObject.transform); // 그 전에 부모 였던 오브젝트 자식으로 만듬
-        childObject.transform.parent.SetLocalPositionAndRotation(new Vector3(parentPosition.x, 0.11f, 0), Quaternion.Euler(new Vector3(0, 0, 0))); // parent 오차 수정
+        childObject.transform.parent.SetLocalPositionAndRotation(new Vector3(parentPosition.x, 0.2f, 0), Quaternion.Euler(new Vector3(0, 0, 0))); // parent 오차 수정
         childObject.transform.SetLocalPositionAndRotation(new Vector3(-5, 5, 0), Quaternion.Euler(new Vector3(0, 0, 0))); // child 오차 수정
     }
     void SetRotation() // 결론 오차 수정을 위한 작업
@@ -67,7 +67,7 @@ public class PlayerRotate : MonoBehaviour
         else
         {
            childObject.transform.SetParent(null);
-           childObject.transform.position = new Vector3(0,0.6f,0);
+           childObject.transform.position = new Vector3(0,0.7f,0);
            for (int j = 0; j < 4; j++)
            {
                parentObject[j].transform.localEulerAngles = Vector3.zero;

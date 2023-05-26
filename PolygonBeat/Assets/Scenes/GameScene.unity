@@ -697,7 +697,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 558690951}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.6, z: 0}
+  m_LocalPosition: {x: 0, y: 0.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2383,7 +2383,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1446677638}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.25203788, y: 0.053293422, z: 0.054445103}
+  m_LocalPosition: {x: 2.073, y: 0.978, z: 0.054445103}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2733,8 +2733,8 @@ MonoBehaviour:
   songManager: {fileID: 0}
   dataManager: {fileID: 0}
   ground:
-  - {fileID: 3917200891346524428, guid: d58822cac18437248ba3f949cafa0fc6, type: 3}
-  - {fileID: 3817435385734082713, guid: e4ba4d647c4889940b5f0fbf343e6e51, type: 3}
+  - {fileID: 6646984435927538192, guid: e87ee4e463b6cd046822612302367aea, type: 3}
+  - {fileID: 4272312478575817848, guid: 4da83ba1b8f8f1b42a21bf8a83611322, type: 3}
 --- !u!1 &1720000920
 GameObject:
   m_ObjectHideFlags: 0
