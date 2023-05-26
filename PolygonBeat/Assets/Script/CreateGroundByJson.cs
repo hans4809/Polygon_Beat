@@ -36,7 +36,6 @@ public class CreateGroundByJson : MonoBehaviour
     {
         for(int i = 0; i < currentMusic.data.Count; i++)
         {
-            Debug.Log(currentMusic.data.Count);
             InstantiateGround(currentMusic.data[i].index, currentMusic.data[i].index.ToString(), new Vector3(currentMusic.data[i].index, 0, 0));
         }
     }
