@@ -102,7 +102,7 @@ public class JsonManager
         else
         {
             //세이브파일이 없는경우
-            wholeGameData = new WholeGameData(false,0,50,50,50);
+            wholeGameData = new WholeGameData(false,0,50,50,50,0);
         }
         return wholeGameData;
         //이 정보를 게임매니저나, 로딩으로 넘겨주는 것이당

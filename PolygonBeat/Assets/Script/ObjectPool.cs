@@ -12,6 +12,7 @@ public class ObjectInfo
 public class ObjectPool : MonoBehaviour
 {
     [SerializeField] ObjectInfo[] objectInfo = null;
+    public CreateGroundByJson createGroundByJson;
 
     public Queue<GameObject> groundQueue = new Queue<GameObject>();
 

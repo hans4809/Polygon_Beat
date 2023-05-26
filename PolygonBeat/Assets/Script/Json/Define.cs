@@ -22,27 +22,6 @@ public class Define
         public int bpm;
         public int count;
     }
-    //public List<MusicData> _musicList = new List<MusicData>();
-    
-    /*  [System.Serializable]public class MusicData
-    {
-        public int Index { get; set; }
-        public int Bpm { get; set; }
-        public int Count { get; set; }
-
-        public MusicData(int index, int bpm, int count) 
-        {
-            Index = index;
-            Bpm = bpm;
-            Count = count;
-        }
-        public class Root
-        {
-            public List<MusicData> music5 { get; set; }
-        }
-    }*/
-
-
     public class CharacterData
     {
         private int _characterIndex;
@@ -71,9 +50,11 @@ public class Define
     {
         private bool _tutorialClear;
         private int _coin;
+        public int _currentSong;
         public float _masterVolume;
         public float _bgmVolume;
         public float _sfxVolume;
+
 
         public bool TutorialClear
         {
@@ -87,13 +68,14 @@ public class Define
             set { _coin = value; }
         }
 
-        public WholeGameData(bool tutorialClear, int coin, float masterVolume, float bgmVolume, float sfxVolume)
+        public WholeGameData(bool tutorialClear, int coin, float masterVolume, float bgmVolume, float sfxVolume, int currentSong)
         {
             this._tutorialClear = tutorialClear;
             this._coin = coin;
             this._masterVolume = masterVolume;
             this._bgmVolume = bgmVolume;
             this._sfxVolume = sfxVolume;
+            this._currentSong = currentSong;
         }
     }
 }
