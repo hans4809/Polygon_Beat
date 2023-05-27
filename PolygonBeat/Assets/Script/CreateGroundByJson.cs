@@ -32,7 +32,7 @@ public class CreateGroundByJson : MonoBehaviour
             Instantiate(ground[0], vector3, Quaternion.identity, transformParent).name = "ground" + name;
         }
     }
-    void Start()
+    public void Start()
     {
         for(int i = 0; i < currentMusic.data.Count; i++)
         {

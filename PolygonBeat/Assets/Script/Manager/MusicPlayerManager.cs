@@ -14,8 +14,6 @@ public class MusicPlayerManager : MonoBehaviour
 {
     public static MusicPlayerManager Instance;
     public JsonManager testJson;
-    //public AudioClip audioClip;
-    //public AudioSource audioSource;
     public RhythmPlayer rhythmPlayer;
     public WholeGameData wholeGameData;
     [SerializeField] Sound[] sfx = null;
@@ -42,7 +40,6 @@ public class MusicPlayerManager : MonoBehaviour
     private void Awake()
     {
         testJson = new JsonManager();
-        rhythmPlayer = new RhythmPlayer();
         wholeGameData = testJson.LoadWholeGameData();
         PlayBGM(wholeGameData._currentSong.ToString());
     }

@@ -13,11 +13,11 @@ public class PauseManager : MonoBehaviour
     public GameObject pauseButton;
     public List<Button> buttonList;
     public GameObject pauseMenuCanvas;
-    public RhythmPlayer rhythmPlayer;
+    public AudioSource audioSource;
     public bool isPause;
     public void Resume()
     {
-        rhythmPlayer.UnPause();
+        audioSource.UnPause();
         pauseMenuCanvas.SetActive(false);
         pauseButton.SetActive(true);
         isPause = false;
@@ -26,7 +26,7 @@ public class PauseManager : MonoBehaviour
 
     public void Pause()
     {
-        rhythmPlayer.Pause();
+        audioSource.Pause();
         pauseMenuCanvas.SetActive(true);
         pauseButton.SetActive(false);
         isPause = true;
@@ -35,6 +35,7 @@ public class PauseManager : MonoBehaviour
     public void Start()
     {
         isPause = false;
+        pauseButton.SetActive(true);
         pauseMenuCanvas.SetActive(false);
         buttonList[0].onClick.AddListener(Pause);
         buttonList[1].onClick.AddListener(Resume);

@@ -1,15 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameOverManager : MonoBehaviour
 {
     public List<GameObject> lives;
-    public int life = 3;
+    public int life;
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
+        life = 3;
+        for(int i=0; i<life; i++) 
+        {
+            lives[i].SetActive(true);
+        }
     }
 
     public void GameOver()
@@ -31,11 +37,11 @@ public class GameOverManager : MonoBehaviour
                     lives[1].SetActive(false);
                     break;
                 case 0:
-                    lives[0].SetActive(false); 
+                    lives[0].SetActive(false);
                     break;
             }
         }
-        if(life == 0)
+        if (life == 0)
         {
             GameOver();
         }

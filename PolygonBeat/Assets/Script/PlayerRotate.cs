@@ -14,7 +14,7 @@ public class PlayerRotate : MonoBehaviour
     [SerializeField][Range(0.01f, 10f)] float delayTime = 0.1f;
     [SerializeField] AnalyzeExample analyzeExample;
     [SerializeField] RhythmPlayer rhythmPlayer;
-    [SerializeField] GroundCreater groundCreater;
+    //[SerializeField] GroundCreater groundCreater;
     [SerializeField] List<GameObject> parentObject;
     [SerializeField] GameObject childObject;
     Vector3 initParentPostion;
@@ -126,7 +126,7 @@ public class PlayerRotate : MonoBehaviour
             {
                 //isRotate = false;
                 time = 0f; // time을 0으로 초기화시켜야 Lerp가 작동함
-                if (beatIndex >= analyzeExample.beats.Count - 1||childObject.transform.parent.localPosition.x>=analyzeExample.beats.Count - 1) // 맵 끝에 도달했을 때 멈춤
+                if (beatIndex >= analyzeExample.beats.Count -1 ||childObject.transform.parent.localPosition.x>= analyzeExample.beats.Count - 1) // 맵 끝에 도달했을 때 멈춤
                 {
                     rotateSpeed = 0;
                     SceneManager.LoadScene("ClearScene");

@@ -7,11 +7,14 @@ using UnityEngine.UI;
 public class ReplayManager : MonoBehaviour
 {   
     public PauseManager pauseManager;
-    public GroundCreater groundCreater;
+    //public GroundCreater groundCreater;
+    public GameOverManager gameOverManager;
+    public CreateGroundByJson createGroundByJson;
     public PlayerRotate playerRotate;
     public Button replayButton;
-    public RhythmPlayer rhythmPlayer;
+    public AudioSource audioSource;
     public List<Vector3> gameObjectInitPosition;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -20,15 +23,16 @@ public class ReplayManager : MonoBehaviour
 
     void Replay()
     {
-        rhythmPlayer.Stop();
-        rhythmPlayer.Play();
+        audioSource.Stop();
+        audioSource.Play();
         ResetAll();
         Time.timeScale = 1f;
     }
     private void ResetAll()
     {
         pauseManager.Start();
-        groundCreater.Start();
+        createGroundByJson.Start();
+        gameOverManager.Start();
         playerRotate.Setting();
     }
 
