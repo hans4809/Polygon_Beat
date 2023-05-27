@@ -1009,6 +1009,7 @@ GameObject:
   - component: {fileID: 790133179}
   - component: {fileID: 790133178}
   - component: {fileID: 790133177}
+  - component: {fileID: 790133180}
   m_Layer: 0
   m_Name: BACK
   m_TagString: Untagged
@@ -1119,6 +1120,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 790133175}
   m_CullTransparentMesh: 1
+--- !u!114 &790133180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 790133175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d1dbb14fc786d84c89c6a451965851f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backButton: {fileID: 790133177}
 --- !u!1 &1128802109
 GameObject:
   m_ObjectHideFlags: 0
