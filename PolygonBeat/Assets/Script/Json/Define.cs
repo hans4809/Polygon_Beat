@@ -19,7 +19,7 @@ public class Define
     public class Data
     {
         public int index;
-        public int bpm;
+        public float bpm;
         public int count;
     }
     public class CharacterData

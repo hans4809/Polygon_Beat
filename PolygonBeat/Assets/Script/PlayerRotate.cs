@@ -8,15 +8,21 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using static Unity.VisualScripting.AnnotationUtility;
 using UnityEngine.SceneManagement;
+using static Define;
 
 public class PlayerRotate : MonoBehaviour
 {
-    [SerializeField][Range(0.01f, 10f)] float delayTime = 0.1f;
+    //[SerializeField][Range(0.01f, 10f)] float delayTime = 0.1f;
     [SerializeField] AnalyzeExample analyzeExample;
-    [SerializeField] RhythmPlayer rhythmPlayer;
+    //[SerializeField] RhythmPlayer rhythmPlayer;
     //[SerializeField] GroundCreater groundCreater;
     [SerializeField] List<GameObject> parentObject;
     [SerializeField] GameObject childObject;
+    public JsonManager testJson;
+    //public Transform transformParent;
+    public Music currentMusic;
+    public MusicData musicData;
+    public WholeGameData wholeGameData;
     Vector3 initParentPostion;
     Vector3 parentPosition;
     Vector3 rotation;
@@ -55,7 +61,10 @@ public class PlayerRotate : MonoBehaviour
         childObject.transform.localEulerAngles = Vector3.zero;
         childObject.transform.parent.localPosition = parentPosition;
         childObject.transform.localPosition = new Vector3(-5, 5, 0);
-        rotateSpeed = 1 / analyzeExample.beats[0].timestamp;
+        //rotateSpeed = 1 / analyzeExample.beats[0].timestamp;
+        rotateSpeed = (currentMusic.data[1].bpm / 60);
+        Debug.Log(1 / analyzeExample.beats[0].timestamp);
+        Debug.Log(rotateSpeed);
     }
 
     public void Setting()
@@ -103,13 +112,29 @@ public class PlayerRotate : MonoBehaviour
         initParentPostion = childObject.transform.parent.localPosition;
         //isRotate = true;
     }
+    private void Awake()
+    {
+        testJson = new JsonManager();
+        musicData = testJson.LoadMusicData();
+        wholeGameData = testJson.LoadWholeGameData();
+        switch (wholeGameData._currentSong)
+        {
+            case (0):
+                currentMusic = musicData.music[0];
+                break;
+            case (1):
+                currentMusic = musicData.music[1];
+                break;
+        }
+    }
     private float GetRotateSpeed(int index) // 로테이션 속도 계산
     {
         /*if(groundCreater.slowIndex <= index + 1  && index + 1 < groundCreater.fastIndex)
         {
             return (1 / (analyzeExample.beats[index + 1].timestamp - analyzeExample.beats[index].timestamp))/2;
         }*/
-        return (1 / (analyzeExample.beats[index+1].timestamp - (analyzeExample.beats[index].timestamp /*- delayTime*/)));
+        //return (1 / (analyzeExample.beats[index+1].timestamp - (analyzeExample.beats[index].timestamp /*- delayTime*/)));
+        return ((currentMusic.data[index].bpm) / 60);
     }
     void Update()
     {
@@ -126,7 +151,12 @@ public class PlayerRotate : MonoBehaviour
             {
                 //isRotate = false;
                 time = 0f; // time을 0으로 초기화시켜야 Lerp가 작동함
-                if (beatIndex >= analyzeExample.beats.Count -1 ||childObject.transform.parent.localPosition.x>= analyzeExample.beats.Count - 1) // 맵 끝에 도달했을 때 멈춤
+                /*if (beatIndex >= analyzeExample.beats.Count -1 ||childObject.transform.parent.localPosition.x>= analyzeExample.beats.Count - 1) // 맵 끝에 도달했을 때 멈춤
+                {
+                    rotateSpeed = 0;
+                    SceneManager.LoadScene("ClearScene");
+                }*/
+                if(beatIndex >= currentMusic.data.Count -1 || childObject.transform.parent.localPosition.x >= currentMusic.data.Count - 1)
                 {
                     rotateSpeed = 0;
                     SceneManager.LoadScene("ClearScene");
@@ -134,8 +164,13 @@ public class PlayerRotate : MonoBehaviour
                 else // 그 외에 로테이션 속도 계산
                 {
                     rotateSpeed = GetRotateSpeed(beatIndex);
-                    Debug.Log("인덱스 : " + beatIndex.ToString() + "속도 : " + rotateSpeed.ToString());
+                    //float rotateSpeed1 = 1 / (analyzeExample.beats[beatIndex + 1].timestamp - analyzeExample.beats[beatIndex].timestamp);
+                    Debug.Log("인덱스 : " + beatIndex.ToString() + "속도 : " + rotateSpeed.ToString()); //+ " " + rotateSpeed1);
                     beatIndex++;
+                    if (rotateSpeed == 0) 
+                    {
+                        SceneManager.LoadScene("ClearScene");
+                    }
                 }
                 if (childObject.transform.parent == parentObject[0].transform)
                 {
