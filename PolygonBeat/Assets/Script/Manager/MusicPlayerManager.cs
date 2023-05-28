@@ -27,7 +27,7 @@ public class MusicPlayerManager : MonoBehaviour
             if(bgmName == bgm[i].name)
             {
                 bgmPlayer.clip = bgm[i].audioClip;
-                bgmPlayer.PlayDelayed(4.0f);
+                bgmPlayer.PlayDelayed(3.0f);
             }
         }
     }

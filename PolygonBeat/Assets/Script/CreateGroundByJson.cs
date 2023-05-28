@@ -8,11 +8,7 @@ using static Define;
 
 public class CreateGroundByJson : MonoBehaviour
 {
-    public JsonManager testJson;
     public Transform transformParent;
-    public Music currentMusic;
-    public MusicData musicData;
-    public WholeGameData wholeGameData;
     public SongManager songManager;
     public List<GameObject> ground;
 

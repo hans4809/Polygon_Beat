@@ -12,9 +12,15 @@ public class Define
     [System.Serializable]
     public class Music
     {
+        public List<BeatData> beatData;
         public List<Data> data;
     }
 
+    [System.Serializable]
+    public class BeatData
+    {
+        public float touchTime;
+    }
     [System.Serializable]
     public class Data
     {
