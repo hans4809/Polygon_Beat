@@ -9,7 +9,7 @@ public class GameQuit : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        quitButton.onClick.AddListener(GameFinish);
     }
 
     void GameFinish() 
@@ -19,7 +19,7 @@ public class GameQuit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        quitButton.onClick.AddListener(GameFinish);
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             GameFinish();

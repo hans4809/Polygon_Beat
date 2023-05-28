@@ -10,7 +10,7 @@ public class Back : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        backButton.onClick.AddListener(BackButton);
     }
 
     void BackButton() 
@@ -20,6 +20,6 @@ public class Back : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        backButton.onClick.AddListener(BackButton);
+
     }
 }
