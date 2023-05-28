@@ -10,12 +10,13 @@ public class DataManager : MonoBehaviour // 여긴 볼 거 없음
     public WholeGameData wholeGameData;
     public CharacterData characterData;
     public MusicData musicData;
+    public Music currentMusic;
     public JsonManager testJson;
     public List<GameObject> gameObjects;
     // Start is called before the first frame update
 
 
-    private void Awake()
+    public void Awake()
     {
         testJson = new JsonManager();
         if (singleTon == null)
@@ -26,13 +27,25 @@ public class DataManager : MonoBehaviour // 여긴 볼 거 없음
         else if (singleTon != this)
             Destroy(singleTon.gameObjects[0]);
         wholeGameData = testJson.LoadWholeGameData();
+        musicData = testJson.LoadMusicData();
+        switch (wholeGameData._currentSong)
+        {
+            case (0):
+                currentMusic = musicData.music[0];
+                break;
+            case (1):
+                currentMusic = musicData.music[1];
+                break;
+        }
     }
 
     private void Start()
     {
+        testJson.Save(wholeGameData);
     }
     // Update is called once per frame
     void Update()
     {
+
     }
 }

@@ -48,25 +48,12 @@ public class Define
 
     public class WholeGameData
     {
-        private bool _tutorialClear;
-        private int _coin;
+        public bool _tutorialClear;
+        public int _coin;
         public int _currentSong;
         public float _masterVolume;
         public float _bgmVolume;
         public float _sfxVolume;
-
-
-        public bool TutorialClear
-        {
-            get { return _tutorialClear; }
-            set { _tutorialClear = value; }
-        }
-
-        public int Coin
-        {
-            get { return _coin; }
-            set { _coin = value; }
-        }
 
         public WholeGameData(bool tutorialClear, int coin, float masterVolume, float bgmVolume, float sfxVolume, int currentSong)
         {

@@ -13,7 +13,6 @@ public class Sound
 public class MusicPlayerManager : MonoBehaviour
 {
     public static MusicPlayerManager Instance;
-    public JsonManager testJson;
     public RhythmPlayer rhythmPlayer;
     public WholeGameData wholeGameData;
     [SerializeField] Sound[] sfx = null;
@@ -35,13 +34,12 @@ public class MusicPlayerManager : MonoBehaviour
     void Start()
     {
         Instance = this;
-        
     }
     private void Awake()
     {
-        testJson = new JsonManager();
-        wholeGameData = testJson.LoadWholeGameData();
-        PlayBGM(wholeGameData._currentSong.ToString());
+        //dataManager = GameObject.Find("DataManger").AddComponent<DataManager>() as DataManager;
+        //testJson = new JsonManager();
+        PlayBGM(DataManager.singleTon.wholeGameData._currentSong.ToString());
     }
     // Update is called once per frame
     void Update()

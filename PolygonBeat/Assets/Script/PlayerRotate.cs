@@ -12,23 +12,14 @@ using static Define;
 
 public class PlayerRotate : MonoBehaviour
 {
-    //[SerializeField][Range(0.01f, 10f)] float delayTime = 0.1f;
-    [SerializeField] AnalyzeExample analyzeExample;
-    //[SerializeField] RhythmPlayer rhythmPlayer;
-    //[SerializeField] GroundCreater groundCreater;
     [SerializeField] List<GameObject> parentObject;
     [SerializeField] GameObject childObject;
-    public JsonManager testJson;
-    //public Transform transformParent;
-    public Music currentMusic;
-    public MusicData musicData;
-    public WholeGameData wholeGameData;
     Vector3 initParentPostion;
     Vector3 parentPosition;
     Vector3 rotation;
     bool isRotate;
     float rotateSpeed;
-    float time = 0f;
+    float time;
     int beatIndex = 0;
     /*IEnumerator RotateDelay()
     {
@@ -61,9 +52,7 @@ public class PlayerRotate : MonoBehaviour
         childObject.transform.localEulerAngles = Vector3.zero;
         childObject.transform.parent.localPosition = parentPosition;
         childObject.transform.localPosition = new Vector3(-5, 5, 0);
-        //rotateSpeed = 1 / analyzeExample.beats[0].timestamp;
-        rotateSpeed = (currentMusic.data[1].bpm / 60);
-        Debug.Log(1 / analyzeExample.beats[0].timestamp);
+        rotateSpeed = (DataManager.singleTon.currentMusic.data[1].bpm / 60);
         Debug.Log(rotateSpeed);
     }
 
@@ -111,39 +100,18 @@ public class PlayerRotate : MonoBehaviour
         Setting();
         initParentPostion = childObject.transform.parent.localPosition;
         //isRotate = true;
-    }
-    private void Awake()
-    {
-        testJson = new JsonManager();
-        musicData = testJson.LoadMusicData();
-        wholeGameData = testJson.LoadWholeGameData();
-        switch (wholeGameData._currentSong)
-        {
-            case (0):
-                currentMusic = musicData.music[0];
-                break;
-            case (1):
-                currentMusic = musicData.music[1];
-                break;
-        }
+        Debug.Log(time);
+        Time.timeScale = 1.0f;
+        time = 0f;
     }
     private float GetRotateSpeed(int index) // 로테이션 속도 계산
     {
-        /*if(groundCreater.slowIndex <= index + 1  && index + 1 < groundCreater.fastIndex)
-        {
-            return (1 / (analyzeExample.beats[index + 1].timestamp - analyzeExample.beats[index].timestamp))/2;
-        }*/
-        //return (1 / (analyzeExample.beats[index+1].timestamp - (analyzeExample.beats[index].timestamp /*- delayTime*/)));
-        return ((currentMusic.data[index].bpm) / 60);
+        return ((DataManager.singleTon.currentMusic.data[index].bpm) / 60);
     }
     void Update()
     {
-        //if (isRotate) 
-        {
-            /*if (rhythmPlayer.time <= analyzeExample.beats[0].timestamp)
-            {
-                return;
-            }*/
+            Debug.Log("현재 시간 : " + time + "돌아가는 속도 : " + rotateSpeed);
+
             rotation = Vector3.Lerp(new Vector3(0, 0, 0), new Vector3(0, 0, -90), time); // time이 0 ~ 1 갈 동안 로테이션도 (0,0,0)에서 (0,0,-90)으로 변함
             childObject.transform.parent.transform.localEulerAngles = rotation; // 부모 오브젝트 돌림
             time += Time.deltaTime * rotateSpeed; // 한 프레임당 얼만큼 돌릴 건지 결정
@@ -151,12 +119,7 @@ public class PlayerRotate : MonoBehaviour
             {
                 //isRotate = false;
                 time = 0f; // time을 0으로 초기화시켜야 Lerp가 작동함
-                /*if (beatIndex >= analyzeExample.beats.Count -1 ||childObject.transform.parent.localPosition.x>= analyzeExample.beats.Count - 1) // 맵 끝에 도달했을 때 멈춤
-                {
-                    rotateSpeed = 0;
-                    SceneManager.LoadScene("ClearScene");
-                }*/
-                if(beatIndex >= currentMusic.data.Count -1 || childObject.transform.parent.localPosition.x >= currentMusic.data.Count - 1)
+                if(beatIndex >= DataManager.singleTon.currentMusic.data.Count -1 || childObject.transform.parent.localPosition.x >= DataManager.singleTon.currentMusic.data.Count - 1)
                 {
                     rotateSpeed = 0;
                     SceneManager.LoadScene("ClearScene");
@@ -164,7 +127,6 @@ public class PlayerRotate : MonoBehaviour
                 else // 그 외에 로테이션 속도 계산
                 {
                     rotateSpeed = GetRotateSpeed(beatIndex);
-                    //float rotateSpeed1 = 1 / (analyzeExample.beats[beatIndex + 1].timestamp - analyzeExample.beats[beatIndex].timestamp);
                     Debug.Log("인덱스 : " + beatIndex.ToString() + "속도 : " + rotateSpeed.ToString()); //+ " " + rotateSpeed1);
                     beatIndex++;
                     if (rotateSpeed == 0) 
@@ -197,6 +159,5 @@ public class PlayerRotate : MonoBehaviour
                     //StartCoroutine(RotateDelay());
                 }
             }
-        }
     }
 }
