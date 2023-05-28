@@ -9,6 +9,7 @@ using UnityEngine.UIElements;
 using static Unity.VisualScripting.AnnotationUtility;
 using UnityEngine.SceneManagement;
 using static Define;
+using UnityEngine.UI;
 
 public class PlayerRotate : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class PlayerRotate : MonoBehaviour
     Vector3 initParentPostion;
     Vector3 parentPosition;
     Vector3 rotation;
-    bool isRotate;
+    float startTime;
     float rotateSpeed;
     float time;
     int beatIndex = 0;
@@ -107,9 +108,9 @@ public class PlayerRotate : MonoBehaviour
         //isRotate = true;
         Time.timeScale = 1.0f;
         time = 0f;
+        startTime = 0f;
         bgmPlayer = GameObject.Find("BGMPlayer").GetComponent<AudioSource>();
     }
-
     void Update()
     {
         if(bgmPlayer.time == 0)

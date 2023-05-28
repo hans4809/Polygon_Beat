@@ -9,7 +9,6 @@ using UnityEngine.SceneManagement;
 public class TouchCheck : MonoBehaviour
 {
     int i;
-    
     float time;
     float clickedtime;
     float BeforeBoundary;
@@ -21,12 +20,8 @@ public class TouchCheck : MonoBehaviour
     Queue<float> BeatsStamp = new Queue<float>();
     public AnalyzeExample analyzeExample;
     public LifeManager lifeManager;
-    
-
-
     private void Start()
     {
-        
         time = 0.0f;
         BeforeBoundary = 0.0f;
         clicked = false;
@@ -56,12 +51,8 @@ public class TouchCheck : MonoBehaviour
         }
     }
 
-
-
     private void Update()
     {
-        
-
         time += Time.deltaTime;
 
         if(Input.GetMouseButtonDown(0)) 
@@ -114,7 +105,5 @@ public class TouchCheck : MonoBehaviour
             BeatsStamp.Dequeue();
             CorrectArea.Dequeue();
         }
-
-        
     }
 }
