@@ -27,7 +27,7 @@ public class MusicPlayerManager : MonoBehaviour
             if(bgmName == bgm[i].name)
             {
                 bgmPlayer.clip = bgm[i].audioClip;
-                bgmPlayer.Play();
+                bgmPlayer.PlayDelayed(4.0f);
             }
         }
     }
@@ -44,6 +44,10 @@ public class MusicPlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+    }
+    private void FixedUpdate()
+    {
+        Debug.Log(bgmPlayer.time);
     }
 }

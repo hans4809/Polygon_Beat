@@ -645,6 +645,7 @@ GameObject:
   - component: {fileID: 558690956}
   - component: {fileID: 558690955}
   - component: {fileID: 558690958}
+  - component: {fileID: 558690959}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -735,17 +736,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2381b5c4c56976a43bdd33e018c57d63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  analyzeExample: {fileID: 1601891909}
   parentObject:
   - {fileID: 199275934}
   - {fileID: 1720000920}
   - {fileID: 1145447306}
   - {fileID: 1110739450}
   childObject: {fileID: 558690951}
-  currentMusic:
-    data: []
-  musicData:
-    music: []
 --- !u!114 &558690955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -819,6 +815,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   analyzeExample: {fileID: 0}
   lifeManager: {fileID: 0}
+--- !u!114 &558690959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 558690951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2d804422943c14bb2b1589bfd93d77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &570105285
 GameObject:
   m_ObjectHideFlags: 0
@@ -1871,7 +1879,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1264941337}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7c382fa595d448e4e83cbf5dd9e267b8, type: 3}
   m_Name: 
@@ -2449,7 +2457,6 @@ MonoBehaviour:
   musicData:
     music: []
   songManager: {fileID: 0}
-  dataManager: {fileID: 0}
   ground:
   - {fileID: 6646984435927538192, guid: e87ee4e463b6cd046822612302367aea, type: 3}
   - {fileID: 4272312478575817848, guid: 4da83ba1b8f8f1b42a21bf8a83611322, type: 3}

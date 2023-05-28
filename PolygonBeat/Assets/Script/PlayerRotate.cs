@@ -14,6 +14,7 @@ public class PlayerRotate : MonoBehaviour
 {
     [SerializeField] List<GameObject> parentObject;
     [SerializeField] GameObject childObject;
+    [SerializeField] AudioSource bgmPlayer;
     Vector3 initParentPostion;
     Vector3 parentPosition;
     Vector3 rotation;
@@ -100,9 +101,9 @@ public class PlayerRotate : MonoBehaviour
         Setting();
         initParentPostion = childObject.transform.parent.localPosition;
         //isRotate = true;
-        Debug.Log(time);
         Time.timeScale = 1.0f;
         time = 0f;
+        bgmPlayer = GameObject.Find("BGMPlayer").GetComponent<AudioSource>();
     }
     private float GetRotateSpeed(int index) // 로테이션 속도 계산
     {
@@ -110,8 +111,10 @@ public class PlayerRotate : MonoBehaviour
     }
     void Update()
     {
-            Debug.Log("현재 시간 : " + time + "돌아가는 속도 : " + rotateSpeed);
-
+        if(bgmPlayer.time == 0)
+        {
+            return;
+        }
             rotation = Vector3.Lerp(new Vector3(0, 0, 0), new Vector3(0, 0, -90), time); // time이 0 ~ 1 갈 동안 로테이션도 (0,0,0)에서 (0,0,-90)으로 변함
             childObject.transform.parent.transform.localEulerAngles = rotation; // 부모 오브젝트 돌림
             time += Time.deltaTime * rotateSpeed; // 한 프레임당 얼만큼 돌릴 건지 결정
@@ -127,7 +130,6 @@ public class PlayerRotate : MonoBehaviour
                 else // 그 외에 로테이션 속도 계산
                 {
                     rotateSpeed = GetRotateSpeed(beatIndex);
-                    Debug.Log("인덱스 : " + beatIndex.ToString() + "속도 : " + rotateSpeed.ToString()); //+ " " + rotateSpeed1);
                     beatIndex++;
                     if (rotateSpeed == 0) 
                     {
