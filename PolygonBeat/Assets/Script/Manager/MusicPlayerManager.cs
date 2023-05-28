@@ -48,6 +48,5 @@ public class MusicPlayerManager : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        Debug.Log(bgmPlayer.time);
     }
 }

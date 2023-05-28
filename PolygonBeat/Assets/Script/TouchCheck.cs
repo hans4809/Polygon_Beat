@@ -76,7 +76,6 @@ public class TouchCheck : MonoBehaviour
                         cleared = true;
                         clicked = true;
                     }
-                    
 
                     else if (clickedtime >= BeatsStamp.Peek() + CorrectArea.Peek() && time < Boundary.Peek()) 
                     {
@@ -88,7 +87,6 @@ public class TouchCheck : MonoBehaviour
                 }
             }
         }
-
         if (time >= Boundary.Peek()) 
         {
             if (!clicked && !cleared && !missed) 

@@ -132,6 +132,7 @@ public class PlayerRotate : MonoBehaviour
             {
                 rotateSpeed = GetRotateSpeed(beatIndex);
                 beatIndex++;
+                Debug.Log(beatIndex);
                 if (rotateSpeed == 0) 
                 {
                     SceneManager.LoadScene("ClearScene");

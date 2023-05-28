@@ -1,37 +1,41 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Claims;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class TouchCheckByJson : MonoBehaviour
 {
-    int i;
+    int beatIndex;
     float time;
     float clickedtime;
-    float BeforeBoundary;
+    float leastTime;
+    float maxTime;
+    float boundary;
     bool clicked;
-    bool cleared;
-    bool missed;
-    Queue<float> Boundary = new Queue<float>();
-    Queue<float> CorrectArea = new Queue<float>();
-    Queue<float> BeatsStamp = new Queue<float>();
+    //bool cleared;
+    //bool missed;
+    //Queue<float> Boundary = new Queue<float>();
+    //Queue<float> CorrectArea = new Queue<float>();
+    //Queue<float> BeatsStamp = new Queue<float>();
     [SerializeField] LifeManager lifeManager;
     [SerializeField] AudioSource bgmPlayer;
 
     // Start is called before the first frame update
     void Start()
     {
-        time = 0f;
-        BeforeBoundary = 0.0f;
+        beatIndex = 0;
+        boundary = 0.2f;
         clicked = false;
-        cleared = false;
-        missed = false;
-        BeatTimeInform();
+        //cleared = false;
+        //missed = false;
+        //BeatTimeInform();
         lifeManager = GameObject.Find("GameOverManager").GetComponent<LifeManager>();
         bgmPlayer = GameObject.Find("BGMPlayer").GetComponent<AudioSource>();
-
+        leastTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime - boundary;
+        maxTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime + boundary;
     }
-    private void BeatTimeInform()
+    /*private void BeatTimeInform()
     {
         for (i = 0; i < DataManager.singleTon.currentMusic.beatData.Count - 1; i++)
         {
@@ -47,16 +51,59 @@ public class TouchCheckByJson : MonoBehaviour
         {
             BeatsStamp.Enqueue(DataManager.singleTon.currentMusic.beatData[i].touchTime);
         }
+    }*/
+    IEnumerator touchDelay()
+    {
+        yield return new WaitForSeconds(DataManager.singleTon.currentMusic.beatData[beatIndex+1].touchTime - DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime);
+        clicked = false;
     }
-
     // Update is called once per frame
     void Update()
     {
-        time += Time.deltaTime;
-        if (Input.GetMouseButtonDown(0))
+        if (bgmPlayer.time == 0)
         {
-            clickedtime = time;
-            if (clickedtime >= BeforeBoundary && bgmPlayer.time < Boundary.Peek())
+            return;
+        }
+        if (!clicked)
+        {
+            clicked = true;
+            clickedtime = bgmPlayer.time;
+            Debug.Log(beatIndex);
+            leastTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime - boundary;
+            maxTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime + boundary;
+            beatIndex++;
+            if (Input.GetMouseButtonDown(0))
+            {
+                clicked = true;
+                clickedtime = bgmPlayer.time;
+                Debug.Log(beatIndex);
+                leastTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime - boundary;
+                maxTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime + boundary;
+                beatIndex++;
+                if (clickedtime >= leastTime && clickedtime <= maxTime)
+                {
+                    Debug.Log("CORRECT");
+                }
+                else
+                {
+                    Debug.Log("MISS");
+                    lifeManager.LifeReduce();
+                }
+                StartCoroutine(touchDelay());
+            }
+            else
+            {
+                if (bgmPlayer.time >= maxTime)
+                {
+                    Debug.Log(maxTime);
+                    Debug.LogError("MISS");
+                    lifeManager.LifeReduce();
+                }
+                StartCoroutine(touchDelay());
+            }
+        }
+    }
+            /*if (clickedtime >= BeforeBoundary && bgmPlayer.time < Boundary.Peek())
             {
                 if (!clicked)
                 {
@@ -82,9 +129,9 @@ public class TouchCheckByJson : MonoBehaviour
                         missed = true;
                     }
                 }
-            }
-        }
-        if (bgmPlayer.time >= Boundary.Peek())
+            }*/
+
+        /*if (bgmPlayer.time >= Boundary.Peek())
         {
             if (!clicked && !cleared && !missed)
             {
@@ -97,6 +144,6 @@ public class TouchCheckByJson : MonoBehaviour
             BeforeBoundary = Boundary.Dequeue();
             BeatsStamp.Dequeue();
             CorrectArea.Dequeue();
-        }
-    }
+        }*/
+
 }
