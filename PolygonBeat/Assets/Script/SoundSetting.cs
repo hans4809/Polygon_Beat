@@ -1,29 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Audio;
 
 
 public class SoundSetting : MonoBehaviour
 {
-    public AudioMixer mixer;
+    public AudioMixer audioMixer;
 
-    [Range(-80, 0)]
-    public float master = 0;
+    public Slider BgmSlider;
+    public Slider SfxSlider;
 
-    [Range(-80, 0)]
-    public float bgm = 0;
-
-    [Range(-80, 0)]
-    public float sfx = 0;
-
-    public void SoundControl()
+    public void SetBgm() 
     {
-        mixer.SetFloat(nameof(master), master);
-        mixer.SetFloat(nameof(bgm), bgm);
-        mixer.SetFloat(nameof(sfx), sfx);
+        audioMixer.SetFloat("Bgm", Mathf.Log10(BgmSlider.value) * 20);
+    }
 
-
+    public void SetSfx()
+    {
+        audioMixer.SetFloat("Sfx", Mathf.Log10(SfxSlider.value) * 20);
     }
 
     // Start is called before the first frame update
@@ -35,6 +31,6 @@ public class SoundSetting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        SoundControl();
+        
     }
 }
