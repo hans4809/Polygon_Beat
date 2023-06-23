@@ -14,12 +14,12 @@ public class SoundSetting : MonoBehaviour
 
     public void SetBgm() 
     {
-        audioMixer.SetFloat("Bgm", Mathf.Log10(BgmSlider.value) * 20);
+        audioMixer.SetFloat("BGM", Mathf.Log10(BgmSlider.value) * 20);
     }
 
     public void SetSfx()
     {
-        audioMixer.SetFloat("Sfx", Mathf.Log10(SfxSlider.value) * 20);
+        audioMixer.SetFloat("SFX", Mathf.Log10(SfxSlider.value) * 20);
     }
 
     // Start is called before the first frame update

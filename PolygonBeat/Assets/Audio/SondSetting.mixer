@@ -83,9 +83,9 @@ AudioMixerController:
   m_UpdateMode: 0
   m_ExposedParameters:
   - guid: 13b626ab02f386e4fbc73d9d1afc6392
-    name: bgm
+    name: BGM
   - guid: 2b78aff76e9ab5f4ab1216c83866925c
-    name: master
+    name: MASTER
   - guid: d7807e72ea9d68e47ad34a24c1bbd3d4
     name: sfx
   m_AudioMixerGroupViews:
