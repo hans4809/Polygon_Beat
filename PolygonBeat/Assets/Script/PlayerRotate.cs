@@ -22,7 +22,7 @@ public class PlayerRotate : MonoBehaviour
     float startTime;
     float rotateSpeed;
     float time;
-    int beatIndex = 0;
+    public int beatIndex = 0;
     /*IEnumerator RotateDelay()
     {
         yield return new WaitForSeconds(delayTime);
@@ -132,7 +132,6 @@ public class PlayerRotate : MonoBehaviour
             {
                 rotateSpeed = GetRotateSpeed(beatIndex);
                 beatIndex++;
-                Debug.Log(beatIndex);
                 if (rotateSpeed == 0) 
                 {
                     SceneManager.LoadScene("ClearScene");
