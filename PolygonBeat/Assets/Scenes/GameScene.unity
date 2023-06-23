@@ -1057,6 +1057,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifeManager: {fileID: 0}
   bgmPlayer: {fileID: 0}
+  effectManager: {fileID: 0}
 --- !u!1 &570105285
 GameObject:
   m_ObjectHideFlags: 0
@@ -4263,7 +4264,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1979442401}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -73, y: -95, z: 10}
   m_LocalScale: {x: 108, y: 108, z: 108}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4283,6 +4284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59a258e418ae0441940727cac582256, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitAnimator: {fileID: 0}
 --- !u!1 &2013676982
 GameObject:
   m_ObjectHideFlags: 0
