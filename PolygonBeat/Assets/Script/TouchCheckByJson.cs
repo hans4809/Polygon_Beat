@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class TouchCheckByJson : MonoBehaviour
 {
     int beatIndex = 0;
-    //float time;
+    int position = 1;
     float clickedtime;
     float leastTime;
     float maxTime;
@@ -22,6 +22,7 @@ public class TouchCheckByJson : MonoBehaviour
     [SerializeField] LifeManager lifeManager;
     [SerializeField] AudioSource bgmPlayer;
     [SerializeField] EffectManager effectManager;
+    [SerializeField] GameObject player;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +34,7 @@ public class TouchCheckByJson : MonoBehaviour
         bgmPlayer = GameObject.Find("BGMPlayer").GetComponent<AudioSource>();
         lifeManager = FindObjectOfType<LifeManager>();
         effectManager = FindObjectOfType<EffectManager>();
+        player = GameObject.Find("Player");
         leastTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime - boundary;
         maxTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime + boundary;
     }
@@ -71,6 +73,7 @@ public class TouchCheckByJson : MonoBehaviour
         if ((!clicked)&&(!cleared)&&(!missed))
         {
             clickedtime = bgmPlayer.time;
+            position = (int)(player.transform.position.x + 0.1);
             leastTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime - boundary;
             maxTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime + boundary;
             if (Input.GetKeyDown(KeyCode.Space))
@@ -80,7 +83,7 @@ public class TouchCheckByJson : MonoBehaviour
                     clicked = true;
                     cleared = true;
                     Debug.Log("CLEAR");
-                    effectManager.HitEffect();
+                    effectManager.HitEffect(position);
                     StartCoroutine(touchDelay());
                 }
                 else
