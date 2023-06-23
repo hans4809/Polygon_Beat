@@ -1,37 +1,38 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Claims;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class TouchCheckByJson : MonoBehaviour
 {
-    int beatIndex;
-    float time;
+    int beatIndex = 0;
+    //float time;
     float clickedtime;
     float leastTime;
     float maxTime;
-    float boundary;
+    float boundary = 0.2f;
     bool clicked;
-    //bool cleared;
-    //bool missed;
+    bool cleared;
+    bool missed;
     //Queue<float> Boundary = new Queue<float>();
     //Queue<float> CorrectArea = new Queue<float>();
     //Queue<float> BeatsStamp = new Queue<float>();
     [SerializeField] LifeManager lifeManager;
     [SerializeField] AudioSource bgmPlayer;
+    [SerializeField] EffectManager effectManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        beatIndex = 0;
-        boundary = 0.2f;
         clicked = false;
-        //cleared = false;
-        //missed = false;
+        cleared = false;
+        missed = false;
         //BeatTimeInform();
-        lifeManager = GameObject.Find("GameOverManager").GetComponent<LifeManager>();
         bgmPlayer = GameObject.Find("BGMPlayer").GetComponent<AudioSource>();
+        lifeManager = FindObjectOfType<LifeManager>();
+        effectManager = FindObjectOfType<EffectManager>();
         leastTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime - boundary;
         maxTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime + boundary;
     }
@@ -54,8 +55,11 @@ public class TouchCheckByJson : MonoBehaviour
     }*/
     IEnumerator touchDelay()
     {
-        yield return new WaitForSeconds(DataManager.singleTon.currentMusic.beatData[beatIndex+1].touchTime - DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime);
+        beatIndex++;
         clicked = false;
+        missed = false;
+        cleared = false;
+        yield return new WaitForSeconds(boundary*2);
     }
     // Update is called once per frame
     void Update()
@@ -64,43 +68,39 @@ public class TouchCheckByJson : MonoBehaviour
         {
             return;
         }
-        if (!clicked)
+        if ((!clicked)&&(!cleared)&&(!missed))
         {
-            clicked = true;
             clickedtime = bgmPlayer.time;
-            Debug.Log(beatIndex);
             leastTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime - boundary;
             maxTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime + boundary;
-            beatIndex++;
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                clicked = true;
-                clickedtime = bgmPlayer.time;
-                Debug.Log(beatIndex);
-                leastTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime - boundary;
-                maxTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime + boundary;
-                beatIndex++;
                 if (clickedtime >= leastTime && clickedtime <= maxTime)
                 {
-                    Debug.Log("CORRECT");
+                    clicked = true;
+                    cleared = true;
+                    Debug.Log("CLEAR");
+                    effectManager.HitEffect();
+                    StartCoroutine(touchDelay());
                 }
                 else
                 {
-                    Debug.Log("MISS");
-                    lifeManager.LifeReduce();
-                }
-                StartCoroutine(touchDelay());
-            }
-            else
-            {
-                if (bgmPlayer.time >= maxTime)
-                {
-                    Debug.Log(maxTime);
+                    clicked = true;
+                    missed = true;
                     Debug.LogError("MISS");
-                    lifeManager.LifeReduce();
                 }
-                StartCoroutine(touchDelay());
             }
+        }
+        if (bgmPlayer.time >= maxTime&&(!clicked))
+        {
+            missed = true;
+            Debug.LogError("MISS");
+        }
+        if(missed)
+        {
+            lifeManager.LifeReduce();
+            missed = false;
+            StartCoroutine(touchDelay());
         }
     }
             /*if (clickedtime >= BeforeBoundary && bgmPlayer.time < Boundary.Peek())
