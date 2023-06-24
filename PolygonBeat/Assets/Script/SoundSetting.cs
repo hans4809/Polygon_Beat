@@ -22,6 +22,11 @@ public class SoundSetting : MonoBehaviour
         audioMixer.SetFloat("SFX", Mathf.Log10(SfxSlider.value) * 20);
     }
 
+    public void SetMaster()
+    {
+        SetBgm();
+        SetSfx();
+    }
     // Start is called before the first frame update
     void Start()
     {
