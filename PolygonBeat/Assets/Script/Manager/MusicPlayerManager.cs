@@ -33,7 +33,7 @@ public class MusicPlayerManager : MonoBehaviour
     }
     public void PlaySFX(string sfxName) 
     {
-        for(int i = 0; i < sfx.Length; i++)
+        for (int i = 0; i < sfx.Length; i++)
         {
             for (int j = 0; j < sfxPlayer.Length; j++)
             {

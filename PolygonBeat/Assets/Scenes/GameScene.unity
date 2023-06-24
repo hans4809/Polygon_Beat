@@ -1132,7 +1132,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 45912f13e955daf4899b263700ddbb3e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1284,7 +1284,7 @@ GameObject:
   - component: {fileID: 570105288}
   - component: {fileID: 570105287}
   m_Layer: 5
-  m_Name: life2
+  m_Name: life1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1330,7 +1330,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 74703d819208b5c4b9d05c821f5ada4b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4abdebe74b1012b42832459e44d775bc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2437,7 +2437,7 @@ GameObject:
   - component: {fileID: 1079936639}
   - component: {fileID: 1079936638}
   m_Layer: 5
-  m_Name: life3
+  m_Name: life2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2463,7 +2463,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 74703d819208b5c4b9d05c821f5ada4b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4abdebe74b1012b42832459e44d775bc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2498,7 +2498,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 300, y: -100}
+  m_AnchoredPosition: {x: 305, y: -100}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1110739450
@@ -2625,12 +2625,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3341c56d619eb8e49a8e03468c328745, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lives:
-  - {fileID: 1367456896}
-  - {fileID: 570105285}
-  - {fileID: 1079936637}
   life: 3
-  touchcheck: {fileID: 558690958}
+  lifeSprite:
+  - {fileID: 21300000, guid: 4abdebe74b1012b42832459e44d775bc, type: 3}
+  - {fileID: 21300000, guid: f58b8dce5f837ec4c886ee98bedca5b1, type: 3}
+  lifeImage:
+  - {fileID: 1367456898}
+  - {fileID: 570105287}
+  - {fileID: 1079936638}
 --- !u!1 &1313464404
 GameObject:
   m_ObjectHideFlags: 0
@@ -2815,7 +2817,7 @@ GameObject:
   - component: {fileID: 1367456899}
   - component: {fileID: 1367456898}
   m_Layer: 5
-  m_Name: life1
+  m_Name: life0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2838,7 +2840,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -100}
+  m_AnchoredPosition: {x: 95, y: -100}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1367456898
@@ -2861,7 +2863,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 74703d819208b5c4b9d05c821f5ada4b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4abdebe74b1012b42832459e44d775bc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4541,7 +4543,7 @@ MonoBehaviour:
   tmpUgui: {fileID: 1898293187}
   tmp_Text: {fileID: 1898293187}
   bgmPlayer: {fileID: 0}
-  gameObject: {fileID: 0}
+  myGameObject: {fileID: 0}
 --- !u!114 &1898293187
 MonoBehaviour:
   m_ObjectHideFlags: 0

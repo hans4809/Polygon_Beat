@@ -2,19 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LifeManager : MonoBehaviour
 {
-    public List<GameObject> lives;
-    public int life = 3;
-    public TouchCheck touchcheck;
+    [SerializeField] private int life = 3;
+    [SerializeField] List<Sprite> lifeSprite;
+    [SerializeField] List<Image> lifeImage;
 
     // Start is called before the first frame update
     void Start()
     {
-        foreach (GameObject lifeObject in lives)
+        for(int i = 0; i < lifeImage.Count; i++)
         {
-            lifeObject.SetActive(true);
+            lifeImage[i].sprite = lifeSprite[0];
         }
     }
 
@@ -25,14 +26,13 @@ public class LifeManager : MonoBehaviour
         switch (life)
         {
             case 2:
-                lives[2].SetActive(false);
+                lifeImage[2].sprite = lifeSprite[1];
                 break;
             case 1:
-                lives[1].SetActive(false);
+                lifeImage[1].sprite = lifeSprite[1];
                 break;
             case 0:
-                lives[0].SetActive(false);
-                GameOver();
+                lifeImage[0].sprite = lifeSprite[1];
                 break;
         }
     }
@@ -44,6 +44,7 @@ public class LifeManager : MonoBehaviour
 
     private void Update()
     {
-            
+        if (life <= 0)
+            GameOver();
     }
 }

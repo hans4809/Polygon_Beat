@@ -77,7 +77,6 @@ public class TouchCheckByJson : MonoBehaviour
                     position = (int)(player.transform.position.x + 0.5);
                     effectManager.Miss(position);
                     musicPlayerManager.PlaySFX("touch");
-                    Debug.LogError("MISS");
                 }
             }
         }
@@ -86,7 +85,6 @@ public class TouchCheckByJson : MonoBehaviour
             missed = true;
             position = (int)(player.transform.position.x + 0.5);
             effectManager.Miss(position);
-            Debug.LogError("MISS");
         }
         if(missed)
         {

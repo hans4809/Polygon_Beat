@@ -10,7 +10,7 @@ public class Count : MonoBehaviour
     public TMP_Text tmp_Text;
     public AudioSource bgmPlayer;
     float time;
-    [SerializeField] GameObject gameObject;
+    [SerializeField] GameObject myGameObject;
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +18,7 @@ public class Count : MonoBehaviour
         time = 0f;
         tmp_Text.text = "3";
         bgmPlayer = GameObject.Find("BGMPlayer").GetComponent<AudioSource>();
-        gameObject = GameObject.Find("Count");
+        myGameObject = GameObject.Find("Count");
     }
 
     // Update is called once per frame

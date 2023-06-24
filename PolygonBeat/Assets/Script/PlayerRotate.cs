@@ -19,7 +19,6 @@ public class PlayerRotate : MonoBehaviour
     Vector3 initParentPostion;
     Vector3 parentPosition;
     Vector3 rotation;
-    float startTime;
     float rotateSpeed;
     float time;
     public int beatIndex = 0;
@@ -105,10 +104,8 @@ public class PlayerRotate : MonoBehaviour
     {
         Setting();
         initParentPostion = childObject.transform.parent.localPosition;
-        //isRotate = true;
         Time.timeScale = 1.0f;
         time = 0f;
-        startTime = 0f;
         bgmPlayer = GameObject.Find("BGMPlayer").GetComponent<AudioSource>();
     }
     void Update()
