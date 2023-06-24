@@ -6,7 +6,6 @@ public class EffectManager : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] Animator hitAnimator = null;
-    [SerializeField] GameObject player;
     string hit = "Hit";
 
     public void HitEffect(int position)
@@ -17,7 +16,6 @@ public class EffectManager : MonoBehaviour
     void Start()
     {
         hitAnimator = GameObject.Find("HitEffect").GetComponent<Animator>();
-        player = GameObject.Find("Player");
     }
 
     // Update is called once per frame

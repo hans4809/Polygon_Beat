@@ -31,14 +31,30 @@ public class MusicPlayerManager : MonoBehaviour
             }
         }
     }
+    public void PlaySFX(string sfxName) 
+    {
+        for(int i = 0; i < sfx.Length; i++)
+        {
+            for (int j = 0; j < sfxPlayer.Length; j++)
+            {
+                if (!sfxPlayer[j].isPlaying)
+                {
+                    sfxPlayer[j].clip = sfx[i].audioClip;
+                    sfxPlayer[j].Play();
+                    return;
+                }
+            }
+            Debug.Log("모든 오디오 플레이어가 재생중입니다.");
+            return;
+        }
+        Debug.Log(sfxName + "해당 효과음이 없습니다.");
+    }
     void Start()
     {
         Instance = this;
     }
     private void Awake()
     {
-        //dataManager = GameObject.Find("DataManger").AddComponent<DataManager>() as DataManager;
-        //testJson = new JsonManager();
         PlayBGM(DataManager.singleTon.wholeGameData._currentSong.ToString());
     }
     // Update is called once per frame

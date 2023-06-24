@@ -16,11 +16,9 @@ public class TouchCheckByJson : MonoBehaviour
     bool clicked;
     bool cleared;
     bool missed;
-    //Queue<float> Boundary = new Queue<float>();
-    //Queue<float> CorrectArea = new Queue<float>();
-    //Queue<float> BeatsStamp = new Queue<float>();
     [SerializeField] LifeManager lifeManager;
     [SerializeField] AudioSource bgmPlayer;
+    [SerializeField] MusicPlayerManager musicPlayerManager;
     [SerializeField] EffectManager effectManager;
     [SerializeField] GameObject player;
 
@@ -34,27 +32,12 @@ public class TouchCheckByJson : MonoBehaviour
         bgmPlayer = GameObject.Find("BGMPlayer").GetComponent<AudioSource>();
         lifeManager = FindObjectOfType<LifeManager>();
         effectManager = FindObjectOfType<EffectManager>();
+        musicPlayerManager = FindObjectOfType<MusicPlayerManager>();
         player = GameObject.Find("Player");
         leastTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime - boundary;
         maxTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime + boundary;
     }
-    /*private void BeatTimeInform()
-    {
-        for (i = 0; i < DataManager.singleTon.currentMusic.beatData.Count - 1; i++)
-        {
-            Boundary.Enqueue((DataManager.singleTon.currentMusic.beatData[i+1].touchTime + DataManager.singleTon.currentMusic.beatData[i].touchTime) / 2f); //경계값 설정
-        }
 
-        for (i = 0; i < DataManager.singleTon.currentMusic.beatData.Count - 1; i++)
-        {
-            CorrectArea.Enqueue((DataManager.singleTon.currentMusic.beatData[i+1].touchTime - DataManager.singleTon.currentMusic.beatData[i].touchTime) * 0.45f); //오차허용범위.마지막 비트는 오차범위없음
-        }
-
-        for (i = 0; i < DataManager.singleTon.currentMusic.beatData.Count; i++)
-        {
-            BeatsStamp.Enqueue(DataManager.singleTon.currentMusic.beatData[i].touchTime);
-        }
-    }*/
     IEnumerator touchDelay()
     {
         beatIndex++;
@@ -84,12 +67,14 @@ public class TouchCheckByJson : MonoBehaviour
                     cleared = true;
                     Debug.Log("CLEAR");
                     effectManager.HitEffect(position);
+                    musicPlayerManager.PlaySFX("touch");
                     StartCoroutine(touchDelay());
                 }
                 else
                 {
                     clicked = true;
                     missed = true;
+                    musicPlayerManager.PlaySFX("touch");
                     Debug.LogError("MISS");
                 }
             }
@@ -106,47 +91,4 @@ public class TouchCheckByJson : MonoBehaviour
             StartCoroutine(touchDelay());
         }
     }
-            /*if (clickedtime >= BeforeBoundary && bgmPlayer.time < Boundary.Peek())
-            {
-                if (!clicked)
-                {
-                    if (clickedtime >= BeforeBoundary && clickedtime < BeatsStamp.Peek() - CorrectArea.Peek())
-                    {
-                        Debug.Log("Miss");
-                        lifeManager.LifeReduce();
-                        clicked = true;
-                        missed = true;
-                    }
-
-                    else if (clickedtime >= BeatsStamp.Peek() - CorrectArea.Peek() && clickedtime < BeatsStamp.Peek() + CorrectArea.Peek())
-                    {
-                        Debug.Log("Clear");
-                        cleared = true;
-                        clicked = true;
-                    }
-                    else if (clickedtime >= BeatsStamp.Peek() + CorrectArea.Peek() && bgmPlayer.time < Boundary.Peek())
-                    {
-                        Debug.Log("Miss");
-                        lifeManager.LifeReduce();
-                        clicked = true;
-                        missed = true;
-                    }
-                }
-            }*/
-
-        /*if (bgmPlayer.time >= Boundary.Peek())
-        {
-            if (!clicked && !cleared && !missed)
-            {
-                Debug.Log("Miss");
-                lifeManager.LifeReduce();
-            }
-            cleared = false;
-            clicked = false;
-            missed = false;
-            BeforeBoundary = Boundary.Dequeue();
-            BeatsStamp.Dequeue();
-            CorrectArea.Dequeue();
-        }*/
-
 }
