@@ -10,8 +10,6 @@ using static Define;
 public class SongManager : MonoBehaviour
 {
     public List<Button> buttonList;
-    public JsonManager jsonManager;
-    public WholeGameData wholeGameData;
 
     public void FirstSong()
     {
@@ -29,7 +27,7 @@ public class SongManager : MonoBehaviour
     {
         buttonList[0].onClick.AddListener(FirstSong);
         buttonList[1].onClick.AddListener(SecondSong);
-        jsonManager = new JsonManager();
+
     }
 
     // Update is called once per frame

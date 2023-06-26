@@ -3491,10 +3491,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d5f06ea1757bf349a9e51e0932921a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  songManager: {fileID: 0}
-  _ground: []
-  _coin: {fileID: 3388994323668056008, guid: 967f0bcb852c323498d19b310ae710d8, type: 3}
-  _savePoint: {fileID: 2159174996864268990, guid: a78e0bdbef662e44d9d65ffd94598280, type: 3}
+  transformParent: {fileID: 1601891911}
+  ground: []
+  coin: {fileID: 0}
+  savePoint: {fileID: 0}
 --- !u!114 &1601891909
 MonoBehaviour:
   m_ObjectHideFlags: 0
