@@ -3491,11 +3491,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d5f06ea1757bf349a9e51e0932921a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transformParent: {fileID: 0}
   songManager: {fileID: 0}
-  ground:
-  - {fileID: 6646984435927538192, guid: e87ee4e463b6cd046822612302367aea, type: 3}
-  - {fileID: 4272312478575817848, guid: 4da83ba1b8f8f1b42a21bf8a83611322, type: 3}
+  _ground: []
+  _coin: {fileID: 3388994323668056008, guid: 967f0bcb852c323498d19b310ae710d8, type: 3}
+  _savePoint: {fileID: 2159174996864268990, guid: a78e0bdbef662e44d9d65ffd94598280, type: 3}
 --- !u!114 &1601891909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3571,9 +3570,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59a258e418ae0441940727cac582256, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitAnimator: {fileID: 0}
-  perfectAnimator: {fileID: 0}
-  missAnimator: {fileID: 0}
+  hitAnimator: {fileID: 355562707}
+  perfectAnimator: {fileID: 1388639279}
+  missAnimator: {fileID: 512823073}
 --- !u!1 &1614261384
 GameObject:
   m_ObjectHideFlags: 0
