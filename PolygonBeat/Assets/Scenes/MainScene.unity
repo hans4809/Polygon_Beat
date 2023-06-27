@@ -898,6 +898,7 @@ GameObject:
   - component: {fileID: 246852204}
   - component: {fileID: 246852206}
   - component: {fileID: 246852205}
+  - component: {fileID: 246852207}
   m_Layer: 5
   m_Name: CharacterCanvas_Triangle
   m_TagString: Untagged
@@ -967,6 +968,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 246852203}
   m_CullTransparentMesh: 1
+--- !u!114 &246852207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246852203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26aca00c4970c9f49818093fe4c92950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quitButton: {fileID: 1850297914}
+  settingCanvas: {fileID: 246852203}
 --- !u!1 &248328833
 GameObject:
   m_ObjectHideFlags: 0
@@ -1922,7 +1937,7 @@ GameObject:
   - component: {fileID: 504025557}
   - component: {fileID: 504025556}
   m_Layer: 5
-  m_Name: TriangleButton
+  m_Name: SquareButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4491,6 +4506,8 @@ GameObject:
   - component: {fileID: 1301219612}
   - component: {fileID: 1301219613}
   - component: {fileID: 1301219614}
+  - component: {fileID: 1301219615}
+  - component: {fileID: 1301219616}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -4560,13 +4577,41 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1301219609}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57516c480a4c0ad48ab5b763eed6d614, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   characterButton: {fileID: 1035962547}
   characterCanvas: {fileID: 1592031268}
+--- !u!114 &1301219615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301219609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0cb5bf2e1aef8c42b39e96522ea93c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triangleButton: {fileID: 1668572574}
+  squareButton: {fileID: 504025556}
+  triangleCanvas: {fileID: 246852203}
+  squareCanvas: {fileID: 1592031268}
+--- !u!114 &1301219616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301219609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6559bab20339b2b47a070dbe21d55bad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1303323422
 GameObject:
   m_ObjectHideFlags: 0
@@ -5805,6 +5850,7 @@ GameObject:
   - component: {fileID: 1592031269}
   - component: {fileID: 1592031271}
   - component: {fileID: 1592031270}
+  - component: {fileID: 1592031272}
   m_Layer: 5
   m_Name: CharacterCanvas_Square
   m_TagString: Untagged
@@ -5874,6 +5920,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1592031268}
   m_CullTransparentMesh: 1
+--- !u!114 &1592031272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592031268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26aca00c4970c9f49818093fe4c92950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quitButton: {fileID: 1624800639}
+  settingCanvas: {fileID: 1592031268}
 --- !u!1 &1614963287
 GameObject:
   m_ObjectHideFlags: 0
