@@ -4490,6 +4490,7 @@ GameObject:
   - component: {fileID: 1301219611}
   - component: {fileID: 1301219612}
   - component: {fileID: 1301219613}
+  - component: {fileID: 1301219614}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -4552,6 +4553,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quitButton: {fileID: 1586453280}
+--- !u!114 &1301219614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301219609}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57516c480a4c0ad48ab5b763eed6d614, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterButton: {fileID: 1035962547}
+  characterCanvas: {fileID: 1592031268}
 --- !u!1 &1303323422
 GameObject:
   m_ObjectHideFlags: 0
