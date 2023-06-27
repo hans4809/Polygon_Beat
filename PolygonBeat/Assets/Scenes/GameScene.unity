@@ -208,6 +208,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rhythmPlayer: {fileID: 1559307547}
+  wholeGameData:
+    _tutorialClear: 0
+    _coin: 0
+    _currentSong: 0
+    _masterVolume: 0
+    _bgmVolume: 0
+    _sfxVolume: 0
   sfx:
   - name: coin
     audioClip: {fileID: 8300000, guid: 9840f981764c9e0488c9beb83b29b828, type: 3}

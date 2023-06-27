@@ -2285,7 +2285,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 62bb1de599ce760448da17cacd19ab5e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3012,6 +3012,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3dbbabe8ee814e418569c64867692b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wholeGameData:
+    _tutorialClear: 0
+    _coin: 0
+    _currentSong: 0
+    _masterVolume: 0
+    _bgmVolume: 0
+    _sfxVolume: 0
   musicData:
     music: []
   currentMusic:
@@ -4060,7 +4067,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: CREDIT
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4508,6 +4515,7 @@ GameObject:
   - component: {fileID: 1301219614}
   - component: {fileID: 1301219615}
   - component: {fileID: 1301219616}
+  - component: {fileID: 1301219617}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -4612,6 +4620,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6559bab20339b2b47a070dbe21d55bad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  machineButton: {fileID: 144756428}
+  characterCanvas: {fileID: 1903312856}
+--- !u!114 &1301219617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301219609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6559bab20339b2b47a070dbe21d55bad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  machineButton: {fileID: 464498522}
+  characterCanvas: {fileID: 1903312856}
 --- !u!1 &1303323422
 GameObject:
   m_ObjectHideFlags: 0
@@ -7050,7 +7074,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: SETTING
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7810,7 +7834,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 200, y: -200}
-  m_SizeDelta: {x: 200, y: 200}
+  m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2035571658
 MonoBehaviour:
@@ -7876,7 +7900,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 1514e1cdd5141ce409c9751cfff34c71, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
