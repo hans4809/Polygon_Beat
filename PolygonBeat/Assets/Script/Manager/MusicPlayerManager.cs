@@ -31,6 +31,15 @@ public class MusicPlayerManager : MonoBehaviour
             }
         }
     }
+    public void StopBGM(string bgmName) 
+    {
+        bgmPlayer.Stop();
+    }
+
+    public AudioSource GetBGMPlayer()
+    {
+        return bgmPlayer;
+    }
     public void PlaySFX(string sfxName) 
     {
         for (int i = 0; i < sfx.Length; i++)

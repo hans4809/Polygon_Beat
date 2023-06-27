@@ -7,14 +7,14 @@ using UnityEngine.UI;
 public class ReplayManager : MonoBehaviour
 {   
     public PauseManager pauseManager;
-    //public GroundCreater groundCreater;
-    public GameOverManager gameOverManager;
     public CreateGroundByJson createGroundByJson;
     public PlayerRotate playerRotate;
     public Button replayButton;
-    public AudioSource audioSource;
-    public List<Vector3> gameObjectInitPosition;
-
+    //public AudioSource audioSource;
+    public MusicPlayerManager musicPlayerManager;
+    public LifeManager lifeManager;
+    public Count count;
+    
     // Start is called before the first frame update
     void Awake()
     {
@@ -23,17 +23,18 @@ public class ReplayManager : MonoBehaviour
 
     void Replay()
     {
-        audioSource.Stop();
-        audioSource.Play();
         ResetAll();
+        musicPlayerManager.StopBGM(DataManager.singleTon.wholeGameData._currentSong.ToString());
+        musicPlayerManager.PlayBGM(DataManager.singleTon.wholeGameData._currentSong.ToString());
         Time.timeScale = 1f;
     }
     private void ResetAll()
     {
         pauseManager.Start();
         createGroundByJson.Start();
-        gameOverManager.Start();
         playerRotate.Setting();
+        lifeManager.Start();
+        count.Setting();
     }
 
     // Update is called once per frame

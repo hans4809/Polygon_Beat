@@ -744,12 +744,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseManager: {fileID: 995007373}
-  gameOverManager: {fileID: 1264941338}
   createGroundByJson: {fileID: 1601891908}
   playerRotate: {fileID: 558690954}
   replayButton: {fileID: 894387362}
-  audioSource: {fileID: 1559307548}
-  gameObjectInitPosition: []
+  musicPlayerManager: {fileID: 103456894}
+  lifeManager: {fileID: 1264941340}
+  count: {fileID: 1898293186}
 --- !u!4 &392399781
 Transform:
   m_ObjectHideFlags: 0
@@ -2564,7 +2564,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1264941339}
-  - component: {fileID: 1264941338}
   - component: {fileID: 1264941340}
   m_Layer: 0
   m_Name: GameOverManager
@@ -2573,23 +2572,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1264941338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1264941337}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c382fa595d448e4e83cbf5dd9e267b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lives:
-  - {fileID: 1367456896}
-  - {fileID: 570105285}
-  - {fileID: 1079936637}
-  life: 3
 --- !u!4 &1264941339
 Transform:
   m_ObjectHideFlags: 0

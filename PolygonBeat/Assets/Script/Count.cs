@@ -1,41 +1,47 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 [AddComponentMenu("UI/DebugTextComponentName", 11)]
 public class Count : MonoBehaviour
 {
+    public Count Instance;
     public TextMeshProUGUI tmpUgui;
     public TMP_Text tmp_Text;
-    public AudioSource bgmPlayer;
+    public MusicPlayerManager musicPlayerManager;
     float time;
     [SerializeField] GameObject myGameObject;
 
     // Start is called before the first frame update
     void Start()
     {
-        time = 0f;
-        tmp_Text.text = "3";
-        bgmPlayer = GameObject.Find("BGMPlayer").GetComponent<AudioSource>();
-        myGameObject = GameObject.Find("Count");
+        Setting();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Setting()
     {
-        if(bgmPlayer.time == 0)
+        this.gameObject.SetActive(true);
+        time = 0f;
+        tmp_Text.text = "3";
+        musicPlayerManager = FindAnyObjectByType<MusicPlayerManager>();
+        myGameObject = GameObject.Find("Count");
+    }
+    public void Counting()
+    {
+        if (musicPlayerManager.GetBGMPlayer().time == 0)
         {
             time += Time.deltaTime;
-            if(time >= 0 && time < 1)
+            if (time >= 0 && time < 1)
             {
                 tmp_Text.text = "3";
             }
-            if(time >= 1 && time < 2)
+            if (time >= 1 && time < 2)
             {
                 tmp_Text.text = "2";
             }
-            if(time >= 2 && time < 3)
+            if (time >= 2 && time < 3)
             {
                 tmp_Text.text = "1";
             }
@@ -44,5 +50,10 @@ public class Count : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
+    }
+    // Update is called once per frame
+    void Update()
+    {
+        Counting();
     }
 }

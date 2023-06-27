@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 using static Define;
 
 
-public class SongManager : MonoBehaviour
+public class StageManager : MonoBehaviour
 {
     public List<Button> buttonList;
 
