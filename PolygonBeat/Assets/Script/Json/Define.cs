@@ -28,6 +28,7 @@ public class Define
         public float bpm;
         public int count;
     }
+    [System.Serializable]
     public class CharacterData
     {
         private int _characterIndex;
@@ -52,6 +53,7 @@ public class Define
         }
     }
 
+    [System.Serializable]
     public class WholeGameData
     {
         public bool _tutorialClear;

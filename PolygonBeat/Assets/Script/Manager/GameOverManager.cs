@@ -8,6 +8,7 @@ public class GameOverManager : MonoBehaviour
 {
     public List<GameObject> lives;
     public int life;
+    [SerializeField] JsonManager jsonManager;
     // Start is called before the first frame update
     public void Start()
     {
