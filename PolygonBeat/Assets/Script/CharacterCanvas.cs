@@ -15,14 +15,15 @@ public class CharacterCanvas : MonoBehaviour
     {
         characterCanvas.SetActive(false);
         characterstate = false;
+        characterButton.onClick.AddListener(CharacterSetting);
     }
 
-    void CharacterSetting()
+    public void CharacterSetting()
     {
         characterCanvas.SetActive(true); 
         characterstate = true;
 
-       // GetComponent<Button>().interactable = false;
+        settingButton.interactable = false;
     }
 
     // Update is called once per frame

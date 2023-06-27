@@ -750,8 +750,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 829, y: 502}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 874, y: 453}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &193637334
 MonoBehaviour:
@@ -981,6 +981,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quitButton: {fileID: 1850297914}
+  settingsButton: {fileID: 563343122}
   settingCanvas: {fileID: 246852203}
 --- !u!1 &248328833
 GameObject:
@@ -5338,7 +5339,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterButton: {fileID: 1035962547}
-  settingButton: {fileID: 0}
+  settingButton: {fileID: 563343122}
   characterCanvas: {fileID: 1592031268}
 --- !u!114 &1301219615
 MonoBehaviour:
@@ -6550,6 +6551,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quitButton: {fileID: 193637334}
+  settingsButton: {fileID: 563343122}
   settingCanvas: {fileID: 1551686269}
 --- !u!1 &1577958008
 GameObject:
@@ -6923,6 +6925,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quitButton: {fileID: 1624800639}
+  settingsButton: {fileID: 563343122}
   settingCanvas: {fileID: 1592031268}
 --- !u!1 &1614963287
 GameObject:

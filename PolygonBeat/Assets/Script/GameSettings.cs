@@ -21,6 +21,7 @@ public class GameSettings : MonoBehaviour
     {
         settingCanvas.SetActive(true);
         settingstate = true;
+        settingsButton.interactable = false;
     }
     // Update is called once per frame
     void Update()
