@@ -46,6 +46,14 @@ public class DataManager : MonoBehaviour // 여긴 볼 거 없음
     // Update is called once per frame
     void Update()
     {
-
+        switch (wholeGameData._currentSong)
+        {
+            case (0):
+                currentMusic = musicData.music[0];
+                break;
+            case (1):
+                currentMusic = musicData.music[1];
+                break;
+        }
     }
 }

@@ -1088,9 +1088,8 @@ GameObject:
   - component: {fileID: 558690954}
   - component: {fileID: 558690957}
   - component: {fileID: 558690956}
-  - component: {fileID: 558690955}
-  - component: {fileID: 558690958}
   - component: {fileID: 558690959}
+  - component: {fileID: 558690960}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1189,18 +1188,6 @@ MonoBehaviour:
   childObject: {fileID: 558690951}
   bgmPlayer: {fileID: 0}
   beatIndex: 0
---- !u!114 &558690955
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 558690951}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97a5ce83c7f15f94e942b5700b513ea3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &558690956
 Rigidbody2D:
   serializedVersion: 4
@@ -1248,20 +1235,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &558690958
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 558690951}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab45b84cee4c38244b39f37a3e83744a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  analyzeExample: {fileID: 0}
-  lifeManager: {fileID: 0}
 --- !u!114 &558690959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1279,6 +1252,18 @@ MonoBehaviour:
   musicPlayerManager: {fileID: 0}
   effectManager: {fileID: 0}
   player: {fileID: 0}
+--- !u!114 &558690960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 558690951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7158974d378b1544cbfe3f4e0306f30b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &570105285
 GameObject:
   m_ObjectHideFlags: 0
