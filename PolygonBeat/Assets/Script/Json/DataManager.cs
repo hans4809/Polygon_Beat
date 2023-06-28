@@ -8,7 +8,8 @@ public class DataManager : MonoBehaviour // ���� �� �� ���
 {
     public static DataManager singleTon;
     public WholeGameData wholeGameData;
-    public UnityEditor.U2D.Animation.CharacterData characterData;
+    public UserCharacterData userCharacterData;
+    public IndividualCharacter individualCharacterData;
     public MusicData musicData;
     public Music currentMusic;
     public JsonManager jsonManager;
