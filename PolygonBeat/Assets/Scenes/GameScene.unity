@@ -743,13 +743,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 657f3143f685d2847966322c4b1e6f72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseManager: {fileID: 995007373}
-  createGroundByJson: {fileID: 1601891908}
-  playerRotate: {fileID: 558690954}
+  pauseManager: {fileID: 0}
+  createGroundByJson: {fileID: 0}
+  playerRotate: {fileID: 0}
   replayButton: {fileID: 894387362}
-  musicPlayerManager: {fileID: 103456894}
-  lifeManager: {fileID: 1264941340}
+  musicPlayerManager: {fileID: 0}
+  lifeManager: {fileID: 0}
   count: {fileID: 1898293186}
+  touchCheckByJson: {fileID: 0}
 --- !u!4 &392399781
 Transform:
   m_ObjectHideFlags: 0
@@ -4514,9 +4515,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b00e576163177d45ae82169d4e6bb64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Instance: {fileID: 0}
   tmpUgui: {fileID: 1898293187}
   tmp_Text: {fileID: 1898293187}
-  bgmPlayer: {fileID: 0}
+  musicPlayerManager: {fileID: 0}
   myGameObject: {fileID: 0}
 --- !u!114 &1898293187
 MonoBehaviour:

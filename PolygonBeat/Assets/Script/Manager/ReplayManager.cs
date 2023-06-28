@@ -6,19 +6,27 @@ using UnityEngine.UI;
 
 public class ReplayManager : MonoBehaviour
 {   
-    public PauseManager pauseManager;
-    public CreateGroundByJson createGroundByJson;
-    public PlayerRotate playerRotate;
-    public Button replayButton;
+    [SerializeField] PauseManager pauseManager;
+    [SerializeField] CreateGroundByJson createGroundByJson;
+    [SerializeField] PlayerRotate playerRotate;
+    [SerializeField] public Button replayButton;
     //public AudioSource audioSource;
-    public MusicPlayerManager musicPlayerManager;
-    public LifeManager lifeManager;
-    public Count count;
+    [SerializeField] MusicPlayerManager musicPlayerManager;
+    [SerializeField] LifeManager lifeManager;
+    [SerializeField] Count count;
+    [SerializeField] TouchCheckByJson touchCheckByJson;
     
     // Start is called before the first frame update
     void Awake()
     {
         replayButton.onClick.AddListener(Replay);
+        pauseManager = FindAnyObjectByType<PauseManager>();
+        createGroundByJson = FindAnyObjectByType<CreateGroundByJson>();
+        playerRotate = FindAnyObjectByType<PlayerRotate>();
+        musicPlayerManager = FindAnyObjectByType<MusicPlayerManager>();
+        lifeManager = FindAnyObjectByType<LifeManager>();
+        count = FindAnyObjectByType<Count>();
+        touchCheckByJson = FindAnyObjectByType<TouchCheckByJson>();
     }
 
     void Replay()
@@ -30,11 +38,12 @@ public class ReplayManager : MonoBehaviour
     }
     private void ResetAll()
     {
-        pauseManager.Start();
-        createGroundByJson.Start();
-        playerRotate.Setting();
-        lifeManager.Start();
+        pauseManager.Init();
+        createGroundByJson.CreateGround();
+        playerRotate.Init();
         count.Setting();
+        touchCheckByJson.Init();
+        lifeManager.Init();
     }
 
     // Update is called once per frame

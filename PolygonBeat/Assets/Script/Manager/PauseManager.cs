@@ -32,7 +32,7 @@ public class PauseManager : MonoBehaviour
         isPause = true;
         Time.timeScale = 0f;
     }
-    public void Start()
+    void Start()
     {
         isPause = false;
         pauseButton.SetActive(true);
@@ -41,6 +41,12 @@ public class PauseManager : MonoBehaviour
         buttonList[1].onClick.AddListener(Resume);
     }
 
+    public void Init()
+    {
+        isPause = false;
+        pauseButton.SetActive(true);
+        pauseMenuCanvas.SetActive(false);
+    }
     // Update is called once per frame
     void Update()
     {

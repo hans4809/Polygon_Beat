@@ -15,7 +15,7 @@ public class PlayerRotate : MonoBehaviour
 {
     [SerializeField] List<GameObject> parentObject;
     [SerializeField] GameObject childObject;
-    [SerializeField] AudioSource bgmPlayer;
+    [SerializeField] MusicPlayerManager musicPlayerManager;
     Vector3 initParentPostion;
     Vector3 parentPosition;
     Vector3 rotation;
@@ -54,7 +54,6 @@ public class PlayerRotate : MonoBehaviour
         childObject.transform.parent.localPosition = parentPosition;
         childObject.transform.localPosition = new Vector3(-5, 5, 0);
         rotateSpeed = (DataManager.singleTon.currentMusic.data[1].bpm / 60);
-        Debug.Log(rotateSpeed);
     }
 
     public void Setting()
@@ -99,19 +98,24 @@ public class PlayerRotate : MonoBehaviour
     {
         return ((DataManager.singleTon.currentMusic.data[index].bpm) / 60);
     }
-
+    public void Init()
+    {
+        Setting();
+        time = 0;
+    }
     void Start() // 처음 상태에 필요한 것들 초기화
     {
         Setting();
         initParentPostion = childObject.transform.parent.localPosition;
         Time.timeScale = 1.0f;
         time = 0f;
-        bgmPlayer = GameObject.Find("BGMPlayer").GetComponent<AudioSource>();
+        musicPlayerManager = FindAnyObjectByType<MusicPlayerManager>();
     }
     void Update()
     {
-        if(bgmPlayer.time == 0)
+        if(musicPlayerManager.GetBGMPlayer().time == 0)
         {
+            Debug.Log(musicPlayerManager.GetBGMPlayer().time);
             return;
         }
         rotation = Vector3.Lerp(new Vector3(0, 0, 0), new Vector3(0, 0, -90), time); // time이 0 ~ 1 갈 동안 로테이션도 (0,0,0)에서 (0,0,-90)으로 변함

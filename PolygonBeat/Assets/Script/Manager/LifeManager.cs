@@ -11,9 +11,18 @@ public class LifeManager : MonoBehaviour
     [SerializeField] List<Image> lifeImage;
 
     // Start is called before the first frame update
-    public void Start()
+    void Start()
     {
-        for(int i = 0; i < lifeImage.Count; i++)
+        life = 3;
+        for(int i = 0; i < life; i++)
+        {
+            lifeImage[i].sprite = lifeSprite[0];
+        }
+    }
+    public void Init()
+    {
+        life = 3;
+        for (int i = 0; i < life; i++)
         {
             lifeImage[i].sprite = lifeSprite[0];
         }

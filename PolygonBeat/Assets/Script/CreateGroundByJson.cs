@@ -36,7 +36,10 @@ public class CreateGroundByJson : MonoBehaviour
         ground.Add(Resources.Load<GameObject>("UI/block2"));
         coin = Resources.Load<GameObject>("UI/Icon/coin");
         savePoint = Resources.Load<GameObject>("UI/Icon/save_point");
-
+        CreateGround();
+    }
+    public void CreateGround()
+    {
         coinIndex = new int[DataManager.singleTon.currentMusic.data.Count / 10];
         int coinNum = 0;
         for (int j = 0; j < DataManager.singleTon.currentMusic.data.Count / 10; j++)
@@ -46,10 +49,10 @@ public class CreateGroundByJson : MonoBehaviour
 
         for (int i = -1; i < DataManager.singleTon.currentMusic.data.Count + 1; i++)
         {
-            InstantiateGround(i + 1, (i+1).ToString(), new Vector3(i + 1, 0, 0));
+            InstantiateGround(i + 1, (i + 1).ToString(), new Vector3(i + 1, 0, 0));
             if (i == DataManager.singleTon.currentMusic.data.Count / 2)
             {
-                Instantiate(savePoint, new Vector3(i+1, 0.8f, 0), Quaternion.identity);
+                Instantiate(savePoint, new Vector3(i + 1, 0.8f, 0), Quaternion.identity);
             }
             if (coinNum >= DataManager.singleTon.currentMusic.data.Count / 10)
             {
@@ -60,13 +63,12 @@ public class CreateGroundByJson : MonoBehaviour
             {
                 if (i == coinIndex[coinNum])
                 {
-                    Instantiate(coin, new Vector3(i + 1, 0.7f, 0),Quaternion.identity);
+                    Instantiate(coin, new Vector3(i + 1, 0.7f, 0), Quaternion.identity);
                     coinNum++;
                 }
             }
         }
     }
-
     // Update is called once per frame
     void Update()
     {

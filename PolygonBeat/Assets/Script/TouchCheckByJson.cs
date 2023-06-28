@@ -25,6 +25,7 @@ public class TouchCheckByJson : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        beatIndex = 0;
         clicked = false;
         cleared = false;
         missed = false;
@@ -37,7 +38,15 @@ public class TouchCheckByJson : MonoBehaviour
         leastTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime - boundary;
         maxTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime + boundary;
     }
-
+    public void Init()
+    {
+        beatIndex = 0;
+        clicked = false;
+        cleared = false;
+        missed = false;
+        leastTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime - boundary;
+        maxTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime + boundary;
+    }
     IEnumerator touchDelay()
     {
         beatIndex++;
@@ -49,7 +58,7 @@ public class TouchCheckByJson : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (bgmPlayer.time == 0)
+        if (musicPlayerManager.GetBGMPlayer().time == 0)
         {
             return;
         }
