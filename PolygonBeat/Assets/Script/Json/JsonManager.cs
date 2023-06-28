@@ -3,16 +3,17 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using Unity.VisualScripting.FullSerializer;
+using UnityEditor.U2D.Animation;
 using UnityEngine;
 using static Define;
 
 public class JsonManager
 {
-    public void Save(CharacterData data)
+    public void Save(UserCharacterData data)
     {
-        //¾Èµå·ÎÀÌµå¿¡¼­ÀÇ ÀúÀå À§Ä¡¸¦ ´Ù¸£°Ô ÇØÁÖ¾î¾ß ÇÑ´Ù
-        //Application.dataPath¸¦ ÀÌ¿ëÇÏ¸é ¾îµğ·Î °¡´ÂÁö´Â ±¸±Û¸µ ÇØº¸±æ ¹Ù¶õ´Ù
-        //¾Èµå·ÎÀÌµåÀÇ °æ¿ì¿¡´Â µ¥ÀÌÅÍÁ¶ÀÛÀ» ¸·±âÀ§ÇØ 2Áøµ¥ÀÌÅÍ·Î º¯È¯À» ÇØ¾ßÇÑ´Ù
+        //ì•ˆë“œë¡œì´ë“œì—ì„œì˜ ì €ì¥ ìœ„ì¹˜ë¥¼ ë‹¤ë¥´ê²Œ í•´ì£¼ì–´ì•¼ í•œë‹¤
+        //Application.dataPathë¥¼ ì´ìš©í•˜ë©´ ì–´ë””ë¡œ ê°€ëŠ”ì§€ëŠ” êµ¬ê¸€ë§ í•´ë³´ê¸¸ ë°”ë€ë‹¤
+        //ì•ˆë“œë¡œì´ë“œì˜ ê²½ìš°ì—ëŠ” ë°ì´í„°ì¡°ì‘ì„ ë§‰ê¸°ìœ„í•´ 2ì§„ë°ì´í„°ë¡œ ë³€í™˜ì„ í•´ì•¼í•œë‹¤
 
         string savePath = Application.dataPath;
         string appender = "/userData/CharacterData.json";
@@ -26,9 +27,9 @@ public class JsonManager
         StringBuilder builder = new StringBuilder(savePath);
         builder.Append(appender);
         string jsonText = JsonUtility.ToJson(data, true);
-        //ÀÌ·¯¸éÀº ÀÏ´Ü µ¥ÀÌÅÍ°¡ ÅØ½ºÆ®·Î º¯È¯ÀÌ µÈ´Ù
-        //jsonUtility¸¦ ÀÌ¿ëÇÏ¿© dataÀÎ WholeGameData¸¦ jsonÇü½ÄÀÇ text·Î ¹Ù²Ù¾îÁØ´Ù
-        //ÆÄÀÏ½ºÆ®¸²À» ÀÌ·¸°Ô ÁöÁ¤ÇØÁÖ°í ÀúÀåÇØÁÖ¸éµÈ´ç ²ı
+        //ì´ëŸ¬ë©´ì€ ì¼ë‹¨ ë°ì´í„°ê°€ í…ìŠ¤íŠ¸ë¡œ ë³€í™˜ì´ ëœë‹¤
+        //jsonUtilityë¥¼ ì´ìš©í•˜ì—¬ dataì¸ WholeGameDataë¥¼ jsoní˜•ì‹ì˜ textë¡œ ë°”ê¾¸ì–´ì¤€ë‹¤
+        //íŒŒì¼ìŠ¤íŠ¸ë¦¼ì„ ì´ë ‡ê²Œ ì§€ì •í•´ì£¼ê³  ì €ì¥í•´ì£¼ë©´ëœë‹¹ ë—
         FileStream fileStream = new FileStream(builder.ToString(), FileMode.Create);
         byte[] bytes = Encoding.UTF8.GetBytes(jsonText);
         fileStream.Write(bytes, 0, bytes.Length);
@@ -36,9 +37,9 @@ public class JsonManager
     }
     public void Save(WholeGameData data)
     {
-        //¾Èµå·ÎÀÌµå¿¡¼­ÀÇ ÀúÀå À§Ä¡¸¦ ´Ù¸£°Ô ÇØÁÖ¾î¾ß ÇÑ´Ù
-        //Application.dataPath¸¦ ÀÌ¿ëÇÏ¸é ¾îµğ·Î °¡´ÂÁö´Â ±¸±Û¸µ ÇØº¸±æ ¹Ù¶õ´Ù
-        //¾Èµå·ÎÀÌµåÀÇ °æ¿ì¿¡´Â µ¥ÀÌÅÍÁ¶ÀÛÀ» ¸·±âÀ§ÇØ 2Áøµ¥ÀÌÅÍ·Î º¯È¯À» ÇØ¾ßÇÑ´Ù
+        //ì•ˆë“œë¡œì´ë“œì—ì„œì˜ ì €ì¥ ìœ„ì¹˜ë¥¼ ë‹¤ë¥´ê²Œ í•´ì£¼ì–´ì•¼ í•œë‹¤
+        //Application.dataPathë¥¼ ì´ìš©í•˜ë©´ ì–´ë””ë¡œ ê°€ëŠ”ì§€ëŠ” êµ¬ê¸€ë§ í•´ë³´ê¸¸ ë°”ë€ë‹¤
+        //ì•ˆë“œë¡œì´ë“œì˜ ê²½ìš°ì—ëŠ” ë°ì´í„°ì¡°ì‘ì„ ë§‰ê¸°ìœ„í•´ 2ì§„ë°ì´í„°ë¡œ ë³€í™˜ì„ í•´ì•¼í•œë‹¤
 
         string savePath = Application.dataPath;
         string appender = "/userData/WholeGameData.json";
@@ -52,15 +53,14 @@ public class JsonManager
         StringBuilder builder = new StringBuilder(savePath);
         builder.Append(appender);
         string jsonText = JsonUtility.ToJson(data, true);
-        //ÀÌ·¯¸éÀº ÀÏ´Ü µ¥ÀÌÅÍ°¡ ÅØ½ºÆ®·Î º¯È¯ÀÌ µÈ´Ù
-        //jsonUtility¸¦ ÀÌ¿ëÇÏ¿© dataÀÎ WholeGameData¸¦ jsonÇü½ÄÀÇ text·Î ¹Ù²Ù¾îÁØ´Ù
-        //ÆÄÀÏ½ºÆ®¸²À» ÀÌ·¸°Ô ÁöÁ¤ÇØÁÖ°í ÀúÀåÇØÁÖ¸éµÈ´ç ²ı
+        //ì´ëŸ¬ë©´ì€ ì¼ë‹¨ ë°ì´í„°ê°€ í…ìŠ¤íŠ¸ë¡œ ë³€í™˜ì´ ëœë‹¤
+        //jsonUtilityë¥¼ ì´ìš©í•˜ì—¬ dataì¸ WholeGameDataë¥¼ jsoní˜•ì‹ì˜ textë¡œ ë°”ê¾¸ì–´ì¤€ë‹¤
+        //íŒŒì¼ìŠ¤íŠ¸ë¦¼ì„ ì´ë ‡ê²Œ ì§€ì •í•´ì£¼ê³  ì €ì¥í•´ì£¼ë©´ëœë‹¹ ë—
         FileStream fileStream = new FileStream(builder.ToString(), FileMode.Create);
         byte[] bytes = Encoding.UTF8.GetBytes(jsonText);
         fileStream.Write(bytes, 0, bytes.Length);
         fileStream.Close();
     }
-
 
     public WholeGameData LoadWholeGameData()
     {
@@ -77,18 +77,18 @@ public class JsonManager
 #endif
         StringBuilder builder = new StringBuilder(loadPath);
         builder.Append(directory);
-        //À§±îÁö´Â ¼¼ÀÌºê¶û ¶È°°´Ù
-        //ÆÄÀÏ½ºÆ®¸²À» ¸¸µé¾îÁØ´Ù. ÆÄÀÏ¸ğµå¸¦ openÀ¸·Î ÇØ¼­ ¿­¾îÁØ´Ù. ´Ù ±¸±Û¸µÀÌ´Ù
+        //ìœ„ê¹Œì§€ëŠ” ì„¸ì´ë¸Œë‘ ë˜‘ê°™ë‹¤
+        //íŒŒì¼ìŠ¤íŠ¸ë¦¼ì„ ë§Œë“¤ì–´ì¤€ë‹¤. íŒŒì¼ëª¨ë“œë¥¼ openìœ¼ë¡œ í•´ì„œ ì—´ì–´ì¤€ë‹¤. ë‹¤ êµ¬ê¸€ë§ì´ë‹¤
         if (!Directory.Exists(builder.ToString()))
         {
-            //µğ·ºÅä¸®°¡ ¾ø´Â°æ¿ì ¸¸µé¾îÁØ´Ù
+            //ë””ë ‰í† ë¦¬ê°€ ì—†ëŠ”ê²½ìš° ë§Œë“¤ì–´ì¤€ë‹¤
             Directory.CreateDirectory(builder.ToString());
         }
         builder.Append(appender);
 
         if (File.Exists(builder.ToString()))
         {
-            //¼¼ÀÌºê ÆÄÀÏÀÌ ÀÖ´Â°æ¿ì
+            //ì„¸ì´ë¸Œ íŒŒì¼ì´ ìˆëŠ”ê²½ìš°
             FileStream stream = new FileStream(builder.ToString(), FileMode.Open);
 
             byte[] bytes = new byte[stream.Length];
@@ -96,16 +96,16 @@ public class JsonManager
             stream.Close();
             string jsonData = Encoding.UTF8.GetString(bytes);
 
-            //ÅØ½ºÆ®¸¦ stringÀ¸·Î ¹Ù²Û´ÙÀ½¿¡ FromJson¿¡ ³Ö¾îÁÖ¸éÀº ¿ì¸®°¡ ¾µ ¼ö ÀÖ´Â °´Ã¼·Î ¹Ù²Ü ¼ö ÀÖ´Ù
+            //í…ìŠ¤íŠ¸ë¥¼ stringìœ¼ë¡œ ë°”ê¾¼ë‹¤ìŒì— FromJsonì— ë„£ì–´ì£¼ë©´ì€ ìš°ë¦¬ê°€ ì“¸ ìˆ˜ ìˆëŠ” ê°ì²´ë¡œ ë°”ê¿€ ìˆ˜ ìˆë‹¤
             wholeGameData = JsonUtility.FromJson<WholeGameData>(jsonData);
         }
         else
         {
-            //¼¼ÀÌºêÆÄÀÏÀÌ ¾ø´Â°æ¿ì
+            //ì„¸ì´ë¸ŒíŒŒì¼ì´ ì—†ëŠ”ê²½ìš°
             wholeGameData = new WholeGameData(false,0,50,50,50,0);
         }
         return wholeGameData;
-        //ÀÌ Á¤º¸¸¦ °ÔÀÓ¸Å´ÏÀú³ª, ·ÎµùÀ¸·Î ³Ñ°ÜÁÖ´Â °ÍÀÌ´ç
+        //ì´ ì •ë³´ë¥¼ ê²Œì„ë§¤ë‹ˆì €ë‚˜, ë¡œë”©ìœ¼ë¡œ ë„˜ê²¨ì£¼ëŠ” ê²ƒì´ë‹¹
     }
     public MusicData LoadMusicData()
     {
@@ -122,25 +122,25 @@ public class JsonManager
 #endif
         StringBuilder builder = new StringBuilder(loadPath);
         builder.Append(directory);
-        //À§±îÁö´Â ¼¼ÀÌºê¶û ¶È°°´Ù
-        //ÆÄÀÏ½ºÆ®¸²À» ¸¸µé¾îÁØ´Ù. ÆÄÀÏ¸ğµå¸¦ openÀ¸·Î ÇØ¼­ ¿­¾îÁØ´Ù. ´Ù ±¸±Û¸µÀÌ´Ù
+        //ìœ„ê¹Œì§€ëŠ” ì„¸ì´ë¸Œë‘ ë˜‘ê°™ë‹¤
+        //íŒŒì¼ìŠ¤íŠ¸ë¦¼ì„ ë§Œë“¤ì–´ì¤€ë‹¤. íŒŒì¼ëª¨ë“œë¥¼ openìœ¼ë¡œ í•´ì„œ ì—´ì–´ì¤€ë‹¤. ë‹¤ êµ¬ê¸€ë§ì´ë‹¤
         if (!Directory.Exists(builder.ToString()))
         {
-            //µğ·ºÅä¸®°¡ ¾ø´Â°æ¿ì ¸¸µé¾îÁØ´Ù
+            //ë””ë ‰í† ë¦¬ê°€ ì—†ëŠ”ê²½ìš° ë§Œë“¤ì–´ì¤€ë‹¤
             Directory.CreateDirectory(builder.ToString());
         }
         builder.Append(appender);
 
         if (File.Exists(builder.ToString()))
         {
-            //¼¼ÀÌºê ÆÄÀÏÀÌ ÀÖ´Â°æ¿ì
+            //ì„¸ì´ë¸Œ íŒŒì¼ì´ ìˆëŠ”ê²½ìš°
             FileStream stream = new FileStream(builder.ToString(), FileMode.Open);
             //TextAsset textAsset = Resources.Load<TextAsset>(builder.ToString());
             byte[] bytes = new byte[stream.Length];
             stream.Read(bytes, 0, bytes.Length);
             stream.Close();
             string jsonData = Encoding.UTF8.GetString(bytes);
-            //ÅØ½ºÆ®¸¦ stringÀ¸·Î ¹Ù²Û´ÙÀ½¿¡ FromJson¿¡ ³Ö¾îÁÖ¸éÀº ¿ì¸®°¡ ¾µ ¼ö ÀÖ´Â °´Ã¼·Î ¹Ù²Ü ¼ö ÀÖ´Ù
+            //í…ìŠ¤íŠ¸ë¥¼ stringìœ¼ë¡œ ë°”ê¾¼ë‹¤ìŒì— FromJsonì— ë„£ì–´ì£¼ë©´ì€ ìš°ë¦¬ê°€ ì“¸ ìˆ˜ ìˆëŠ” ê°ì²´ë¡œ ë°”ê¿€ ìˆ˜ ìˆë‹¤
             musicData = JsonUtility.FromJson<MusicData>(jsonData);
         }
         else
@@ -148,6 +148,52 @@ public class JsonManager
             musicData= new MusicData();
         }
         return musicData;
-        //ÀÌ Á¤º¸¸¦ °ÔÀÓ¸Å´ÏÀú³ª, ·ÎµùÀ¸·Î ³Ñ°ÜÁÖ´Â °ÍÀÌ´ç
+        //ì´ ì •ë³´ë¥¼ ê²Œì„ë§¤ë‹ˆì €ë‚˜, ë¡œë”©ìœ¼ë¡œ ë„˜ê²¨ì£¼ëŠ” ê²ƒì´ë‹¹
+    }
+    public UserCharacterData LoadCharacterData()
+    {
+        UserCharacterData userCharacterData;
+        IndividualCharacter individualCharacterData;
+        string loadPath = Application.dataPath;
+        string directory = "/userData";
+        string appender = "/CharacterData.json";
+#if UNITY_EDITOR_WIN
+
+#endif
+
+#if UNITY_ANDROID
+        //loadPath = Application.persistentDataPath;
+#endif
+        StringBuilder builder = new StringBuilder(loadPath);
+        builder.Append(directory);
+        //ìœ„ê¹Œì§€ëŠ” ì„¸ì´ë¸Œë‘ ë˜‘ê°™ë‹¤
+        //íŒŒì¼ìŠ¤íŠ¸ë¦¼ì„ ë§Œë“¤ì–´ì¤€ë‹¤. íŒŒì¼ëª¨ë“œë¥¼ openìœ¼ë¡œ í•´ì„œ ì—´ì–´ì¤€ë‹¤. ë‹¤ êµ¬ê¸€ë§ì´ë‹¤
+        if (!Directory.Exists(builder.ToString()))
+        {
+            //ë””ë ‰í† ë¦¬ê°€ ì—†ëŠ”ê²½ìš° ë§Œë“¤ì–´ì¤€ë‹¤
+            Directory.CreateDirectory(builder.ToString());
+        }
+        builder.Append(appender);
+
+        if (File.Exists(builder.ToString()))
+        {
+            //ì„¸ì´ë¸Œ íŒŒì¼ì´ ìˆëŠ”ê²½ìš°
+            FileStream stream = new FileStream(builder.ToString(), FileMode.Open);
+            //TextAsset textAsset = Resources.Load<TextAsset>(builder.ToString());
+            byte[] bytes = new byte[stream.Length];
+            stream.Read(bytes, 0, bytes.Length);
+            stream.Close();
+            string jsonData = Encoding.UTF8.GetString(bytes);
+            //í…ìŠ¤íŠ¸ë¥¼ stringìœ¼ë¡œ ë°”ê¾¼ë‹¤ìŒì— FromJsonì— ë„£ì–´ì£¼ë©´ì€ ìš°ë¦¬ê°€ ì“¸ ìˆ˜ ìˆëŠ” ê°ì²´ë¡œ ë°”ê¿€ ìˆ˜ ìˆë‹¤
+            individualCharacterData = JsonUtility.FromJson<IndividualCharacter>(jsonData);
+            userCharacterData = JsonUtility.FromJson<UserCharacterData>(jsonData);
+        }
+        else
+        {
+            userCharacterData = new UserCharacterData();
+            individualCharacterData = new IndividualCharacter(0, true, 0, "square");
+        }
+        return userCharacterData;
+        //ì´ ì •ë³´ë¥¼ ê²Œì„ë§¤ë‹ˆì €ë‚˜, ë¡œë”©ìœ¼ë¡œ ë„˜ê²¨ì£¼ëŠ” ê²ƒì´ë‹¹
     }
 }

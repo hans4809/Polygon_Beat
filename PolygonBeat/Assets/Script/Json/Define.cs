@@ -29,27 +29,45 @@ public class Define
         public int count;
     }
     [System.Serializable]
-    public class CharacterData
+    public class UserCharacterData
     {
+        public List<IndividualCharacter> individualCharacters;
+    }
+    public class IndividualCharacter
+    {
+        private int _rarity;
         private int _characterIndex;
         private bool _isHave;
+        private string _shape;
 
+        public int Rarity
+        {
+            get { return _rarity; }
+            set { _rarity = value; }
+        }
         public int CharacterIndex
         {
             get { return _characterIndex; }
             set { _characterIndex = value; }
         }
 
+        public string Shape
+        {
+            get { return _shape; }
+            set { _shape = value; }
+        }
         public bool IsHave
         {
             get { return _isHave; }
             set { _isHave = value; }
         }
 
-        public CharacterData(int characterIndex, bool isHave)
+        public IndividualCharacter(int characterIndex, bool isHave, int rarity, string shape)
         {
             this._characterIndex = characterIndex;
             this._isHave = isHave;
+            this._rarity = rarity;
+            this._shape = shape;
         }
     }
 

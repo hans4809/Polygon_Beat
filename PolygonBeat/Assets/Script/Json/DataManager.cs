@@ -4,11 +4,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using static Define;
 
-public class DataManager : MonoBehaviour // ¿©±ä º¼ °Å ¾øÀ½
+public class DataManager : MonoBehaviour // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 {
     public static DataManager singleTon;
     public WholeGameData wholeGameData;
-    public CharacterData characterData;
+    public UnityEditor.U2D.Animation.CharacterData characterData;
     public MusicData musicData;
     public Music currentMusic;
     public JsonManager jsonManager;
