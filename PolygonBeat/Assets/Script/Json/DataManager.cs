@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using static Define;
 
-public class DataManager : MonoBehaviour // ���� �� �� ����
+public class DataManager : MonoBehaviour
 {
     public static DataManager singleTon;
     public WholeGameData wholeGameData;
@@ -43,6 +43,7 @@ public class DataManager : MonoBehaviour // ���� �� �� ���
     private void Start()
     {
         jsonManager.Save(wholeGameData);
+        jsonManager.Save(userCharacterData);
     }
     // Update is called once per frame
     void Update()

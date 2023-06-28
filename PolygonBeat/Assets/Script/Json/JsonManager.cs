@@ -153,7 +153,6 @@ public class JsonManager
     public UserCharacterData LoadCharacterData()
     {
         UserCharacterData userCharacterData;
-        IndividualCharacter individualCharacterData;
         string loadPath = Application.dataPath;
         string directory = "/userData";
         string appender = "/CharacterData.json";
@@ -185,13 +184,11 @@ public class JsonManager
             stream.Close();
             string jsonData = Encoding.UTF8.GetString(bytes);
             //텍스트를 string으로 바꾼다음에 FromJson에 넣어주면은 우리가 쓸 수 있는 객체로 바꿀 수 있다
-            individualCharacterData = JsonUtility.FromJson<IndividualCharacter>(jsonData);
             userCharacterData = JsonUtility.FromJson<UserCharacterData>(jsonData);
         }
         else
         {
             userCharacterData = new UserCharacterData();
-            individualCharacterData = new IndividualCharacter(0, true, 0, "square");
         }
         return userCharacterData;
         //이 정보를 게임매니저나, 로딩으로 넘겨주는 것이당

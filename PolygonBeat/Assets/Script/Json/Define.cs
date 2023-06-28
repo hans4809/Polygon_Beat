@@ -33,12 +33,13 @@ public class Define
     {
         public List<IndividualCharacter> individualCharacters;
     }
+    [System.Serializable]
     public class IndividualCharacter
     {
         private int _rarity;
         private int _characterIndex;
         private bool _isHave;
-        private string _shape;
+        private int _shape;
 
         public int Rarity
         {
@@ -51,7 +52,7 @@ public class Define
             set { _characterIndex = value; }
         }
 
-        public string Shape
+        public int Shape
         {
             get { return _shape; }
             set { _shape = value; }
@@ -62,7 +63,7 @@ public class Define
             set { _isHave = value; }
         }
 
-        public IndividualCharacter(int characterIndex, bool isHave, int rarity, string shape)
+        public IndividualCharacter(int characterIndex, bool isHave, int rarity, int shape)
         {
             this._characterIndex = characterIndex;
             this._isHave = isHave;
