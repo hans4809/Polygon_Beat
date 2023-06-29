@@ -7,9 +7,9 @@ using UnityEngine.UI;
 
 public class CharacterChanger : MonoBehaviour
 {
-    public Button button;     
-    public Button button1;     
-    public RawImage image;    
+    public Button button;
+    public Button button1;
+    public RawImage image;
     public RawImage image1;
 
     void OnButton_Click()
@@ -22,12 +22,12 @@ public class CharacterChanger : MonoBehaviour
     {
         image.gameObject.SetActive(false);
         image1.gameObject.SetActive(true);
-    } 
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
