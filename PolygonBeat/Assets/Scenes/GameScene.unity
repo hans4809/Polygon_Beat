@@ -4835,6 +4835,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2020576233}
   - component: {fileID: 2020576234}
+  - component: {fileID: 2020576235}
   m_Layer: 0
   m_Name: WholeManger
   m_TagString: Untagged
@@ -4875,6 +4876,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 1938528760}
+--- !u!114 &2020576235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2020576232}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae06770d6c78aa2459c48020aa597bb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 558690952}
+  characterImage: {fileID: 0}
 --- !u!1 &2041269953
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,28 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor.U2D.Animation;
 using UnityEngine;
 using UnityEngine.UI;
 
 
 public class CharacterChanger : MonoBehaviour
 {
-    public Button button;
-    public Button button1;
-    public RawImage image;
-    public RawImage image1;
+    public Image characterImage;
+    public Sprite[] CharacterSprites;
 
-    void OnButton_Click()
+
+    public void OnCharacterSelected(int characterIndex)
     {
-        image.gameObject.SetActive(true);
-        image1.gameObject.SetActive(false);
+        characterImage.sprite = CharacterSprites[characterIndex];     
     }
 
-    void OnButton1Click()
-    {
-        image.gameObject.SetActive(false);
-        image1.gameObject.SetActive(true);
-    }
+
 
     // Start is called before the first frame update
     void Start()
@@ -33,7 +28,6 @@ public class CharacterChanger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        button.onClick.AddListener(OnButton_Click);
-        button1.onClick.AddListener(OnButton1Click);
+
     }
 }
