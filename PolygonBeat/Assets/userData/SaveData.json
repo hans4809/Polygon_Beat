@@ -1,8 +1,5 @@
 {
-    "playerSavePosition": {
-        "x": 0.0,
-        "y": 0.6000000238418579,
-        "z": 0.0
-    },
-    "playerCoin": 0
+    "savePosition": {
+        "x": 0.0
+    }
 }

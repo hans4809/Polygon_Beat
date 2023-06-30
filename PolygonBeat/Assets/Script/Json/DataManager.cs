@@ -10,6 +10,7 @@ public class DataManager : MonoBehaviour
     public WholeGameData wholeGameData;
     public UserCharacterData userCharacterData;
     public IndividualCharacter individualCharacterData;
+    public SaveData saveData;
     public MusicData musicData;
     public Music currentMusic;
     public JsonManager jsonManager;
@@ -20,6 +21,7 @@ public class DataManager : MonoBehaviour
     public void Awake()
     {
         jsonManager = new JsonManager();
+        saveData = new SaveData();
         if (singleTon == null)
         {
             singleTon = this;

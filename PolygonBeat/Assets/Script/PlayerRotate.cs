@@ -115,7 +115,6 @@ public class PlayerRotate : MonoBehaviour
     {
         if(musicPlayerManager.GetBGMPlayer().time == 0)
         {
-            Debug.Log(musicPlayerManager.GetBGMPlayer().time);
             return;
         }
         rotation = Vector3.Lerp(new Vector3(0, 0, 0), new Vector3(0, 0, -90), time); // time이 0 ~ 1 갈 동안 로테이션도 (0,0,0)에서 (0,0,-90)으로 변함

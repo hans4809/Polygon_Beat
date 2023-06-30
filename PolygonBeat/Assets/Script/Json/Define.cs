@@ -92,4 +92,9 @@ public class Define
             this._currentSong = currentSong;
         }
     }
+    [System.Serializable]
+    public class SaveData
+    {
+        public int savePoint;
+    }
 }

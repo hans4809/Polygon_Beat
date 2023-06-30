@@ -13,6 +13,7 @@ public class CreateGroundByJson : MonoBehaviour
     public List<GameObject> ground;
     public GameObject coin;
     public GameObject savePoint;
+    public int savePosition;
     public int[] coinIndex;
     private void InstantiateGround(int index, string name, Vector3 vector3) // 게임오브젝트 복제하는 함수
     {
@@ -36,6 +37,7 @@ public class CreateGroundByJson : MonoBehaviour
         ground.Add(Resources.Load<GameObject>("UI/block2"));
         coin = Resources.Load<GameObject>("UI/Icon/coin");
         savePoint = Resources.Load<GameObject>("UI/Icon/save_point");
+        savePosition = DataManager.singleTon.currentMusic.data.Count / 50;
         CreateGround();
     }
     public void CreateGround()
@@ -50,7 +52,7 @@ public class CreateGroundByJson : MonoBehaviour
         for (int i = -1; i < DataManager.singleTon.currentMusic.data.Count + 1; i++)
         {
             InstantiateGround(i + 1, (i + 1).ToString(), new Vector3(i + 1, 0, 0));
-            if (i == DataManager.singleTon.currentMusic.data.Count / 2)
+            if (i == savePosition)
             {
                 Instantiate(savePoint, new Vector3(i + 1, 0.8f, 0), Quaternion.identity);
             }
