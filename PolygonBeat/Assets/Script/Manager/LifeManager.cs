@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEditor.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -9,10 +10,10 @@ using UnityEngine.UIElements;
 public class LifeManager : MonoBehaviour
 {
     [SerializeField] private int life = 3;
+    [SerializeField] TMP_Text tmp_Text;
     [SerializeField] List<Sprite> lifeSprite;
     [SerializeField] List<UnityEngine.UI.Image> lifeImage;
-    [SerializeField] List<UnityEngine.UI.Button> buttonList;
-    [SerializeField] GameObject gameOverCanvas;
+    [SerializeField] GameObject gameOverPanel;
     [SerializeField] MusicPlayerManager musicPlayerManager;
 
     // Start is called before the first frame update
@@ -24,8 +25,6 @@ public class LifeManager : MonoBehaviour
         {
             lifeImage[i].sprite = lifeSprite[0];
         }
-        buttonList[0].onClick.AddListener(ChangetoSelectScene);
-        buttonList[1].onClick.AddListener(Replay);
     }
     public void Init()
     {
@@ -56,19 +55,12 @@ public class LifeManager : MonoBehaviour
 
     public void GameOver()
     {
-        gameOverCanvas.SetActive(true);
+        tmp_Text.text = "GAME OVER";
+        gameOverPanel.SetActive(true);
         Time.timeScale = 0;
         musicPlayerManager.StopBGM(DataManager.singleTon.wholeGameData._currentSong.ToString());
+    }
 
-    }
-    public void ChangetoSelectScene()
-    {
-        SceneManager.LoadScene("StageSelect");
-    }
-    public void Replay()
-    {
-
-    }
     private void Update()
     {
         if (life <= 0)

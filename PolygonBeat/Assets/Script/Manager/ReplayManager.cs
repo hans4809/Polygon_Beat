@@ -2,6 +2,7 @@ using RhythmTool;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ReplayManager : MonoBehaviour
@@ -9,7 +10,7 @@ public class ReplayManager : MonoBehaviour
     [SerializeField] PauseManager pauseManager;
     [SerializeField] CreateGroundByJson createGroundByJson;
     [SerializeField] PlayerRotate playerRotate;
-    [SerializeField] public Button replayButton;
+    [SerializeField] List<Button> buttonList;
     //public AudioSource audioSource;
     [SerializeField] MusicPlayerManager musicPlayerManager;
     [SerializeField] LifeManager lifeManager;
@@ -19,7 +20,8 @@ public class ReplayManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        replayButton.onClick.AddListener(Replay);
+        buttonList[0].onClick.AddListener(Replay);
+        buttonList[1].onClick.AddListener(ChangetoSelectScene);
         pauseManager = FindAnyObjectByType<PauseManager>();
         createGroundByJson = FindAnyObjectByType<CreateGroundByJson>();
         playerRotate = FindAnyObjectByType<PlayerRotate>();
@@ -44,6 +46,10 @@ public class ReplayManager : MonoBehaviour
         count.Setting();
         touchCheckByJson.Init();
         lifeManager.Init();
+    }
+    public void ChangetoSelectScene()
+    {
+        SceneManager.LoadScene("StageSelect");
     }
 
     // Update is called once per frame

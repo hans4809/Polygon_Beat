@@ -12,7 +12,6 @@ public class Count : MonoBehaviour
     public TMP_Text tmp_Text;
     public MusicPlayerManager musicPlayerManager;
     float time;
-    [SerializeField] GameObject myGameObject;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +25,6 @@ public class Count : MonoBehaviour
         time = 0f;
         tmp_Text.text = "3";
         musicPlayerManager = FindAnyObjectByType<MusicPlayerManager>();
-        myGameObject = GameObject.Find("Count");
     }
     public void Counting()
     {

@@ -10,12 +10,15 @@ using static Unity.VisualScripting.AnnotationUtility;
 using UnityEngine.SceneManagement;
 using static Define;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlayerRotate : MonoBehaviour
 {
+    [SerializeField] TMP_Text tmp_Text;
     [SerializeField] List<GameObject> parentObject;
     [SerializeField] GameObject childObject;
     [SerializeField] MusicPlayerManager musicPlayerManager;
+    [SerializeField] GameObject clearPanel;
     Vector3 initParentPostion;
     Vector3 parentPosition;
     Vector3 rotation;
@@ -126,7 +129,8 @@ public class PlayerRotate : MonoBehaviour
             if(beatIndex >= DataManager.singleTon.currentMusic.data.Count -1)
             {
                 rotateSpeed = 0;
-                SceneManager.LoadScene("ClearScene");
+                tmp_Text.text = "CLEAR";
+                clearPanel.SetActive(true);
             }
             else // 그 외에 로테이션 속도 계산
             {
@@ -134,7 +138,8 @@ public class PlayerRotate : MonoBehaviour
                 beatIndex++;
                 if (rotateSpeed == 0) 
                 {
-                    SceneManager.LoadScene("ClearScene");
+                    tmp_Text.text = "CLEAR";
+                    clearPanel.SetActive(true);
                 }
             }
             if (childObject.transform.parent == parentObject[0].transform)

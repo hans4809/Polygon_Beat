@@ -868,7 +868,10 @@ MonoBehaviour:
   pauseManager: {fileID: 0}
   createGroundByJson: {fileID: 0}
   playerRotate: {fileID: 0}
-  replayButton: {fileID: 894387362}
+  buttonList:
+  - {fileID: 894387362}
+  - {fileID: 957383037}
+  - {fileID: 272563263}
   musicPlayerManager: {fileID: 0}
   lifeManager: {fileID: 0}
   count: {fileID: 1898293186}
@@ -1303,6 +1306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2381b5c4c56976a43bdd33e018c57d63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tmp_Text: {fileID: 595434018}
   parentObject:
   - {fileID: 199275934}
   - {fileID: 1720000920}
@@ -1310,6 +1314,7 @@ MonoBehaviour:
   - {fileID: 1110739450}
   childObject: {fileID: 558690951}
   musicPlayerManager: {fileID: 0}
+  clearPanel: {fileID: 1145394534}
   beatIndex: 0
 --- !u!50 &558690956
 Rigidbody2D:
@@ -2917,7 +2922,7 @@ GameObject:
   - component: {fileID: 1145394537}
   - component: {fileID: 1145394536}
   m_Layer: 5
-  m_Name: GameOver
+  m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3195,6 +3200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 3
+  tmp_Text: {fileID: 595434018}
   lifeSprite:
   - {fileID: 21300000, guid: 4abdebe74b1012b42832459e44d775bc, type: 3}
   - {fileID: 21300000, guid: f58b8dce5f837ec4c886ee98bedca5b1, type: 3}
@@ -3202,10 +3208,7 @@ MonoBehaviour:
   - {fileID: 1367456898}
   - {fileID: 570105287}
   - {fileID: 1079936638}
-  buttonList:
-  - {fileID: 957383037}
-  - {fileID: 272563263}
-  gameOverCanvas: {fileID: 1145394534}
+  gameOverPanel: {fileID: 1145394534}
   musicPlayerManager: {fileID: 0}
 --- !u!1 &1313464404
 GameObject:
@@ -5250,7 +5253,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b00e576163177d45ae82169d4e6bb64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Instance: {fileID: 0}
   tmpUgui: {fileID: 1898293187}
   tmp_Text: {fileID: 1898293187}
   musicPlayerManager: {fileID: 0}
