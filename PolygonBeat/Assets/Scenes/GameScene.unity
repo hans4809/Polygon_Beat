@@ -2922,7 +2922,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1145394535
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3202,6 +3202,11 @@ MonoBehaviour:
   - {fileID: 1367456898}
   - {fileID: 570105287}
   - {fileID: 1079936638}
+  buttonList:
+  - {fileID: 957383037}
+  - {fileID: 272563263}
+  gameOverCanvas: {fileID: 1145394534}
+  musicPlayerManager: {fileID: 0}
 --- !u!1 &1313464404
 GameObject:
   m_ObjectHideFlags: 0
@@ -3929,7 +3934,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ef290cbb45382c4dbf611467fe3887e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rhythmData: {fileID: 11400000, guid: 876c9933932c58a458120420904631cd, type: 2}
+  rhythmData: {fileID: 0}
   targets:
   - {fileID: 11400000, guid: 1003cad40244dfa48a3dbcecd3f54836, type: 2}
 --- !u!82 &1559307548
