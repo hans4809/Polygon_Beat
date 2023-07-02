@@ -876,6 +876,7 @@ MonoBehaviour:
   lifeManager: {fileID: 0}
   count: {fileID: 1898293186}
   touchCheckByJson: {fileID: 0}
+  gameOverPanel: {fileID: 1145394534}
 --- !u!4 &392399781
 Transform:
   m_ObjectHideFlags: 0
@@ -5253,10 +5254,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b00e576163177d45ae82169d4e6bb64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Instance: {fileID: 0}
   tmpUgui: {fileID: 1898293187}
   tmp_Text: {fileID: 1898293187}
   musicPlayerManager: {fileID: 0}
-  myGameObject: {fileID: 0}
 --- !u!114 &1898293187
 MonoBehaviour:
   m_ObjectHideFlags: 0

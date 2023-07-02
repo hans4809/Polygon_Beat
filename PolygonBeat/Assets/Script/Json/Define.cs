@@ -96,5 +96,6 @@ public class Define
     public class SaveData
     {
         public int savePoint;
+        public float saveMusicTime;
     }
 }

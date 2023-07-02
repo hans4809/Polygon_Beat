@@ -16,12 +16,14 @@ public class ReplayManager : MonoBehaviour
     [SerializeField] LifeManager lifeManager;
     [SerializeField] Count count;
     [SerializeField] TouchCheckByJson touchCheckByJson;
+    [SerializeField] GameObject gameOverPanel;
     
     // Start is called before the first frame update
     void Awake()
     {
         buttonList[0].onClick.AddListener(Replay);
         buttonList[1].onClick.AddListener(ChangetoSelectScene);
+        buttonList[2].onClick.AddListener(Replay);
         pauseManager = FindAnyObjectByType<PauseManager>();
         createGroundByJson = FindAnyObjectByType<CreateGroundByJson>();
         playerRotate = FindAnyObjectByType<PlayerRotate>();
@@ -33,6 +35,7 @@ public class ReplayManager : MonoBehaviour
 
     void Replay()
     {
+        gameOverPanel.SetActive(false);
         ResetAll();
         musicPlayerManager.StopBGM(DataManager.singleTon.wholeGameData._currentSong.ToString());
         musicPlayerManager.PlayBGM(DataManager.singleTon.wholeGameData._currentSong.ToString());

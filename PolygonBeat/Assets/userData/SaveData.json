@@ -1,5 +1,4 @@
 {
-    "savePosition": {
-        "x": 0.0
-    }
+    "savePosition": 0.0,
+    "saveMusicTime" : 0.0
 }
