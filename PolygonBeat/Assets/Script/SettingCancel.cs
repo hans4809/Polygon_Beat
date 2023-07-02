@@ -14,7 +14,7 @@ public class SettingCancel : MonoBehaviour
     {
         settingCanvas.SetActive(false);
         settingstate = false;
-       // GetComponent<Button>().interactable = true;
+        //GetComponent<Button>().interactable = true;
         settingsButton.interactable = true;
     }
     // Start is called before the first frame update

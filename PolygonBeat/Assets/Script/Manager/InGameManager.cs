@@ -16,7 +16,7 @@ public class InGameManager : MonoBehaviour
         }
         if (other.gameObject.tag == "SavePoint")
         {
-            DataManager.singleTon.saveData.savePoint = createGroundByJson.savePosition;
+            DataManager.singleTon.saveData._savePoint = createGroundByJson.savePosition;
         }
     }
     void Start()

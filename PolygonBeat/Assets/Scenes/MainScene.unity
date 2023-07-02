@@ -3621,6 +3621,10 @@ MonoBehaviour:
     _sfxVolume: 0
   userCharacterData:
     individualCharacters: []
+  saveData:
+    _savePoint: 0
+    _saveMusicTime: 0
+    _currentCharacter: 0
   musicData:
     music: []
   currentMusic:

@@ -95,7 +95,8 @@ public class Define
     [System.Serializable]
     public class SaveData
     {
-        public int savePoint;
-        public float saveMusicTime;
+        public int _savePoint;
+        public float _saveMusicTime;
+        public int _currentCharacter;
     }
 }
