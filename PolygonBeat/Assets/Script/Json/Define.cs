@@ -99,12 +99,7 @@ public class Define
         public int _savePoint;
         public float _saveMusicTime;
         public int _currentCharacter;
-    }
-
-    [System.Serializable]
-    public class PlayerSprite
-    {
-        public Image _image;
         public Sprite _sprite;
     }
+
 }

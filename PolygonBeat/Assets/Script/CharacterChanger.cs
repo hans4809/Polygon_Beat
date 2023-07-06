@@ -16,8 +16,7 @@ public class CharacterChanger : MonoBehaviour
     {
         if(changeImage != null||changeSprite != null)
         {
-            DataManager.singleTon.playerSprite._image = changeImage;
-            DataManager.singleTon.playerSprite._sprite = changeSprite;
+            DataManager.singleTon.saveData._sprite = changeSprite;
         }
         return;
     }

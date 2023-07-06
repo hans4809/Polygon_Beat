@@ -52,7 +52,7 @@ public class PlayerRotate : MonoBehaviour
     void setObject()
     {
         playerSpriteRenderer = childObject.GetComponent<SpriteRenderer>();
-        playerSpriteRenderer.sprite = DataManager.singleTon.playerSprite._sprite;
+        playerSpriteRenderer.sprite = DataManager.singleTon.saveData._sprite;
         parentObject[0].transform.SetParent(null);
         parentPosition = parentObject[0].transform.localPosition;
         childObject.transform.SetParent(parentObject[0].transform);
