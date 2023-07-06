@@ -19,6 +19,8 @@ public class PlayerRotate : MonoBehaviour
     [SerializeField] GameObject childObject;
     [SerializeField] MusicPlayerManager musicPlayerManager;
     [SerializeField] GameObject clearPanel;
+    [SerializeField] SpriteRenderer playerSpriteRenderer;
+    [SerializeField] Sprite playerSprite;
     Vector3 initParentPostion;
     Vector3 parentPosition;
     Vector3 rotation;
@@ -49,6 +51,8 @@ public class PlayerRotate : MonoBehaviour
     }
     void setObject()
     {
+        playerSpriteRenderer = childObject.GetComponent<SpriteRenderer>();
+        playerSpriteRenderer.sprite = DataManager.singleTon.playerSprite._sprite;
         parentObject[0].transform.SetParent(null);
         parentPosition = parentObject[0].transform.localPosition;
         childObject.transform.SetParent(parentObject[0].transform);

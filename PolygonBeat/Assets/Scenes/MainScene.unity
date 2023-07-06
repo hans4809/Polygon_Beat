@@ -3632,6 +3632,10 @@ MonoBehaviour:
     data: []
   gameObjects:
   - {fileID: 832511630}
+  playerSprite:
+    _image: {fileID: 0}
+    _sprite: {fileID: 0}
+    _spriteRenderer: {fileID: 0}
 --- !u!4 &832511632
 Transform:
   m_ObjectHideFlags: 0
@@ -4574,6 +4578,7 @@ GameObject:
   - component: {fileID: 1076969977}
   - component: {fileID: 1076969976}
   - component: {fileID: 1076969975}
+  - component: {fileID: 1076969978}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -4696,6 +4701,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1076969973}
   m_CullTransparentMesh: 1
+--- !u!114 &1076969978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1076969973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18844b7fad2dfbd4b8e017f099db1235, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  changeImage: {fileID: 0}
+  changeSprite: {fileID: 0}
+  changeButton: {fileID: 0}
 --- !u!1 &1113605274
 GameObject:
   m_ObjectHideFlags: 0
@@ -5761,10 +5781,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18844b7fad2dfbd4b8e017f099db1235, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterImage: {fileID: 1419994762}
-  CharacterSprites:
-  - {fileID: 21300000, guid: 50c07607607cc0c49b5649e336d18f94, type: 3}
-  - {fileID: 21300000, guid: c4c0f66debb02a64ba2596a054f3b657, type: 3}
+  changeImage: {fileID: 0}
+  changeSprite: {fileID: 0}
+  changeButton: {fileID: 0}
 --- !u!1 &1303323422
 GameObject:
   m_ObjectHideFlags: 0
@@ -7500,7 +7519,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1592031269
 RectTransform:
   m_ObjectHideFlags: 0

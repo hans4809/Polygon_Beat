@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Define
 {
@@ -98,5 +99,12 @@ public class Define
         public int _savePoint;
         public float _saveMusicTime;
         public int _currentCharacter;
+    }
+
+    [System.Serializable]
+    public class PlayerSprite
+    {
+        public Image _image;
+        public Sprite _sprite;
     }
 }

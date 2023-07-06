@@ -15,6 +15,7 @@ public class DataManager : MonoBehaviour
     public Music currentMusic;
     public JsonManager jsonManager;
     public List<GameObject> gameObjects;
+    public PlayerSprite playerSprite;
     // Start is called before the first frame update
 
 
@@ -22,6 +23,7 @@ public class DataManager : MonoBehaviour
     {
         jsonManager = new JsonManager();
         saveData = new SaveData();
+        playerSprite = new PlayerSprite();
         if (singleTon == null)
         {
             singleTon = this;
