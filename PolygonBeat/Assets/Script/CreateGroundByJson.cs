@@ -30,11 +30,28 @@ public class CreateGroundByJson : MonoBehaviour
         {
             Instantiate(ground[0], vector3, Quaternion.identity).name = "ground" + name;
         }
+        switch(DataManager.singleTon.currentMusic.data[index].count)
+        {
+            case 2:
+                Instantiate(ground[1], vector3, Quaternion.identity);
+                break;
+            case 3:
+                Instantiate(ground[2], vector3, Quaternion.identity); 
+                break;
+            case 4:
+                Instantiate(ground[3], vector3, Quaternion.identity);
+                break;
+            default:
+                Instantiate(ground[0], vector3, Quaternion.identity);
+                break;
+        }
     }
     public void Start()
     {
-        ground.Add(Resources.Load<GameObject>("UI/block1"));
-        ground.Add(Resources.Load<GameObject>("UI/block2"));
+        ground.Add(Resources.Load<GameObject>("Prefebs/bg1_defualt01"));
+        ground.Add(Resources.Load<GameObject>("Prefebs/bg1_defualt02"));
+        ground.Add(Resources.Load<GameObject>("Prefebs/bg1_defualt03"));
+        ground.Add(Resources.Load<GameObject>("Prefebs/bg1_defualt04"));
         coin = Resources.Load<GameObject>("UI/Icon/coin");
         savePoint = Resources.Load<GameObject>("UI/Icon/save_point");
         savePosition = DataManager.singleTon.currentMusic.data.Count / 50;

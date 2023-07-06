@@ -1316,6 +1316,8 @@ MonoBehaviour:
   childObject: {fileID: 558690951}
   musicPlayerManager: {fileID: 0}
   clearPanel: {fileID: 1145394534}
+  playerSpriteRenderer: {fileID: 0}
+  playerSprite: {fileID: 0}
   beatIndex: 0
 --- !u!50 &558690956
 Rigidbody2D:
