@@ -60,6 +60,9 @@ public class DataManager : MonoBehaviour
             case (1):
                 currentMusic = musicData.music[1];
                 break;
+            case (2):
+                currentMusic = musicData.music[2];
+                break;
         }
     }
 }
