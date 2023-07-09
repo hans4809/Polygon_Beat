@@ -21,15 +21,6 @@ public class CreateGroundByJson : MonoBehaviour
         {
             return;
         }
-        
-        if (DataManager.singleTon.currentMusic.data[index].count != 1)
-        {   
-            Instantiate(ground[1], vector3, Quaternion.identity).name = "ground" + name;
-        }
-        else
-        {
-            Instantiate(ground[0], vector3, Quaternion.identity).name = "ground" + name;
-        }
         switch(DataManager.singleTon.currentMusic.data[index].count)
         {
             case 2:

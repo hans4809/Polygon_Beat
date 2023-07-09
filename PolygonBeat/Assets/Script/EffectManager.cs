@@ -27,7 +27,7 @@ public class EffectManager : MonoBehaviour
     }
     void Start()
     {
-        hitAnimator = GameObject.Find("HitEffect").GetComponent <Animator>();
+        hitAnimator = GameObject.Find("Effect").GetComponent <Animator>();
         perfectAnimator = GameObject.Find("Perfect").GetComponent <Animator>();
         missAnimator = GameObject.Find("Miss").GetComponent <Animator>();
     }
