@@ -12,7 +12,7 @@ public class TouchCheckByJson : MonoBehaviour
     float clickedtime;
     float leastTime;
     float maxTime;
-    float boundary = 0.2f;
+    [SerializeField] float boundary;
     bool clicked;
     bool cleared;
     bool missed;
@@ -26,6 +26,7 @@ public class TouchCheckByJson : MonoBehaviour
     void Start()
     {
         beatIndex = 0;
+        boundary = DataManager.singleTon.currentMusic.beatData[beatIndex + 1].touchTime - DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime;
         clicked = false;
         cleared = false;
         missed = false;
@@ -49,11 +50,12 @@ public class TouchCheckByJson : MonoBehaviour
     }
     IEnumerator touchDelay()
     {
+        boundary = DataManager.singleTon.currentMusic.beatData[beatIndex + 1].touchTime - DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime;
         beatIndex++;
         clicked = false;
         missed = false;
         cleared = false;
-        yield return new WaitForSeconds(boundary*2);
+        yield return new WaitForSeconds(boundary * 2);
     }
     // Update is called once per frame
     void Update()

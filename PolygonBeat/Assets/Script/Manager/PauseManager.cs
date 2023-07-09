@@ -14,12 +14,16 @@ public class PauseManager : MonoBehaviour
     public List<Button> buttonList;
     public GameObject pauseMenuCanvas;
     public AudioSource audioSource;
+    public GameObject Coin;
+    public GameObject Count;
     public bool isPause;
     public void Resume()
     {
         audioSource.UnPause();
         pauseMenuCanvas.SetActive(false);
         pauseButton.SetActive(true);
+        Coin.SetActive(true);
+        Count.SetActive(true);
         isPause = false;
         Time.timeScale = 1f;
     }
@@ -29,6 +33,8 @@ public class PauseManager : MonoBehaviour
         audioSource.Pause();
         pauseMenuCanvas.SetActive(true);
         pauseButton.SetActive(false);
+        Coin.SetActive(false);
+        Count.SetActive(false);
         isPause = true;
         Time.timeScale = 0f;
     }
@@ -36,6 +42,8 @@ public class PauseManager : MonoBehaviour
     {
         isPause = false;
         pauseButton.SetActive(true);
+        Coin.SetActive(true);
+        Count.SetActive(true);
         pauseMenuCanvas.SetActive(false);
         buttonList[0].onClick.AddListener(Pause);
         buttonList[1].onClick.AddListener(Resume);
@@ -45,6 +53,8 @@ public class PauseManager : MonoBehaviour
     {
         isPause = false;
         pauseButton.SetActive(true);
+        Coin.SetActive(true);
+        Count.SetActive(true);
         pauseMenuCanvas.SetActive(false);
     }
     // Update is called once per frame
