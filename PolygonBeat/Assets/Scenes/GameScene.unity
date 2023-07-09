@@ -231,6 +231,8 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: 6ccabc2b5c8bb9c46a27089af95746e3, type: 3}
   - name: 1
     audioClip: {fileID: 8300000, guid: d32b58b27dfdffe4ca7bf6998017a056, type: 3}
+  - name: 2
+    audioClip: {fileID: 8300000, guid: e5ea3f0296615e04998edee05f6a7671, type: 3}
   bgmPlayer: {fileID: 1559307548}
   sfxPlayer:
   - {fileID: 1801450333}

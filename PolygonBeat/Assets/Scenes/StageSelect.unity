@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 294157315}
   m_Layer: 0
   m_Name: STAGE1
-  m_TagString: Untagged
+  m_TagString: StageButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -259,7 +259,7 @@ GameObject:
   - component: {fileID: 323569520}
   m_Layer: 0
   m_Name: STAGE3
-  m_TagString: Untagged
+  m_TagString: StageButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -381,7 +381,7 @@ GameObject:
   - component: {fileID: 524182914}
   m_Layer: 0
   m_Name: STAGE2
-  m_TagString: Untagged
+  m_TagString: StageButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1470,6 +1470,7 @@ MonoBehaviour:
   buttonList:
   - {fileID: 294157315}
   - {fileID: 524182914}
+  - {fileID: 323569520}
 --- !u!1 &2129137112
 GameObject:
   m_ObjectHideFlags: 0

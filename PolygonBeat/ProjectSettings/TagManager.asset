@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Coin
   - SavePoint
+  - StageButton
   layers:
   - Default
   - TransparentFX

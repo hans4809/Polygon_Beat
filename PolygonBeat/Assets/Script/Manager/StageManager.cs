@@ -22,12 +22,17 @@ public class StageManager : MonoBehaviour
         DataManager.singleTon.wholeGameData._currentSong = 1;
         SceneManager.LoadScene("GameScene");
     }
+    public void ThirdSong()
+    {
+        DataManager.singleTon.wholeGameData._currentSong = 2;
+        SceneManager.LoadScene("GameScene");
+    }
     // Start is called before the first frame update
     public void Awake()
     {
         buttonList[0].onClick.AddListener(FirstSong);
         buttonList[1].onClick.AddListener(SecondSong);
-
+        buttonList[2].onClick.AddListener(ThirdSong);
     }
 
     // Update is called once per frame
