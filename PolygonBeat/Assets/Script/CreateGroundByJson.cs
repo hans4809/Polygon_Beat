@@ -10,6 +10,7 @@ using static Define;
 public class CreateGroundByJson : MonoBehaviour
 {
     public Transform transformParent;
+    public List<GameObject> groundList;
     public List<GameObject> ground;
     public GameObject coin;
     public GameObject savePoint;
@@ -17,6 +18,7 @@ public class CreateGroundByJson : MonoBehaviour
     public int[] coinIndex;
     private void InstantiateGround(int index, string name, Vector3 vector3) // 게임오브젝트 복제하는 함수
     {
+        GameObject myGameObject;
         if (index >= DataManager.singleTon.currentMusic.data.Count)
         {
             return;
@@ -24,25 +26,44 @@ public class CreateGroundByJson : MonoBehaviour
         switch(DataManager.singleTon.currentMusic.data[index].count)
         {
             case 2:
-                Instantiate(ground[1], vector3, Quaternion.identity);
+                myGameObject = Instantiate(groundList[1], vector3, Quaternion.identity, transformParent);
+                myGameObject.name = DataManager.singleTon.currentMusic.data[index].count.ToString();
+                ground.Add(myGameObject);
                 break;
             case 3:
-                Instantiate(ground[2], vector3, Quaternion.identity); 
+                myGameObject = Instantiate(groundList[2], vector3, Quaternion.identity, transformParent);
+                myGameObject.name = DataManager.singleTon.currentMusic.data[index].count.ToString();
+                ground.Add(myGameObject);
                 break;
             case 4:
-                Instantiate(ground[3], vector3, Quaternion.identity);
+                myGameObject = Instantiate(groundList[3], vector3, Quaternion.identity, transformParent);
+                myGameObject.name = DataManager.singleTon.currentMusic.data[index].count.ToString();
+                ground.Add(myGameObject);
                 break;
             default:
-                Instantiate(ground[0], vector3, Quaternion.identity);
+                myGameObject = Instantiate(groundList[0], vector3, Quaternion.identity, transformParent);
+                myGameObject.name = DataManager.singleTon.currentMusic.data[index].count.ToString();
+                ground.Add(myGameObject);
                 break;
         }
     }
     public void Start()
     {
-        ground.Add(Resources.Load<GameObject>("Prefebs/bg1_defualt01"));
-        ground.Add(Resources.Load<GameObject>("Prefebs/bg1_defualt02"));
-        ground.Add(Resources.Load<GameObject>("Prefebs/bg1_defualt03"));
-        ground.Add(Resources.Load<GameObject>("Prefebs/bg1_defualt04"));
+        if (DataManager.singleTon.wholeGameData._currentSong == 0)
+        {
+            groundList.Add(Resources.Load<GameObject>("Prefebs/bg1_defualt01"));
+            groundList.Add(Resources.Load<GameObject>("Prefebs/bg1_defualt02"));
+            groundList.Add(Resources.Load<GameObject>("Prefebs/bg1_defualt03"));
+            groundList.Add(Resources.Load<GameObject>("Prefebs/bg1_defualt04"));
+        }
+        else 
+        {
+            groundList.Add(Resources.Load<GameObject>("Prefebs/bg2_defualt01"));
+            groundList.Add(Resources.Load<GameObject>("Prefebs/bg2_defualt02"));
+            groundList.Add(Resources.Load<GameObject>("Prefebs/bg2_defualt03"));
+            groundList.Add(Resources.Load<GameObject>("Prefebs/bg2_defualt04"));
+        }
+
         coin = Resources.Load<GameObject>("UI/Icon/coin");
         savePoint = Resources.Load<GameObject>("UI/Icon/save_point");
         savePosition = DataManager.singleTon.currentMusic.data.Count / 50;
@@ -60,10 +81,6 @@ public class CreateGroundByJson : MonoBehaviour
         for (int i = -1; i < DataManager.singleTon.currentMusic.data.Count + 1; i++)
         {
             InstantiateGround(i + 1, (i + 1).ToString(), new Vector3(i + 1, 0, 0));
-            if (i == savePosition)
-            {
-                Instantiate(savePoint, new Vector3(i + 1, 0.8f, 0), Quaternion.identity);
-            }
             if (coinNum >= DataManager.singleTon.currentMusic.data.Count / 10)
             {
                 coinNum = DataManager.singleTon.currentMusic.data.Count / 10;
@@ -73,7 +90,7 @@ public class CreateGroundByJson : MonoBehaviour
             {
                 if (i == coinIndex[coinNum])
                 {
-                    Instantiate(coin, new Vector3(i + 1, 0.7f, 0), Quaternion.identity);
+                    Instantiate(coin, new Vector3(i, 0.7f, 0), Quaternion.identity, ground[i].transform);
                     coinNum++;
                 }
             }
