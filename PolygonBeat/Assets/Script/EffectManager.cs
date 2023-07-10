@@ -9,6 +9,7 @@ public class EffectManager : MonoBehaviour
     [SerializeField] Animator perfectAnimator = null;
     [SerializeField] Animator missAnimator = null;
     [SerializeField] List<Sprite> groundGlow;
+    [SerializeField] List<Sprite> groundGray;
     [SerializeField] CreateGroundByJson createGroundByJson;
     string hit = "Hit";
 
@@ -31,6 +32,21 @@ public class EffectManager : MonoBehaviour
         }
         hitAnimator.transform.localPosition = new Vector3(position, 0, 0);
         hitAnimator.SetTrigger(hit);
+        switch (createGroundByJson.ground[position].name)
+        {
+            case "2":
+                createGroundByJson.ground[position].GetComponent<SpriteRenderer>().sprite = groundGray[1];
+                break;
+            case "3":
+                createGroundByJson.ground[position].GetComponent<SpriteRenderer>().sprite = groundGray[2];
+                break;
+            case "4":
+                createGroundByJson.ground[position].GetComponent<SpriteRenderer>().sprite = groundGray[3];
+                break;
+            default:
+                createGroundByJson.ground[position].GetComponent<SpriteRenderer>().sprite = groundGray[0];
+                break;
+        }
     }
     public void Perfect(int postion)
     {
@@ -54,6 +70,10 @@ public class EffectManager : MonoBehaviour
             groundGlow.Add(Resources.Load<Sprite>("block/bg1/bg1_glow02"));
             groundGlow.Add(Resources.Load<Sprite>("block/bg1/bg1_glow03"));
             groundGlow.Add(Resources.Load<Sprite>("block/bg1/bg1_glow04"));
+            groundGray.Add(Resources.Load<Sprite>("block/gray/gray_b01"));
+            groundGray.Add(Resources.Load<Sprite>("block/gray/gray_b02"));
+            groundGray.Add(Resources.Load<Sprite>("block/gray/gray_b03"));
+            groundGray.Add(Resources.Load<Sprite>("block/gray/gray_b04"));
         }
         else
         {
@@ -61,7 +81,12 @@ public class EffectManager : MonoBehaviour
             groundGlow.Add(Resources.Load<Sprite>("block/bg2/bg2_glow02"));
             groundGlow.Add(Resources.Load<Sprite>("block/bg2/bg2_glow03"));
             groundGlow.Add(Resources.Load<Sprite>("block/bg2/bg2_glow04"));
+            groundGray.Add(Resources.Load<Sprite>("block/gray/gray_w01"));
+            groundGray.Add(Resources.Load<Sprite>("block/gray/gray_w02"));
+            groundGray.Add(Resources.Load<Sprite>("block/gray/gray_w03"));
+            groundGray.Add(Resources.Load<Sprite>("block/gray/gray_w04"));
         }
+
     }
 
     // Update is called once per frame
