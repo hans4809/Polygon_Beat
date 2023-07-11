@@ -15,6 +15,8 @@ public class GameSettings : MonoBehaviour
     {
          settingCanvas.SetActive(false);
          settingstate = false;
+         settingsButton.interactable = true;
+        
     }
 
     void SoundSettings() 

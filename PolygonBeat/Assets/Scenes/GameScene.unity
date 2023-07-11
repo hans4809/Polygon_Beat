@@ -4784,7 +4784,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1553374608}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bb2db2ded1c2e0c41b54e6763ec679e5, type: 3}
   m_Name: 
@@ -6591,6 +6591,8 @@ GameObject:
   - component: {fileID: 2020576233}
   - component: {fileID: 2020576234}
   - component: {fileID: 2020576235}
+  - component: {fileID: 2020576237}
+  - component: {fileID: 2020576236}
   m_Layer: 0
   m_Name: WholeManger
   m_TagString: Untagged
@@ -6627,7 +6629,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2020576232}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 44cd3c1123df2ef408be2b4f46faee31, type: 3}
   m_Name: 
@@ -6647,6 +6649,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 558690952}
   characterImage: {fileID: 0}
+--- !u!114 &2020576236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2020576232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb2db2ded1c2e0c41b54e6763ec679e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: a225495efe1dc6b4e8c008e23b77a446, type: 2}
+  MasterSlider: {fileID: 723137900}
+  BgmSlider: {fileID: 1938528760}
+  SfxSlider: {fileID: 1759636511}
+--- !u!114 &2020576237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2020576232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 937c7bfe0c073004f9a9048b40c1f392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2041269953
 GameObject:
   m_ObjectHideFlags: 0
