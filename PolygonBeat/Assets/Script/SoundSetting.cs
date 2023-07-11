@@ -9,10 +9,16 @@ public class SoundSetting : MonoBehaviour
 {
     public AudioMixer audioMixer;
 
+    public Slider MasterSlider;
     public Slider BgmSlider;
     public Slider SfxSlider;
 
-    public void SetBgm() 
+
+    private static float masterVolume = 1f;
+    private static float bgmVolume = 1f;
+    private static float sfxVolume = 1f;
+
+    public void SetBgm()
     {
         audioMixer.SetFloat("BGM", Mathf.Log10(BgmSlider.value) * 20);
     }
@@ -27,15 +33,73 @@ public class SoundSetting : MonoBehaviour
         SetBgm();
         SetSfx();
     }
-    // Start is called before the first frame update
-    void Start()
+
+
+    private void Start()
     {
-        
+        if (SoundManager.Instance != null)
+        {
+            masterVolume = SoundManager.Instance.GetMasterVolume();
+            bgmVolume = SoundManager.Instance.GetBGMVolume();
+            sfxVolume = SoundManager.Instance.GetSFXVolume();
+        }
+
+
+
+
+        SetSliderValues();
+
+        MasterSlider.onValueChanged.AddListener(OnMasterSliderValueChanged);
+        BgmSlider.onValueChanged.AddListener(OnBGMSliderValueChanged);
+        SfxSlider.onValueChanged.AddListener(OnSFXSliderValueChanged);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void SetSliderValues()
     {
-        
+        MasterSlider.value = masterVolume;
+        BgmSlider.value = bgmVolume;
+        SfxSlider.value = sfxVolume;
+    }
+
+    private void OnMasterSliderValueChanged(float value)
+    {
+        masterVolume = value;
+        if (SoundManager.Instance != null)
+        {
+            SoundManager.Instance.SetMasterVolume(masterVolume);
+        }
+    }
+
+    private void OnBGMSliderValueChanged(float value)
+    {
+        bgmVolume = value;
+        if (SoundManager.Instance != null)
+        {
+            SoundManager.Instance.SetBGMVolume(bgmVolume);
+        }
+    }
+
+    private void OnSFXSliderValueChanged(float value)
+    {
+        sfxVolume = value;
+        if (SoundManager.Instance != null)
+        {
+            SoundManager.Instance.SetSFXVolume(sfxVolume);
+        }
+    }
+
+    public static float GetMasterVolume()
+    {
+        return masterVolume;
+    }
+
+    public static float GetBGMVolume()
+    {
+        return bgmVolume;
+    }
+
+    public static float GetSFXVolume()
+    {
+        return sfxVolume;
     }
 }

@@ -2634,6 +2634,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: a225495efe1dc6b4e8c008e23b77a446, type: 2}
+  MasterSlider: {fileID: 0}
   BgmSlider: {fileID: 1938528760}
   SfxSlider: {fileID: 1759636511}
 --- !u!1 &957383035
@@ -4421,6 +4422,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1553374609}
   - component: {fileID: 1553374610}
+  - component: {fileID: 1553374611}
   m_Layer: 5
   m_Name: SoundOptions
   m_TagString: Untagged
@@ -4464,8 +4466,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: a225495efe1dc6b4e8c008e23b77a446, type: 2}
+  MasterSlider: {fileID: 723137900}
   BgmSlider: {fileID: 1938528760}
   SfxSlider: {fileID: 1759636511}
+--- !u!114 &1553374611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1553374608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 937c7bfe0c073004f9a9048b40c1f392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1559307544
 GameObject:
   m_ObjectHideFlags: 0
@@ -4743,6 +4758,7 @@ MonoBehaviour:
   perfectAnimator: {fileID: 1388639279}
   missAnimator: {fileID: 512823073}
   groundGlow: []
+  groundGray: []
   createGroundByJson: {fileID: 0}
 --- !u!1 &1614261384
 GameObject:
