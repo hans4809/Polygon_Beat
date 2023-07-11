@@ -56,9 +56,14 @@ public class SoundSetting : MonoBehaviour
 
     private void SetSliderValues()
     {
-        MasterSlider.value = masterVolume;
-        BgmSlider.value = bgmVolume;
-        SfxSlider.value = sfxVolume;
+        if (MasterSlider != null)
+            MasterSlider.value = masterVolume;
+
+        if (BgmSlider != null)
+            BgmSlider.value = bgmVolume;
+
+        if (SfxSlider != null)
+            SfxSlider.value = sfxVolume;
     }
 
     private void OnMasterSliderValueChanged(float value)

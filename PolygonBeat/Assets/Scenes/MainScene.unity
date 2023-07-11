@@ -5646,6 +5646,7 @@ GameObject:
   - component: {fileID: 1301219615}
   - component: {fileID: 1301219616}
   - component: {fileID: 1301219617}
+  - component: {fileID: 1301219618}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -5767,6 +5768,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   machineButton: {fileID: 464498522}
   characterCanvas: {fileID: 1903312856}
+--- !u!114 &1301219618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301219609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb2db2ded1c2e0c41b54e6763ec679e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: a225495efe1dc6b4e8c008e23b77a446, type: 2}
+  MasterSlider: {fileID: 1504232012}
+  BgmSlider: {fileID: 1130448156}
+  SfxSlider: {fileID: 295631878}
 --- !u!1 &1303323422
 GameObject:
   m_ObjectHideFlags: 0
@@ -5815,7 +5832,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1303323422}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bb2db2ded1c2e0c41b54e6763ec679e5, type: 3}
   m_Name: 
