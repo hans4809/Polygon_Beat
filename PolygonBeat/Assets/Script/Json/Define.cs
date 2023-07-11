@@ -99,7 +99,8 @@ public class Define
         public int _savePoint;
         public float _saveMusicTime;
         public int _currentCharacter;
-        public Sprite _sprite;
+        public Sprite _squareSprite;
+        public Sprite _triangleSprite;
     }
 
 }

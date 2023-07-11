@@ -20,7 +20,7 @@ public class TouchCheckByJson : MonoBehaviour
     [SerializeField] AudioSource bgmPlayer;
     [SerializeField] MusicPlayerManager musicPlayerManager;
     [SerializeField] EffectManager effectManager;
-    [SerializeField] GameObject player;
+    [SerializeField] PlayerRotate playerRotate;
 
     // Start is called before the first frame update
     void Start()
@@ -35,7 +35,7 @@ public class TouchCheckByJson : MonoBehaviour
         lifeManager = FindObjectOfType<LifeManager>();
         effectManager = FindObjectOfType<EffectManager>();
         musicPlayerManager = FindObjectOfType<MusicPlayerManager>();
-        player = GameObject.Find("Player");
+        playerRotate = FindObjectOfType<PlayerRotate>();
         leastTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime - boundary;
         maxTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime + boundary;
     }
@@ -75,7 +75,7 @@ public class TouchCheckByJson : MonoBehaviour
                 {
                     clicked = true;
                     cleared = true;
-                    position = (int)(player.transform.position.x + 0.5);
+                    position = (int)(playerRotate.GetPlayer().transform.position.x + 0.5);
                     effectManager.HitEffect(position);
                     effectManager.Perfect(position);
                     musicPlayerManager.PlaySFX("touch");
@@ -85,7 +85,7 @@ public class TouchCheckByJson : MonoBehaviour
                 {
                     clicked = true;
                     missed = true;
-                    position = (int)(player.transform.position.x + 0.5);
+                    position = (int)(playerRotate.GetPlayer().transform.position.x + 0.5);
                     effectManager.Miss(position);
                     musicPlayerManager.PlaySFX("touch");
                 }
@@ -94,7 +94,7 @@ public class TouchCheckByJson : MonoBehaviour
         if (bgmPlayer.time >= maxTime&&(!clicked))
         {
             missed = true;
-            position = (int)(player.transform.position.x + 0.5);
+            position = (int)(playerRotate.GetPlayer().transform.position.x + 0.5);
             effectManager.Miss(position);
         }
         if(missed)

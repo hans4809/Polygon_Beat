@@ -15,7 +15,6 @@ public class DataManager : MonoBehaviour
     public Music currentMusic;
     public JsonManager jsonManager;
     public List<GameObject> gameObjects;
-    public Sprite defaultSprite;
     // Start is called before the first frame update
 
 
@@ -23,7 +22,8 @@ public class DataManager : MonoBehaviour
     {
         jsonManager = new JsonManager();
         saveData = new SaveData();
-        saveData._sprite = defaultSprite;
+        saveData._squareSprite = Resources.Load<Sprite>("Character/default/default01_square");
+        saveData._triangleSprite = Resources.Load<Sprite>("Character/default/default01_triangle");
         if (singleTon == null)
         {
             singleTon = this;

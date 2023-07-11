@@ -3626,7 +3626,8 @@ MonoBehaviour:
     _savePoint: 0
     _saveMusicTime: 0
     _currentCharacter: 0
-    _sprite: {fileID: 0}
+    _squareSprite: {fileID: 0}
+    _triangleSprite: {fileID: 0}
   musicData:
     music: []
   currentMusic:
@@ -3634,7 +3635,6 @@ MonoBehaviour:
     data: []
   gameObjects:
   - {fileID: 832511630}
-  defaultSprite: {fileID: 21300000, guid: ddf534478600cda478a708732440e411, type: 3}
 --- !u!4 &832511632
 Transform:
   m_ObjectHideFlags: 0
