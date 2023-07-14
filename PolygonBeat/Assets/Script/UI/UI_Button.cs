@@ -10,8 +10,11 @@ public class UI_Button : UI_Popup
     
     enum Buttons // 열거형으로 버튼들 이름 저장
     {
-        Character1,
-        Character2,
+        CharacterButton0,
+        CharacterButton1,
+        CharacterButton2,
+        CharacterButton3,
+        CharacterButton4,
     }
 
     enum Texts // 열거형으로 텍스트들 이름 저장
@@ -36,7 +39,7 @@ public class UI_Button : UI_Popup
         Bind<Image>(typeof(Images));
         Bind<GameObject>(typeof(GameObjects));
 
-        GameObject go = Get<Button>((int)Buttons.Character1).gameObject;
+        GameObject go = Get<Button>((int)Buttons.CharacterButton0).gameObject;
 
         UI_EventHandler _event = go.GetComponent<UI_EventHandler>();
         ADDUIEvent(go, (PointerEventData data) => { go.gameObject.transform.position = data.position;/* 실행 하고자 하는 함수 */ }, UI_Define.UIEvent.Click);

@@ -5,9 +5,11 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class UI_Base : MonoBehaviour
+public abstract class UI_Base : MonoBehaviour
 {
     Dictionary<Type, UnityEngine.Object[]> _objects = new Dictionary<Type, UnityEngine.Object[]>();
+
+    public abstract void Init();
     protected void Bind<T>(Type type) where T : UnityEngine.Object // 타입에 맞는 열거형들 전부 _objects 배열에 바인딩
     {
         string[] names = Enum.GetNames(type);

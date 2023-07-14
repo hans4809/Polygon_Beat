@@ -25,6 +25,8 @@ public class TouchCheckByJson : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Managers.CheckManager.KeyAction += OnKeyboard;
+        //Managers.CheckManager.KeyAction -= OnKeyboard;
         beatIndex = 0;
         boundary = DataManager.singleTon.currentMusic.beatData[beatIndex + 1].touchTime - DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime;
         clicked = false;
@@ -60,16 +62,21 @@ public class TouchCheckByJson : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        OnKeyboard();
+    }
+
+    void OnKeyboard()
+    {
         if (musicPlayerManager.GetBGMPlayer().time == 0)
         {
             return;
         }
-        if ((!clicked)&&(!cleared)&&(!missed))
+        if ((!clicked) && (!cleared) && (!missed))
         {
             clickedtime = bgmPlayer.time;
             leastTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime - boundary;
             maxTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime + boundary;
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.anyKeyDown)
             {
                 if (clickedtime >= leastTime && clickedtime <= maxTime)
                 {
@@ -91,13 +98,13 @@ public class TouchCheckByJson : MonoBehaviour
                 }
             }
         }
-        if (bgmPlayer.time >= maxTime&&(!clicked))
+        if (bgmPlayer.time >= maxTime && (!clicked))
         {
             missed = true;
             position = (int)(playerRotate.GetPlayer().transform.position.x + 0.5);
             effectManager.Miss(position);
         }
-        if(missed)
+        if (missed)
         {
             lifeManager.LifeReduce();
             missed = false;

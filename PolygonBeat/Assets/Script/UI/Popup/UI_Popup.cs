@@ -5,7 +5,7 @@ using UnityEngine;
 public class UI_Popup : UI_Base
 {
     // Start is called before the first frame update
-    public virtual void Init()
+    public override void Init()
     {
         Managers.UI.SetCanvas(gameObject, true);
     }
