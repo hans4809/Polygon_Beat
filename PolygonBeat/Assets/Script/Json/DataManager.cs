@@ -14,7 +14,7 @@ public class DataManager : MonoBehaviour
     public MusicData musicData;
     public Music currentMusic;
     public JsonManager jsonManager;
-    public List<GameObject> gameObjects;
+    public GameObject _gameObject;
     // Start is called before the first frame update
 
 
@@ -27,10 +27,10 @@ public class DataManager : MonoBehaviour
         if (singleTon == null)
         {
             singleTon = this;
-            DontDestroyOnLoad(gameObjects[0]);
+            DontDestroyOnLoad(_gameObject);
         }
         else if (singleTon != this)
-            Destroy(singleTon.gameObjects[0]);
+            Destroy(singleTon._gameObject);
         wholeGameData = jsonManager.LoadWholeGameData();
         musicData = jsonManager.LoadMusicData();
         switch (wholeGameData._currentSong)

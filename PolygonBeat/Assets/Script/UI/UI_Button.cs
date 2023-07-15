@@ -34,15 +34,15 @@ public class UI_Button : UI_Popup
     public override void Init()
     {
         base.Init();
-        Bind<Button>(typeof(Buttons));
-        Bind<Text>(typeof(Texts));
-        Bind<Image>(typeof(Images));
-        Bind<GameObject>(typeof(GameObjects));
+        //Bind<Button>(typeof(Buttons));
+        //Bind<Text>(typeof(Texts));
+        //Bind<Image>(typeof(Images));
+        //Bind<GameObject>(typeof(GameObjects));
 
-        GameObject go = Get<Button>((int)Buttons.CharacterButton0).gameObject;
+        //GameObject go = Get<Button>((int)Buttons.CharacterButton0).gameObject;
 
-        UI_EventHandler _event = go.GetComponent<UI_EventHandler>();
-        ADDUIEvent(go, (PointerEventData data) => { go.gameObject.transform.position = data.position;/* 실행 하고자 하는 함수 */ }, UI_Define.UIEvent.Click);
+        //UI_EventHandler _event = go.GetComponent<UI_EventHandler>();
+        //ADDUIEvent(go, (PointerEventData data) => { go.gameObject.transform.position = data.position;/* 실행 하고자 하는 함수 */ }, UI_Define.UIEvent.Click);
         //또는 GetButton((int)Buttons.Character1).gameObject.ADDUIEvent(OnButtonClicked);
         //GetImage((int)Images.Character1);
     }

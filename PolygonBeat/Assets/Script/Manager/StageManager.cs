@@ -14,17 +14,20 @@ public class StageManager : MonoBehaviour
     public void FirstSong()
     {
         DataManager.singleTon.wholeGameData._currentSong = 0;
+        //Managers.Data.wholeGameData._currentSong = 0;
         SceneManager.LoadScene("GameScene");    
     }
 
     public void SecondSong()
     {
         DataManager.singleTon.wholeGameData._currentSong = 1;
+        //Managers.Data.wholeGameData._currentSong = 1;
         SceneManager.LoadScene("GameScene");
     }
     public void ThirdSong()
     {
         DataManager.singleTon.wholeGameData._currentSong = 2;
+        //Managers.Data.wholeGameData._currentSong = 2;
         SceneManager.LoadScene("GameScene");
     }
     // Start is called before the first frame update
