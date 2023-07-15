@@ -66,32 +66,26 @@ public class EffectManager : MonoBehaviour
         createGroundByJson = FindAnyObjectByType<CreateGroundByJson>();
         if (DataManager.singleTon.wholeGameData._currentSong == 0)
         {
-            groundGlow.Add(Resources.Load<Sprite>("block/bg1/bg1_glow01"));
-            groundGlow.Add(Resources.Load<Sprite>("block/bg1/bg1_glow02"));
-            groundGlow.Add(Resources.Load<Sprite>("block/bg1/bg1_glow03"));
-            groundGlow.Add(Resources.Load<Sprite>("block/bg1/bg1_glow04"));
-            groundGray.Add(Resources.Load<Sprite>("block/gray/gray_b01"));
-            groundGray.Add(Resources.Load<Sprite>("block/gray/gray_b02"));
-            groundGray.Add(Resources.Load<Sprite>("block/gray/gray_b03"));
-            groundGray.Add(Resources.Load<Sprite>("block/gray/gray_b04"));
+            groundGlow.Add(Managers.Resource.Load<Sprite>("block/bg1/bg1_glow02"));
+            groundGlow.Add(Managers.Resource.Load<Sprite>("block/bg1/bg1_glow02"));
+            groundGlow.Add(Managers.Resource.Load<Sprite>("block/bg1/bg1_glow03"));
+            groundGlow.Add(Managers.Resource.Load<Sprite>("block/bg1/bg1_glow04"));
+            groundGray.Add(Managers.Resource.Load<Sprite>("block/gray/gray_b01"));
+            groundGray.Add(Managers.Resource.Load<Sprite>("block/gray/gray_b02"));
+            groundGray.Add(Managers.Resource.Load<Sprite>("block/gray/gray_b03"));
+            groundGray.Add(Managers.Resource.Load<Sprite>("block/gray/gray_b04"));
         }
         else
         {
-            groundGlow.Add(Resources.Load<Sprite>("block/bg2/bg2_glow01"));
-            groundGlow.Add(Resources.Load<Sprite>("block/bg2/bg2_glow02"));
-            groundGlow.Add(Resources.Load<Sprite>("block/bg2/bg2_glow03"));
-            groundGlow.Add(Resources.Load<Sprite>("block/bg2/bg2_glow04"));
-            groundGray.Add(Resources.Load<Sprite>("block/gray/gray_w01"));
-            groundGray.Add(Resources.Load<Sprite>("block/gray/gray_w02"));
-            groundGray.Add(Resources.Load<Sprite>("block/gray/gray_w03"));
-            groundGray.Add(Resources.Load<Sprite>("block/gray/gray_w04"));
+            groundGlow.Add(Managers.Resource.Load<Sprite>("block/bg2/bg2_glow01"));
+            groundGlow.Add(Managers.Resource.Load<Sprite>("block/bg2/bg2_glow02"));
+            groundGlow.Add(Managers.Resource.Load<Sprite>("block/bg2/bg2_glow03"));
+            groundGlow.Add(Managers.Resource.Load<Sprite>("block/bg2/bg2_glow04"));
+            groundGray.Add(Managers.Resource.Load<Sprite>("block/gray/gray_w01"));
+            groundGray.Add(Managers.Resource.Load<Sprite>("block/gray/gray_w02"));
+            groundGray.Add(Managers.Resource.Load<Sprite>("block/gray/gray_w03"));
+            groundGray.Add(Managers.Resource.Load<Sprite>("block/gray/gray_w04"));
         }
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

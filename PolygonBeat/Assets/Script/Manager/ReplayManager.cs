@@ -11,7 +11,6 @@ public class ReplayManager : MonoBehaviour
     [SerializeField] CreateGroundByJson createGroundByJson;
     [SerializeField] PlayerRotate playerRotate;
     [SerializeField] List<Button> buttonList;
-    //public AudioSource audioSource;
     [SerializeField] MusicPlayerManager musicPlayerManager;
     [SerializeField] LifeManager lifeManager;
     [SerializeField] Count count;
@@ -44,7 +43,7 @@ public class ReplayManager : MonoBehaviour
     private void ResetAll()
     {
         pauseManager.Init();
-        createGroundByJson.CreateGround();
+        createGroundByJson.Init();
         playerRotate.Init();
         count.Setting();
         touchCheckByJson.Init();

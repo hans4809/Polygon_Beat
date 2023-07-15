@@ -2825,7 +2825,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &832511631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2858,8 +2858,7 @@ MonoBehaviour:
   currentMusic:
     beatData: []
     data: []
-  gameObjects:
-  - {fileID: 832511630}
+  _gameObject: {fileID: 832511630}
 --- !u!4 &832511632
 Transform:
   m_ObjectHideFlags: 0
@@ -4219,7 +4218,7 @@ GameObject:
   - component: {fileID: 1301219619}
   - component: {fileID: 1301219620}
   m_Layer: 0
-  m_Name: '@Manager'
+  m_Name: Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4247,7 +4246,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1301219609}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cc8bb5d98a097594bb633808a19b500f, type: 3}
   m_Name: 
@@ -4261,7 +4260,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1301219609}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cad5784bcf64d9a4ab8ef8adcb03b563, type: 3}
   m_Name: 
@@ -4274,7 +4273,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1301219609}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3886eb214989a8840b63f3966cdf990e, type: 3}
   m_Name: 
@@ -4346,7 +4345,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1301219609}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bb2db2ded1c2e0c41b54e6763ec679e5, type: 3}
   m_Name: 

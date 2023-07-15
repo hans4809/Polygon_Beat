@@ -9,13 +9,13 @@ public class Managers : MonoBehaviour
     UI_Manager ui = new UI_Manager();
     ResourceManager _resource = new ResourceManager();
     DataManager _data = new DataManager();
+    CheckManager _checkManager = new CheckManager();
+    MapManager _mapManager = new MapManager();
     public static UI_Manager UI { get { return Instance.ui; } }
-
-    CheckManager checkManager = new CheckManager();
-    public static CheckManager CheckManager { get { return Instance.checkManager; } }
+    public static CheckManager CheckManager { get { return Instance._checkManager; } }
     public static ResourceManager Resource { get { return Instance._resource; } }
-
     public static DataManager Data { get { return Instance._data; } }
+    public static MapManager Map { get { return Instance._mapManager; } }
     void Start() 
     {
         Init();
@@ -23,7 +23,8 @@ public class Managers : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        checkManager.OnUpdate();
+        _checkManager.OnUpdate();
+        //_mapManager.OnUpdate();
     }
     static void Init()
     {

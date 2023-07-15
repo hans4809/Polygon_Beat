@@ -4973,7 +4973,6 @@ GameObject:
   - component: {fileID: 1601891911}
   - component: {fileID: 1601891910}
   - component: {fileID: 1601891908}
-  - component: {fileID: 1601891909}
   - component: {fileID: 1601891912}
   m_Layer: 0
   m_Name: GroundCreater
@@ -4995,31 +4994,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transformParent: {fileID: 1387119357}
-  groundList: []
   ground: []
-  coin: {fileID: 0}
-  savePoint: {fileID: 0}
+  blockResourceString: []
+  coinResourceString: 
   savePosition: 0
   coinIndex: 
---- !u!114 &1601891909
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1601891903}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f698c6db8bd658459110b0661d8d588, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  analyzer: {fileID: 1446677643}
-  audioClip: {fileID: 8300000, guid: d32b58b27dfdffe4ca7bf6998017a056, type: 3}
-  rhythmData: {fileID: 11400000, guid: 0c92e566fc52fd146977bd1945d76714, type: 2}
-  audioSource: {fileID: 1559307548}
-  beats: []
-  onsets: []
-  chromas: []
 --- !u!223 &1601891910
 Canvas:
   m_ObjectHideFlags: 0
