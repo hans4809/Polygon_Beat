@@ -7,7 +7,7 @@ public class UI_CharacterCanvas_Square : UI_Popup
 {
     enum GameObjects
     {
-        Panel
+        CharacterPanel
     }
     public override void Init()
     {
@@ -15,7 +15,7 @@ public class UI_CharacterCanvas_Square : UI_Popup
 
         Bind<GameObject>(typeof(GameObjects));
 
-        GameObject panel = Get<GameObject>((int)GameObjects.Panel);
+        GameObject panel = Get<GameObject>((int)GameObjects.CharacterPanel);
         List<Button> buttons = new List<Button>();
         buttons.AddRange(panel.GetComponentsInChildren<Button>()) ;
     }

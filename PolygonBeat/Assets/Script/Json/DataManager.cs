@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using static Define;
+using static DataDefine;
 
 public class DataManager : MonoBehaviour
 {

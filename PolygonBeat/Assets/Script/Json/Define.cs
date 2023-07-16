@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Define
+public class DataDefine
 {
     [System.Serializable]
     public class MusicData
