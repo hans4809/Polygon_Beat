@@ -37,6 +37,7 @@ public class LifeManager : MonoBehaviour
 
     public void LifeReduce()
     {
+        Debug.Log("Life Reduce");
         life--;
 
         switch (life)

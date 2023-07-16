@@ -20,11 +20,11 @@ public abstract class UI_Base : MonoBehaviour
         {
             if (typeof(T) == typeof(GameObject))
             {
-                objects[i] = Util.FindChild<T>(gameObject, names[i], true);
+                objects[i] = Util.FindChild(gameObject, names[i], true);
             }
             else
             {
-                objects[i] = Util.FindChild(gameObject, names[i], true);
+                objects[i] = Util.FindChild<T>(gameObject, names[i], true);
             }
             if (objects[i] == null)
             {
@@ -47,16 +47,16 @@ public abstract class UI_Base : MonoBehaviour
     protected Button GetButton(int index) { return Get<Button>(index); }
     protected Image GetImage(int index) { return Get<Image>(index); }
 
-    public static void ADDUIEvent(GameObject go, Action<PointerEventData> action, UI_Define.UIEvent type = UI_Define.UIEvent.Click)
+    public static void AddUIEvent(GameObject go, Action<PointerEventData> action, Define.UIEvent type = Define.UIEvent.Click)
     {
         UI_EventHandler _event = Util.GetOrAddComponent<UI_EventHandler>(go);
         switch (type)
         {
-            case UI_Define.UIEvent.Click:
-                _event.OnClickHandler += action;
+            case Define.UIEvent.Click:
                 _event.OnClickHandler -= action;
+                _event.OnClickHandler += action;
                 break;
-            case UI_Define.UIEvent.Drag:
+            case Define.UIEvent.Drag:
                 break;
         }
         

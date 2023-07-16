@@ -25,24 +25,17 @@ public class TouchCheckByJson : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Managers.CheckManager.KeyAction += OnKeyboard;
-        //Managers.CheckManager.KeyAction -= OnKeyboard;
-        beatIndex = 0;
-        boundary = DataManager.singleTon.currentMusic.beatData[beatIndex + 1].touchTime - DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime;
-        clicked = false;
-        cleared = false;
-        missed = false;
-        //BeatTimeInform();
+        Init();
         bgmPlayer = GameObject.Find("BGMPlayer").GetComponent<AudioSource>();
         lifeManager = FindObjectOfType<LifeManager>();
         effectManager = FindObjectOfType<EffectManager>();
         musicPlayerManager = FindObjectOfType<MusicPlayerManager>();
         playerRotate = FindObjectOfType<PlayerRotate>();
-        leastTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime - boundary;
-        maxTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime + boundary;
     }
     public void Init()
     {
+        Managers.Input.KeyAction -= OnKeyboard;
+        Managers.Input.KeyAction += OnKeyboard;
         beatIndex = 0;
         clicked = false;
         cleared = false;
@@ -62,7 +55,6 @@ public class TouchCheckByJson : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        OnKeyboard();
     }
 
     void OnKeyboard()
@@ -76,7 +68,7 @@ public class TouchCheckByJson : MonoBehaviour
             clickedtime = bgmPlayer.time;
             leastTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime - boundary;
             maxTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime + boundary;
-            if (Input.anyKeyDown)
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 if (clickedtime >= leastTime && clickedtime <= maxTime)
                 {

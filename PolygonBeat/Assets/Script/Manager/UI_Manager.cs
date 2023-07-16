@@ -12,10 +12,10 @@ public class UI_Manager : MonoBehaviour
     {
         get
         {
-            GameObject root = GameObject.Find("@ui_root");
+            GameObject root = GameObject.Find("@UI_root");
             if (root == null)
             {
-                root = new GameObject { name = "@ui_root" };
+                root = new GameObject { name = "@UI_root" };
             }
             return root;
         }

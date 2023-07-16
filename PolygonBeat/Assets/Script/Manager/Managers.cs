@@ -5,19 +5,16 @@ using UnityEngine;
 public class Managers : MonoBehaviour
 {
     static Managers s_instance;
-    public static Managers Instance { get { Init();  return s_instance; } }
+    static Managers Instance { get { Init();  return s_instance; } }
+
     UI_Manager _ui = new UI_Manager();
     ResourceManager _resource = new ResourceManager();
     SceneManagerEx _scene = new SceneManagerEx();
-    //DataManager _data = new DataManager();
-    //CheckManager _checkManager = new CheckManager();
-    //MapManager _mapManager = new MapManager();
+    InputManager _input = new InputManager();
     public static UI_Manager UI { get { return Instance._ui; } }
     public static SceneManagerEx Scene { get { return Instance._scene; } }
-    //public static CheckManager CheckManager { get { return Instance._checkManager; } }
     public static ResourceManager Resource { get { return Instance._resource; } }
-    //public static DataManager Data { get { return Instance._data; } }
-    //public static MapManager Map { get { return Instance._mapManager; } }
+    public static InputManager Input { get { return Instance._input; } }
     void Start() 
     {
         Init();
@@ -25,13 +22,12 @@ public class Managers : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //_checkManager.OnUpdate();
-        //_mapManager.OnUpdate();
+        _input.OnUpdate();
     }
     static void Init()
     {
         GameObject go = GameObject.Find("@Manager");
-        if (s_instance == null)
+        if (go == null)
         {
             go = new GameObject { name = "@Manager" };
             go.AddComponent<Managers>();

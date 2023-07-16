@@ -13,6 +13,16 @@ public class Util
         }
         return component;
     }
+    public static GameObject FindChild(GameObject go, string name = null, bool recursive = false) // 게임오브젝트 자체를 반환
+    {
+        Transform transfrom = FindChild<Transform>(go, name, recursive);
+        if (transfrom == null)
+        {
+            return null;
+        }
+        return transfrom.gameObject;
+    }
+
     public static T FindChild<T>(GameObject go, string name = null, bool recursive = false) where T : UnityEngine.Object // 게임 오브젝트의 자식들의 T의 컴포넌트 반환
     {
         if (go == null)
@@ -46,13 +56,5 @@ public class Util
         }
         return null;
     }
-    public static GameObject FindChild(GameObject go, string name = null, bool recursive = false) // 게임오브젝트 자체를 반환
-    {
-        Transform transfrom = FindChild<Transform>(go, name, recursive);
-        if (transfrom == null)
-        {
-            return null;
-        }
-        return transfrom.gameObject;
-    }
+
 }

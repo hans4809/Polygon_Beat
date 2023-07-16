@@ -25,12 +25,7 @@ public class UI_MainScene : UI_Scene
     {
         base.Init();
         Bind<Button>(typeof(Buttons));
-        GetButton((int)Buttons.Credit).gameObject.ADDUIEvent(CreditClicked);
-        GetButton((int)Buttons.Character).gameObject.ADDUIEvent(CharacterClicked);
-        GetButton((int)Buttons.Setting).gameObject.ADDUIEvent(SettingClicked);
-        GetButton((int)Buttons.Quit).gameObject.ADDUIEvent(QuitClicked);
-        GetButton((int)Buttons.Tutorial).gameObject.ADDUIEvent(TutorialClicked);
-        GetButton((int)Buttons.Start).gameObject.ADDUIEvent(StartClicked);
+        GetButton((int)Buttons.Credit).gameObject.AddUIEvent(CreditClicked);
     }
 
     public void CreditClicked(PointerEventData data)
@@ -56,6 +51,7 @@ public class UI_MainScene : UI_Scene
     public void StartClicked(PointerEventData data)
     {
         Debug.Log("StartButton Clicked !");
+        Managers.Scene.LoadScene(Define.Scene.StageSelect);
     }
 
 }
