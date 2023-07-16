@@ -10,10 +10,12 @@ public class UI_CharacterButton : UI_Button
     public override void Init()
     {
         _image = this.GetComponent<Image>();
+        //GetButton((int)Buttons.Character1).gameObject.ADDUIEvent(OnButtonClicked);
     }
     void Start()
     {
         Init();
+        
     }
 
     // Update is called once per frame

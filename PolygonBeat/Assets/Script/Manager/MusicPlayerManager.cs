@@ -2,7 +2,7 @@ using RhythmTool;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static DataDefine;
+using static Define;
 
 [System.Serializable]
 public class Sound

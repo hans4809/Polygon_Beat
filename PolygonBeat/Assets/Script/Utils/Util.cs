@@ -13,7 +13,7 @@ public class Util
         }
         return component;
     }
-    public static T FindChild<T>(GameObject go/*최상위 부모*/, string name = null, bool recursive = false) where T : UnityEngine.Object // 게임 오브젝트의 자식들의 T의 컴포넌트 반환
+    public static T FindChild<T>(GameObject go, string name = null, bool recursive = false) where T : UnityEngine.Object // 게임 오브젝트의 자식들의 T의 컴포넌트 반환
     {
         if (go == null)
             return null;

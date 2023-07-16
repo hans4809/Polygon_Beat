@@ -43,12 +43,17 @@ public class UI_Manager : MonoBehaviour
         {
             name = typeof(T).Name;
         }
-        GameObject go = Managers.Resource.Instantiate($"UI/PopUP/{name}");
-        T popUp = Util.GetOrAddComponent<T>(go);
-        _popUpStack.Push(popUp);
-        go.transform.SetParent(Root.transform);
-        return popUp;
-
+        //GameObject go = Managers.Resource.Instantiate($"UI/PopUP/{name}");
+        //T popUp = Util.GetOrAddComponent<T>(go);
+        //_popUpStack.Push(popUp);
+        //gameobject root = gameobject.Find("@ui_root");
+        //if (root == null)
+        //{
+        //    root = new gameobject { name = "@ui_root"};
+        //};
+        //go.transform.SetParent(root.transform);
+        //return popUP;
+        return null;
     }
     public T ShowSceneUI<T>(string name = null) where T : UI_Scene
     {
@@ -56,11 +61,17 @@ public class UI_Manager : MonoBehaviour
         {
             name = typeof(T).Name;
         }
-        GameObject go = Managers.Resource.Instantiate($"UI/Scene/{name}");
-        T sceneUI = Util.GetOrAddComponent<T>(go);
-        _sceneUI = sceneUI;
-        go.transform.SetParent(Root.transform);
-        return sceneUI;
+        //GameObject go = Managers.Resource.Instantiate($"UI/Scene/{name}");
+        //T sceneUI = Util.GetOrAddComponent<T>(go);
+        //_sceneUI = sceneUI;
+        //GameObject root = GameObject.Find("@UI_Root");
+        //if(root == null)
+        //{
+        //    root = new GameObject { name = "@UI_Root"; };
+        //}
+        //go.transform.SetParent(root.transform);
+        //return sceneUI;
+        return null;
     }
 
     public void ClosePopUpUI()
@@ -69,12 +80,12 @@ public class UI_Manager : MonoBehaviour
         {
             return;
         }
-        UI_Popup popUP = _popUpStack.Pop();
-        Managers.Resource.Destroy(popUP.gameObject);
-        popUP = null;
+        UI_Popup popuUP = _popUpStack.Pop();
+        //Managers.Resource.Destroy(popuUP.gameObject);
+        popuUP = null;
 
         _order--;
-    } 
+    }
     public void ClosePopUpUI(UI_Popup popUp)
     {
         if (_popUpStack.Count == 0)

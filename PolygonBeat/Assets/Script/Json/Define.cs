@@ -1,8 +1,9 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class DataDefine
+public class Define
 {
     [System.Serializable]
     public class MusicData
@@ -28,7 +29,6 @@ public class DataDefine
         public float bpm;
         public int count;
     }
-
     [System.Serializable]
     public class UserCharacterData
     {
@@ -102,4 +102,5 @@ public class DataDefine
         public Sprite _squareSprite;
         public Sprite _triangleSprite;
     }
+
 }

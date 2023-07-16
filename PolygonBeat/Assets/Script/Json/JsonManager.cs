@@ -5,7 +5,7 @@ using System.Text;
 using Unity.VisualScripting.FullSerializer;
 using UnityEditor.U2D.Animation;
 using UnityEngine;
-using static DataDefine;
+using static Define;
 
 public class JsonManager
 {
