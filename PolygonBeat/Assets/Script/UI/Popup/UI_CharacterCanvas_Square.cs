@@ -7,7 +7,7 @@ public class UI_CharacterCanvas_Square : UI_Popup
 {
     enum GameObjects
     {
-        Panel
+        CharacterPanel
     }
     public override void Init()
     {
@@ -15,9 +15,9 @@ public class UI_CharacterCanvas_Square : UI_Popup
 
         Bind<GameObject>(typeof(GameObjects));
 
-        GameObject panel = Get<GameObject>((int)GameObjects.Panel);
+        GameObject characterPanel = Get<GameObject>((int)GameObjects.CharacterPanel);
         List<Button> buttons = new List<Button>();
-        buttons.AddRange(panel.GetComponentsInChildren<Button>()) ;
+        buttons.AddRange(characterPanel.GetComponentsInChildren<Button>()) ;
     }
     // Start is called before the first frame update
     void Start()

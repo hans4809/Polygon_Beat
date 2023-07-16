@@ -1,15 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class UI_CharacterButton : UI_Button
+public class GameScene : BaseScene
 {
-    Image _image;
-    // Start is called before the first frame update
-    public override void Init()
+    public override void Clear() 
     {
-        _image = this.GetComponent<Image>();
+
+    }
+    
+    protected override void Init()
+    {
+        base.Init();
+        SceneType = Define.Scene.GameScene;
     }
     void Start()
     {
