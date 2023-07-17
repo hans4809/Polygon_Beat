@@ -56,7 +56,6 @@ public class UI_MainScene : UI_Scene
     }
     public void StartClicked(PointerEventData data)
     {
-
         Managers.Scene.LoadScene(Define.Scene.StageSelect);
     }
 
