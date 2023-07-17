@@ -9,7 +9,6 @@ public class InputManager
     public Action KeyAction = null;
     public Action<Define.MouseEvent> MouseAction = null;
     bool _pressed = false;
-    // Update is called once per frame
     public void OnUpdate()
     {
         if (EventSystem.current.IsPointerOverGameObject())
