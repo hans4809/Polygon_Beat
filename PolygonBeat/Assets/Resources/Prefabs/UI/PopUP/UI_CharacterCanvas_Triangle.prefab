@@ -283,7 +283,7 @@ GameObject:
   - component: {fileID: 9173362179345752414}
   - component: {fileID: 9173362179345752412}
   m_Layer: 5
-  m_Name: CharacterCanvas_Triangle
+  m_Name: UI_CharacterCanvas_Triangle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

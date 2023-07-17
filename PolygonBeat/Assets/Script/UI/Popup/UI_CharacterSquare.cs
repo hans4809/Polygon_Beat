@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UI_CharacterCanvas_Square : UI_Popup
+public class UI_CharacterSquare : UI_Popup
 {
     enum GameObjects
     {
@@ -12,12 +12,6 @@ public class UI_CharacterCanvas_Square : UI_Popup
     public override void Init()
     {
         base.Init();
-
-        Bind<GameObject>(typeof(GameObjects));
-
-        GameObject panel = Get<GameObject>((int)GameObjects.CharacterPanel);
-        List<Button> buttons = new List<Button>();
-        buttons.AddRange(panel.GetComponentsInChildren<Button>()) ;
     }
     // Start is called before the first frame update
     void Start()

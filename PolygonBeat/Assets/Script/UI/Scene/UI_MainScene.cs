@@ -26,15 +26,21 @@ public class UI_MainScene : UI_Scene
         base.Init();
         Bind<Button>(typeof(Buttons));
         GetButton((int)Buttons.Credit).gameObject.AddUIEvent(CreditClicked);
+        GetButton((int)Buttons.Character).gameObject.AddUIEvent(CharacterClicked);
+        GetButton((int)Buttons.Setting).gameObject.AddUIEvent(SettingClicked);
+        GetButton((int)Buttons.Quit).gameObject.AddUIEvent(QuitClicked);
+        GetButton((int)Buttons.Tutorial).gameObject.AddUIEvent(TutorialClicked);
+        GetButton((int)Buttons.Start).gameObject.AddUIEvent(StartClicked);
     }
 
     public void CreditClicked(PointerEventData data)
     {
-        Debug.Log("CreditButton Clicked !");
+        Managers.UI.ShowPopUpUI<UI_Credit>();
     }
     public void CharacterClicked(PointerEventData data)
     {
         Debug.Log("CharacterButton Clicked !");
+        Managers.UI.ShowPopUpUI<UI_CharacterSquare>();
     }
     public void SettingClicked(PointerEventData data)
     {
@@ -50,7 +56,7 @@ public class UI_MainScene : UI_Scene
     }
     public void StartClicked(PointerEventData data)
     {
-        Debug.Log("StartButton Clicked !");
+
         Managers.Scene.LoadScene(Define.Scene.StageSelect);
     }
 
