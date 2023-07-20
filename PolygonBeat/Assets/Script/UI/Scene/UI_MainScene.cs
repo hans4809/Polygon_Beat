@@ -44,7 +44,7 @@ public class UI_MainScene : UI_Scene
     }
     public void SettingClicked(PointerEventData data)
     {
-        Debug.Log("SettingButton Clicked !");
+        Managers.UI.ShowPopUpUI<UI_Setting>();
     }
     public void QuitClicked(PointerEventData data)
     {

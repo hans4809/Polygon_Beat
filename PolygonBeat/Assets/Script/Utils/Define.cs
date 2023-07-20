@@ -22,4 +22,10 @@ public class Define
         GameScene,
         StageSelect
     }
+    public enum Sound
+    {
+        BGM,
+        SFX,
+        MaxCount
+    }
 }

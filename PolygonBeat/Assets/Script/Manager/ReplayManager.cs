@@ -11,33 +11,25 @@ public class ReplayManager : MonoBehaviour
     [SerializeField] CreateGroundByJson createGroundByJson;
     [SerializeField] PlayerRotate playerRotate;
     [SerializeField] List<Button> buttonList;
-    [SerializeField] MusicPlayerManager musicPlayerManager;
-    [SerializeField] LifeManager lifeManager;
+    //[SerializeField] MusicPlayerManager musicPlayerManager;
     [SerializeField] Count count;
     [SerializeField] TouchCheckByJson touchCheckByJson;
     [SerializeField] GameObject gameOverPanel;
+    [SerializeField] UI_GameScene ui_GameScene;
     
     // Start is called before the first frame update
     void Awake()
     {
-        buttonList[0].onClick.AddListener(Replay);
-        buttonList[1].onClick.AddListener(ChangetoSelectScene);
-        buttonList[2].onClick.AddListener(Replay);
-        pauseManager = FindAnyObjectByType<PauseManager>();
-        createGroundByJson = FindAnyObjectByType<CreateGroundByJson>();
-        playerRotate = FindAnyObjectByType<PlayerRotate>();
-        musicPlayerManager = FindAnyObjectByType<MusicPlayerManager>();
-        lifeManager = FindAnyObjectByType<LifeManager>();
-        count = FindAnyObjectByType<Count>();
-        touchCheckByJson = FindAnyObjectByType<TouchCheckByJson>();
+
     }
 
-    void Replay()
+    public void Replay()
     {
-        gameOverPanel.SetActive(false);
         ResetAll();
-        musicPlayerManager.StopBGM(DataManager.singleTon.wholeGameData._currentSong.ToString());
-        musicPlayerManager.PlayBGM(DataManager.singleTon.wholeGameData._currentSong.ToString());
+        //musicPlayerManager.StopBGM(DataManager.singleTon.wholeGameData._currentSong.ToString());
+        //musicPlayerManager.PlayBGM(DataManager.singleTon.wholeGameData._currentSong.ToString());
+        Managers.Sound.Stop(Managers.Sound._audioSources[(int)Define.Sound.BGM]);
+        Managers.Sound.Play(DataManager.singleTon.wholeGameData._currentSong.ToString());
         Time.timeScale = 1f;
     }
     private void ResetAll()
@@ -47,16 +39,6 @@ public class ReplayManager : MonoBehaviour
         playerRotate.Init();
         count.Setting();
         touchCheckByJson.Init();
-        lifeManager.Init();
-    }
-    public void ChangetoSelectScene()
-    {
-        SceneManager.LoadScene("StageSelect");
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        ui_GameScene.Init();
     }
 }

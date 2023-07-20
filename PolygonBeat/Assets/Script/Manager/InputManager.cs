@@ -36,4 +36,9 @@ public class InputManager
             }
         }
     }
+    public void Clear()
+    {
+        MouseAction = null;
+        KeyAction = null;
+    }
 }

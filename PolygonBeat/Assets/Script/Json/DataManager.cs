@@ -35,11 +35,14 @@ public class DataManager : MonoBehaviour
         musicData = jsonManager.LoadMusicData();
         switch (wholeGameData._currentSong)
         {
-            case (0):
+            case 5:
                 currentMusic = musicData.music[0];
                 break;
-            case (1):
+            case 7:
                 currentMusic = musicData.music[1];
+                break;
+            case 9:
+                currentMusic = musicData.music[2];
                 break;
         }
     }

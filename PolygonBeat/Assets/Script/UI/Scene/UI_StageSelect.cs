@@ -34,18 +34,23 @@ public class UI_StageSelect : UI_Scene
     }
     public void FirstClicked(PointerEventData data)
     {
-        DataManager.singleTon.wholeGameData._currentSong = 0;
+        DataManager.singleTon.wholeGameData._currentSong = 5;
         Managers.Scene.LoadScene(Define.Scene.GameScene);
     }
 
     public void SecondClicked(PointerEventData data)
     {
-        DataManager.singleTon.wholeGameData._currentSong = 1;
+        DataManager.singleTon.wholeGameData._currentSong = 7;
         Managers.Scene.LoadScene(Define.Scene.GameScene);
     }
     public void ThirdClicked(PointerEventData data)
     {
-        DataManager.singleTon.wholeGameData._currentSong = 2;
+        DataManager.singleTon.wholeGameData._currentSong = 9;
+        Managers.Scene.LoadScene(Define.Scene.GameScene);
+    }
+    public void ForthClicked(PointerEventData data)
+    {
+        DataManager.singleTon.wholeGameData._currentSong = 10;
         Managers.Scene.LoadScene(Define.Scene.GameScene);
     }
 }

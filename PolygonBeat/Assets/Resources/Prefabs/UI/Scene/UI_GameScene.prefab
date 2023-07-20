@@ -29,13 +29,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1573620993585436267}
-  - {fileID: 1573620993990796332}
-  - {fileID: 1573620992642745707}
-  - {fileID: 1573620994230459949}
-  - {fileID: 1573620993443708780}
-  - {fileID: 1573620994312764264}
+  m_Children: []
   m_Father: {fileID: 1573620993563090199}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -112,8 +106,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2938446365395043153}
-  m_RootOrder: 2
+  m_Father: {fileID: 1573620993563090199}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -189,8 +183,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2938446365395043153}
-  m_RootOrder: 4
+  m_Father: {fileID: 1573620993563090199}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -309,7 +303,6 @@ MonoBehaviour:
   Instance: {fileID: 0}
   tmpUgui: {fileID: 1573620993443708782}
   tmp_Text: {fileID: 1573620993443708782}
-  musicPlayerManager: {fileID: 0}
 --- !u!1 &1573620993563090203
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,6 +315,7 @@ GameObject:
   - component: {fileID: 1573620993563090196}
   - component: {fileID: 1573620993563090197}
   - component: {fileID: 1573620993563090202}
+  - component: {fileID: 212773415564376447}
   m_Layer: 5
   m_Name: UI_GameScene
   m_TagString: Untagged
@@ -342,6 +336,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2938446365395043153}
+  - {fileID: 1573620993585436267}
+  - {fileID: 1573620993990796332}
+  - {fileID: 1573620992642745707}
+  - {fileID: 1573620994230459949}
+  - {fileID: 1573620993443708780}
+  - {fileID: 1573620994312764264}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -411,6 +411,20 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &212773415564376447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573620993563090203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 055be668720574340bf320d5dcbea287, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lives: []
+  coinText: {fileID: 0}
 --- !u!1 &1573620993585436268
 GameObject:
   m_ObjectHideFlags: 0
@@ -442,8 +456,8 @@ RectTransform:
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2938446365395043153}
-  m_RootOrder: 0
+  m_Father: {fileID: 1573620993563090199}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -562,8 +576,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2938446365395043153}
-  m_RootOrder: 1
+  m_Father: {fileID: 1573620993563090199}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -638,8 +652,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2938446365395043153}
-  m_RootOrder: 3
+  m_Father: {fileID: 1573620993563090199}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -715,8 +729,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1573620994426244414}
-  m_Father: {fileID: 2938446365395043153}
-  m_RootOrder: 5
+  m_Father: {fileID: 1573620993563090199}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -774,7 +788,7 @@ GameObject:
   - component: {fileID: 1573620994426244408}
   - component: {fileID: 1573620994426244409}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: CoinText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

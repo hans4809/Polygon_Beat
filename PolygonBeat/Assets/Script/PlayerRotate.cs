@@ -17,7 +17,6 @@ public class PlayerRotate : MonoBehaviour
     [SerializeField] TMP_Text tmp_Text;
     [SerializeField] List<GameObject> parentObject;
     [SerializeField] GameObject childObject;
-    [SerializeField] MusicPlayerManager musicPlayerManager;
     [SerializeField] GameObject clearPanel;
     Vector3 initParentPostion;
     Vector3 parentPosition;
@@ -148,7 +147,6 @@ public class PlayerRotate : MonoBehaviour
             }
             else
             {
-
                 childObject.transform.SetParent(null);
                 childObject.transform.position = new Vector3(0, 0.68f, 0);
                 for (int j = 0; j < 4; j++)
@@ -189,7 +187,7 @@ public class PlayerRotate : MonoBehaviour
     }
     void Start() // 처음 상태에 필요한 것들 초기화
     {
-        if(DataManager.singleTon.wholeGameData._currentSong == 0 || DataManager.singleTon.wholeGameData._currentSong == 1)
+        if(DataManager.singleTon.wholeGameData._currentSong == 5 || DataManager.singleTon.wholeGameData._currentSong == 7)
         {
             GameObject.Find("PlayerTriangle").SetActive(false);
             childObject = GameObject.Find("PlayerSquare");
@@ -202,7 +200,7 @@ public class PlayerRotate : MonoBehaviour
                 parentObject[i].transform.SetParent(childObject.transform);
             }
         }
-        else if (DataManager.singleTon.wholeGameData._currentSong == 2)
+        else if (DataManager.singleTon.wholeGameData._currentSong == 9)
         {
             GameObject.Find("PlayerSquare").SetActive(false);
             childObject = GameObject.Find("PlayerTriangle");
@@ -218,11 +216,11 @@ public class PlayerRotate : MonoBehaviour
         initParentPostion = childObject.transform.parent.localPosition;
         Time.timeScale = 1.0f;
         time = 0f;
-        musicPlayerManager = FindAnyObjectByType<MusicPlayerManager>();
+        //musicPlayerManager = FindAnyObjectByType<MusicPlayerManager>();
     }
     void Update()
     {
-        if(musicPlayerManager.GetBGMPlayer().time == 0)
+        if(/*musicPlayerManager.GetBGMPlayer().time*/Managers.Sound._audioSources[(int)Define.Sound.BGM].time == 0)
         {
             return;
         }
@@ -255,7 +253,7 @@ public class PlayerRotate : MonoBehaviour
                     clearPanel.SetActive(true);
                 }
             }
-            if (DataManager.singleTon.wholeGameData._currentSong == 0 || DataManager.singleTon.wholeGameData._currentSong == 1)
+            if (DataManager.singleTon.wholeGameData._currentSong == 5 || DataManager.singleTon.wholeGameData._currentSong == 7)
             {
                 if (childObject.transform.parent == parentObject[0].transform)
                 {
@@ -278,7 +276,7 @@ public class PlayerRotate : MonoBehaviour
                     SetRotation();
                 }
             }
-            else if (DataManager.singleTon.wholeGameData._currentSong == 2)
+            else if (DataManager.singleTon.wholeGameData._currentSong == 9)
             {
                 if (childObject.transform.parent == parentObject[0].transform)
                 {

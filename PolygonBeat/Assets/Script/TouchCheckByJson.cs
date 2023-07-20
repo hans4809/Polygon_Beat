@@ -16,21 +16,25 @@ public class TouchCheckByJson : MonoBehaviour
     bool clicked;
     bool cleared;
     bool missed;
-    [SerializeField] LifeManager lifeManager;
+    //[SerializeField] LifeManager lifeManager;
     [SerializeField] AudioSource bgmPlayer;
-    [SerializeField] MusicPlayerManager musicPlayerManager;
-    [SerializeField] EffectManager effectManager;
+    //[SerializeField] MusicPlayerManager musicPlayerManager;
+    //[SerializeField] EffectManager effectManager;
+    [SerializeField] UI_Effect ui_Effect;
     [SerializeField] PlayerRotate playerRotate;
+    [SerializeField] UI_GameScene ui_GameScene;
 
     // Start is called before the first frame update
     void Start()
     {
         Init();
-        bgmPlayer = GameObject.Find("BGMPlayer").GetComponent<AudioSource>();
-        lifeManager = FindObjectOfType<LifeManager>();
-        effectManager = FindObjectOfType<EffectManager>();
-        musicPlayerManager = FindObjectOfType<MusicPlayerManager>();
+        //bgmPlayer = GameObject.Find("BGMPlayer").GetComponent<AudioSource>();
+        //lifeManager = FindObjectOfType<LifeManager>();
+        //effectManager = FindObjectOfType<EffectManager>();
+        //musicPlayerManager = FindObjectOfType<MusicPlayerManager>();
         playerRotate = FindObjectOfType<PlayerRotate>();
+        ui_GameScene = FindObjectOfType<UI_GameScene>();
+        ui_Effect = FindObjectOfType<UI_Effect>();
     }
     public void Init()
     {
@@ -52,20 +56,17 @@ public class TouchCheckByJson : MonoBehaviour
         cleared = false;
         yield return new WaitForSeconds(boundary * 2);
     }
-    // Update is called once per frame
-    void Update()
-    {
-    }
 
     void OnKeyboard()
     {
-        if (musicPlayerManager.GetBGMPlayer().time == 0)
+        if (/*musicPlayerManager.GetBGMPlayer().time*/ Managers.Sound._audioSources[(int)Define.Sound.BGM].time == 0)
         {
             return;
         }
         if ((!clicked) && (!cleared) && (!missed))
         {
-            clickedtime = bgmPlayer.time;
+            //clickedtime = bgmPlayer.time;
+            clickedtime = Managers.Sound._audioSources[(int)Define.Sound.BGM].time;
             leastTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime - boundary;
             maxTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime + boundary;
             if (Input.GetKeyDown(KeyCode.Space))
@@ -75,9 +76,12 @@ public class TouchCheckByJson : MonoBehaviour
                     clicked = true;
                     cleared = true;
                     position = (int)(playerRotate.GetPlayer().transform.position.x + 0.5);
-                    effectManager.HitEffect(position);
-                    effectManager.Perfect(position);
-                    musicPlayerManager.PlaySFX("touch");
+                    //effectManager.HitEffect(position);
+                    //effectManager.Perfect(position);
+                    //musicPlayerManager.PlaySFX("touch");
+                    ui_Effect.HitEffect(position);
+                    ui_Effect.Perfect(position);
+                    Managers.Sound.Play("Sounds/SFX/Touch");
                     StartCoroutine(touchDelay());
                 }
                 else
@@ -85,8 +89,10 @@ public class TouchCheckByJson : MonoBehaviour
                     clicked = true;
                     missed = true;
                     position = (int)(playerRotate.GetPlayer().transform.position.x + 0.5);
-                    effectManager.Miss(position);
-                    musicPlayerManager.PlaySFX("touch");
+                    //effectManager.Miss(position);
+                    ui_Effect.Miss(position);
+                    Managers.Sound.Play("Sounds/SFX/Touch");
+                    //musicPlayerManager.PlaySFX("touch");
                 }
             }
         }
@@ -94,11 +100,13 @@ public class TouchCheckByJson : MonoBehaviour
         {
             missed = true;
             position = (int)(playerRotate.GetPlayer().transform.position.x + 0.5);
-            effectManager.Miss(position);
+            //effectManager.Miss(position);
+            ui_Effect.Miss(position);
+
         }
         if (missed)
         {
-            lifeManager.LifeReduce();
+            ui_GameScene.LifeReduce();
             missed = false;
             StartCoroutine(touchDelay());
         }

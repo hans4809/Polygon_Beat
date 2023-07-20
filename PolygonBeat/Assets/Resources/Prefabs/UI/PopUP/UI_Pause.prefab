@@ -896,7 +896,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8694606908192844938}
   - component: {fileID: 8694606908192844937}
-  - component: {fileID: 8694606908192844936}
   m_Layer: 5
   m_Name: SoundOptions
   m_TagString: Untagged
@@ -943,18 +942,6 @@ MonoBehaviour:
   MasterSlider: {fileID: 8694606908049409143}
   BgmSlider: {fileID: 8694606908979472611}
   SfxSlider: {fileID: 8694606909057703172}
---- !u!114 &8694606908192844936
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8694606908192844939}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 937c7bfe0c073004f9a9048b40c1f392, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8694606908255858580
 GameObject:
   m_ObjectHideFlags: 0

@@ -88,12 +88,16 @@ public class UI_Manager : MonoBehaviour
         ClosePopUpUI();
 
     }
-
     public void CloseAllPopUPUI()
     {
         while (_popUpStack.Count > 0)
         {
             ClosePopUpUI();
         }
+    }
+    public void Clear()
+    {
+        CloseAllPopUPUI();
+        _sceneUI = null;
     }
 }

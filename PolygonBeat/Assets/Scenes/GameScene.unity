@@ -376,7 +376,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &383945962
 MonoBehaviour:
@@ -390,7 +390,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7158974d378b1544cbfe3f4e0306f30b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  createGroundByJson: {fileID: 0}
 --- !u!1 &392399779
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,11 +426,10 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  musicPlayerManager: {fileID: 0}
-  lifeManager: {fileID: 0}
   count: {fileID: 0}
   touchCheckByJson: {fileID: 0}
   gameOverPanel: {fileID: 0}
+  ui_GameScene: {fileID: 0}
 --- !u!4 &392399781
 Transform:
   m_ObjectHideFlags: 0
@@ -669,7 +667,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7158974d378b1544cbfe3f4e0306f30b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  createGroundByJson: {fileID: 0}
 --- !u!61 &558690961
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -762,7 +759,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &941925280
 GameObject:
@@ -836,7 +833,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 995007372}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d8c85cf8b160a444bc251603275704c, type: 3}
   m_Name: 
@@ -1140,7 +1137,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 3
-  tmp_Text: {fileID: 0}
   lifeSprite:
   - {fileID: 21300000, guid: 4abdebe74b1012b42832459e44d775bc, type: 3}
   - {fileID: 21300000, guid: f58b8dce5f837ec4c886ee98bedca5b1, type: 3}
@@ -1149,7 +1145,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   gameOverPanel: {fileID: 0}
-  musicPlayerManager: {fileID: 0}
 --- !u!1 &1399070020
 GameObject:
   m_ObjectHideFlags: 0
@@ -1166,7 +1161,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1399070021
 Transform:
   m_ObjectHideFlags: 0
@@ -2114,7 +2109,6 @@ GameObject:
   - component: {fileID: 2020576233}
   - component: {fileID: 2020576234}
   - component: {fileID: 2020576235}
-  - component: {fileID: 2020576237}
   - component: {fileID: 2020576236}
   - component: {fileID: 2020576238}
   m_Layer: 0
@@ -2123,7 +2117,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2020576233
 Transform:
   m_ObjectHideFlags: 0
@@ -2141,9 +2135,8 @@ Transform:
   - {fileID: 995007374}
   - {fileID: 103456893}
   - {fileID: 1399070021}
-  - {fileID: 2058380762}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2020576234
 MonoBehaviour:
@@ -2179,7 +2172,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2020576232}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bb2db2ded1c2e0c41b54e6763ec679e5, type: 3}
   m_Name: 
@@ -2188,18 +2181,6 @@ MonoBehaviour:
   MasterSlider: {fileID: 0}
   BgmSlider: {fileID: 0}
   SfxSlider: {fileID: 0}
---- !u!114 &2020576237
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2020576232}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 937c7bfe0c073004f9a9048b40c1f392, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2020576238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2207,7 +2188,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2020576232}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a2e45250f8aafb64d9d7fdc4ea6e1c94, type: 3}
   m_Name: 
@@ -2221,6 +2202,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2035233148}
+  - component: {fileID: 2035233149}
   m_Layer: 0
   m_Name: '@Scene'
   m_TagString: Untagged
@@ -2241,8 +2223,24 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2035233149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2035233147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb4e578c94e6624498b610c1ba6bd479, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grounds: []
+  blockResourceString: []
+  coinResourceString: 
+  coinIndex: 
 --- !u!1 &2058380761
 GameObject:
   m_ObjectHideFlags: 0
@@ -2268,13 +2266,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2058380761}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2020576233}
-  m_RootOrder: 5
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2058380763
 MonoBehaviour:
@@ -2289,11 +2287,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boundary: 0.1
-  lifeManager: {fileID: 0}
   bgmPlayer: {fileID: 0}
-  musicPlayerManager: {fileID: 0}
-  effectManager: {fileID: 0}
+  ui_Effect: {fileID: 0}
   playerRotate: {fileID: 0}
+  ui_GameScene: {fileID: 0}
 --- !u!114 &2058380764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2309,6 +2306,5 @@ MonoBehaviour:
   tmp_Text: {fileID: 0}
   parentObject: []
   childObject: {fileID: 0}
-  musicPlayerManager: {fileID: 0}
   clearPanel: {fileID: 0}
   beatIndex: 0
