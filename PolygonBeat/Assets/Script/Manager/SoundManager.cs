@@ -8,12 +8,9 @@ public class SoundManager
 {
     public AudioSource[] _audioSources = new AudioSource[(int)Define.Sound.MaxCount];
     Dictionary<string, AudioClip> _audioClips = new Dictionary<string, AudioClip>();
-
+    [SerializeField]
     public AudioMixer audioMixer;
-
-    public Slider MasterSlider;
-    public Slider BgmSlider;
-    public Slider SfxSlider;
+    public AudioMixerGroup[] audioMixerGroups;
 
     private static float masterVolume = 1f;
     private static float bgmVolume = 1f;
@@ -33,12 +30,11 @@ public class SoundManager
                 _audioSources[i] = go.AddComponent<AudioSource>();
                 go.transform.parent = root.transform;
             }
-            //_audioSources[(int)Define.Sound.BGM].loop = true;
         }
-        SetSoundSetting();
     }
     public void Play(AudioClip audioClip, Define.Sound type = Define.Sound.SFX, float pitch = 1.0f)
     {
+        AudioMixer audioMixer = Managers.Resource.Load<AudioMixer>("AudioMixer/SoundSetting");
         if (audioClip == null)
         {
             return;
@@ -65,6 +61,7 @@ public class SoundManager
     }
     public void PlayDelayed(AudioClip audioClip, float delay, Define.Sound type = Define.Sound.BGM, float pitch = 1.0f)
     {
+        AudioMixer audioMixer = Managers.Resource.Load<AudioMixer>("AudioMixer/SoundSetting");
         if (audioClip == null)
         {
             return;
@@ -78,12 +75,14 @@ public class SoundManager
             }
             audioSource.pitch = pitch;
             audioSource.clip = audioClip;
+            audioSource.outputAudioMixerGroup = audioMixer.FindMatchingGroups("BGM")[0];
             audioSource.PlayDelayed(3.0f);
         }
         else
         {
             AudioSource audioSource = _audioSources[(int)Define.Sound.SFX];
             audioSource.pitch = pitch;
+            audioSource.outputAudioMixerGroup = audioMixer.FindMatchingGroups("SFX")[0];
             audioSource.PlayOneShot(audioClip);
         }
     }
@@ -135,48 +134,5 @@ public class SoundManager
             audioSource.Stop();
         }
         _audioClips.Clear();
-    }
-    public static void SetSoundSetting()
-    {
-        masterVolume = DataManager.singleTon.wholeGameData._masterVolume;
-        bgmVolume = DataManager.singleTon.wholeGameData._bgmVolume;
-        sfxVolume = DataManager.singleTon.wholeGameData._sfxVolume;
-    }
-    public static float GetMasterVolume()
-    {
-        return masterVolume;
-    }
-    public static float GetBGMVolume()
-    {
-        return bgmVolume;
-    }
-
-    public static float GetSFXVolume()
-    {
-        return sfxVolume;
-    }
-    public void SetBgm()
-    {
-        audioMixer.SetFloat("BGM", Mathf.Log10(BgmSlider.value) * 20);
-    }
-    public void SetSfx()
-    {
-        audioMixer.SetFloat("SFX", Mathf.Log10(SfxSlider.value) * 20);
-    }
-    public void SetMaster()
-    {
-        SetBgm();
-        SetSfx();
-    }
-    private void SetSliderValues()
-    {
-        if (MasterSlider != null)
-            MasterSlider.value = masterVolume;
-
-        if (BgmSlider != null)
-            BgmSlider.value = bgmVolume;
-
-        if (SfxSlider != null)
-            SfxSlider.value = sfxVolume;
     }
 }

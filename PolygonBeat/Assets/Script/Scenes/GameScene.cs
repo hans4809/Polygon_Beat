@@ -15,7 +15,7 @@ public class GameScene : BaseScene
         SceneType = Define.Scene.GameScene;
         Managers.UI.ShowSceneUI<UI_GameScene>();
         Managers.UI.ShowSceneUI<UI_Effect>();
-        Managers.Sound.PlayDelayed($"/Sounds/{DataManager.singleTon.wholeGameData._currentSong}", 3.0f);
+        Managers.Sound.PlayDelayed($"Sounds/BGM/{DataManager.singleTon.wholeGameData._currentSong}", 3.0f, Define.Sound.BGM);
         GameObject root = GameObject.Find("@Ground");
         if (root == null)
         {
@@ -45,6 +45,7 @@ public class GameScene : BaseScene
             Managers.Map.CreateGround(blockResourceString, grounds, coinResourceString, root.transform);
             return;
         }
+        Managers.Sound.Play($"BGM/{DataManager.singleTon.wholeGameData._currentSong}", Define.Sound.BGM);
     }
 
     // Update is called once per frame

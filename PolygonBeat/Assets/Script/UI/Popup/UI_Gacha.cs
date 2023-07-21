@@ -37,7 +37,7 @@ public class UI_Gacha : UI_Popup
     }
     public void CloseClick(PointerEventData data)
     {
-        ClosePopUPUI();
+        Managers.UI.CloseAllPopUPUI();
     }
     public void GachaClick(PointerEventData data)
     {

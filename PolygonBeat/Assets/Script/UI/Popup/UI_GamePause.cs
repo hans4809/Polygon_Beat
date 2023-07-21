@@ -10,11 +10,14 @@ public class UI_GamePause : UI_Popup
     Slider _bgmSlider;
     Slider _sfxSlider;
     ReplayManager replay = new ReplayManager();
-    public enum GameObjects
+    public enum Buttons
     {
         Quit,
         Return,
-        Replay,
+        Replay
+    }
+    public enum Sliders
+    {
         MasterSlider,
         BgmSlider,
         SfxSlider
@@ -26,13 +29,14 @@ public class UI_GamePause : UI_Popup
     public override void Init()
     {
         base.Init();
-        Bind<GameObject>(typeof(GameObjects));
-        GetButton((int)GameObjects.Quit).gameObject.AddUIEvent(QuitClick);
-        GetButton((int)GameObjects.Return).gameObject.AddUIEvent(ReturnClick);
-        GetButton((int)GameObjects.Replay).gameObject.AddUIEvent(ReplayClick);
-        _masterSlider = Get<Slider>((int)GameObjects.MasterSlider);
-        _bgmSlider = Get<Slider>((int)GameObjects.BgmSlider);
-        _sfxSlider = Get<Slider>((int)GameObjects.SfxSlider);
+        Bind<Button>(typeof(Buttons));
+        Bind<Slider>(typeof(Sliders));
+        GetButton((int)Buttons.Quit).gameObject.AddUIEvent(QuitClick);
+        GetButton((int)Buttons.Return).gameObject.AddUIEvent(ReturnClick);
+        GetButton((int)Buttons.Replay).gameObject.AddUIEvent(ReplayClick);
+        _masterSlider = Get<Slider>((int)Sliders.MasterSlider);
+        _bgmSlider = Get<Slider>((int)Sliders.BgmSlider);
+        _sfxSlider = Get<Slider>((int)Sliders.SfxSlider);
     }
     public void QuitClick(PointerEventData data)
     {

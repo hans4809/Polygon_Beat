@@ -72,7 +72,7 @@ public class PlayerRotate : MonoBehaviour
     void setObject()
     {
  
-        if (DataManager.singleTon.wholeGameData._currentSong == 0 || DataManager.singleTon.wholeGameData._currentSong == 1)
+        if (DataManager.singleTon.wholeGameData._currentSong == 5 || DataManager.singleTon.wholeGameData._currentSong == 7)
         {
             childObject.GetComponent<SpriteRenderer>().sprite = DataManager.singleTon.saveData._squareSprite;
             parentObject[0].transform.SetParent(null);
@@ -84,7 +84,7 @@ public class PlayerRotate : MonoBehaviour
             childObject.transform.localPosition = new Vector3(-5, 5, 0);
             rotateSpeed = (DataManager.singleTon.currentMusic.data[1].bpm / 60);
         }
-        else if(DataManager.singleTon.wholeGameData._currentSong == 2)
+        else if(DataManager.singleTon.wholeGameData._currentSong == 9 || DataManager.singleTon.wholeGameData._currentSong == 10)
         {
             childObject.GetComponent<SpriteRenderer>().sprite = DataManager.singleTon.saveData._triangleSprite;
             parentObject[0].transform.SetParent(null);
@@ -100,7 +100,7 @@ public class PlayerRotate : MonoBehaviour
 
     public void Setting()
     {
-        if (DataManager.singleTon.wholeGameData._currentSong == 0 || DataManager.singleTon.wholeGameData._currentSong == 1)
+        if (DataManager.singleTon.wholeGameData._currentSong == 5 || DataManager.singleTon.wholeGameData._currentSong == 7)
         {
             if (childObject.transform.parent == null)
             {
@@ -139,7 +139,7 @@ public class PlayerRotate : MonoBehaviour
                 childObject.transform.parent.localPosition = parentPosition;
             }
         }
-        else if (DataManager.singleTon.wholeGameData._currentSong == 2)
+        else if (DataManager.singleTon.wholeGameData._currentSong == 9 || DataManager.singleTon.wholeGameData._currentSong == 10)
         {
             if (childObject.transform.parent == null)
             {
@@ -237,22 +237,22 @@ public class PlayerRotate : MonoBehaviour
         if (time >= 1) //90도 돌고나면 부모를 바꿔서 다시 돌려야 제대로 돌아감
         {       
             time = 0f; //time을 0으로 초기화시켜야 Lerp가 작동함
-            if(beatIndex >= DataManager.singleTon.currentMusic.data.Count -1)
-            {
-                rotateSpeed = 0;
-                tmp_Text.text = "CLEAR";
-                clearPanel.SetActive(true);
-            }
+            //if(beatIndex >= DataManager.singleTon.currentMusic.data.Count -1)
+            //{
+            //    rotateSpeed = 0;
+            //    tmp_Text.text = "CLEAR";
+            //   clearPanel.SetActive(true);
+            //}
             //else // 그 외에 로테이션 속도 계산
-            {
-                rotateSpeed = GetRotateSpeed(beatIndex);
-                beatIndex++;
-                if (rotateSpeed == 0) 
-                {
-                    tmp_Text.text = "CLEAR";
-                    clearPanel.SetActive(true);
-                }
-            }
+            //{
+            //    rotateSpeed = GetRotateSpeed(beatIndex);
+            //    beatIndex++;
+            //    if (rotateSpeed == 0) 
+            //    {
+            //        tmp_Text.text = "CLEAR";
+            //        clearPanel.SetActive(true);
+            //    }
+            //}
             if (DataManager.singleTon.wholeGameData._currentSong == 5 || DataManager.singleTon.wholeGameData._currentSong == 7)
             {
                 if (childObject.transform.parent == parentObject[0].transform)
