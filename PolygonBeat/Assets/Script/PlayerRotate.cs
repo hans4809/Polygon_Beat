@@ -18,6 +18,7 @@ public class PlayerRotate : MonoBehaviour
     [SerializeField] List<GameObject> parentObject;
     [SerializeField] GameObject childObject;
     [SerializeField] GameObject clearPanel;
+    [SerializeField] AudioSource _bgm;
     Vector3 initParentPostion;
     Vector3 parentPosition;
     Vector3 rotation;
@@ -31,7 +32,7 @@ public class PlayerRotate : MonoBehaviour
     }
     void SwapParent(GameObject preParentObject, GameObject nextParentObject) // 결론 부모를 바꿈
     {
-        if(DataManager.singleTon.wholeGameData._currentSong == 0 || DataManager.singleTon.wholeGameData._currentSong == 1)
+        if(DataManager.singleTon.wholeGameData._currentSong == 5 || DataManager.singleTon.wholeGameData._currentSong == 7)
         {
             parentPosition.x += 1;
             nextParentObject.transform.SetParent(null); //다음에 부모가 될 오브젝트 종속성 없게 만듬
@@ -41,7 +42,7 @@ public class PlayerRotate : MonoBehaviour
             childObject.transform.parent.SetLocalPositionAndRotation(new Vector3(parentPosition.x, parentPosition.y, 0), Quaternion.Euler(new Vector3(0, 0, 0))); //parent 오차 수정
             childObject.transform.SetLocalPositionAndRotation(new Vector3(-5, 5, 0), Quaternion.Euler(new Vector3(0, 0, 0))); //child 오차 수정
         }
-        else if(DataManager.singleTon.wholeGameData._currentSong == 2)
+        else if(DataManager.singleTon.wholeGameData._currentSong == 9 || DataManager.singleTon.wholeGameData._currentSong == 10)
         {
             parentPosition.x += 1;
             nextParentObject.transform.SetParent(null); //다음에 부모가 될 오브젝트 종속성 없게 만듬
@@ -54,14 +55,14 @@ public class PlayerRotate : MonoBehaviour
     }
     void SetRotation() //결론 오차 수정을 위한 작업
     {
-        if (DataManager.singleTon.wholeGameData._currentSong == 0 || DataManager.singleTon.wholeGameData._currentSong == 1)
+        if (DataManager.singleTon.wholeGameData._currentSong == 5 || DataManager.singleTon.wholeGameData._currentSong == 7)
         {
             for (int i = 0; i < 3; i++)
             {
                 childObject.transform.GetChild(i).localEulerAngles = Vector3.zero; //90도 돌고 오차 수정을 위해 전부 rotation 초기화
             }
         }
-        else if (DataManager.singleTon.wholeGameData._currentSong == 2)
+        else if (DataManager.singleTon.wholeGameData._currentSong == 9 || DataManager.singleTon.wholeGameData._currentSong == 10)
         {
             for (int i = 0; i < 2; i++)
             {
@@ -187,7 +188,8 @@ public class PlayerRotate : MonoBehaviour
     }
     void Start() // 처음 상태에 필요한 것들 초기화
     {
-        if(DataManager.singleTon.wholeGameData._currentSong == 5 || DataManager.singleTon.wholeGameData._currentSong == 7)
+        _bgm = Managers.Sound._audioSources[(int)Define.Sound.BGM];
+        if (DataManager.singleTon.wholeGameData._currentSong == 5 || DataManager.singleTon.wholeGameData._currentSong == 7)
         {
             GameObject.Find("PlayerTriangle").SetActive(false);
             childObject = GameObject.Find("PlayerSquare");
@@ -200,7 +202,7 @@ public class PlayerRotate : MonoBehaviour
                 parentObject[i].transform.SetParent(childObject.transform);
             }
         }
-        else if (DataManager.singleTon.wholeGameData._currentSong == 9)
+        else if (DataManager.singleTon.wholeGameData._currentSong == 9 || DataManager.singleTon.wholeGameData._currentSong == 10)
         {
             GameObject.Find("PlayerSquare").SetActive(false);
             childObject = GameObject.Find("PlayerTriangle");
@@ -216,19 +218,19 @@ public class PlayerRotate : MonoBehaviour
         initParentPostion = childObject.transform.parent.localPosition;
         Time.timeScale = 1.0f;
         time = 0f;
-        //musicPlayerManager = FindAnyObjectByType<MusicPlayerManager>();
     }
     void Update()
     {
-        if(/*musicPlayerManager.GetBGMPlayer().time*/Managers.Sound._audioSources[(int)Define.Sound.BGM].time == 0)
+        if(/*musicPlayerManager.GetBGMPlayer().time*/_bgm.time == 0)
         {
+            Debug.Log(_bgm.time);
             return;
         }
-        if (DataManager.singleTon.wholeGameData._currentSong == 0 || DataManager.singleTon.wholeGameData._currentSong == 1)
+        if (DataManager.singleTon.wholeGameData._currentSong == 5 || DataManager.singleTon.wholeGameData._currentSong == 7)
         {
             rotation = Vector3.Lerp(new Vector3(0, 0, 0), new Vector3(0, 0, -90), time); //time이 0 ~ 1 갈 동안 로테이션도 (0,0,0)에서 (0,0,-90)으로 변함
         }  
-        else if (DataManager.singleTon.wholeGameData._currentSong == 2)
+        else if (DataManager.singleTon.wholeGameData._currentSong == 9 || DataManager.singleTon.wholeGameData._currentSong == 10)
         {
             rotation = Vector3.Lerp(new Vector3(0, 0, 0), new Vector3(0, 0, -120), time); //time이 0 ~ 1 갈 동안 로테이션도 (0,0,0)에서 (0,0,-120)으로 변함
         }
@@ -237,22 +239,6 @@ public class PlayerRotate : MonoBehaviour
         if (time >= 1) //90도 돌고나면 부모를 바꿔서 다시 돌려야 제대로 돌아감
         {       
             time = 0f; //time을 0으로 초기화시켜야 Lerp가 작동함
-            //if(beatIndex >= DataManager.singleTon.currentMusic.data.Count -1)
-            //{
-            //    rotateSpeed = 0;
-            //    tmp_Text.text = "CLEAR";
-            //   clearPanel.SetActive(true);
-            //}
-            //else // 그 외에 로테이션 속도 계산
-            //{
-            //    rotateSpeed = GetRotateSpeed(beatIndex);
-            //    beatIndex++;
-            //    if (rotateSpeed == 0) 
-            //    {
-            //        tmp_Text.text = "CLEAR";
-            //        clearPanel.SetActive(true);
-            //    }
-            //}
             if (DataManager.singleTon.wholeGameData._currentSong == 5 || DataManager.singleTon.wholeGameData._currentSong == 7)
             {
                 if (childObject.transform.parent == parentObject[0].transform)
@@ -276,7 +262,7 @@ public class PlayerRotate : MonoBehaviour
                     SetRotation();
                 }
             }
-            else if (DataManager.singleTon.wholeGameData._currentSong == 9)
+            else if (DataManager.singleTon.wholeGameData._currentSong == 9 || DataManager.singleTon.wholeGameData._currentSong == 10)
             {
                 if (childObject.transform.parent == parentObject[0].transform)
                 {

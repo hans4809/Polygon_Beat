@@ -7,9 +7,12 @@ using TMPro;
 
 public class UI_GameScene : UI_Scene
 {
-    public List<Image> lives = new List<Image>();
-    public Text coinText;
-    public Text count;
+    [SerializeField] List<Image> lives = new List<Image>();
+    [SerializeField] Text coinText;
+    [SerializeField] Text count;
+    [SerializeField] AudioSource _bgm;
+    UI_GameOver gameOver;
+
     int life = 3;
     float time = 0;
     public enum Buttons
@@ -34,6 +37,7 @@ public class UI_GameScene : UI_Scene
     public override void Init()
     {
         base.Init();
+        _bgm = Managers.Sound._audioSources[(int)Define.Sound.BGM];
         Bind<Button>(typeof(Buttons));
         Bind<Image>(typeof(Images));
         Bind<Text>(typeof(Texts));
@@ -46,7 +50,7 @@ public class UI_GameScene : UI_Scene
         lives[0].sprite = Managers.Resource.Load<Sprite>("UI/Icon/heart_red");
         lives[1].sprite = Managers.Resource.Load<Sprite>("UI/Icon/heart_red");
         lives[2].sprite = Managers.Resource.Load<Sprite>("UI/Icon/heart_red");
-        coinText.text = $": {DataManager.singleTon.wholeGameData._coin}";
+        coinText.text = $" : {DataManager.singleTon.wholeGameData._coin}";
     }
     public void PauseClick(PointerEventData data)
     {
@@ -74,11 +78,14 @@ public class UI_GameScene : UI_Scene
         if (life <= 0)
         {
             Time.timeScale = 0;
-            Managers.Sound.Stop(Managers.Sound._audioSources[(int)Define.Sound.BGM]);
-            Managers.UI.ShowPopUpUI<UI_GameOver>();
+            Managers.Sound.Stop(_bgm);
+            if (gameOver == null)
+            {
+                gameOver = Managers.UI.ShowPopUpUI<UI_GameOver>();
+            }
         }
-        //coinText.text = $": {DataManager.singleTon.wholeGameData._coin}";
-        if(Managers.Sound._audioSources[(int)Define.Sound.BGM].time == 0)
+        coinText.text = $" : {DataManager.singleTon.wholeGameData._coin}";
+        if(_bgm.time == 0)
         {
             time += Time.deltaTime;
             if (time >= 0 && time < 1)

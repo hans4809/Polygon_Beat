@@ -28,10 +28,7 @@ public class TouchCheckByJson : MonoBehaviour
     void Start()
     {
         Init();
-        //bgmPlayer = GameObject.Find("BGMPlayer").GetComponent<AudioSource>();
-        //lifeManager = FindObjectOfType<LifeManager>();
-        //effectManager = FindObjectOfType<EffectManager>();
-        //musicPlayerManager = FindObjectOfType<MusicPlayerManager>();
+        bgmPlayer = Managers.Sound._audioSources[(int)Define.Sound.BGM];
         playerRotate = FindObjectOfType<PlayerRotate>();
         ui_GameScene = FindObjectOfType<UI_GameScene>();
         ui_Effect = FindObjectOfType<UI_Effect>();
@@ -59,17 +56,16 @@ public class TouchCheckByJson : MonoBehaviour
 
     void OnKeyboard()
     {
-        if (/*musicPlayerManager.GetBGMPlayer().time*/ Managers.Sound._audioSources[(int)Define.Sound.BGM].time == 0)
+        if (bgmPlayer.time == 0)
         {
             return;
         }
         if ((!clicked) && (!cleared) && (!missed))
         {
-            //clickedtime = bgmPlayer.time;
-            clickedtime = Managers.Sound._audioSources[(int)Define.Sound.BGM].time;
+            clickedtime = bgmPlayer.time;
             leastTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime - boundary;
             maxTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime + boundary;
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKey(KeyCode.Space))
             {
                 if (clickedtime >= leastTime && clickedtime <= maxTime)
                 {

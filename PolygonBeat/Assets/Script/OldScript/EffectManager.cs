@@ -63,7 +63,7 @@ public class EffectManager : MonoBehaviour
         perfectAnimator = GameObject.Find("Perfect").GetComponent <Animator>();
         missAnimator = GameObject.Find("Miss").GetComponent <Animator>();
         gameScene = FindAnyObjectByType<GameScene>();
-        if (DataManager.singleTon.wholeGameData._currentSong == 0)
+        if (DataManager.singleTon.wholeGameData._currentSong == 5)
         {
             groundGlow.Add(Managers.Resource.Load<Sprite>("block/bg1/bg1_glow02"));
             groundGlow.Add(Managers.Resource.Load<Sprite>("block/bg1/bg1_glow02"));

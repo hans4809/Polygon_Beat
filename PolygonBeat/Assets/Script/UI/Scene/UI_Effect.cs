@@ -24,11 +24,12 @@ public class UI_Effect : UI_Scene
     public override void Init()
     {
         base.Init();
-        Bind<GameObject>(typeof(Effects));
+        gameScene = FindAnyObjectByType<GameScene>();
+        Bind<Animator>(typeof(Effects));
         perfectAnimator = Get<Animator>((int)Effects.Perfect);
         missAnimator = Get<Animator>((int)Effects.Miss);
         effectAnimator = Get<Animator>((int)Effects.Effect);
-        if (DataManager.singleTon.wholeGameData._currentSong == 0)
+        if (DataManager.singleTon.wholeGameData._currentSong == 5)
         {
             groundGlow.Add(Managers.Resource.Load<Sprite>("block/bg1/bg1_glow02"));
             groundGlow.Add(Managers.Resource.Load<Sprite>("block/bg1/bg1_glow02"));

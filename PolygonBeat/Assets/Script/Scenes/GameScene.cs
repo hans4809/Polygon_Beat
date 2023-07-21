@@ -45,7 +45,7 @@ public class GameScene : BaseScene
             Managers.Map.CreateGround(blockResourceString, grounds, coinResourceString, root.transform);
             return;
         }
-        Managers.Sound.Play($"BGM/{DataManager.singleTon.wholeGameData._currentSong}", Define.Sound.BGM);
+        Managers.Sound.PlayDelayed($"BGM/{DataManager.singleTon.wholeGameData._currentSong}", 3.0f, Define.Sound.BGM);
     }
 
     // Update is called once per frame
