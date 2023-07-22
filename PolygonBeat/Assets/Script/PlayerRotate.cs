@@ -14,10 +14,8 @@ using TMPro;
 
 public class PlayerRotate : MonoBehaviour
 {
-    [SerializeField] TMP_Text tmp_Text;
     [SerializeField] List<GameObject> parentObject;
     [SerializeField] GameObject childObject;
-    [SerializeField] GameObject clearPanel;
     [SerializeField] AudioSource _bgm;
     Vector3 initParentPostion;
     Vector3 parentPosition;

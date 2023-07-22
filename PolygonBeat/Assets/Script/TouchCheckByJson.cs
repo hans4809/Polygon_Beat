@@ -20,7 +20,6 @@ public class TouchCheckByJson : MonoBehaviour
     [SerializeField] AudioSource bgmPlayer;
     //[SerializeField] MusicPlayerManager musicPlayerManager;
     //[SerializeField] EffectManager effectManager;
-    [SerializeField] UI_Effect ui_Effect;
     [SerializeField] PlayerRotate playerRotate;
     [SerializeField] UI_GameScene ui_GameScene;
 
@@ -31,18 +30,21 @@ public class TouchCheckByJson : MonoBehaviour
         bgmPlayer = Managers.Sound._audioSources[(int)Define.Sound.BGM];
         playerRotate = FindObjectOfType<PlayerRotate>();
         ui_GameScene = FindObjectOfType<UI_GameScene>();
-        ui_Effect = FindObjectOfType<UI_Effect>();
     }
     public void Init()
     {
-        Managers.Input.KeyAction -= OnKeyboard;
-        Managers.Input.KeyAction += OnKeyboard;
+        //Managers.Input.KeyAction -= OnKeyboard;
+        //Managers.Input.KeyAction += OnKeyboard;
         beatIndex = 0;
         clicked = false;
         cleared = false;
         missed = false;
         leastTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime - boundary;
         maxTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime + boundary;
+    }
+    private void Update()
+    {
+        OnKeyboard();
     }
     IEnumerator touchDelay()
     {
@@ -65,7 +67,7 @@ public class TouchCheckByJson : MonoBehaviour
             clickedtime = bgmPlayer.time;
             leastTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime - boundary;
             maxTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime + boundary;
-            if (Input.GetKey(KeyCode.Space))
+            if (Input.anyKeyDown)
             {
                 if (clickedtime >= leastTime && clickedtime <= maxTime)
                 {
@@ -75,8 +77,8 @@ public class TouchCheckByJson : MonoBehaviour
                     //effectManager.HitEffect(position);
                     //effectManager.Perfect(position);
                     //musicPlayerManager.PlaySFX("touch");
-                    ui_Effect.HitEffect(position);
-                    ui_Effect.Perfect(position);
+                    ui_GameScene.HitEffect(position);
+                    ui_GameScene.Perfect(position);
                     Managers.Sound.Play("Sounds/SFX/Touch");
                     StartCoroutine(touchDelay());
                 }
@@ -86,7 +88,7 @@ public class TouchCheckByJson : MonoBehaviour
                     missed = true;
                     position = (int)(playerRotate.GetPlayer().transform.position.x + 0.5);
                     //effectManager.Miss(position);
-                    ui_Effect.Miss(position);
+                    ui_GameScene.Miss(position);
                     Managers.Sound.Play("Sounds/SFX/Touch");
                     //musicPlayerManager.PlaySFX("touch");
                 }
@@ -97,7 +99,7 @@ public class TouchCheckByJson : MonoBehaviour
             missed = true;
             position = (int)(playerRotate.GetPlayer().transform.position.x + 0.5);
             //effectManager.Miss(position);
-            ui_Effect.Miss(position);
+            ui_GameScene.Miss(position);
 
         }
         if (missed)

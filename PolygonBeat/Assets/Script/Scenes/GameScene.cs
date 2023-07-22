@@ -14,7 +14,7 @@ public class GameScene : BaseScene
         base.Init();
         SceneType = Define.Scene.GameScene;
         Managers.UI.ShowSceneUI<UI_GameScene>();
-        Managers.UI.ShowSceneUI<UI_Effect>();
+        //Managers.UI.ShowSceneUI<UI_Effect>();
         Managers.Sound.PlayDelayed($"Sounds/BGM/{DataManager.singleTon.wholeGameData._currentSong}", 3.0f, Define.Sound.BGM);
         GameObject root = GameObject.Find("@Ground");
         if (root == null)
