@@ -37,6 +37,17 @@ public class UI_Manager : MonoBehaviour
             canvas.sortingOrder = 0;
         }
     }
+    public T ShowAnyUI<T>(string name = null) where T : UI_Base
+    {
+        if (string.IsNullOrEmpty(name))
+        {
+            name = typeof(T).Name;
+        }
+        GameObject go = Managers.Resource.Instantiate($"UI/{name}");
+        T anyUI = Util.GetOrAddComponent<T>(go);
+        go.transform.SetParent(Root.transform);
+        return anyUI;
+    }
     public T ShowPopUpUI<T>(string name = null) where T : UI_Popup
     {
         if (string.IsNullOrEmpty(name))

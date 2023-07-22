@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UI_Effect : UI_Scene
+public class UI_Effect : UI_Base
 {
     [SerializeField] Animator effectAnimator = null;
     [SerializeField] Animator perfectAnimator = null;
@@ -10,6 +10,7 @@ public class UI_Effect : UI_Scene
     [SerializeField] List<Sprite> groundGlow;
     [SerializeField] List<Sprite> groundGray;
     [SerializeField] GameScene gameScene;
+    [SerializeField] Canvas effectCanvas;
     string hit = "Hit";
     public enum Effects
     {
@@ -23,8 +24,10 @@ public class UI_Effect : UI_Scene
     }
     public override void Init()
     {
-        base.Init();
         gameScene = FindAnyObjectByType<GameScene>();
+        effectCanvas = this.GetComponent<Canvas>();
+        effectCanvas.renderMode = RenderMode.WorldSpace;
+        effectCanvas.worldCamera = Camera.main;
         Bind<Animator>(typeof(Effects));
         perfectAnimator = Get<Animator>((int)Effects.Perfect);
         missAnimator = Get<Animator>((int)Effects.Miss);

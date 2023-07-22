@@ -24,6 +24,7 @@ public class GameScene : BaseScene
         base.Init();
         _bgm = Managers.Sound._audioSources[(int)Define.Sound.BGM];
         Managers.UI.ShowSceneUI<UI_GameScene>();
+        Managers.UI.ShowAnyUI<UI_Effect>();
         ResetScene();
     }
     public void ResetScene()

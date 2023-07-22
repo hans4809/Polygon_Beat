@@ -22,6 +22,7 @@ public class TouchCheckByJson : MonoBehaviour
     //[SerializeField] EffectManager effectManager;
     [SerializeField] PlayerRotate playerRotate;
     [SerializeField] UI_GameScene ui_GameScene;
+    [SerializeField] UI_Effect ui_Effect;
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +30,8 @@ public class TouchCheckByJson : MonoBehaviour
         Init();
         bgmPlayer = Managers.Sound._audioSources[(int)Define.Sound.BGM];
         playerRotate = FindObjectOfType<PlayerRotate>();
-        ui_GameScene = FindObjectOfType<UI_GameScene>();
+        ui_GameScene = FindAnyObjectByType<UI_GameScene>();
+        ui_Effect = FindAnyObjectByType<UI_Effect>();
     }
     public void Init()
     {
@@ -75,8 +77,8 @@ public class TouchCheckByJson : MonoBehaviour
                     //effectManager.HitEffect(position);
                     //effectManager.Perfect(position);
                     //musicPlayerManager.PlaySFX("touch");
-                    ui_GameScene.HitEffect(position);
-                    ui_GameScene.Perfect(position);
+                    ui_Effect.HitEffect(position);
+                    ui_Effect.Perfect(position);
                     Managers.Sound.Play("Sounds/SFX/Touch");
                     StartCoroutine(touchDelay());
                 }
@@ -86,7 +88,7 @@ public class TouchCheckByJson : MonoBehaviour
                     missed = true;
                     position = (int)(playerRotate.GetPlayer().transform.position.x + 0.5);
                     //effectManager.Miss(position);
-                    ui_GameScene.Miss(position);
+                    ui_Effect.Miss(position);
                     Managers.Sound.Play("Sounds/SFX/Touch");
                     //musicPlayerManager.PlaySFX("touch");
                 }
@@ -97,7 +99,7 @@ public class TouchCheckByJson : MonoBehaviour
             missed = true;
             position = (int)(playerRotate.GetPlayer().transform.position.x + 0.5);
             //effectManager.Miss(position);
-            ui_GameScene.Miss(position);
+            ui_Effect.Miss(position);
 
         }
         if (missed)
