@@ -26,10 +26,8 @@ public class ReplayManager : MonoBehaviour
     public void Replay()
     {
         ResetAll();
-        //musicPlayerManager.StopBGM(DataManager.singleTon.wholeGameData._currentSong.ToString());
-        //musicPlayerManager.PlayBGM(DataManager.singleTon.wholeGameData._currentSong.ToString());
         Managers.Sound.Stop(Managers.Sound._audioSources[(int)Define.Sound.BGM]);
-        Managers.Sound.Play(DataManager.singleTon.wholeGameData._currentSong.ToString());
+        Managers.Sound.PlayDelayed(DataManager.singleTon.wholeGameData._currentSong.ToString(), 3.0f, Define.Sound.BGM);
         Time.timeScale = 1f;
     }
     private void ResetAll()

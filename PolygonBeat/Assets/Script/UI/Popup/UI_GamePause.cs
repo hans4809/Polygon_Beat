@@ -9,7 +9,12 @@ public class UI_GamePause : UI_Popup
     Slider _masterSlider;
     Slider _bgmSlider;
     Slider _sfxSlider;
-    ReplayManager replay = new ReplayManager();
+    AudioSource _bgm;
+    GameScene gameScene;
+    PlayerRotate playerRotate;
+    TouchCheckByJson touchCheck;
+    UI_GameScene ui_GameScene;
+
     public enum Buttons
     {
         Quit,
@@ -28,7 +33,12 @@ public class UI_GamePause : UI_Popup
     }
     public override void Init()
     {
-        base.Init();
+        base.Init(); 
+        gameScene = FindAnyObjectByType<GameScene>();
+        playerRotate = FindAnyObjectByType<PlayerRotate>();
+        touchCheck = FindAnyObjectByType<TouchCheckByJson>();
+        ui_GameScene = FindAnyObjectByType<UI_GameScene>();
+        _bgm = Managers.Sound._audioSources[(int)Define.Sound.BGM];
         Bind<Button>(typeof(Buttons));
         Bind<Slider>(typeof(Sliders));
         GetButton((int)Buttons.Quit).gameObject.AddUIEvent(QuitClick);
@@ -45,14 +55,19 @@ public class UI_GamePause : UI_Popup
     }
     public void ReturnClick(PointerEventData data)
     {
+        _bgm.UnPause();
         ClosePopUPUI();
-        replay.Replay();
         Time.timeScale = 1f;
     }
     public void ReplayClick(PointerEventData data)
     {
+        ui_GameScene.Clear();
+        gameScene.Clear();
+        gameScene.ResetScene();
+        playerRotate.Init();
+        touchCheck.Init();
         ClosePopUPUI();
-        replay.Replay();
+        Managers.Sound.PlayDelayed(_bgm.clip, 3.0f, Define.Sound.BGM);
         Time.timeScale = 1f;
     }
     // Update is called once per frame

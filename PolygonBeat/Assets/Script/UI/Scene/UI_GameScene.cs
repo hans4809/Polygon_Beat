@@ -18,10 +18,10 @@ public class UI_GameScene : UI_Scene
     [SerializeField] List<Sprite> groundGray;
     [SerializeField] GameScene gameScene;
     [SerializeField] UI_GameOver gameOver;
+    [SerializeField] public int life = 3;
+    [SerializeField] public float time = 0;
     string hit = "Hit";
 
-    [SerializeField]int life = 3;
-    float time = 0;
     public enum Buttons
     {
         PauseButton,
@@ -46,6 +46,14 @@ public class UI_GameScene : UI_Scene
     void Start()
     {
         Init();
+    }
+    public void Clear()
+    {
+        lives[0].sprite = Managers.Resource.Load<Sprite>("UI/Icon/heart_red");
+        lives[1].sprite = Managers.Resource.Load<Sprite>("UI/Icon/heart_red");
+        lives[2].sprite = Managers.Resource.Load<Sprite>("UI/Icon/heart_red");
+        time = 0f;
+        life = 3;
     }
     public override void Init()
     {
@@ -94,6 +102,8 @@ public class UI_GameScene : UI_Scene
     }
     public void PauseClick(PointerEventData data)
     {
+        _bgm.Pause();
+        Time.timeScale = 0f;
         Managers.UI.ShowPopUpUI<UI_GamePause>();
     }
     public void LifeReduce()
@@ -113,19 +123,9 @@ public class UI_GameScene : UI_Scene
                 break;
         }
     }
-    private void Update()
+    public void Count()
     {
-        if (life <= 0)
-        {
-            Time.timeScale = 0;
-            Managers.Sound.Stop(_bgm);
-            if (gameOver == null)
-            {
-                gameOver = Managers.UI.ShowPopUpUI<UI_GameOver>();
-            }
-        }
-        coinText.text = $" : {DataManager.singleTon.wholeGameData._coin}";
-        if(_bgm.time == 0)
+        if (_bgm.time == 0)
         {
             time += Time.deltaTime;
             if (time >= 0 && time < 1)
@@ -141,11 +141,24 @@ public class UI_GameScene : UI_Scene
                 count.text = "1";
             }
         }
-        if(_bgm.time > 0)
+        if (_bgm.time > 0)
         {
             count.text = "";
         }
-
+    }
+    private void Update()
+    {
+        if (life <= 0)
+        {
+            Time.timeScale = 0;
+            Managers.Sound.Stop(_bgm);
+            if (gameOver == null)
+            {
+                gameOver = Managers.UI.ShowPopUpUI<UI_GameOver>();
+            }
+        }
+        coinText.text = $" : {DataManager.singleTon.wholeGameData._coin}";
+        Count();
     }
     public void HitEffect(int position)
     {

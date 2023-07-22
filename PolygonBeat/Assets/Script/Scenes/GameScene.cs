@@ -8,14 +8,27 @@ public class GameScene : BaseScene
     public List<string> blockResourceString;
     public string coinResourceString;
     public int[] coinIndex;
-    public override void Clear() { }
+    [SerializeField] AudioSource _bgm;
+    public override void Clear()
+    {
+        Managers.Sound.Stop(_bgm);
+        for(int i =0; i < grounds.Count; i++)
+        {
+           Managers.Resource.Destroy(grounds[i]);
+        }
+        Managers.Map.Clear(grounds);
+
+    }
     protected override void Init()
     {
         base.Init();
-        SceneType = Define.Scene.GameScene;
+        _bgm = Managers.Sound._audioSources[(int)Define.Sound.BGM];
         Managers.UI.ShowSceneUI<UI_GameScene>();
-        //Managers.UI.ShowSceneUI<UI_Effect>();
-        Managers.Sound.PlayDelayed($"Sounds/BGM/{DataManager.singleTon.wholeGameData._currentSong}", 3.0f, Define.Sound.BGM);
+        ResetScene();
+    }
+    public void ResetScene()
+    {
+        SceneType = Define.Scene.GameScene;
         GameObject root = GameObject.Find("@Ground");
         if (root == null)
         {
@@ -47,7 +60,6 @@ public class GameScene : BaseScene
         }
         Managers.Sound.PlayDelayed($"BGM/{DataManager.singleTon.wholeGameData._currentSong}", 3.0f, Define.Sound.BGM);
     }
-
     // Update is called once per frame
     void Update()
     {

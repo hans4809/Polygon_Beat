@@ -10,7 +10,7 @@ public class InGameManager : MonoBehaviour
         {
             DataManager.singleTon.wholeGameData._coin++;
             DataManager.singleTon.jsonManager.Save(DataManager.singleTon.wholeGameData);
-            other.gameObject.SetActive(false);
+            Managers.Resource.Destroy(other.gameObject);
         }
     }
 }

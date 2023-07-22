@@ -6,6 +6,10 @@ public class MapManager
 {
     public int[] coinIndex;
 
+    public void Clear(List<GameObject> grounds)
+    {
+        grounds.Clear();
+    }
     public void InstantiateGround(List<string> _resourceStrings, List<GameObject> grounds, int index, Vector3 position, Transform transformParent) // 게임오브젝트 복제하는 함수
     {
         GameObject myGameObject;
@@ -87,6 +91,5 @@ public class MapManager
                 }
             }
         }
-
     }
 }

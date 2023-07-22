@@ -33,8 +33,6 @@ public class TouchCheckByJson : MonoBehaviour
     }
     public void Init()
     {
-        //Managers.Input.KeyAction -= OnKeyboard;
-        //Managers.Input.KeyAction += OnKeyboard;
         beatIndex = 0;
         clicked = false;
         cleared = false;
@@ -67,7 +65,7 @@ public class TouchCheckByJson : MonoBehaviour
             clickedtime = bgmPlayer.time;
             leastTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime - boundary;
             maxTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime + boundary;
-            if (Input.anyKeyDown)
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 if (clickedtime >= leastTime && clickedtime <= maxTime)
                 {
