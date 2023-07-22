@@ -9,7 +9,8 @@ public class InGameManager : MonoBehaviour
         if (other.gameObject.tag == "Coin")
         {
             DataManager.singleTon.wholeGameData._coin++;
-            DataManager.singleTon.jsonManager.Save(DataManager.singleTon.wholeGameData);
+            //DataManager.singleTon.jsonManager.Save(DataManager.singleTon.wholeGameData);
+            DataManager.singleTon.jsonManager.Save<DataDefine.WholeGameData>(DataManager.singleTon.wholeGameData);
             Managers.Resource.Destroy(other.gameObject);
         }
     }

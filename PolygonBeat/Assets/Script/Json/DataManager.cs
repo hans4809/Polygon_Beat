@@ -31,8 +31,10 @@ public class DataManager : MonoBehaviour
         }
         else if (singleTon != this)
             Destroy(singleTon._gameObject);
-        wholeGameData = jsonManager.LoadWholeGameData();
-        musicData = jsonManager.LoadMusicData();
+        //wholeGameData = jsonManager.LoadWholeGameData();
+        wholeGameData = jsonManager.Load<WholeGameData>();
+        //musicData = jsonManager.LoadMusicData();
+        musicData = jsonManager.Load<MusicData>();
         switch (wholeGameData._currentSong)
         {
             case 5:
@@ -49,8 +51,10 @@ public class DataManager : MonoBehaviour
 
     private void Start()
     {
-        jsonManager.Save(wholeGameData);
-        jsonManager.Save(userCharacterData);
+        //jsonManager.Save(wholeGameData);
+        jsonManager.Save<WholeGameData>(wholeGameData);
+        //jsonManager.Save(userCharacterData);
+        jsonManager.Save<UserCharacterData>(userCharacterData);
     }
     // Update is called once per frame
     void Update()

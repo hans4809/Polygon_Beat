@@ -12,9 +12,6 @@ public class SoundManager
     public AudioMixer audioMixer;
     public AudioMixerGroup[] audioMixerGroups;
 
-    private static float masterVolume = 1f;
-    private static float bgmVolume = 1f;
-    private static float sfxVolume = 1f;
     public void Init()
     {
         GameObject root = GameObject.Find("@Sound");
@@ -34,7 +31,7 @@ public class SoundManager
     }
     public void Play(AudioClip audioClip, Define.Sound type = Define.Sound.SFX, float pitch = 1.0f)
     {
-        AudioMixer audioMixer = Managers.Resource.Load<AudioMixer>("AudioMixer/SoundSetting");
+        audioMixer = Managers.Resource.Load<AudioMixer>("AudioMixer/SoundSetting");
         if (audioClip == null)
         {
             return;
@@ -61,7 +58,7 @@ public class SoundManager
     }
     public void PlayDelayed(AudioClip audioClip, float delay, Define.Sound type = Define.Sound.BGM, float pitch = 1.0f)
     {
-        AudioMixer audioMixer = Managers.Resource.Load<AudioMixer>("AudioMixer/SoundSetting");
+        audioMixer = Managers.Resource.Load<AudioMixer>("AudioMixer/SoundSetting");
         if (audioClip == null)
         {
             return;

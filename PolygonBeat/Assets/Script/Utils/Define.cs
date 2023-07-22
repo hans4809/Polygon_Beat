@@ -7,7 +7,8 @@ public class Define
     public enum UIEvent
     {
         Click,
-        Drag
+        Drag,
+        Slider
     }
     public enum MouseEvent
     {
@@ -24,6 +25,7 @@ public class Define
     }
     public enum Sound
     {
+        Master,
         BGM,
         SFX,
         MaxCount

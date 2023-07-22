@@ -59,6 +59,10 @@ public abstract class UI_Base : MonoBehaviour
                 break;
             case Define.UIEvent.Drag:
                 break;
+            case Define.UIEvent.Slider:
+                _event.SliderHandler -= action;
+                _event.SliderHandler += action;
+                break;
         }
         
     }

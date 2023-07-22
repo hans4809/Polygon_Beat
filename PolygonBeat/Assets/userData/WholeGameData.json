@@ -1,8 +1,8 @@
 {
     "_tutorialClear": false,
-    "_coin": 1024,
+    "_coin": 1031,
     "_currentSong": 5,
-    "_masterVolume": 50.0,
-    "_bgmVolume": 50.0,
-    "_sfxVolume": 50.0
+    "_masterVolume": 0.8964409232139587,
+    "_bgmVolume": 0.3265080451965332,
+    "_sfxVolume": 0.19972515106201173
 }

@@ -92,6 +92,15 @@ public class DataDefine
             this._sfxVolume = sfxVolume;
             this._currentSong = currentSong;
         }
+        public WholeGameData()
+        {
+            _tutorialClear = false;
+            _coin = 0;
+            _masterVolume = 50f;
+            _bgmVolume = 50f;
+            _sfxVolume = 50f;
+            _currentSong = 5;
+        }
     }
     [System.Serializable]
     public class SaveData
