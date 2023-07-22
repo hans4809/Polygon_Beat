@@ -30,10 +30,10 @@ public class DataManager : MonoBehaviour
             DontDestroyOnLoad(_gameObject);
         }
         else if (singleTon != this)
+        {
             Destroy(singleTon._gameObject);
-        //wholeGameData = jsonManager.LoadWholeGameData();
+        }
         wholeGameData = jsonManager.Load<WholeGameData>();
-        //musicData = jsonManager.LoadMusicData();
         musicData = jsonManager.Load<MusicData>();
         switch (wholeGameData._currentSong)
         {
@@ -46,14 +46,15 @@ public class DataManager : MonoBehaviour
             case 9:
                 currentMusic = musicData.music[2];
                 break;
+            case 10:
+                currentMusic = musicData.music[2];
+                break;
         }
     }
 
     private void Start()
     {
-        //jsonManager.Save(wholeGameData);
         jsonManager.Save<WholeGameData>(wholeGameData);
-        //jsonManager.Save(userCharacterData);
         jsonManager.Save<UserCharacterData>(userCharacterData);
     }
     // Update is called once per frame
@@ -61,13 +62,16 @@ public class DataManager : MonoBehaviour
     {
         switch (wholeGameData._currentSong)
         {
-            case (0):
+            case 5:
                 currentMusic = musicData.music[0];
                 break;
-            case (1):
+            case 7:
                 currentMusic = musicData.music[1];
                 break;
-            case (2):
+            case 9:
+                currentMusic = musicData.music[2];
+                break;
+            case 10:
                 currentMusic = musicData.music[2];
                 break;
         }

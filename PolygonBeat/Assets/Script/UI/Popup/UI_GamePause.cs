@@ -45,10 +45,13 @@ public class UI_GamePause : UI_Popup
         GetButton((int)Buttons.Return).gameObject.AddUIEvent(ReturnClick);
         GetButton((int)Buttons.Replay).gameObject.AddUIEvent(ReplayClick);
         _masterSlider = Get<Slider>((int)Sliders.MasterSlider);
-        _masterSlider.gameObject.AddUIEvent(MasterVolume);
         _bgmSlider = Get<Slider>((int)Sliders.BgmSlider);
-        _bgmSlider.gameObject.AddUIEvent(BGMVolume);
         _sfxSlider = Get<Slider>((int)Sliders.SfxSlider);
+        _masterSlider.value = DataManager.singleTon.wholeGameData._masterVolume;
+        _bgmSlider.value = DataManager.singleTon.wholeGameData._bgmVolume;
+        _sfxSlider.value = DataManager.singleTon.wholeGameData._sfxVolume;
+        _masterSlider.gameObject.AddUIEvent(MasterVolume);
+        _bgmSlider.gameObject.AddUIEvent(BGMVolume);
         _sfxSlider.gameObject.AddUIEvent(SFXVolume);
     }
     public void QuitClick(PointerEventData data)
@@ -65,16 +68,19 @@ public class UI_GamePause : UI_Popup
     public void MasterVolume(PointerEventData data)
     {
         DataManager.singleTon.wholeGameData._masterVolume = _masterSlider.value;
+        DataManager.singleTon.jsonManager.Save<DataDefine.WholeGameData>(DataManager.singleTon.wholeGameData);
         Managers.Sound.audioMixer.SetFloat("Master", Mathf.Log10(_masterSlider.value) * 20);
     }
     public void BGMVolume(PointerEventData data)
     {
         DataManager.singleTon.wholeGameData._bgmVolume = _bgmSlider.value;
+        DataManager.singleTon.jsonManager.Save<DataDefine.WholeGameData>(DataManager.singleTon.wholeGameData);
         Managers.Sound.audioMixer.SetFloat("BGM", Mathf.Log10(_bgmSlider.value) * 20);
     }
     public void SFXVolume(PointerEventData data)
     {
         DataManager.singleTon.wholeGameData._sfxVolume = _sfxSlider.value;
+        DataManager.singleTon.jsonManager.Save<DataDefine.WholeGameData>(DataManager.singleTon.wholeGameData);
         Managers.Sound.audioMixer.SetFloat("SFX", Mathf.Log10(_sfxSlider.value) * 20);
     }
 

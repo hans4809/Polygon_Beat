@@ -14,6 +14,7 @@ public class SoundManager
 
     public void Init()
     {
+        audioMixer = Resources.Load<AudioMixer>("AudioMixer/SoundSetting");
         GameObject root = GameObject.Find("@Sound");
         if(root == null)
         {
@@ -25,13 +26,14 @@ public class SoundManager
             {
                 GameObject go = new GameObject { name = soundNames[i] };
                 _audioSources[i] = go.AddComponent<AudioSource>();
+                _audioSources[i].outputAudioMixerGroup = audioMixer.FindMatchingGroups($"{soundNames[i]}")[0];
                 go.transform.parent = root.transform;
             }
         }
     }
     public void Play(AudioClip audioClip, Define.Sound type = Define.Sound.SFX, float pitch = 1.0f)
     {
-        audioMixer = Managers.Resource.Load<AudioMixer>("AudioMixer/SoundSetting");
+        //audioMixer = Managers.Resource.Load<AudioMixer>("AudioMixer/SoundSetting");
         if (audioClip == null)
         {
             return;
@@ -45,14 +47,14 @@ public class SoundManager
             }
             audioSource.pitch = pitch;
             audioSource.clip = audioClip;
-            audioSource.outputAudioMixerGroup = audioMixer.FindMatchingGroups("BGM")[0];
+            //audioSource.outputAudioMixerGroup = audioMixer.FindMatchingGroups("BGM")[0];
             audioSource.Play();
         }
         else
         {
             AudioSource audioSource = _audioSources[(int)Define.Sound.SFX];
             audioSource.pitch = pitch;
-            audioSource.outputAudioMixerGroup = audioMixer.FindMatchingGroups("SFX")[0];
+            //audioSource.outputAudioMixerGroup = audioMixer.FindMatchingGroups("SFX")[0];
             audioSource.PlayOneShot(audioClip);
         }
     }
@@ -72,14 +74,14 @@ public class SoundManager
             }
             audioSource.pitch = pitch;
             audioSource.clip = audioClip;
-            audioSource.outputAudioMixerGroup = audioMixer.FindMatchingGroups("BGM")[0];
+            //audioSource.outputAudioMixerGroup = audioMixer.FindMatchingGroups("BGM")[0];
             audioSource.PlayDelayed(3.0f);
         }
         else
         {
             AudioSource audioSource = _audioSources[(int)Define.Sound.SFX];
             audioSource.pitch = pitch;
-            audioSource.outputAudioMixerGroup = audioMixer.FindMatchingGroups("SFX")[0];
+            //audioSource.outputAudioMixerGroup = audioMixer.FindMatchingGroups("SFX")[0];
             audioSource.PlayOneShot(audioClip);
         }
     }
