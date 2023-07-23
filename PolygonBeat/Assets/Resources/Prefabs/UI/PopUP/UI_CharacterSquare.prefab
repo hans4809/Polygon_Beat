@@ -636,6 +636,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 864134e30254abf47b81015f5db25b1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentCharacter: {fileID: 0}
 --- !u!1 &8579266727292333324
 GameObject:
   m_ObjectHideFlags: 0
@@ -1296,6 +1297,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7570151191289661989, guid: 6e3f3f55b5a30a449b56c9a7436e13d9, type: 3}
+      propertyPath: m_Color.b
+      value: 0.31132078
+      objectReference: {fileID: 0}
+    - target: {fileID: 7570151191289661989, guid: 6e3f3f55b5a30a449b56c9a7436e13d9, type: 3}
+      propertyPath: m_Color.g
+      value: 0.31132078
+      objectReference: {fileID: 0}
+    - target: {fileID: 7570151191289661989, guid: 6e3f3f55b5a30a449b56c9a7436e13d9, type: 3}
+      propertyPath: m_Color.r
+      value: 0.31132078
+      objectReference: {fileID: 0}
     - target: {fileID: 7570151191289661995, guid: 6e3f3f55b5a30a449b56c9a7436e13d9, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1408,7 +1421,8 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7570151191289661991, guid: 6e3f3f55b5a30a449b56c9a7436e13d9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6e3f3f55b5a30a449b56c9a7436e13d9, type: 3}
 --- !u!1 &221208990061230886 stripped
 GameObject:
@@ -1933,6 +1947,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   content: {fileID: 0}
+  contentRect: {fileID: 0}
+  userCharacterData:
+    characters: []
+  spritePath: 
   count: 6
   pos: 0
   movepos: 0

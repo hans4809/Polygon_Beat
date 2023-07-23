@@ -5,7 +5,11 @@ using UnityEngine;
 public class ResourceManager
 {
     public T Load<T>(string path) where T : Object
-    {
+    {   
+        if(Resources.Load<T>(path) == null)
+        {
+            Debug.Log($"Failed to load Resource : {path}");
+        }
         return Resources.Load<T>(path);
     }
     public GameObject Instantiate(string path, Transform parent = null)

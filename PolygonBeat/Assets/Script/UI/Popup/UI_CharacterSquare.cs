@@ -11,7 +11,7 @@ public class UI_CharacterSquare : UI_Popup
         Change,
         Back,
         Close,
-        Gacha
+        Gacha,
     }
     void Start()
     {

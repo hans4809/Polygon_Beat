@@ -3,10 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using static DataDefine;
 
 public class UI_CharacterPanel : UI_Base 
 {
-    [SerializeField] RectTransform content;
+    [SerializeField] GameObject content;
+    [SerializeField] RectTransform contentRect;
+    [SerializeField] UserCharacterData userCharacterData;
+    [SerializeField] string spritePath;
     [SerializeField] int count = 29;
     [SerializeField] float pos;
     [SerializeField] float movepos;
@@ -26,20 +30,38 @@ public class UI_CharacterPanel : UI_Base
     }
     public override void Init()
     {
+        userCharacterData = DataManager.singleTon.userCharacterData;
         Bind<GameObject>(typeof(GameObjects));
         Bind<Button>(typeof(Buttons));
-        content = Get<GameObject>((int)GameObjects.Content).GetComponent<RectTransform>();
+        content = Get<GameObject>((int)GameObjects.Content);
+        contentRect = content.GetComponent<RectTransform>();
         GetButton((int)Buttons.Right).gameObject.AddUIEvent(RightClick);
         GetButton((int)Buttons.Left).gameObject.AddUIEvent(LeftClick);
-        pos = content.localPosition.x;
-        movepos = content.rect.xMax - content.rect.xMax / count;
+        foreach(Transform child in content.transform)
+        {
+            Managers.Resource.Destroy(child.gameObject);
+        }
+        for(int i = 0; i < DataManager.singleTon.userCharacterData.characters.Count; i++)
+        {
+            GameObject go = Managers.Resource.Instantiate("UI/UI_CharacterButton");
+            go.transform.SetParent(content.transform);
+            spritePath = $"Character/{userCharacterData.characters[i]._rarity}/{userCharacterData.characters[i]._rarity}{userCharacterData.characters[i]._index}_square";
+            go.GetComponent<Image>().sprite = Managers.Resource.Load<Sprite>(spritePath);
+            if (!userCharacterData.characters[i]._isHave)
+            {
+                go.GetComponent<Image>().color = Color.gray;
+            }
+
+        }
+        pos = contentRect.localPosition.x;
+        movepos = contentRect.rect.xMax - contentRect.rect.xMax / count;
     }
     IEnumerator scroll()
     {
         while (isScroll)
         {
-            content.localPosition = Vector2.Lerp(content.localPosition, new Vector2(movepos, 0), Time.deltaTime * 5);
-            if(Vector2.Distance(content.localPosition, new Vector2(movepos, 0)) < 0.1f)
+            contentRect.localPosition = Vector2.Lerp(contentRect.localPosition, new Vector2(movepos, 0), Time.deltaTime * 5);
+            if(Vector2.Distance(contentRect.localPosition, new Vector2(movepos, 0)) < 0.1f)
             {
                 isScroll = false;
             }
@@ -48,28 +70,28 @@ public class UI_CharacterPanel : UI_Base
     }
     public void RightClick(PointerEventData data)
     {
-        if(content.rect.xMin + content.rect.xMax/count == movepos)
+        if(contentRect.rect.xMin + contentRect.rect.xMax/count == movepos)
         {
 
         }
         else
         {
             isScroll = true;
-            movepos = pos - content.rect.width / count;
+            movepos = pos - contentRect.rect.width / count;
             pos = movepos;
             StartCoroutine(scroll());
         }
     }
     public void LeftClick(PointerEventData data)
     {
-        if (content.rect.xMax - content.rect.xMax / count == movepos)
+        if (contentRect.rect.xMax - contentRect.rect.xMax / count == movepos)
         {
 
         }
         else
         {
             isScroll = true;
-            movepos = pos + content.rect.width / count;
+            movepos = pos + contentRect.rect.width / count;
             pos = movepos;
             StartCoroutine(scroll());
 

@@ -1,26 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class UI_CharacterButton : UI_Button
+public class UI_CharacterButton : UI_Base
 {
-    Image _image;
-    // Start is called before the first frame update
+    Image _changeImage;
+    Image _currentImage;
     public override void Init()
     {
-        _image = this.GetComponent<Image>();
-        //GetButton((int)Buttons.Character1).gameObject.ADDUIEvent(OnButtonClicked);
+        _changeImage = this.GetComponent<Image>();
+        _currentImage = GameObject.Find("CurrentCharacter").GetComponent<Image>();
+        if(_changeImage.color != Color.gray)
+            this.GetComponent<Button>().gameObject.AddUIEvent(ChangeImage);
     }
     void Start()
     {
         Init();
-        
     }
-
-    // Update is called once per frame
-    void Update()
+    public void ChangeImage(PointerEventData data)
     {
-        
+        _currentImage.sprite = _changeImage.sprite;
+        DataManager.singleTon.saveData._changeSprite = _changeImage.sprite;
     }
 }

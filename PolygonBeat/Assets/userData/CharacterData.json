@@ -1,3 +1,178 @@
 {
-    "individualCharacters": []
+    "characters": [
+        { 
+            "_index" : 1,
+            "_rarity" : "defualt",
+            "_isHave" : true,
+            "_shape" : "square"
+        },
+        {
+            "_index" : 2,
+            "_rarity" : "defualt",
+            "_isHave" : false,
+            "_shape" : "square"
+        },
+        {
+            "_index" : 3,
+            "_rarity" : "defualt",
+            "_isHave" : false,
+            "_shape" : "square"
+        },
+        {
+            "_index" : 4,
+            "_rarity" : "defualt",
+            "_isHave" : false,
+            "_shape" : "square"
+        },
+        {
+            "_index" : 5,
+            "_rarity" : "defualt",
+            "_isHave" : false,
+            "_shape" : "square"
+        },
+        {
+            "_index" : 6,
+            "_rarity" : "defualt",
+            "_isHave" : false,
+            "_shape" : "square"
+        },
+        {
+            "_index" : 7,
+            "_rarity" : "defualt",
+            "_isHave" : false,
+            "_shape" : "square"
+        },
+        {
+            "_index" : 8,
+            "_rarity" : "defualt",
+            "_isHave" : false,
+            "_shape" : "square"
+        },
+        {
+            "_index" : 9,
+            "_rarity" : "defualt",
+            "_isHave" : false,
+            "_shape" : "square"
+        },
+        {
+            "_index" : 1,
+            "_rarity" : "normal",
+            "_isHave" : false,
+            "_shape" : "square"
+        },
+        {
+            "_index" : 2,
+            "_rarity" : "normal",
+            "_isHave" : false,
+            "_shape" : "square"
+        },
+        {
+            "_index" : 3,
+            "_rarity" : "normal",
+            "_isHave" : false,
+            "_shape" : "square"
+        },
+        {
+            "_index" : 4,
+            "_rarity" : "normal",
+            "_isHave" : false,
+            "_shape" : "square"
+        },
+        {
+            "_index" : 5,
+            "_rarity" : "normal",
+            "_isHave" : false,
+            "_shape" : "square"
+        },
+        {
+            "_index" : 6,
+            "_rarity" : "normal",
+            "_isHave" : false,
+            "_shape" : "square"
+        },
+        {
+            "_index" : 7,
+            "_rarity" : "normal",
+            "_isHave" : false,
+            "_shape" : "square"
+        },
+        {
+            "_index" : 8,
+            "_rarity" : "normal",
+            "_isHave" : false,
+            "_shape" : "square"
+        },
+        {
+            "_index" : 9,
+            "_rarity" : "normal",
+            "_isHave" : false,
+            "_shape" : "square"
+        },
+        {
+            "_index" : 10,
+            "_rarity" : "normal",
+            "_isHave" : false,
+            "_shape" : "square"
+        },
+        {
+            "_index" : 11,
+            "_rarity" : "normal",
+            "_isHave" : false,
+            "_shape" : "square"
+        },
+        {
+            "_index" : 12,
+            "_rarity" : "normal",
+            "_isHave" : false,
+            "_shape" : "square"
+        },
+        {
+            "_index" : 1,
+            "_rarity" : "rare",
+            "_isHave" : false,
+            "_shape" : "square"
+        },
+        {
+            "_index" : 2,
+            "_rarity" : "rare",
+            "_isHave" : false,
+            "_shape" : "square"
+        },
+        {
+            "_index" : 3,
+            "_rarity" : "rare",
+            "_isHave" : false,
+            "_shape" : "square"
+        },
+        {
+            "_index" : 4,
+            "_rarity" : "rare",
+            "_isHave" : false,
+            "_shape" : "square"
+        },
+        {
+            "_index" : 5,
+            "_rarity" : "rare",
+            "_isHave" : false,
+            "_shape" : "square"
+        },
+        {
+            "_index" : 6,
+            "_rarity" : "rare",
+            "_isHave" : false,
+            "_shape" : "square"
+        },
+        {
+            "_index" : 1,
+            "_rarity" : "epic",
+            "_isHave" : false,
+            "_shape" : "square"
+        },
+        {
+            "_index" : 2,
+            "_rarity" : "epic",
+            "_isHave" : false,
+            "_shape" : "square"
+        }
+    ]
 }

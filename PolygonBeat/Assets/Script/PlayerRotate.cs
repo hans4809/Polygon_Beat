@@ -73,7 +73,7 @@ public class PlayerRotate : MonoBehaviour
  
         if (DataManager.singleTon.wholeGameData._currentSong == 5 || DataManager.singleTon.wholeGameData._currentSong == 7)
         {
-            childObject.GetComponent<SpriteRenderer>().sprite = DataManager.singleTon.saveData._squareSprite;
+            childObject.GetComponent<SpriteRenderer>().sprite = Managers.Resource.Load<Sprite>($"Character/{DataManager.singleTon.saveData._rarity}/{DataManager.singleTon.saveData._currentCharacter}_square");
             parentObject[0].transform.SetParent(null);
             parentPosition = new Vector3(0.5f, 0.2f, 0);
             childObject.transform.SetParent(parentObject[0].transform);
@@ -85,7 +85,7 @@ public class PlayerRotate : MonoBehaviour
         }
         else if(DataManager.singleTon.wholeGameData._currentSong == 9 || DataManager.singleTon.wholeGameData._currentSong == 10)
         {
-            childObject.GetComponent<SpriteRenderer>().sprite = DataManager.singleTon.saveData._triangleSprite;
+            childObject.GetComponent<SpriteRenderer>().sprite = Managers.Resource.Load<Sprite>($"Character/{DataManager.singleTon.saveData._rarity}/{DataManager.singleTon.saveData._currentCharacter}_triangle");
             parentObject[0].transform.SetParent(null);
             parentPosition = new Vector3(0.5f, 0.23f, 0);
             childObject.transform.SetParent(parentObject[0].transform);

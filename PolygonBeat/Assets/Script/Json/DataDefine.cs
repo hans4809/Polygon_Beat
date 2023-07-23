@@ -32,44 +32,29 @@ public class DataDefine
     [System.Serializable]
     public class UserCharacterData
     {
-        public List<IndividualCharacter> individualCharacters;
+        public List<Characters> characters;
     }
     [System.Serializable]
-    public class IndividualCharacter
+    public class Characters
     {
-        private int _rarity;
-        private int _characterIndex;
-        private bool _isHave;
-        private int _shape;
+        public int _index;
+        public string _rarity;
+        public bool _isHave;
+        public int _shape;
 
-        public int Rarity
+        public Characters(int index, bool isHave, string rarity, int shape)
         {
-            get { return _rarity; }
-            set { _rarity = value; }
-        }
-        public int CharacterIndex
-        {
-            get { return _characterIndex; }
-            set { _characterIndex = value; }
-        }
-
-        public int Shape
-        {
-            get { return _shape; }
-            set { _shape = value; }
-        }
-        public bool IsHave
-        {
-            get { return _isHave; }
-            set { _isHave = value; }
-        }
-
-        public IndividualCharacter(int characterIndex, bool isHave, int rarity, int shape)
-        {
-            this._characterIndex = characterIndex;
+            this._index = index;
             this._isHave = isHave;
             this._rarity = rarity;
             this._shape = shape;
+        }
+        public Characters()
+        {
+            _index = 0;
+            _isHave = true;
+            _rarity = "defualt";
+            _shape = 0;
         }
     }
 
@@ -96,20 +81,23 @@ public class DataDefine
         {
             _tutorialClear = false;
             _coin = 0;
-            _masterVolume = 50f;
-            _bgmVolume = 50f;
-            _sfxVolume = 50f;
+            _masterVolume = 0.5f;
+            _bgmVolume = 0.5f;
+            _sfxVolume = 0.5f;
             _currentSong = 5;
         }
     }
     [System.Serializable]
     public class SaveData
     {
-        public int _savePoint;
-        public float _saveMusicTime;
-        public int _currentCharacter;
-        public Sprite _squareSprite;
-        public Sprite _triangleSprite;
+        public string _currentCharacter;
+        public string _rarity;
+        public Sprite _changeSprite;
+        public SaveData()
+        {
+            _currentCharacter = "default1";
+            _rarity = "default";
+        }
     }
 
 }

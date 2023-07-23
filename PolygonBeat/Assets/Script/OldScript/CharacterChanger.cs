@@ -16,7 +16,7 @@ public class CharacterChanger : MonoBehaviour
     {
         if(changeImage != null||changeSprite != null)
         {
-            DataManager.singleTon.saveData._squareSprite = changeSprite;
+            //DataManager.singleTon.saveData._squareSprite = changeSprite;
         }
         return;
     }

@@ -9,7 +9,6 @@ public class DataManager : MonoBehaviour
     public static DataManager singleTon;
     public WholeGameData wholeGameData;
     public UserCharacterData userCharacterData;
-    public IndividualCharacter individualCharacterData;
     public SaveData saveData;
     public MusicData musicData;
     public Music currentMusic;
@@ -22,8 +21,6 @@ public class DataManager : MonoBehaviour
     {
         jsonManager = new JsonManager();
         saveData = new SaveData();
-        saveData._squareSprite = Resources.Load<Sprite>("Character/default/default01_square");
-        saveData._triangleSprite = Resources.Load<Sprite>("Character/default/default01_triangle");
         if (singleTon == null)
         {
             singleTon = this;
@@ -35,6 +32,8 @@ public class DataManager : MonoBehaviour
         }
         wholeGameData = jsonManager.Load<WholeGameData>();
         musicData = jsonManager.Load<MusicData>();
+        saveData = jsonManager.Load<SaveData>();
+        userCharacterData = jsonManager.Load<UserCharacterData>();
         switch (wholeGameData._currentSong)
         {
             case 5:
