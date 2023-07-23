@@ -27,7 +27,7 @@ public class UI_Gacha : UI_Popup
         Bind<Button>(typeof(Buttons));
         Bind<GameObject>(typeof(GameObjects));
         GetButton((int)Buttons.Back).gameObject.AddUIEvent(BackClick);
-        GetButton((int)Buttons.Back).gameObject.AddUIEvent(CloseClick);
+        GetButton((int)Buttons.Close).gameObject.AddUIEvent(CloseClick);
         anim = Get<GameObject>((int)GameObjects.Gacha);
         GetButton((int)Buttons.GachaButton).gameObject.AddUIEvent(GachaClick);
     }
