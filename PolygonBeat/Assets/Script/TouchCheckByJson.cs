@@ -13,7 +13,7 @@ public class TouchCheckByJson : MonoBehaviour
     float leastTime;
     float maxTime;
     float preMaxTime;
-    [SerializeField] float boundary = 0.1f;
+    [SerializeField] float boundary = 0.15f;
     bool clicked;
     bool cleared;
     bool missed;
@@ -66,7 +66,7 @@ public class TouchCheckByJson : MonoBehaviour
         {
             leastTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime - boundary;
             maxTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime + boundary;
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.K))
             {
                 clickedTime = bgmPlayer.time;
                 if (clickedTime >= leastTime && clickedTime <= maxTime)

@@ -29,7 +29,7 @@ public class UI_CharacterTri : UI_Popup
     public void ChangeClick(PointerEventData data)
     {
         ClosePopUPUI();
-        Managers.UI.ShowPopUpUI<UI_CharacterTri>();
+        Managers.UI.ShowPopUpUI<UI_CharacterSquare>();
     }
     public void BackClick(PointerEventData data)
     {

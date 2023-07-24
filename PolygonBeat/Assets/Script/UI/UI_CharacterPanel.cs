@@ -69,7 +69,6 @@ public class UI_CharacterPanel : UI_Base
                 }
             }
         }
-
         pos = contentRect.localPosition.x;
         movepos = contentRect.rect.xMax - contentRect.rect.xMax / count;
     }

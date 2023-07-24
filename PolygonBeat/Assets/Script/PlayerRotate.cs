@@ -106,8 +106,7 @@ public class PlayerRotate : MonoBehaviour
                 setObject();
             }
             else
-            {
-
+            { 
                 childObject.transform.SetParent(null);
                 childObject.transform.position = new Vector3(0, 0.7f, 0);
                 for (int j = 0; j < 4; j++)
@@ -148,11 +147,11 @@ public class PlayerRotate : MonoBehaviour
             {
                 childObject.transform.SetParent(null);
                 childObject.transform.position = new Vector3(0, 0.68f, 0);
-                for (int j = 0; j < 4; j++)
+                for (int j = 0; j < 3; j++)
                 {
                     parentObject[j].transform.localEulerAngles = Vector3.zero;
                 }
-                for (int i = 0; i < 4; i++)
+                for (int i = 0; i < 3; i++)
                 {
                     parentObject[i].transform.SetParent(childObject.transform);
                     switch (i)

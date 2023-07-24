@@ -34,7 +34,6 @@ public class UI_GameOver : UI_Popup
     }
     public void QuitClick(PointerEventData data)
     {
-        ClosePopUPUI();
         Managers.Scene.LoadScene(Define.Scene.StageSelect);
     }
     public void ReplayClick(PointerEventData data)

@@ -47,9 +47,9 @@ public class GameScene : BaseScene
             else
             {
                 blockResourceString.Add("Block/bg2/bg2_defualt01");
-                blockResourceString.Add("Block/bg2/bg2_defualt01");
-                blockResourceString.Add("Block/bg2/bg2_defualt01");
-                blockResourceString.Add("Block/bg2/bg2_defualt01");
+                blockResourceString.Add("Block/bg2/bg2_defualt02");
+                blockResourceString.Add("Block/bg2/bg2_defualt03");
+                blockResourceString.Add("Block/bg2/bg2_defualt04");
             }
             coinResourceString = "Icon/coin";
             Managers.Map.CreateGround(blockResourceString, grounds, coinResourceString, root.transform);
