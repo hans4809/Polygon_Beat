@@ -41,18 +41,35 @@ public class UI_CharacterPanel : UI_Base
         {
             Managers.Resource.Destroy(child.gameObject);
         }
-        for(int i = 0; i < DataManager.singleTon.userCharacterData.characters.Count; i++)
+        if (this.transform.parent.GetComponent<UI_CharacterSquare>())
         {
-            GameObject go = Managers.Resource.Instantiate("UI/UI_CharacterButton");
-            go.transform.SetParent(content.transform);
-            spritePath = $"Character/{userCharacterData.characters[i]._rarity}/{userCharacterData.characters[i]._rarity}{userCharacterData.characters[i]._index}_square";
-            go.GetComponent<Image>().sprite = Managers.Resource.Load<Sprite>(spritePath);
-            if (!userCharacterData.characters[i]._isHave)
+            for (int i = 0; i < DataManager.singleTon.userCharacterData.characters.Count; i++)
             {
-                go.GetComponent<Image>().color = Color.gray;
+                GameObject go = Managers.Resource.Instantiate("UI/UI_CharacterButton");
+                go.transform.SetParent(content.transform);
+                spritePath = $"Character/{userCharacterData.characters[i]._rarity}/{userCharacterData.characters[i]._rarity}{userCharacterData.characters[i]._index}_square";
+                go.GetComponent<Image>().sprite = Managers.Resource.Load<Sprite>(spritePath);
+                if (!userCharacterData.characters[i]._isHave)
+                {
+                    go.GetComponent<Image>().color = Color.gray;
+                }
             }
-
         }
+        else
+        {
+            for (int i = 0; i < DataManager.singleTon.userCharacterData.characters.Count; i++)
+            {
+                GameObject go = Managers.Resource.Instantiate("UI/UI_CharacterButton");
+                go.transform.SetParent(content.transform);
+                spritePath = $"Character/{userCharacterData.characters[i]._rarity}/{userCharacterData.characters[i]._rarity}{userCharacterData.characters[i]._index}_triangle";
+                go.GetComponent<Image>().sprite = Managers.Resource.Load<Sprite>(spritePath);
+                if (!userCharacterData.characters[i]._isHave)
+                {
+                    go.GetComponent<Image>().color = Color.gray;
+                }
+            }
+        }
+
         pos = contentRect.localPosition.x;
         movepos = contentRect.rect.xMax - contentRect.rect.xMax / count;
     }

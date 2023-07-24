@@ -9,7 +9,6 @@ public class UI_CharacterTri : UI_Popup
     enum Buttons
     {
         Change,
-        CurrentCharacter,
         Back,
         Close,
         Gacha
