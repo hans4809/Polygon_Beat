@@ -9,10 +9,11 @@ public class TouchCheckByJson : MonoBehaviour
 {
     int beatIndex = 0;
     int position = 1;
-    float clickedtime;
+    float clickedTime;
     float leastTime;
     float maxTime;
-    [SerializeField] float boundary;
+    float preMaxTime;
+    [SerializeField] float boundary = 0.1f;
     bool clicked;
     bool cleared;
     bool missed;
@@ -55,7 +56,6 @@ public class TouchCheckByJson : MonoBehaviour
         cleared = false;
         yield return new WaitForSeconds(boundary * 2);
     }
-
     void OnKeyboard()
     {
         if (bgmPlayer.time == 0)
@@ -64,49 +64,73 @@ public class TouchCheckByJson : MonoBehaviour
         }
         if ((!clicked) && (!cleared) && (!missed))
         {
-            clickedtime = bgmPlayer.time;
             leastTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime - boundary;
             maxTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime + boundary;
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                if (clickedtime >= leastTime && clickedtime <= maxTime)
+                clickedTime = bgmPlayer.time;
+                if (clickedTime >= leastTime && clickedTime <= maxTime)
                 {
                     clicked = true;
                     cleared = true;
                     position = (int)(playerRotate.GetPlayer().transform.position.x + 0.5);
-                    //effectManager.HitEffect(position);
-                    //effectManager.Perfect(position);
-                    //musicPlayerManager.PlaySFX("touch");
                     ui_Effect.HitEffect(position);
                     ui_Effect.Perfect(position);
                     Managers.Sound.Play("Sounds/SFX/Touch");
-                    StartCoroutine(touchDelay());
+                    //StartCoroutine(touchDelay());
                 }
                 else
                 {
                     clicked = true;
                     missed = true;
                     position = (int)(playerRotate.GetPlayer().transform.position.x + 0.5);
-                    //effectManager.Miss(position);
                     ui_Effect.Miss(position);
                     Managers.Sound.Play("Sounds/SFX/Touch");
-                    //musicPlayerManager.PlaySFX("touch");
+                    ui_GameScene.LifeReduce();
                 }
+                preMaxTime = maxTime;
+                beatIndex++;
+                leastTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime - boundary;
+                maxTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime + boundary;
             }
+        }
+        if (bgmPlayer.time <= maxTime && clicked)
+        {
+            clicked = false;
+            missed = false;
+            cleared = false;
         }
         if (bgmPlayer.time >= maxTime && (!clicked))
         {
             missed = true;
             position = (int)(playerRotate.GetPlayer().transform.position.x + 0.5);
-            //effectManager.Miss(position);
             ui_Effect.Miss(position);
-
-        }
-        if (missed)
-        {
             ui_GameScene.LifeReduce();
-            missed = false;
-            StartCoroutine(touchDelay());
+            preMaxTime = maxTime;
+            beatIndex++;
+            leastTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime - boundary;
+            maxTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime + boundary;
+            if (bgmPlayer.time <= maxTime)
+            {
+                clicked = false;
+                missed = false;
+                cleared = false;
+            }
         }
+        //if (missed)
+        //{
+          //  ui_GameScene.LifeReduce();
+            //missed = false;
+            //preMaxTime = maxTime;
+            //beatIndex++;
+            //leastTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime - boundary;
+            //maxTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime + boundary;
+            //if (bgmPlayer.time <= maxTime)
+            //{
+                //clicked = false;
+                //missed = false;
+                //cleared = false;
+            //}
+        //}
     }
 }
