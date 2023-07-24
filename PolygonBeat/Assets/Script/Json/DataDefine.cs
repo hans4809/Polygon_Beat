@@ -41,13 +41,15 @@ public class DataDefine
         public string _rarity;
         public bool _isHave;
         public int _shape;
+        public int _weight;
 
-        public Characters(int index, bool isHave, string rarity, int shape)
+        public Characters(int index, bool isHave, string rarity, int shape, int weight)
         {
             this._index = index;
             this._isHave = isHave;
             this._rarity = rarity;
             this._shape = shape;
+            this._weight = weight;
         }
         public Characters()
         {
@@ -55,6 +57,7 @@ public class DataDefine
             _isHave = true;
             _rarity = "defualt";
             _shape = 0;
+            _weight = 0;
         }
     }
 

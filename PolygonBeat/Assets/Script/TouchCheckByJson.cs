@@ -17,10 +17,7 @@ public class TouchCheckByJson : MonoBehaviour
     bool clicked;
     bool cleared;
     bool missed;
-    //[SerializeField] LifeManager lifeManager;
     [SerializeField] AudioSource bgmPlayer;
-    //[SerializeField] MusicPlayerManager musicPlayerManager;
-    //[SerializeField] EffectManager effectManager;
     [SerializeField] PlayerRotate playerRotate;
     [SerializeField] UI_GameScene ui_GameScene;
     [SerializeField] UI_Effect ui_Effect;
@@ -76,7 +73,6 @@ public class TouchCheckByJson : MonoBehaviour
                     position = (int)(playerRotate.GetPlayer().transform.position.x + 0.5);
                     ui_Effect.HitEffect(position);
                     ui_Effect.Perfect(position);
-                    Managers.Sound.Play("Sounds/SFX/Touch");
                     //StartCoroutine(touchDelay());
                 }
                 else

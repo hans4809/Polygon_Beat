@@ -33,7 +33,6 @@ public class SoundManager
     }
     public void Play(AudioClip audioClip, Define.Sound type = Define.Sound.SFX, float pitch = 1.0f)
     {
-        //audioMixer = Managers.Resource.Load<AudioMixer>("AudioMixer/SoundSetting");
         if (audioClip == null)
         {
             return;
@@ -47,14 +46,12 @@ public class SoundManager
             }
             audioSource.pitch = pitch;
             audioSource.clip = audioClip;
-            //audioSource.outputAudioMixerGroup = audioMixer.FindMatchingGroups("BGM")[0];
             audioSource.Play();
         }
         else
         {
             AudioSource audioSource = _audioSources[(int)Define.Sound.SFX];
             audioSource.pitch = pitch;
-            //audioSource.outputAudioMixerGroup = audioMixer.FindMatchingGroups("SFX")[0];
             audioSource.PlayOneShot(audioClip);
         }
     }

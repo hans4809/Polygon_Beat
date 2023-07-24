@@ -21,7 +21,13 @@ public class UI_CharacterButton : UI_Base
     }
     public void ChangeImage(PointerEventData data)
     {
+        Managers.Sound.Play("Sounds/SFX/Select");
         _currentImage.sprite = _changeImage.sprite;
         DataManager.singleTon.saveData._changeSprite = _changeImage.sprite;
+    }
+    private void Update()
+    {
+        if (_changeImage.color != Color.gray)
+            this.GetComponent<Button>().gameObject.AddUIEvent(ChangeImage);
     }
 }

@@ -10,6 +10,7 @@ public class UI_CharacterPanel : UI_Base
     [SerializeField] GameObject content;
     [SerializeField] RectTransform contentRect;
     [SerializeField] UserCharacterData userCharacterData;
+    [SerializeField] List<GameObject> character;
     [SerializeField] string spritePath;
     [SerializeField] int count = 29;
     [SerializeField] float pos;
@@ -45,13 +46,13 @@ public class UI_CharacterPanel : UI_Base
         {
             for (int i = 0; i < DataManager.singleTon.userCharacterData.characters.Count; i++)
             {
-                GameObject go = Managers.Resource.Instantiate("UI/UI_CharacterButton");
-                go.transform.SetParent(content.transform);
+                character.Add(Managers.Resource.Instantiate("UI/UI_CharacterButton"));
+                character[i].transform.SetParent(content.transform);
                 spritePath = $"Character/{userCharacterData.characters[i]._rarity}/{userCharacterData.characters[i]._rarity}{userCharacterData.characters[i]._index}_square";
-                go.GetComponent<Image>().sprite = Managers.Resource.Load<Sprite>(spritePath);
+                character[i].GetComponent<Image>().sprite = Managers.Resource.Load<Sprite>(spritePath);
                 if (!userCharacterData.characters[i]._isHave)
                 {
-                    go.GetComponent<Image>().color = Color.gray;
+                    character[i].GetComponent<Image>().color = Color.gray;
                 }
             }
         }
@@ -59,13 +60,13 @@ public class UI_CharacterPanel : UI_Base
         {
             for (int i = 0; i < DataManager.singleTon.userCharacterData.characters.Count; i++)
             {
-                GameObject go = Managers.Resource.Instantiate("UI/UI_CharacterButton");
-                go.transform.SetParent(content.transform);
+                character.Add(Managers.Resource.Instantiate("UI/UI_CharacterButton"));
+                character[i].transform.SetParent(content.transform);
                 spritePath = $"Character/{userCharacterData.characters[i]._rarity}/{userCharacterData.characters[i]._rarity}{userCharacterData.characters[i]._index}_triangle";
-                go.GetComponent<Image>().sprite = Managers.Resource.Load<Sprite>(spritePath);
+                character[i].GetComponent<Image>().sprite = Managers.Resource.Load<Sprite>(spritePath);
                 if (!userCharacterData.characters[i]._isHave)
                 {
-                    go.GetComponent<Image>().color = Color.gray;
+                    character[i].GetComponent<Image>().color = Color.gray;
                 }
             }
         }
@@ -116,6 +117,26 @@ public class UI_CharacterPanel : UI_Base
     // Update is called once per frame
     void Update()
     {
-        
+        if (this.transform.parent.GetComponent<UI_CharacterSquare>())
+        {
+            for (int i = 0; i < DataManager.singleTon.userCharacterData.characters.Count; i++)
+            {
+                if (userCharacterData.characters[i]._isHave)
+                {
+                    character[i].GetComponent<Image>().color = new Color(255, 255, 255, 255);
+                }
+                
+            }
+        }
+        else
+        {
+            for (int i = 0; i < DataManager.singleTon.userCharacterData.characters.Count; i++)
+            {
+                if (userCharacterData.characters[i]._isHave)
+                {
+                    character[i].GetComponent<Image>().color = new Color(255, 255, 255, 255);
+                }
+            }
+        }
     }
 }

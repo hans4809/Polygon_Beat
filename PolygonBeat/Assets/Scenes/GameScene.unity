@@ -387,7 +387,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 383945957}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7158974d378b1544cbfe3f4e0306f30b, type: 3}
+  m_Script: {fileID: 11500000, guid: 23616f2eb0d67b24aba0f2c8deb7ce7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &392399779
@@ -559,7 +559,7 @@ GameObject:
   - component: {fileID: 558690952}
   - component: {fileID: 558690961}
   - component: {fileID: 558690956}
-  - component: {fileID: 558690960}
+  - component: {fileID: 558690962}
   m_Layer: 0
   m_Name: PlayerSquare
   m_TagString: Player
@@ -655,18 +655,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &558690960
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 558690951}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7158974d378b1544cbfe3f4e0306f30b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &558690961
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -693,6 +681,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.01, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &558690962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 558690951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23616f2eb0d67b24aba0f2c8deb7ce7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &647878470
 GameObject:
   m_ObjectHideFlags: 0
