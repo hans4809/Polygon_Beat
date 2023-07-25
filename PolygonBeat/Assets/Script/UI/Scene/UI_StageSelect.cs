@@ -9,20 +9,22 @@ public class UI_StageSelect : UI_Scene
     public enum Buttons
     {
         Back,
-        Stage1,
-        Stage2,
-        Stage3,
-        Stage4
+        BackGround1,
+        BackGround2,
+        BackGround3,
+        BackGround4,
+        Play
     }
     public override void Init()
     {
         base.Init();
         Bind<Button>(typeof(Buttons));
         GetButton((int)Buttons.Back).gameObject.AddUIEvent(BackClicked);
-        GetButton((int)Buttons.Stage1).gameObject.AddUIEvent(FirstClicked);
-        GetButton((int)Buttons.Stage2).gameObject.AddUIEvent(SecondClicked);
-        GetButton((int)Buttons.Stage3).gameObject.AddUIEvent(ThirdClicked);
-        GetButton((int)Buttons.Stage4).gameObject.AddUIEvent(ForthClicked);
+        GetButton((int)Buttons.BackGround1).gameObject.AddUIEvent(FirstClicked);
+        GetButton((int)Buttons.BackGround2).gameObject.AddUIEvent(SecondClicked);
+        GetButton((int)Buttons.BackGround3).gameObject.AddUIEvent(ThirdClicked);
+        GetButton((int)Buttons.BackGround4).gameObject.AddUIEvent(ForthClicked);
+        GetButton((int)Buttons.Play).gameObject.AddUIEvent(PlayClicked);
 
     }
     void Start()
@@ -37,22 +39,25 @@ public class UI_StageSelect : UI_Scene
     public void FirstClicked(PointerEventData data)
     {
         DataManager.singleTon.wholeGameData._currentSong = 5;
-        Managers.Scene.LoadScene(Define.Scene.GameScene);
+        Managers.Sound.Play($"Sounds/BGM/{DataManager.singleTon.wholeGameData._currentSong}", Define.Sound.BGM);
     }
-
     public void SecondClicked(PointerEventData data)
     {
         DataManager.singleTon.wholeGameData._currentSong = 7;
-        Managers.Scene.LoadScene(Define.Scene.GameScene);
+        Managers.Sound.Play($"Sounds/BGM/{DataManager.singleTon.wholeGameData._currentSong}", Define.Sound.BGM);
     }
     public void ThirdClicked(PointerEventData data)
     {
         DataManager.singleTon.wholeGameData._currentSong = 9;
-        Managers.Scene.LoadScene(Define.Scene.GameScene);
+        Managers.Sound.Play($"Sounds/BGM/{DataManager.singleTon.wholeGameData._currentSong}", Define.Sound.BGM);
     }
     public void ForthClicked(PointerEventData data)
     {
         DataManager.singleTon.wholeGameData._currentSong = 10;
+        Managers.Sound.Play($"Sounds/BGM/{DataManager.singleTon.wholeGameData._currentSong}", Define.Sound.BGM);
+    }
+    public void PlayClicked(PointerEventData data)
+    {
         Managers.Scene.LoadScene(Define.Scene.GameScene);
     }
 }
