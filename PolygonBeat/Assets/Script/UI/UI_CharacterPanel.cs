@@ -121,7 +121,7 @@ public class UI_CharacterPanel : UI_Base
         {
             for (int i = 0; i < DataManager.singleTon.userCharacterData.characters.Count; i++)
             {
-                if (userCharacterData.characters[i]._isHave)
+                if (userCharacterData.characters[i]._isHave && character[i].GetComponent<Image>().color == Color.gray)
                 {
                     character[i].GetComponent<Image>().color = new Color(255, 255, 255, 255);
                 }
@@ -132,7 +132,7 @@ public class UI_CharacterPanel : UI_Base
         {
             for (int i = 0; i < DataManager.singleTon.userCharacterData.characters.Count; i++)
             {
-                if (userCharacterData.characters[i]._isHave)
+                if (userCharacterData.characters[i]._isHave && character[i].GetComponent<Image>().color == Color.gray)
                 {
                     character[i].GetComponent<Image>().color = new Color(255, 255, 255, 255);
                 }

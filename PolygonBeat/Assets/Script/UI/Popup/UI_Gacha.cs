@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class UI_Gacha : UI_Popup
 {
-    [SerializeField] GameObject anim;
+    [SerializeField] Animator anim;
     [SerializeField] int totalWeight;
     [SerializeField] int normalWeight;
     [SerializeField] int rareWeight;
@@ -38,7 +38,7 @@ public class UI_Gacha : UI_Popup
         Bind<GameObject>(typeof(GameObjects));
         GetButton((int)Buttons.Back).gameObject.AddUIEvent(BackClick);
         GetButton((int)Buttons.Close).gameObject.AddUIEvent(CloseClick);
-        anim = Get<GameObject>((int)GameObjects.Gacha);
+        anim = Get<GameObject>((int)GameObjects.Gacha).GetComponent<Animator>();
         GetButton((int)Buttons.GachaButton).gameObject.AddUIEvent(GachaClick);
         for(int i = 0; i < DataManager.singleTon.userCharacterData.characters.Count; i++)
         {
@@ -79,18 +79,26 @@ public class UI_Gacha : UI_Popup
     }
     public void GachaClick(PointerEventData data)
     {
-        float time = 0f;
         if (DataManager.singleTon.wholeGameData._coin >= 100)
         {
             DataManager.singleTon.wholeGameData._coin -= 100;
+            if(totalWeight == 0)
+            {
+                Managers.UI.ShowPopUpUI<UI_AllGet>();
+                return;
+            }
             DataManager.singleTon.jsonManager.Save<DataDefine.WholeGameData>(DataManager.singleTon.wholeGameData);
             Managers.Sound.Play("Sounds/SFX/Gacha");
-            anim.GetComponent<Animator>().SetTrigger("Click");
+            anim.SetTrigger("Click");
+            while (anim.playbackTime < anim.recorderStopTime)
+            {
+            }
             weightRandom = Random.Range(0, totalWeight);
             if(weightRandom < normalWeight)
             {
                 int index = (int)Random.Range(0, normalList.Count);
                 selectCharacter = normalList[index];
+                normalWeight -= normalList[index]._weight;
                 normalList.RemoveAt(index);
                 selectCharacter._isHave = true;
                 DataManager.singleTon.jsonManager.Save<DataDefine.UserCharacterData>(DataManager.singleTon.userCharacterData);
@@ -100,6 +108,7 @@ public class UI_Gacha : UI_Popup
             {
                 int index = (int)Random.Range(0, normalList.Count);
                 selectCharacter = rareList[index];
+                rareWeight -= rareList[index]._weight;
                 rareList.RemoveAt(index);
                 selectCharacter._isHave = true;
                 DataManager.singleTon.jsonManager.Save<DataDefine.UserCharacterData>(DataManager.singleTon.userCharacterData);
@@ -109,12 +118,16 @@ public class UI_Gacha : UI_Popup
             {
                 int index = (int)Random.Range(0, normalList.Count);
                 selectCharacter = epicList[index];
+                epicWeight -= epicList[index]._weight;
                 epicList.RemoveAt(index);
                 selectCharacter._isHave = true;
                 DataManager.singleTon.jsonManager.Save<DataDefine.UserCharacterData>(DataManager.singleTon.userCharacterData);
                 Managers.UI.ShowPopUpUI<UI_GachaGet>();
             }
         }
-
+    }
+    private void Update()
+    {
+        totalWeight = normalWeight + rareWeight + epicWeight;
     }
 }

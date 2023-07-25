@@ -11,7 +11,8 @@ public class UI_StageSelect : UI_Scene
         Back,
         Stage1,
         Stage2,
-        Stage3
+        Stage3,
+        Stage4
     }
     public override void Init()
     {
@@ -21,6 +22,7 @@ public class UI_StageSelect : UI_Scene
         GetButton((int)Buttons.Stage1).gameObject.AddUIEvent(FirstClicked);
         GetButton((int)Buttons.Stage2).gameObject.AddUIEvent(SecondClicked);
         GetButton((int)Buttons.Stage3).gameObject.AddUIEvent(ThirdClicked);
+        GetButton((int)Buttons.Stage4).gameObject.AddUIEvent(ForthClicked);
 
     }
     void Start()

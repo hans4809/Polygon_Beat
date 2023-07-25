@@ -244,13 +244,11 @@ MonoBehaviour:
     _bgmVolume: 0
     _sfxVolume: 0
   userCharacterData:
-    individualCharacters: []
+    characters: []
   saveData:
-    _savePoint: 0
-    _saveMusicTime: 0
     _currentCharacter: 0
-    _squareSprite: {fileID: 0}
-    _triangleSprite: {fileID: 0}
+    _rarity: default
+    _changeSprite: {fileID: 0}
   musicData:
     music: []
   currentMusic:

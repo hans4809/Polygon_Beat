@@ -73,7 +73,7 @@
         {
             "_index": 2,
             "_rarity": "normal",
-            "_isHave": false,
+            "_isHave": true,
             "_shape": 0,
             "_weight": 8
         },
@@ -87,21 +87,21 @@
         {
             "_index": 4,
             "_rarity": "normal",
-            "_isHave": false,
+            "_isHave": true,
             "_shape": 0,
             "_weight": 8
         },
         {
             "_index": 5,
             "_rarity": "normal",
-            "_isHave": false,
+            "_isHave": true,
             "_shape": 0,
             "_weight": 8
         },
         {
             "_index": 6,
             "_rarity": "normal",
-            "_isHave": false,
+            "_isHave": true,
             "_shape": 0,
             "_weight": 8
         },
@@ -115,21 +115,21 @@
         {
             "_index": 8,
             "_rarity": "normal",
-            "_isHave": false,
+            "_isHave": true,
             "_shape": 0,
             "_weight": 8
         },
         {
             "_index": 9,
             "_rarity": "normal",
-            "_isHave": false,
+            "_isHave": true,
             "_shape": 0,
             "_weight": 8
         },
         {
             "_index": 10,
             "_rarity": "normal",
-            "_isHave": false,
+            "_isHave": true,
             "_shape": 0,
             "_weight": 8
         },
@@ -143,21 +143,21 @@
         {
             "_index": 12,
             "_rarity": "normal",
-            "_isHave": false,
+            "_isHave": true,
             "_shape": 0,
             "_weight": 8
         },
         {
             "_index": 1,
             "_rarity": "rare",
-            "_isHave": false,
+            "_isHave": true,
             "_shape": 0,
             "_weight": 2
         },
         {
             "_index": 2,
             "_rarity": "rare",
-            "_isHave": false,
+            "_isHave": true,
             "_shape": 0,
             "_weight": 2
         },
@@ -171,35 +171,35 @@
         {
             "_index": 4,
             "_rarity": "rare",
-            "_isHave": false,
+            "_isHave": true,
             "_shape": 0,
             "_weight": 2
         },
         {
             "_index": 5,
             "_rarity": "rare",
-            "_isHave": false,
+            "_isHave": true,
             "_shape": 0,
             "_weight": 2
         },
         {
             "_index": 6,
             "_rarity": "rare",
-            "_isHave": false,
+            "_isHave": true,
             "_shape": 0,
             "_weight": 2
         },
         {
             "_index": 1,
             "_rarity": "epic",
-            "_isHave": false,
+            "_isHave": true,
             "_shape": 0,
             "_weight": 1
         },
         {
             "_index": 2,
             "_rarity": "epic",
-            "_isHave": false,
+            "_isHave": true,
             "_shape": 0,
             "_weight": 1
         }

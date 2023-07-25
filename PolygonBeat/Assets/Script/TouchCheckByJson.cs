@@ -73,7 +73,7 @@ public class TouchCheckByJson : MonoBehaviour
                     position = (int)(playerRotate.GetPlayer().transform.position.x + 0.5);
                     ui_Effect.HitEffect(position);
                     ui_Effect.Perfect(position);
-                    //StartCoroutine(touchDelay());
+                    Managers.Sound.Play("Sounds/SFX/Touch");
                 }
                 else
                 {
