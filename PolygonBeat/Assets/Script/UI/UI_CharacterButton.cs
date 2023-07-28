@@ -23,7 +23,27 @@ public class UI_CharacterButton : UI_Base
     {
         Managers.Sound.Play("Sounds/SFX/Select");
         _currentImage.sprite = _changeImage.sprite;
-        DataManager.singleTon.saveData._changeSprite = _changeImage.sprite;
+        Debug.Log(_changeImage.sprite.name);
+        if (_changeImage.sprite.name.Contains("default"))
+        {
+            DataManager.singleTon.saveData._rarity = "default";
+            DataManager.singleTon.saveData._currentCharacter = _changeImage.sprite.name.Substring(0, _changeImage.sprite.name.IndexOf("_"));
+        }
+        else if(_changeImage.sprite.name.Contains("normal"))
+        {
+            DataManager.singleTon.saveData._rarity = "normal";
+            DataManager.singleTon.saveData._currentCharacter = _changeImage.sprite.name.Substring(0, _changeImage.sprite.name.IndexOf("_"));
+        }
+        else if (_changeImage.sprite.name.Contains("rare"))
+        {
+            DataManager.singleTon.saveData._rarity = "rare";
+            DataManager.singleTon.saveData._currentCharacter = _changeImage.sprite.name.Substring(0, _changeImage.sprite.name.IndexOf("_"));
+        }
+        else if (_changeImage.sprite.name.Contains("epic"))
+        {
+            DataManager.singleTon.saveData._rarity = "epic";
+            DataManager.singleTon.saveData._currentCharacter = _changeImage.sprite.name.Substring(0, _changeImage.sprite.name.IndexOf("_"));
+        }
     }
     private void Update()
     {

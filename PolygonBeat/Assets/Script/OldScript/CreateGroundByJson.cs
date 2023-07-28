@@ -1,9 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor.Experimental.GraphView;
-using UnityEditor.SearchService;
 using UnityEngine;
 using static Define;
 
@@ -14,7 +11,7 @@ public class CreateGroundByJson : MonoBehaviour
     public List<string> blockResourceString;
     public string coinResourceString;
     public int[] coinIndex;
-    public void InstantiateGround(int index, Vector3 position) // °ÔÀÓ¿ÀºêÁ§Æ® º¹Á¦ÇÏ´Â ÇÔ¼ö
+    public void InstantiateGround(int index, Vector3 position) // ï¿½ï¿½ï¿½Ó¿ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Ô¼ï¿½
     {
         GameObject myGameObject;
         if (index >= DataManager.singleTon.currentMusic.data.Count)

@@ -28,43 +28,43 @@ public class PlayerRotate : MonoBehaviour
     {
         return childObject;
     }
-    void SwapParent(GameObject preParentObject, GameObject nextParentObject) // °á·Ð ºÎ¸ð¸¦ ¹Ù²Þ
+    void SwapParent(GameObject preParentObject, GameObject nextParentObject) // ï¿½ï¿½ï¿½ ï¿½Î¸ï¿½ ï¿½Ù²ï¿½
     {
         if(DataManager.singleTon.wholeGameData._currentSong == 5 || DataManager.singleTon.wholeGameData._currentSong == 7)
         {
             parentPosition.x += 1;
-            nextParentObject.transform.SetParent(null); //´ÙÀ½¿¡ ºÎ¸ð°¡ µÉ ¿ÀºêÁ§Æ® Á¾¼Ó¼º ¾ø°Ô ¸¸µë
-            nextParentObject.transform.localEulerAngles = Vector3.zero;//ºÎ¸ð·Î ¸¸µé±â Àü¿¡ rotation ÃÊ±âÈ­
-            childObject.transform.SetParent(nextParentObject.transform); //À§¿¡¼­ Á¾¼Ó¼º ¾ø¿£ ¿ÀºêÁ§Æ® ºÎ¸ð·Î ¸¸µë
-            preParentObject.transform.SetParent(childObject.transform); //±× Àü¿¡ ºÎ¸ð ¿´´ø ¿ÀºêÁ§Æ® ÀÚ½ÄÀ¸·Î ¸¸µë
-            childObject.transform.parent.SetLocalPositionAndRotation(new Vector3(parentPosition.x, parentPosition.y, 0), Quaternion.Euler(new Vector3(0, 0, 0))); //parent ¿ÀÂ÷ ¼öÁ¤
-            childObject.transform.SetLocalPositionAndRotation(new Vector3(-5, 5, 0), Quaternion.Euler(new Vector3(0, 0, 0))); //child ¿ÀÂ÷ ¼öÁ¤
+            nextParentObject.transform.SetParent(null); //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Î¸ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½Ó¼ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+            nextParentObject.transform.localEulerAngles = Vector3.zero;//ï¿½Î¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ rotation ï¿½Ê±ï¿½È­
+            childObject.transform.SetParent(nextParentObject.transform); //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ó¼ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½Î¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+            preParentObject.transform.SetParent(childObject.transform); //ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Î¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½Ú½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+            childObject.transform.parent.SetLocalPositionAndRotation(new Vector3(parentPosition.x, parentPosition.y, 0), Quaternion.Euler(new Vector3(0, 0, 0))); //parent ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+            childObject.transform.SetLocalPositionAndRotation(new Vector3(-5, 5, 0), Quaternion.Euler(new Vector3(0, 0, 0))); //child ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         }
         else if(DataManager.singleTon.wholeGameData._currentSong == 9 || DataManager.singleTon.wholeGameData._currentSong == 10)
         {
             parentPosition.x += 1;
-            nextParentObject.transform.SetParent(null); //´ÙÀ½¿¡ ºÎ¸ð°¡ µÉ ¿ÀºêÁ§Æ® Á¾¼Ó¼º ¾ø°Ô ¸¸µë
-            nextParentObject.transform.localEulerAngles = Vector3.zero;//ºÎ¸ð·Î ¸¸µé±â Àü¿¡ rotation ÃÊ±âÈ­
-            childObject.transform.SetParent(nextParentObject.transform); //À§¿¡¼­ Á¾¼Ó¼º ¾ø¿£ ¿ÀºêÁ§Æ® ºÎ¸ð·Î ¸¸µë
-            preParentObject.transform.SetParent(childObject.transform); //±× Àü¿¡ ºÎ¸ð ¿´´ø ¿ÀºêÁ§Æ® ÀÚ½ÄÀ¸·Î ¸¸µë
-            childObject.transform.parent.SetLocalPositionAndRotation(new Vector3(parentPosition.x, parentPosition.y, 0), Quaternion.Euler(new Vector3(0, 0, 0))); //parent ¿ÀÂ÷ ¼öÁ¤
-            childObject.transform.SetLocalPositionAndRotation(new Vector3(-5, 4.5f, 0), Quaternion.Euler(new Vector3(0, 0, 0))); //child ¿ÀÂ÷ ¼öÁ¤
+            nextParentObject.transform.SetParent(null); //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Î¸ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½Ó¼ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+            nextParentObject.transform.localEulerAngles = Vector3.zero;//ï¿½Î¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ rotation ï¿½Ê±ï¿½È­
+            childObject.transform.SetParent(nextParentObject.transform); //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ó¼ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½Î¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+            preParentObject.transform.SetParent(childObject.transform); //ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Î¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½Ú½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+            childObject.transform.parent.SetLocalPositionAndRotation(new Vector3(parentPosition.x, parentPosition.y, 0), Quaternion.Euler(new Vector3(0, 0, 0))); //parent ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+            childObject.transform.SetLocalPositionAndRotation(new Vector3(-5, 4.5f, 0), Quaternion.Euler(new Vector3(0, 0, 0))); //child ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         }
     }
-    void SetRotation() //°á·Ð ¿ÀÂ÷ ¼öÁ¤À» À§ÇÑ ÀÛ¾÷
+    void SetRotation() //ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Û¾ï¿½
     {
         if (DataManager.singleTon.wholeGameData._currentSong == 5 || DataManager.singleTon.wholeGameData._currentSong == 7)
         {
             for (int i = 0; i < 3; i++)
             {
-                childObject.transform.GetChild(i).localEulerAngles = Vector3.zero; //90µµ µ¹°í ¿ÀÂ÷ ¼öÁ¤À» À§ÇØ ÀüºÎ rotation ÃÊ±âÈ­
+                childObject.transform.GetChild(i).localEulerAngles = Vector3.zero; //90ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ rotation ï¿½Ê±ï¿½È­
             }
         }
         else if (DataManager.singleTon.wholeGameData._currentSong == 9 || DataManager.singleTon.wholeGameData._currentSong == 10)
         {
             for (int i = 0; i < 2; i++)
             {
-                childObject.transform.GetChild(i).localEulerAngles = Vector3.zero; //90µµ µ¹°í ¿ÀÂ÷ ¼öÁ¤À» À§ÇØ ÀüºÎ rotation ÃÊ±âÈ­
+                childObject.transform.GetChild(i).localEulerAngles = Vector3.zero; //90ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ rotation ï¿½Ê±ï¿½È­
             }
         }
     }
@@ -173,7 +173,7 @@ public class PlayerRotate : MonoBehaviour
             }
         }
     }
-    private float GetRotateSpeed(int index) // ·ÎÅ×ÀÌ¼Ç ¼Óµµ °è»ê
+    private float GetRotateSpeed(int index) // ï¿½ï¿½ï¿½ï¿½ï¿½Ì¼ï¿½ ï¿½Óµï¿½ ï¿½ï¿½ï¿½
     {
         return ((DataManager.singleTon.currentMusic.data[index].bpm) / 60);
     }
@@ -183,7 +183,7 @@ public class PlayerRotate : MonoBehaviour
         time = 0;
         beatIndex = 0;
     }
-    void Start() // Ã³À½ »óÅÂ¿¡ ÇÊ¿äÇÑ °Íµé ÃÊ±âÈ­
+    void Start() // Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½Â¿ï¿½ ï¿½Ê¿ï¿½ï¿½ï¿½ ï¿½Íµï¿½ ï¿½Ê±ï¿½È­
     {
         _bgm = Managers.Sound._audioSources[(int)Define.Sound.BGM];
         if (DataManager.singleTon.wholeGameData._currentSong == 5 || DataManager.singleTon.wholeGameData._currentSong == 7)
@@ -225,17 +225,17 @@ public class PlayerRotate : MonoBehaviour
         }
         if (DataManager.singleTon.wholeGameData._currentSong == 5 || DataManager.singleTon.wholeGameData._currentSong == 7)
         {
-            rotation = Vector3.Lerp(new Vector3(0, 0, 0), new Vector3(0, 0, -90), time); //timeÀÌ 0 ~ 1 °¥ µ¿¾È ·ÎÅ×ÀÌ¼Çµµ (0,0,0)¿¡¼­ (0,0,-90)À¸·Î º¯ÇÔ
+            rotation = Vector3.Lerp(new Vector3(0, 0, 0), new Vector3(0, 0, -90), time); //timeï¿½ï¿½ 0 ~ 1 ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ì¼Çµï¿½ (0,0,0)ï¿½ï¿½ï¿½ï¿½ (0,0,-90)ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         }  
         else if (DataManager.singleTon.wholeGameData._currentSong == 9 || DataManager.singleTon.wholeGameData._currentSong == 10)
         {
-            rotation = Vector3.Lerp(new Vector3(0, 0, 0), new Vector3(0, 0, -120), time); //timeÀÌ 0 ~ 1 °¥ µ¿¾È ·ÎÅ×ÀÌ¼Çµµ (0,0,0)¿¡¼­ (0,0,-120)À¸·Î º¯ÇÔ
+            rotation = Vector3.Lerp(new Vector3(0, 0, 0), new Vector3(0, 0, -120), time); //timeï¿½ï¿½ 0 ~ 1 ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ì¼Çµï¿½ (0,0,0)ï¿½ï¿½ï¿½ï¿½ (0,0,-120)ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         }
-        childObject.transform.parent.transform.localEulerAngles = rotation; //ºÎ¸ð ¿ÀºêÁ§Æ® µ¹¸²
-        time += Time.deltaTime * rotateSpeed; // ÇÑ ÇÁ·¹ÀÓ´ç ¾ó¸¸Å­ µ¹¸± °ÇÁö °áÁ¤
-        if (time >= 1) //90µµ µ¹°í³ª¸é ºÎ¸ð¸¦ ¹Ù²ã¼­ ´Ù½Ã µ¹·Á¾ß Á¦´ë·Î µ¹¾Æ°¨
+        childObject.transform.parent.transform.localEulerAngles = rotation; //ï¿½Î¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½
+        time += Time.deltaTime * rotateSpeed; // ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ó´ï¿½ ï¿½ï¿½Å­ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        if (time >= 1) //90ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Î¸ï¿½ ï¿½Ù²ã¼­ ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ°ï¿½
         {       
-            time = 0f; //timeÀ» 0À¸·Î ÃÊ±âÈ­½ÃÄÑ¾ß Lerp°¡ ÀÛµ¿ÇÔ
+            time = 0f; //timeï¿½ï¿½ 0ï¿½ï¿½ï¿½ï¿½ ï¿½Ê±ï¿½È­ï¿½ï¿½ï¿½Ñ¾ï¿½ Lerpï¿½ï¿½ ï¿½Ûµï¿½ï¿½ï¿½
             if (DataManager.singleTon.wholeGameData._currentSong == 5 || DataManager.singleTon.wholeGameData._currentSong == 7)
             {
                 if (childObject.transform.parent == parentObject[0].transform)

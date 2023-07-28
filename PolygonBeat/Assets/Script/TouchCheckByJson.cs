@@ -63,7 +63,7 @@ public class TouchCheckByJson : MonoBehaviour
         {
             leastTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime - boundary;
             maxTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime + boundary;
-            if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.K))
+            if (Input.GetMouseButtonDown(0))
             {
                 clickedTime = bgmPlayer.time;
                 if (clickedTime >= leastTime && clickedTime <= maxTime)
