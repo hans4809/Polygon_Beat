@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 6767300208040727870}
   - component: {fileID: 6767300208040727871}
   - component: {fileID: 6767300208040727856}
-  - component: {fileID: 6767300208040727869}
   - component: {fileID: 4337103583707408339}
   m_Layer: 5
   m_Name: UI_CharacterButton
@@ -135,21 +134,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &6767300208040727869
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6767300208040727858}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18844b7fad2dfbd4b8e017f099db1235, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  changeImage: {fileID: 0}
-  changeSprite: {fileID: 0}
-  changeButton: {fileID: 0}
 --- !u!114 &4337103583707408339
 MonoBehaviour:
   m_ObjectHideFlags: 0

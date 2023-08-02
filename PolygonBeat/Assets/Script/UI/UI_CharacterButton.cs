@@ -23,7 +23,6 @@ public class UI_CharacterButton : UI_Base
     {
         Managers.Sound.Play("Sounds/SFX/Select");
         _currentImage.sprite = _changeImage.sprite;
-        Debug.Log(_changeImage.sprite.name);
         if (_changeImage.sprite.name.Contains("default"))
         {
             DataManager.singleTon.saveData._rarity = "default";

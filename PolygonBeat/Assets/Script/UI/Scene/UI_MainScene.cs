@@ -39,7 +39,6 @@ public class UI_MainScene : UI_Scene
     }
     public void CharacterClicked(PointerEventData data)
     {
-        Debug.Log("CharacterButton Clicked !");
         Managers.UI.ShowPopUpUI<UI_CharacterSquare>();
     }
     public void SettingClicked(PointerEventData data)

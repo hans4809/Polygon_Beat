@@ -12,10 +12,10 @@ public class UI_CharacterPanel : UI_Base
     [SerializeField] UserCharacterData userCharacterData;
     [SerializeField] List<GameObject> character;
     [SerializeField] string spritePath;
-    [SerializeField] int count = 29;
+    [SerializeField] int count;
     [SerializeField] float pos;
     [SerializeField] float movepos;
-    [SerializeField] bool isScroll = false;
+    [SerializeField] bool isScroll;
     public enum GameObjects
     {
         Content
@@ -32,6 +32,8 @@ public class UI_CharacterPanel : UI_Base
     public override void Init()
     {
         userCharacterData = DataManager.singleTon.userCharacterData;
+        isScroll = false;
+        count = DataManager.singleTon.userCharacterData.characters.Count;
         Bind<GameObject>(typeof(GameObjects));
         Bind<Button>(typeof(Buttons));
         content = Get<GameObject>((int)GameObjects.Content);

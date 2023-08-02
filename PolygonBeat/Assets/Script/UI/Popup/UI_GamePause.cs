@@ -58,6 +58,7 @@ public class UI_GamePause : UI_Popup
     {
         ClosePopUPUI();
         Managers.Scene.LoadScene(Define.Scene.StageSelect);
+        Time.timeScale = 1f;
     }
     public void ReturnClick(PointerEventData data)
     {
