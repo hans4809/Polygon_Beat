@@ -20,7 +20,7 @@ public class PlayerRotate : MonoBehaviour
     Vector3 initParentPostion;
     Vector3 parentPosition;
     Vector3 rotation;
-    float rotateSpeed;
+    public float rotateSpeed;
     float time;
     public int beatIndex = 0;
 

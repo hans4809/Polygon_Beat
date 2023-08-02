@@ -10,7 +10,7 @@ public class MapManager
     {
         grounds.Clear();
     }
-    public void InstantiateGround(List<string> _resourceStrings, List<GameObject> grounds, int index, Vector3 position, Transform transformParent) // °ÔÀÓ¿ÀºêÁ§Æ® º¹Á¦ÇÏ´Â ÇÔ¼ö
+    public void InstantiateGround(List<string> _resourceStrings, List<GameObject> grounds, int index, Vector3 position, Transform transformParent) // ï¿½ï¿½ï¿½Ó¿ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Ô¼ï¿½
     {
         GameObject myGameObject;
         if (index >= DataManager.singleTon.currentMusic.data.Count)

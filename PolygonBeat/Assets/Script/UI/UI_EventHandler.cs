@@ -8,7 +8,7 @@ public class UI_EventHandler : MonoBehaviour, IPointerClickHandler, IPointerUpHa
 {
     public Action<PointerEventData> OnClickHandler = null;
     public Action<PointerEventData> SliderHandler = null;
-    public void OnPointerClick(PointerEventData eventData) // Å¬¸¯ÇßÀ» ½Ã ÀÌº¥Æ® ÀÎÅÍÆäÀÌ½º
+    public void OnPointerClick(PointerEventData eventData) // Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ìºï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì½ï¿½
     {
         if(OnClickHandler != null)
         {

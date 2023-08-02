@@ -11,7 +11,7 @@ public abstract class UI_Base : MonoBehaviour
     Dictionary<Type, UnityEngine.Object[]> _objects = new Dictionary<Type, UnityEngine.Object[]>();
 
     public abstract void Init();
-    protected void Bind<T>(Type type) where T : UnityEngine.Object // Å¸ÀÔ¿¡ ¸Â´Â ¿­°ÅÇüµé ÀüºÎ _objects ¹è¿­¿¡ ¹ÙÀÎµù
+    protected void Bind<T>(Type type) where T : UnityEngine.Object // Å¸ï¿½Ô¿ï¿½ ï¿½Â´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ _objects ï¿½è¿­ï¿½ï¿½ ï¿½ï¿½ï¿½Îµï¿½
     {
         string[] names = Enum.GetNames(type);
         UnityEngine.Object[] objects = new UnityEngine.Object[names.Length];
@@ -34,7 +34,7 @@ public abstract class UI_Base : MonoBehaviour
         }
     } 
 
-    protected T Get<T>(int index) where T : UnityEngine.Object //¹ÙÀÎµù µÈ _objects ¹è¿­¿¡¼­ ¿øÇÏ´Â °Í GetÇØ¿È
+    protected T Get<T>(int index) where T : UnityEngine.Object //ï¿½ï¿½ï¿½Îµï¿½ ï¿½ï¿½ _objects ï¿½è¿­ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ Getï¿½Ø¿ï¿½
     {
         UnityEngine.Object[] objects = null;
         if (_objects.TryGetValue(typeof(T), out objects) == false)

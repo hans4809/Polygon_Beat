@@ -13,7 +13,7 @@ public class Util
         }
         return component;
     }
-    public static GameObject FindChild(GameObject go, string name = null, bool recursive = false) // °ÔÀÓ¿ÀºêÁ§Æ® ÀÚÃ¼¸¦ ¹ÝÈ¯
+    public static GameObject FindChild(GameObject go, string name = null, bool recursive = false) // ï¿½ï¿½ï¿½Ó¿ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½È¯
     {
         Transform transfrom = FindChild<Transform>(go, name, recursive);
         if (transfrom == null)
@@ -23,11 +23,11 @@ public class Util
         return transfrom.gameObject;
     }
 
-    public static T FindChild<T>(GameObject go, string name = null, bool recursive = false) where T : UnityEngine.Object // °ÔÀÓ ¿ÀºêÁ§Æ®ÀÇ ÀÚ½ÄµéÀÇ TÀÇ ÄÄÆ÷³ÍÆ® ¹ÝÈ¯
+    public static T FindChild<T>(GameObject go, string name = null, bool recursive = false) where T : UnityEngine.Object // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½Ú½Äµï¿½ï¿½ï¿½ Tï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½È¯
     {
         if (go == null)
             return null;
-        if(recursive == false) // Á÷¼Ó ÀÚ½ÄÀÏ °æ¿ì
+        if(recursive == false) // ï¿½ï¿½ï¿½ï¿½ ï¿½Ú½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
         {
             for (int i = 0; i < go.transform.childCount; i++)
             {
@@ -43,7 +43,7 @@ public class Util
             }
 
         }
-        else // Á÷¼Ó ÀÚ½ÄÀÌ ¾Æ´Ñ °æ¿ì
+        else // ï¿½ï¿½ï¿½ï¿½ ï¿½Ú½ï¿½ï¿½ï¿½ ï¿½Æ´ï¿½ ï¿½ï¿½ï¿½
         {
             foreach(T component in go.GetComponentsInChildren<T>())
             {
