@@ -31,9 +31,9 @@ public class UI_Setting : UI_Popup
         _masterSlider.value = DataManager.singleTon.wholeGameData._masterVolume;
         _bgmSlider.value = DataManager.singleTon.wholeGameData._bgmVolume;
         _sfxSlider.value = DataManager.singleTon.wholeGameData._sfxVolume;
-        _masterSlider.gameObject.AddUIEvent(MasterVolume);
-        _bgmSlider.gameObject.AddUIEvent(BGMVolume);
-        _sfxSlider.gameObject.AddUIEvent(SFXVolume);
+        _masterSlider.gameObject.AddUIEvent(MasterVolume, Define.UIEvent.Slider);
+        _bgmSlider.gameObject.AddUIEvent(BGMVolume, Define.UIEvent.Slider);
+        _sfxSlider.gameObject.AddUIEvent(SFXVolume, Define.UIEvent.Slider);
     }
     // Start is called before the first frame update
     void Start()

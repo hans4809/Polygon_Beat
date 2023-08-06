@@ -7,7 +7,9 @@ public class Define
     public enum UIEvent
     {
         Click,
+        BeginDrag,
         Drag,
+        DragEnd,
         Slider
     }
     public enum MouseEvent

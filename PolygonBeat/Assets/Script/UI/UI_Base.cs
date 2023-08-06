@@ -57,7 +57,17 @@ public abstract class UI_Base : MonoBehaviour
                 _event.OnClickHandler -= action;
                 _event.OnClickHandler += action;
                 break;
+            case Define.UIEvent.BeginDrag:
+                _event.JoyStickBeginHandler -= action;
+                _event.JoyStickBeginHandler += action;
+                break;
             case Define.UIEvent.Drag:
+                _event.JoyStickDragHandler -= action;
+                _event.JoyStickDragHandler += action;
+                break;
+            case Define.UIEvent.DragEnd:
+                _event.JoyStickEndHandler -= action;
+                _event.JoyStickEndHandler += action;
                 break;
             case Define.UIEvent.Slider:
                 _event.SliderHandler -= action;

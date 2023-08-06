@@ -70,7 +70,6 @@ public class PlayerRotate : MonoBehaviour
         }
         rotateSpeed = GetRotateSpeed(beatIndex);
     }
-    //}
     void setObject()
     {
  
@@ -82,7 +81,7 @@ public class PlayerRotate : MonoBehaviour
             childObject.transform.SetParent(parentObject.transform);
             childObject.transform.parent.SetLocalPositionAndRotation(new Vector3(parentPosition.x, parentPosition.y, 0), Quaternion.Euler(new Vector3(0, 0, 0)));
             childObject.transform.SetLocalPositionAndRotation(new Vector3(-5, 5, 0), Quaternion.Euler(new Vector3(0, 0, 0)));
-            rotateSpeed = (DataManager.singleTon.currentMusic.data[1].bpm / 60);
+            rotateSpeed = (DataManager.singleTon.currentMusic.data[0].bpm / 60);
         }
         else if(DataManager.singleTon.wholeGameData._currentSong == 9 || DataManager.singleTon.wholeGameData._currentSong == 10)
         {
@@ -92,7 +91,7 @@ public class PlayerRotate : MonoBehaviour
             childObject.transform.SetParent(parentObject.transform);
             childObject.transform.parent.SetLocalPositionAndRotation(new Vector3(parentPosition.x, parentPosition.y, 0), Quaternion.Euler(new Vector3(0, 0, 0)));
             childObject.transform.SetLocalPositionAndRotation(new Vector3(-5, 4.5f, 0), Quaternion.Euler(new Vector3(0, 0, 0)));
-            rotateSpeed = (DataManager.singleTon.currentMusic.data[1].bpm / 60);
+            rotateSpeed = (DataManager.singleTon.currentMusic.data[0].bpm / 60);
         }
     }
 
