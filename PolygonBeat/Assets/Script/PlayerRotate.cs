@@ -164,9 +164,9 @@ public class PlayerRotate : MonoBehaviour
     }
     void Update()
     {
-        if(_bgm.time == 0)
+        Debug.Log(_bgm.time);
+        if (_bgm.time == 0)
         {
-            Debug.Log(_bgm.time);
             return;
         }
         if (DataManager.singleTon.wholeGameData._currentSong == 5 || DataManager.singleTon.wholeGameData._currentSong == 7)
