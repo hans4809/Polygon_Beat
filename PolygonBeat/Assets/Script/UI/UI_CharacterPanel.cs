@@ -52,6 +52,7 @@ public class UI_CharacterPanel : UI_Base
                 character[i].transform.SetParent(content.transform);
                 spritePath = $"Character/{userCharacterData.characters[i]._rarity}/{userCharacterData.characters[i]._rarity}{userCharacterData.characters[i]._index}_square";
                 character[i].GetComponent<Image>().sprite = Managers.Resource.Load<Sprite>(spritePath);
+                character[i].transform.localScale = new Vector3(1.25f , 1.25f, 1.25f);
                 if (!userCharacterData.characters[i]._isHave)
                 {
                     character[i].GetComponent<Image>().color = Color.gray;
