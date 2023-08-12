@@ -48,6 +48,7 @@ public class UI_GameScene : UI_Scene
     public override void Init()
     {
         base.Init();
+        transform.GetComponent<Canvas>().sortingOrder = 5;
         _bgm = Managers.Sound._audioSources[(int)Define.Sound.BGM];
         Bind<Button>(typeof(Buttons));
         Bind<Image>(typeof(Images));

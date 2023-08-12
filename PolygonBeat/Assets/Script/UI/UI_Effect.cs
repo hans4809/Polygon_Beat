@@ -28,6 +28,7 @@ public class UI_Effect : UI_Base
         effectCanvas = this.GetComponent<Canvas>();
         effectCanvas.renderMode = RenderMode.WorldSpace;
         effectCanvas.worldCamera = Camera.main;
+        effectCanvas.sortingOrder = 5;
         Bind<Animator>(typeof(Effects));
         perfectAnimator = Get<Animator>((int)Effects.Perfect);
         missAnimator = Get<Animator>((int)Effects.Miss);

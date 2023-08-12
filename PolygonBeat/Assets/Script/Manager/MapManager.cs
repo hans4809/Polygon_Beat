@@ -41,6 +41,10 @@ public class MapManager
                 break;
         }
     }
+    public void CreateBackGround(string path, float yPosition)
+    {
+        Managers.Resource.Instantiate(path).transform.position = new Vector3(0, yPosition);
+    }
     public void CreateGround(List<string> _resourceStrings, List<GameObject> grounds, string coinResourceString, Transform transformParent)
     {
         if (grounds.Count == 0)
