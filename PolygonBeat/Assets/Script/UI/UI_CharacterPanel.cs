@@ -67,6 +67,7 @@ public class UI_CharacterPanel : UI_Base
                 character[i].transform.SetParent(content.transform);
                 spritePath = $"Character/{userCharacterData.characters[i]._rarity}/{userCharacterData.characters[i]._rarity}{userCharacterData.characters[i]._index}_triangle";
                 character[i].GetComponent<Image>().sprite = Managers.Resource.Load<Sprite>(spritePath);
+                character[i].transform.localScale = new Vector3(1.25f, 1.25f, 1.25f);
                 if (!userCharacterData.characters[i]._isHave)
                 {
                     character[i].GetComponent<Image>().color = Color.gray;
@@ -76,7 +77,7 @@ public class UI_CharacterPanel : UI_Base
         pos = contentRect.localPosition.x;
         movepos = contentRect.rect.xMax - contentRect.rect.xMax / count;
     }
-    IEnumerator scroll()
+    IEnumerator Scroll()
     {
         while (isScroll)
         {
@@ -99,7 +100,7 @@ public class UI_CharacterPanel : UI_Base
             isScroll = true;
             movepos = pos - contentRect.rect.width / count;
             pos = movepos;
-            StartCoroutine(scroll());
+            StartCoroutine(Scroll());
         }
     }
     public void LeftClick(PointerEventData data)
@@ -113,7 +114,7 @@ public class UI_CharacterPanel : UI_Base
             isScroll = true;
             movepos = pos + contentRect.rect.width / count;
             pos = movepos;
-            StartCoroutine(scroll());
+            StartCoroutine(Scroll());
 
         }
     }
@@ -141,5 +142,6 @@ public class UI_CharacterPanel : UI_Base
                 }
             }
         }
+        Debug.Log(Time.timeScale);
     }
 }

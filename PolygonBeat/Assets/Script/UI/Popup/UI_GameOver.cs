@@ -34,8 +34,8 @@ public class UI_GameOver : UI_Popup
     }
     public void QuitClick(PointerEventData data)
     {
+        
         Managers.Scene.LoadScene(Define.Scene.StageSelect);
-        Time.timeScale = 1f;
     }
     public void ReplayClick(PointerEventData data)
     {
@@ -44,9 +44,10 @@ public class UI_GameOver : UI_Popup
         gameScene.ResetScene();
         playerRotate.Init();
         touchCheck.Init();
+        Time.timeScale = 1f;
         ClosePopUPUI();
         Managers.Sound.PlayDelayed(_bgm.clip, 3.0f, Define.Sound.BGM);
-        Time.timeScale = 1f;
+
     }
     // Update is called once per frame
     void Update()

@@ -47,7 +47,7 @@ public class UI_MainScene : UI_Scene
     }
     public void QuitClicked(PointerEventData data)
     {
-        Debug.Log("QuitButton Clicked !");
+        Application.Quit();
     }
     public void TutorialClicked(PointerEventData data)
     {
