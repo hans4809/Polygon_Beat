@@ -6,9 +6,9 @@ using UnityEngine.UI;
 
 public class UI_GamePause : UI_Popup
 {
-    Slider _masterSlider;
-    Slider _bgmSlider;
-    Slider _sfxSlider;
+    Slider _MasterSlider;
+    Slider _BGMSlider;
+    Slider _SFXSlider;
     AudioSource _bgm;
     GameScene gameScene;
     PlayerRotate playerRotate;
@@ -44,15 +44,27 @@ public class UI_GamePause : UI_Popup
         GetButton((int)Buttons.Quit).gameObject.AddUIEvent(QuitClick);
         GetButton((int)Buttons.Return).gameObject.AddUIEvent(ReturnClick);
         GetButton((int)Buttons.Replay).gameObject.AddUIEvent(ReplayClick);
-        _masterSlider = Get<Slider>((int)Sliders.MasterSlider);
-        _bgmSlider = Get<Slider>((int)Sliders.BgmSlider);
-        _sfxSlider = Get<Slider>((int)Sliders.SfxSlider);
-        _masterSlider.value = DataManager.singleTon.wholeGameData._masterVolume;
-        _bgmSlider.value = DataManager.singleTon.wholeGameData._bgmVolume;
-        _sfxSlider.value = DataManager.singleTon.wholeGameData._sfxVolume;
-        _masterSlider.gameObject.AddUIEvent(MasterVolume, Define.UIEvent.Slider);
-        _bgmSlider.gameObject.AddUIEvent(BGMVolume, Define.UIEvent.Slider);
-        _sfxSlider.gameObject.AddUIEvent(SFXVolume, Define.UIEvent.Slider);
+        _MasterSlider = Get<Slider>((int)Sliders.MasterSlider);
+        _BGMSlider = Get<Slider>((int)Sliders.BgmSlider);
+        _SFXSlider = Get<Slider>((int)Sliders.SfxSlider);
+        _MasterSlider.value = DataManager.singleTon.wholeGameData._masterVolume;
+        _BGMSlider.value = DataManager.singleTon.wholeGameData._bgmVolume;
+        _SFXSlider.value = DataManager.singleTon.wholeGameData._sfxVolume;
+        _MasterSlider.gameObject.AddUIEvent(MasterVolume, Define.UIEvent.Slider);
+        _BGMSlider.gameObject.AddUIEvent(BGMVolume, Define.UIEvent.Slider);
+        _SFXSlider.gameObject.AddUIEvent(SFXVolume, Define.UIEvent.Slider);
+        if (_BGMSlider.value <= -40f)
+        {
+            Managers.Sound.audioMixer.SetFloat("BGM", -80);
+        }
+        Managers.Sound.audioMixer.SetFloat("BGM", Mathf.Log10(_BGMSlider.value) * 20);
+        Managers.Sound._audioSources[(int)Define.Sound.BGM].volume = _BGMSlider.value;
+        if (_SFXSlider.value <= -40f)
+        {
+            Managers.Sound.audioMixer.SetFloat("SFX", -80);
+        }
+        Managers.Sound.audioMixer.SetFloat("SFX", Mathf.Log10(_SFXSlider.value) * 20);
+        Managers.Sound._audioSources[(int)Define.Sound.SFX].volume = _SFXSlider.value;
     }
     public void QuitClick(PointerEventData data)
     {
@@ -68,21 +80,36 @@ public class UI_GamePause : UI_Popup
     }
     public void MasterVolume(PointerEventData data)
     {
-        DataManager.singleTon.wholeGameData._masterVolume = _masterSlider.value;
+        DataManager.singleTon.wholeGameData._masterVolume = _MasterSlider.value;
         DataManager.singleTon.jsonManager.Save<DataDefine.WholeGameData>(DataManager.singleTon.wholeGameData);
-        Managers.Sound.audioMixer.SetFloat("Master", Mathf.Log10(_masterSlider.value) * 20);
+        if (DataManager.singleTon.wholeGameData._masterVolume <= -40f)
+        {
+            Managers.Sound.audioMixer.SetFloat("Master", -80);
+        }
+        Managers.Sound.audioMixer.SetFloat("Master", Mathf.Log10(_MasterSlider.value) * 20);
+        Managers.Sound._audioSources[(int)Define.Sound.Master].volume = _MasterSlider.value;
     }
     public void BGMVolume(PointerEventData data)
     {
-        DataManager.singleTon.wholeGameData._bgmVolume = _bgmSlider.value;
+        DataManager.singleTon.wholeGameData._bgmVolume = _BGMSlider.value;
         DataManager.singleTon.jsonManager.Save<DataDefine.WholeGameData>(DataManager.singleTon.wholeGameData);
-        Managers.Sound.audioMixer.SetFloat("BGM", Mathf.Log10(_bgmSlider.value) * 20);
+        if (DataManager.singleTon.wholeGameData._masterVolume <= -40f)
+        {
+            Managers.Sound.audioMixer.SetFloat("BGM", -80);
+        }
+        Managers.Sound.audioMixer.SetFloat("BGM", Mathf.Log10(_BGMSlider.value) * 20);
+        Managers.Sound._audioSources[(int)Define.Sound.BGM].volume = _BGMSlider.value;
     }
     public void SFXVolume(PointerEventData data)
     {
-        DataManager.singleTon.wholeGameData._sfxVolume = _sfxSlider.value;
+        DataManager.singleTon.wholeGameData._sfxVolume = _SFXSlider.value;
         DataManager.singleTon.jsonManager.Save<DataDefine.WholeGameData>(DataManager.singleTon.wholeGameData);
-        Managers.Sound.audioMixer.SetFloat("SFX", Mathf.Log10(_sfxSlider.value) * 20);
+        if (DataManager.singleTon.wholeGameData._masterVolume <= -40f)
+        {
+            Managers.Sound.audioMixer.SetFloat("SFX", -80);
+        }
+        Managers.Sound.audioMixer.SetFloat("SFX", Mathf.Log10(_SFXSlider.value) * 20);
+        Managers.Sound._audioSources[(int)Define.Sound.SFX].volume = _SFXSlider.value;
     }
 
     public void ReplayClick(PointerEventData data)

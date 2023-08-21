@@ -115,6 +115,12 @@ public class UI_GameScene : UI_Scene
     }
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            _bgm.Pause();
+            Time.timeScale = 0f;
+            Managers.UI.ShowPopUpUI<UI_GamePause>();
+        }
         if (life <= 0)
         {
             Time.timeScale = 0;

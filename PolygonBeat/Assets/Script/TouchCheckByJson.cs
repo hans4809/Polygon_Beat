@@ -44,10 +44,6 @@ public class TouchCheckByJson : MonoBehaviour
     }
     private void Update()
     {
-        if (EventSystem.current.IsPointerOverGameObject())
-        {
-            return;
-        }
         OnMouseClick();
     }
     IEnumerator touchDelay()
@@ -61,7 +57,7 @@ public class TouchCheckByJson : MonoBehaviour
     }
     public void OnMouseClick()
     {
-        if (bgmPlayer.time == 0)
+        if (bgmPlayer.time == 0 || Managers.UI.Root.transform.childCount != 2)
         {
             return;
         }
@@ -119,20 +115,21 @@ public class TouchCheckByJson : MonoBehaviour
                 cleared = false;
             }
         }
+
         //if (missed)
         //{
-          //  ui_GameScene.LifeReduce();
-            //missed = false;
-            //preMaxTime = maxTime;
-            //beatIndex++;
-            //leastTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime - boundary;
-            //maxTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime + boundary;
-            //if (bgmPlayer.time <= maxTime)
-            //{
-                //clicked = false;
-                //missed = false;
-                //cleared = false;
-            //}
+        //  ui_GameScene.LifeReduce();
+        //missed = false;
+        //preMaxTime = maxTime;
+        //beatIndex++;
+        //leastTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime - boundary;
+        //maxTime = DataManager.singleTon.currentMusic.beatData[beatIndex].touchTime + boundary;
+        //if (bgmPlayer.time <= maxTime)
+        //{
+        //clicked = false;
+        //missed = false;
+        //cleared = false;
+        //}
         //}
     }
 }

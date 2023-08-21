@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using static DataDefine;
 
 public class UI_StageSelect : UI_Scene
 {
@@ -39,21 +40,25 @@ public class UI_StageSelect : UI_Scene
     public void FirstClicked(PointerEventData data)
     {
         DataManager.singleTon.wholeGameData._currentSong = 5;
+        DataManager.singleTon.currentMusic = DataManager.singleTon.musicData.music[0]; 
         Managers.Sound.Play($"Sounds/BGM/{DataManager.singleTon.wholeGameData._currentSong}", Define.Sound.BGM);
     }
     public void SecondClicked(PointerEventData data)
     {
         DataManager.singleTon.wholeGameData._currentSong = 7;
+        DataManager.singleTon.currentMusic = DataManager.singleTon.musicData.music[1];
         Managers.Sound.Play($"Sounds/BGM/{DataManager.singleTon.wholeGameData._currentSong}", Define.Sound.BGM);
     }
     public void ThirdClicked(PointerEventData data)
     {
         DataManager.singleTon.wholeGameData._currentSong = 9;
+        DataManager.singleTon.currentMusic = DataManager.singleTon.musicData.music[2];
         Managers.Sound.Play($"Sounds/BGM/{DataManager.singleTon.wholeGameData._currentSong}", Define.Sound.BGM);
     }
     public void ForthClicked(PointerEventData data)
     {
         DataManager.singleTon.wholeGameData._currentSong = 10;
+        DataManager.singleTon.currentMusic = DataManager.singleTon.musicData.music[3];
         Managers.Sound.Play($"Sounds/BGM/{DataManager.singleTon.wholeGameData._currentSong}", Define.Sound.BGM);
     }
     public void PlayClicked(PointerEventData data)
