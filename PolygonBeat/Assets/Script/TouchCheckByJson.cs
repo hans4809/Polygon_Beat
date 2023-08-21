@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class TouchCheckByJson : MonoBehaviour
 {
-    int beatIndex = 0;
+    [SerializeField] int beatIndex = 0;
     int position = 1;
     float clickedTime;
     float leastTime;

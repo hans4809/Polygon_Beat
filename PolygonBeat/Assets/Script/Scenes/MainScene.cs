@@ -11,7 +11,7 @@ public class MainScene : BaseScene
         SceneType = Define.Scene.MainScene;
         Managers.UI.ShowSceneUI<UI_MainScene>();
     }
-
+    
     // Update is called once per frame
     void Update()
     {
