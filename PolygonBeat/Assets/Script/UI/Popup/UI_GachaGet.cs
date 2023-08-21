@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class UI_GachaGet : UI_Popup
 {
-    [SerializeField] UI_Gacha ui_Gacha;
+    [SerializeField] Gacha Gacha;
     public enum GameObjects
     {
         Character,
@@ -20,8 +20,8 @@ public class UI_GachaGet : UI_Popup
     {
         base.Init();
         Bind<GameObject>(typeof(GameObjects));
-        ui_Gacha = FindObjectOfType<UI_Gacha>();
-        Get<GameObject>((int)GameObjects.Character).GetComponent<Image>().sprite = Managers.Resource.Load<Sprite>($"Character/{ui_Gacha.selectCharacter._rarity}/{ui_Gacha.selectCharacter._rarity}{ui_Gacha.selectCharacter._index}_square");
+        Gacha = FindObjectOfType<Gacha>();
+        Get<GameObject>((int)GameObjects.Character).GetComponent<Image>().sprite = Managers.Resource.Load<Sprite>($"Character/{Gacha.selectCharacter._rarity}/{Gacha.selectCharacter._rarity}{Gacha.selectCharacter._index}_square");
         Get<GameObject>((int)GameObjects.OK).AddUIEvent(OKClick);
     }
     public void OKClick(PointerEventData data)

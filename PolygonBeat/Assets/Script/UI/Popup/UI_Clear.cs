@@ -4,13 +4,14 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class UI_GameOver : UI_Popup
+public class UI_Clear : UI_Popup
 {
     [SerializeField] AudioSource _bgm;
     [SerializeField] GameScene gameScene;
     [SerializeField] PlayerRotate playerRotate;
     [SerializeField] TouchCheckByJson touchCheck;
     [SerializeField] UI_GameScene ui_GameScene;
+    // Start is called before the first frame update
     public enum Buttons
     {
         Return,
@@ -47,10 +48,5 @@ public class UI_GameOver : UI_Popup
         ClosePopUPUI();
         Managers.Sound.PlayDelayed(_bgm.clip, 3.0f, Define.Sound.BGM);
 
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

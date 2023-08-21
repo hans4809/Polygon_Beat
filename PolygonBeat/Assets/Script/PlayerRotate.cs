@@ -15,7 +15,8 @@ public class PlayerRotate : MonoBehaviour
 {
     [SerializeField] GameObject parentObject;
     [SerializeField] GameObject childObject;
-    [SerializeField] AudioSource _bgm;
+    [SerializeField] AudioSource _bgm; 
+    [SerializeField] UI_Clear clear;
     Vector3 initParentPostion;
     Vector3 parentPosition;
     Vector3 rotation;
@@ -164,7 +165,13 @@ public class PlayerRotate : MonoBehaviour
     }
     void Update()
     {
-        Debug.Log(_bgm.time);
+        if (rotateSpeed == 0)
+        {
+            if (clear == null)
+            {
+                clear = Managers.UI.ShowPopUpUI<UI_Clear>();
+            }
+        }
         if (_bgm.time == 0)
         {
             return;

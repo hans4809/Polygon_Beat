@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Security.Claims;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class TouchCheckByJson : MonoBehaviour
@@ -30,6 +31,7 @@ public class TouchCheckByJson : MonoBehaviour
         playerRotate = FindObjectOfType<PlayerRotate>();
         ui_GameScene = FindAnyObjectByType<UI_GameScene>();
         ui_Effect = FindAnyObjectByType<UI_Effect>();
+
     }
     public void Init()
     {
@@ -42,7 +44,11 @@ public class TouchCheckByJson : MonoBehaviour
     }
     private void Update()
     {
-        OnKeyboard();
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
+        OnMouseClick();
     }
     IEnumerator touchDelay()
     {
@@ -53,7 +59,7 @@ public class TouchCheckByJson : MonoBehaviour
         cleared = false;
         yield return new WaitForSeconds(boundary * 2);
     }
-    void OnKeyboard()
+    public void OnMouseClick()
     {
         if (bgmPlayer.time == 0)
         {

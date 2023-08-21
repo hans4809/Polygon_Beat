@@ -91,6 +91,8 @@ public class UI_GameScene : UI_Scene
     {
         if (_bgm.time == 0)
         {
+            if (!count.isActiveAndEnabled)
+                count.gameObject.SetActive(true);
             time += Time.deltaTime;
             if (time >= 0 && time < 1)
             {
@@ -107,7 +109,8 @@ public class UI_GameScene : UI_Scene
         }
         if (_bgm.time > 0)
         {
-            count.text = "";
+            if(count.isActiveAndEnabled)
+                count.gameObject.SetActive(false);
         }
     }
     private void Update()

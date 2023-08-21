@@ -142,6 +142,5 @@ public class UI_CharacterPanel : UI_Base
                 }
             }
         }
-        Debug.Log(Time.timeScale);
     }
 }
