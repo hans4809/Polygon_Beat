@@ -74,17 +74,17 @@ public class GameScene : BaseScene
                 bgResourceString = "BackGround/BackGround_7";
                 break;
             case 9:
-                blockResourceString.Add("Block/bg3/bg3_defualt01");
-                blockResourceString.Add("Block/bg3/bg3_defualt02");
-                blockResourceString.Add("Block/bg3/bg3_defualt03");
-                blockResourceString.Add("Block/bg3/bg3_defualt04");
-                bgResourceString = "BackGround/BackGround_9";
-                break;
-            case 10:
                 blockResourceString.Add("Block/bg4/bg4_defualt01");
                 blockResourceString.Add("Block/bg4/bg4_defualt02");
                 blockResourceString.Add("Block/bg4/bg4_defualt03");
                 blockResourceString.Add("Block/bg4/bg4_defualt04");
+                bgResourceString = "BackGround/BackGround_9";
+                break;
+            case 10:
+                blockResourceString.Add("Block/bg3/bg3_defualt01");
+                blockResourceString.Add("Block/bg3/bg3_defualt02");
+                blockResourceString.Add("Block/bg3/bg3_defualt03");
+                blockResourceString.Add("Block/bg3/bg3_defualt04");
                 bgResourceString = "BackGround/BackGround_10";
                 break;
         }
