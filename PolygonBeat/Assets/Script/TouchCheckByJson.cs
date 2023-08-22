@@ -73,7 +73,7 @@ public class TouchCheckByJson : MonoBehaviour
                     clicked = true;
                     cleared = true;
                     position = (int)(playerRotate.GetPlayer().transform.position.x + 0.5);
-                    ui_Effect.HitEffect(position);
+                    ui_Effect.HitEffect(position/2);
                     ui_Effect.Perfect(position);
                     Managers.Sound.Play("Sounds/SFX/Touch");
                 }

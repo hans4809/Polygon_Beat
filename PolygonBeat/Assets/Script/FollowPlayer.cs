@@ -5,8 +5,8 @@ using UnityEngine;
 public class FollowPlayer : MonoBehaviour
 {
     [SerializeField] PlayerRotate playerRotate;
-    [SerializeField][Range(-5f, 5f)] public float xPosition = 2f;
-    [SerializeField][Range(-5f, 5f)] public float yPosition = 2f;
+    [SerializeField][Range(-5f, 5f)] public float xPosition = 4f;
+    [SerializeField][Range(-5f, 5f)] public float yPosition = 4f;
     // Start is called before the first frame update
     void Start()
     {

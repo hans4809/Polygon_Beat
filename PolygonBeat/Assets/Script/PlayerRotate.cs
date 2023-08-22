@@ -31,7 +31,8 @@ public class PlayerRotate : MonoBehaviour
     void ParentSet()
     {
         beatIndex++;
-        parentPosition.x += 1;
+        //parentPosition.x += 1;
+        parentPosition.x += 2;
         childObject.transform.SetParent(null);
         parentObject.transform.SetPositionAndRotation(new Vector3(parentPosition.x, parentPosition.y, 0), Quaternion.Euler(new Vector3(0, 0, 0)));
         childObject.transform.SetParent(parentObject.transform);
@@ -39,34 +40,41 @@ public class PlayerRotate : MonoBehaviour
         {
             if (beatIndex % 4 == 1)
             {
-                childObject.transform.SetLocalPositionAndRotation(new Vector3(-5, 5, 0), Quaternion.Euler(new Vector3(0, 0, -90))); //child ���� ����
+                //childObject.transform.SetLocalPositionAndRotation(new Vector3(-5, 5, 0), Quaternion.Euler(new Vector3(0, 0, -90))); //child ���� ����
+                childObject.transform.SetLocalPositionAndRotation(new Vector3(-1, 1, 0), Quaternion.Euler(new Vector3(0, 0, -90))); //child ���� ����
+
             }
             if (beatIndex % 4 == 2)
             {
-                childObject.transform.SetLocalPositionAndRotation(new Vector3(-5, 5, 0), Quaternion.Euler(new Vector3(0, 0, -180))); //child ���� ����
+                //childObject.transform.SetLocalPositionAndRotation(new Vector3(-5, 5, 0), Quaternion.Euler(new Vector3(0, 0, -180))); //child ���� ����
+                childObject.transform.SetLocalPositionAndRotation(new Vector3(-1, 1, 0), Quaternion.Euler(new Vector3(0, 0, -180))); //child ���� ����
+
             }
             if (beatIndex % 4 == 3)
             {
-                childObject.transform.SetLocalPositionAndRotation(new Vector3(-5, 5, 0), Quaternion.Euler(new Vector3(0, 0, -270))); //child ���� ����
+                //childObject.transform.SetLocalPositionAndRotation(new Vector3(-5, 5, 0), Quaternion.Euler(new Vector3(0, 0, -270))); //child ���� ����
+                childObject.transform.SetLocalPositionAndRotation(new Vector3(-1, 1, 0), Quaternion.Euler(new Vector3(0, 0, -270))); //child ���� ����
+
             }
             if (beatIndex % 4 == 0)
             {
-                childObject.transform.SetLocalPositionAndRotation(new Vector3(-5, 5, 0), Quaternion.Euler(new Vector3(0, 0, 0))); //child ���� ����
+                //childObject.transform.SetLocalPositionAndRotation(new Vector3(-5, 5, 0), Quaternion.Euler(new Vector3(0, 0, 0))); //child ���� ����
+                childObject.transform.SetLocalPositionAndRotation(new Vector3(-1, 1, 0), Quaternion.Euler(new Vector3(0, 0, 0))); //child ���� ����
             }
         }
         else if (DataManager.singleTon.wholeGameData._currentSong == 9 || DataManager.singleTon.wholeGameData._currentSong == 10)
         {
             if (beatIndex % 3 == 1)
             {
-                childObject.transform.SetLocalPositionAndRotation(new Vector3(-3.7f, 2.3f, 0), Quaternion.Euler(new Vector3(0, 0, -120))); //child ���� ����
+                childObject.transform.SetLocalPositionAndRotation(new Vector3(-0.75f, 0.43f, 0), Quaternion.Euler(new Vector3(0, 0, -120))); //child ���� ����
             }
             if (beatIndex % 3 == 2)
             {
-                childObject.transform.SetLocalPositionAndRotation(new Vector3(-6.2f, 2.4f, 0), Quaternion.Euler(new Vector3(0, 0, -240))); //child ���� ����
+                childObject.transform.SetLocalPositionAndRotation(new Vector3(-1.25f, 0.43f, 0), Quaternion.Euler(new Vector3(0, 0, -240))); //child ���� ����
             }
             if (beatIndex % 3 == 0)
             {
-                childObject.transform.SetLocalPositionAndRotation(new Vector3(-5, 4.5f, 0), Quaternion.Euler(new Vector3(0, 0, 0))); //child ���� ����
+                childObject.transform.SetLocalPositionAndRotation(new Vector3(-1, 0.87f, 0), Quaternion.Euler(new Vector3(0, 0, 0))); //child ���� ����
             }
         }
         rotateSpeed = GetRotateSpeed(beatIndex);
@@ -78,20 +86,24 @@ public class PlayerRotate : MonoBehaviour
         {
             childObject.GetComponent<SpriteRenderer>().sprite = Managers.Resource.Load<Sprite>($"Character/{DataManager.singleTon.saveData._rarity}/{DataManager.singleTon.saveData._currentCharacter}_square");
             parentObject.transform.SetParent(null);
-            parentPosition = new Vector3(0.5f, 0.2f, 0);
+            //parentPosition = new Vector3(0.5f, 0.5f, 0);
+            parentPosition = new Vector3(1.0f, 0.5f, 0);
             childObject.transform.SetParent(parentObject.transform);
             childObject.transform.parent.SetLocalPositionAndRotation(new Vector3(parentPosition.x, parentPosition.y, 0), Quaternion.Euler(new Vector3(0, 0, 0)));
-            childObject.transform.SetLocalPositionAndRotation(new Vector3(-5, 5, 0), Quaternion.Euler(new Vector3(0, 0, 0)));
+            //childObject.transform.SetLocalPositionAndRotation(new Vector3(-5, 5, 0), Quaternion.Euler(new Vector3(0, 0, 0)));
+            childObject.transform.SetLocalPositionAndRotation(new Vector3(-1, 1, 0), Quaternion.Euler(new Vector3(0, 0, 0)));
             rotateSpeed = (DataManager.singleTon.currentMusic.data[0].bpm / 60);
         }
         else if(DataManager.singleTon.wholeGameData._currentSong == 9 || DataManager.singleTon.wholeGameData._currentSong == 10)
         {
             childObject.GetComponent<SpriteRenderer>().sprite = Managers.Resource.Load<Sprite>($"Character/{DataManager.singleTon.saveData._rarity}/{DataManager.singleTon.saveData._currentCharacter}_triangle");
             parentObject.transform.SetParent(null);
-            parentPosition = new Vector3(0.5f, 0.23f, 0);
+            //parentPosition = new Vector3(0.5f, 0.23f, 0);
+            parentPosition = new Vector3(1.0f, 0.48f, 0);
             childObject.transform.SetParent(parentObject.transform);
             childObject.transform.parent.SetLocalPositionAndRotation(new Vector3(parentPosition.x, parentPosition.y, 0), Quaternion.Euler(new Vector3(0, 0, 0)));
-            childObject.transform.SetLocalPositionAndRotation(new Vector3(-5, 4.5f, 0), Quaternion.Euler(new Vector3(0, 0, 0)));
+            //childObject.transform.SetLocalPositionAndRotation(new Vector3(-5, 4.5f, 0), Quaternion.Euler(new Vector3(0, 0, 0)));
+            childObject.transform.SetLocalPositionAndRotation(new Vector3(-1, 0.87f, 0), Quaternion.Euler(new Vector3(0, 0, 0)));
             rotateSpeed = (DataManager.singleTon.currentMusic.data[0].bpm / 60);
         }
     }
@@ -107,7 +119,8 @@ public class PlayerRotate : MonoBehaviour
             else
             { 
                 childObject.transform.SetParent(null);
-                childObject.transform.position = new Vector3(0, 0.7f, 0);
+                //childObject.transform.position = new Vector3(0, 0.7f, 0);
+                childObject.transform.position = new Vector3(0, 1.5f, 0);
                 parentObject.transform.SetParent(childObject.transform);
                 setObject();
                 parentPosition = initParentPostion;
@@ -123,7 +136,8 @@ public class PlayerRotate : MonoBehaviour
             else
             {
                 childObject.transform.SetParent(null);
-                childObject.transform.position = new Vector3(0, 0.68f, 0);
+                //childObject.transform.position = new Vector3(0, 0.68f, 0);
+                childObject.transform.position = new Vector3(0, 1.35f, 0);
                 parentObject.transform.SetParent(childObject.transform);
                 setObject();
                 parentPosition = initParentPostion;
@@ -143,17 +157,24 @@ public class PlayerRotate : MonoBehaviour
     }
     void Start() // ó�� ���¿� �ʿ��� �͵� �ʱ�ȭ
     {
+        GameObject go;
         _bgm = Managers.Sound._audioSources[(int)Define.Sound.BGM];
         if (DataManager.singleTon.wholeGameData._currentSong == 5 || DataManager.singleTon.wholeGameData._currentSong == 7)
         {
-            GameObject.Find("PlayerTriangle").SetActive(false);
+            if((go = GameObject.Find("PlayerTriangle")) != null)
+            {
+                go.SetActive(false);
+            }
             childObject = GameObject.Find("PlayerSquare");
             parentObject = GameObject.Find("Parent");
 
         }
         else if (DataManager.singleTon.wholeGameData._currentSong == 9 || DataManager.singleTon.wholeGameData._currentSong == 10)
         {
-            GameObject.Find("PlayerSquare").SetActive(false);
+            if ((go = GameObject.Find("PlayerSquare")) != null)
+            {
+                go.SetActive(false);
+            }
             childObject = GameObject.Find("PlayerTriangle");
             parentObject = GameObject.Find("Parent");
 
@@ -165,6 +186,7 @@ public class PlayerRotate : MonoBehaviour
     }
     void Update()
     {
+        Debug.Log(_bgm.time);
         if (rotateSpeed == 0)
         {
             if (clear == null)

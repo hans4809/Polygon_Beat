@@ -304,8 +304,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: You gets all Characters!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b112175de62439949864dd67cde63b38, type: 2}
+  m_sharedMaterial: {fileID: 376663043431075115, guid: b112175de62439949864dd67cde63b38, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

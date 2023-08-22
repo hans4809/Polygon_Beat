@@ -58,7 +58,7 @@ public class MapManager
 
             for (int i = -1; i < DataManager.singleTon.currentMusic.data.Count + 1; i++)
             {
-                InstantiateGround(_resourceStrings, grounds, i + 1, new Vector3(i + 1, 0, 0), transformParent);
+                InstantiateGround(_resourceStrings, grounds, i + 1, new Vector3(2*(i + 1), 0, 0), transformParent);
                 if (coinNum >= DataManager.singleTon.currentMusic.data.Count / 10)
                 {
                     coinNum = DataManager.singleTon.currentMusic.data.Count / 10;
@@ -68,7 +68,7 @@ public class MapManager
                 {
                     if (i == coinIndex[coinNum])
                     {
-                        Managers.Resource.Instantiate(coinResourceString, new Vector3(i, 0.7f, 0), grounds[i].transform);
+                        Managers.Resource.Instantiate(coinResourceString, new Vector3(2*i, 1.5f, 0), grounds[i].transform);
                         coinNum++;
                     }
                 }

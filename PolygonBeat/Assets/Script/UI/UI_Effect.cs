@@ -33,6 +33,8 @@ public class UI_Effect : UI_Base
         perfectAnimator = Get<Animator>((int)Effects.Perfect);
         missAnimator = Get<Animator>((int)Effects.Miss);
         effectAnimator = Get<Animator>((int)Effects.Effect);
+        effectAnimator.GetComponent<RectTransform>().sizeDelta = new Vector2(2, 2);
+        effectAnimator.gameObject.transform.localScale = new Vector3(1.5f, 1, 1);
         if(groundGray.Count == 0 && groundGlow.Count == 0)
         {
             InsertSprties();
@@ -107,7 +109,7 @@ public class UI_Effect : UI_Base
                 gameScene.grounds[position].GetComponent<SpriteRenderer>().sprite = groundGlow[0];
                 break;
         }
-        effectAnimator.transform.localPosition = new Vector3(position, 0, 0);
+        effectAnimator.transform.localPosition = new Vector3(2 * position, 0, 0);
         effectAnimator.SetTrigger(hit);
         switch (gameScene.grounds[position].name)
         {
@@ -127,12 +129,12 @@ public class UI_Effect : UI_Base
     }
     public void Perfect(int postion)
     {
-        perfectAnimator.transform.localPosition = new Vector3(postion, 2, 0);
+        perfectAnimator.transform.localPosition = new Vector3(postion, 3.5f, 0);
         perfectAnimator.SetTrigger(hit);
     }
     public void Miss(int postion)
     {
-        missAnimator.transform.localPosition = new Vector3(postion, 2, 0);
+        missAnimator.transform.localPosition = new Vector3(postion, 3.5f, 0);
         missAnimator.SetTrigger(hit);
     }
 }
