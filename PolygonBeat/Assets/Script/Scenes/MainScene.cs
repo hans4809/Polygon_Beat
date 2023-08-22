@@ -9,6 +9,7 @@ public class MainScene : BaseScene
     {
         base.Init();
         SceneType = Define.Scene.MainScene;
+        Managers.Sound.Play("Sounds/BGM/Main_Menu", Define.Sound.BGM);
         Managers.UI.ShowSceneUI<UI_MainScene>();
     }
     
