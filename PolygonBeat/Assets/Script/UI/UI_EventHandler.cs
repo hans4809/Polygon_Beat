@@ -7,48 +7,36 @@ using UnityEngine.EventSystems;
 public class UI_EventHandler : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerUpHandler
 {
     public Action<PointerEventData> OnClickHandler = null;
-    public Action<PointerEventData> SliderHandler = null;
-    public Action<PointerEventData> JoyStickBeginHandler = null;
-    public Action<PointerEventData> JoyStickDragHandler = null;
-    public Action<PointerEventData> JoyStickEndHandler = null;
-
-    public void OnBeginDrag(PointerEventData eventData)
+    public Action<PointerEventData> OnSliderHandler = null;
+    public Action<PointerEventData> OnDragHandler = null;
+    public Action<PointerEventData> OnBeginDragHandler = null;
+    public Action<PointerEventData> OnEndDragHandler = null;
+    public void OnPointerClick(PointerEventData eventData)
     {
-        if (JoyStickBeginHandler != null)
-        {
-            JoyStickBeginHandler.Invoke(eventData);
-        }
+        if (OnClickHandler != null)
+            OnClickHandler.Invoke(eventData);
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        if (JoyStickDragHandler != null)
-        {
-            JoyStickDragHandler.Invoke(eventData);
-        }
+        if (OnDragHandler != null)
+            OnDragHandler.Invoke(eventData);
     }
-
+    public void OnBeginDrag(PointerEventData eventData)
+    {
+        if (OnBeginDragHandler != null)
+            OnBeginDragHandler.Invoke(eventData);
+    }
     public void OnEndDrag(PointerEventData eventData)
     {
-        if (JoyStickEndHandler != null)
-        {
-            JoyStickEndHandler.Invoke(eventData);
-        }
+        if (OnEndDragHandler != null)
+            OnEndDragHandler.Invoke(eventData);
     }
-
-    public void OnPointerClick(PointerEventData eventData) // Ŭ������ �� �̺�Ʈ �������̽�
-    {
-        if(OnClickHandler != null)
-        {
-            OnClickHandler.Invoke(eventData);
-        }
-    }
-
     public void OnPointerUp(PointerEventData eventData)
     {
-        if (SliderHandler != null)
+        if (OnSliderHandler != null)
         {
-            SliderHandler.Invoke(eventData);
+            OnSliderHandler.Invoke(eventData);
         }
     }
 }

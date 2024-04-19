@@ -8,10 +8,21 @@ using TMPro;
 
 public abstract class UI_Base : MonoBehaviour
 {
+    /// <summary>
+    /// 관리할 object(GameObject, Text, Button, Image 등)들을 저장하는 dictionary
+    /// </summary>
     Dictionary<Type, UnityEngine.Object[]> _objects = new Dictionary<Type, UnityEngine.Object[]>();
 
+    /// <summary>
+    /// 가상함수로 Init()을 만들어서 상속받은 클래스에서 구현을 강제화
     public abstract void Init();
-    protected void Bind<T>(Type type) where T : UnityEngine.Object // Ÿ�Կ� �´� �������� ���� _objects �迭�� ���ε�
+
+    /// <summary>
+    /// Type을 받아서 해당 Type에 맞는 object를 _objects에 저장(바인딩)하는 함수
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <param name="type"> 해당 타입 정보 가진 enum </param>
+    protected void Bind<T>(Type type) where T : UnityEngine.Object 
     {
         string[] names = Enum.GetNames(type);
         UnityEngine.Object[] objects = new UnityEngine.Object[names.Length];
@@ -34,7 +45,13 @@ public abstract class UI_Base : MonoBehaviour
         }
     } 
 
-    protected T Get<T>(int index) where T : UnityEngine.Object //���ε� �� _objects �迭���� ���ϴ� �� Get�ؿ�
+    /// <summary>
+    /// _objects에서 해당 Type에 맞는 object를 가져오는 함수
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <param name="index"></param>
+    /// <returns></returns>
+    protected T Get<T>(int index) where T : UnityEngine.Object 
     {
         UnityEngine.Object[] objects = null;
         if (_objects.TryGetValue(typeof(T), out objects) == false)
@@ -44,10 +61,19 @@ public abstract class UI_Base : MonoBehaviour
         return objects[index] as T;
     }
 
+    /// <summary>
+    /// 자주 쓰는 Type에 맞는 object를 가져오는 함수
+    /// </summary>
     protected Text GetText(int index) { return Get<Text>(index); }
     protected Button GetButton(int index) { return Get<Button>(index); }
     protected Image GetImage(int index) { return Get<Image>(index); }
 
+    /// <summary>
+    /// GameObject에 Event를 추가하는 함수
+    /// </summary>
+    /// <param name="go"></param>
+    /// <param name="action"></param>
+    /// <param name="type"></param>
     public static void AddUIEvent(GameObject go, Action<PointerEventData> action, Define.UIEvent type = Define.UIEvent.Click)
     {
         UI_EventHandler _event = Util.GetOrAddComponent<UI_EventHandler>(go);
@@ -58,20 +84,20 @@ public abstract class UI_Base : MonoBehaviour
                 _event.OnClickHandler += action;
                 break;
             case Define.UIEvent.BeginDrag:
-                _event.JoyStickBeginHandler -= action;
-                _event.JoyStickBeginHandler += action;
+                _event.OnBeginDragHandler -= action;
+                _event.OnBeginDragHandler += action;
                 break;
             case Define.UIEvent.Drag:
-                _event.JoyStickDragHandler -= action;
-                _event.JoyStickDragHandler += action;
+                _event.OnDragHandler -= action;
+                _event.OnDragHandler += action;
                 break;
             case Define.UIEvent.DragEnd:
-                _event.JoyStickEndHandler -= action;
-                _event.JoyStickEndHandler += action;
+                _event.OnEndDragHandler -= action;
+                _event.OnEndDragHandler += action;
                 break;
             case Define.UIEvent.Slider:
-                _event.SliderHandler -= action;
-                _event.SliderHandler += action;
+                _event.OnSliderHandler -= action;
+                _event.OnSliderHandler += action;
                 break;
         }
         
