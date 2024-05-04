@@ -14,7 +14,7 @@ public class CreateGroundByJson : MonoBehaviour
     public void InstantiateGround(int index, Vector3 position) // ���ӿ�����Ʈ �����ϴ� �Լ�
     {
         GameObject myGameObject;
-        if (index >= DataManager.singleTon.currentMusic.data.Count)
+        if (index >= DataManager.singleTon.currentMusic.data.Length)
         {
             return;
         }
@@ -77,19 +77,19 @@ public class CreateGroundByJson : MonoBehaviour
     {
         if(ground.Count == 0)
         {
-            coinIndex = new int[DataManager.singleTon.currentMusic.data.Count / 10];
+            coinIndex = new int[DataManager.singleTon.currentMusic.data.Length / 10];
             int coinNum = 0;
-            for (int j = 0; j < DataManager.singleTon.currentMusic.data.Count / 10; j++)
+            for (int j = 0; j < DataManager.singleTon.currentMusic.data.Length / 10; j++)
             {
                 coinIndex[j] = UnityEngine.Random.Range(j * 10, j * 10 + 10);
             }
 
-            for (int i = -1; i < DataManager.singleTon.currentMusic.data.Count + 1; i++)
+            for (int i = -1; i < DataManager.singleTon.currentMusic.data.Length + 1; i++)
             {
                 InstantiateGround(i + 1, new Vector3(i + 1, 0, 0));
-                if (coinNum >= DataManager.singleTon.currentMusic.data.Count / 10)
+                if (coinNum >= DataManager.singleTon.currentMusic.data.Length / 10)
                 {
-                    coinNum = DataManager.singleTon.currentMusic.data.Count / 10;
+                    coinNum = DataManager.singleTon.currentMusic.data.Length / 10;
                     continue;
                 }
                 else

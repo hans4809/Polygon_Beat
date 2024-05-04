@@ -33,7 +33,7 @@ public class UI_CharacterPanel : UI_Base
     {
         userCharacterData = DataManager.singleTon.userCharacterData;
         isScroll = false;
-        count = DataManager.singleTon.userCharacterData.characters.Count;
+        count = DataManager.singleTon.userCharacterData.characters.Length;
         Bind<GameObject>(typeof(GameObjects));
         Bind<Button>(typeof(Buttons));
         content = Get<GameObject>((int)GameObjects.Content);
@@ -46,7 +46,7 @@ public class UI_CharacterPanel : UI_Base
         }
         if (this.transform.parent.GetComponent<UI_CharacterSquare>())
         {
-            for (int i = 0; i < DataManager.singleTon.userCharacterData.characters.Count; i++)
+            for (int i = 0; i < DataManager.singleTon.userCharacterData.characters.Length; i++)
             {
                 character.Add(Managers.Resource.Instantiate("UI/UI_CharacterButton"));
                 character[i].transform.SetParent(content.transform);
@@ -61,7 +61,7 @@ public class UI_CharacterPanel : UI_Base
         }
         else
         {
-            for (int i = 0; i < DataManager.singleTon.userCharacterData.characters.Count; i++)
+            for (int i = 0; i < DataManager.singleTon.userCharacterData.characters.Length; i++)
             {
                 character.Add(Managers.Resource.Instantiate("UI/UI_CharacterButton"));
                 character[i].transform.SetParent(content.transform);
@@ -123,7 +123,7 @@ public class UI_CharacterPanel : UI_Base
     {
         if (this.transform.parent.GetComponent<UI_CharacterSquare>())
         {
-            for (int i = 0; i < DataManager.singleTon.userCharacterData.characters.Count; i++)
+            for (int i = 0; i < DataManager.singleTon.userCharacterData.characters.Length; i++)
             {
                 if (userCharacterData.characters[i]._isHave && character[i].GetComponent<Image>().color == Color.gray)
                 {
@@ -134,7 +134,7 @@ public class UI_CharacterPanel : UI_Base
         }
         else
         {
-            for (int i = 0; i < DataManager.singleTon.userCharacterData.characters.Count; i++)
+            for (int i = 0; i < DataManager.singleTon.userCharacterData.characters.Length; i++)
             {
                 if (userCharacterData.characters[i]._isHave && character[i].GetComponent<Image>().color == Color.gray)
                 {

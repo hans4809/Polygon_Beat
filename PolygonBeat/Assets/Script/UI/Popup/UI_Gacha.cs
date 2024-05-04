@@ -43,7 +43,7 @@ public class UI_Gacha : UI_Popup
     public void GachaClick(PointerEventData data)
     {
         DataManager.singleTon.wholeGameData._coin -= 100;
-        for (int i = 0; i < DataManager.singleTon.userCharacterData.characters.Count; i++)
+        for (int i = 0; i < DataManager.singleTon.userCharacterData.characters.Length; i++)
         {
             if (DataManager.singleTon.userCharacterData.characters[i]._isHave)
             {

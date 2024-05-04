@@ -17,20 +17,19 @@ public class JsonManager
         {
             name = typeof(T).Name + ".json";
         }
+#if UNITY_EDITOR_WIN // Window에서의 에디터 코드용 #define 지시어
         string savePath = Application.dataPath;
+#endif
+#if UNITY_ANDROID // Android 플랫폼을 위한 #define 지시어
+        string savePath = Application.persistentDataPath;
+#endif
         string appender = $"/userData/{name}";
-#if UNITY_EDITOR_WIN
 
-#endif
-#if UNITY_ANDROID
-        savePath = Application.persistentDataPath;
- 
-#endif
         StringBuilder builder = new StringBuilder(savePath);
         builder.Append(appender);
         string jsonText = JsonUtility.ToJson(data, true);
         //이러면은 일단 데이터가 텍스트로 변환이 된다
-        //jsonUtility를 이용하여 data인 WholeGameData를 json형식의 text로 바꾸어준다
+        //jsonUtility를 이용하여 data인 T를 json형식의 text로 바꾸어준다
         //파일스트림을 이렇게 지정해주고 저장해주면된당 끗
         FileStream fileStream = new FileStream(builder.ToString(), FileMode.Create);
         byte[] bytes = Encoding.UTF8.GetBytes(jsonText);
@@ -44,16 +43,15 @@ public class JsonManager
         {
             name = typeof(T).Name + ".json";
         }
-        string loadPath = Application.dataPath;
+#if UNITY_EDITOR_WIN // Window에서의 에디터 코드용 #define 지시어
+        string loadPath = Application.dataPath; // 프로젝트 폴더 내부(Asset)
+#endif
+#if UNITY_ANDROID // Android 플랫폼을 위한 #define 지시어
+        string loadPath = Application.persistentDataPath; // /mnt/sdcard/Android/data/번들이름/files
+#endif
         string directory = "/userData";
         string appender = $"/{name}";
-#if UNITY_EDITOR_WIN
 
-#endif
-
-#if UNITY_ANDROID
-        loadPath = Application.persistentDataPath;
-#endif
         StringBuilder builder = new StringBuilder(loadPath);
         builder.Append(directory);
         //위까지는 세이브랑 똑같다

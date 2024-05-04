@@ -17,7 +17,7 @@ public class Gacha : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < DataManager.singleTon.userCharacterData.characters.Count; i++)
+        for (int i = 0; i < DataManager.singleTon.userCharacterData.characters.Length; i++)
         {
             switch (DataManager.singleTon.userCharacterData.characters[i]._rarity)
             {

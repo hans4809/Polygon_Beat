@@ -6,7 +6,7 @@ public class UI_Manager : MonoBehaviour
 {
     int _order = 10;
 
-    Stack<UI_Popup> _popUpStack = new Stack<UI_Popup>();
+    Stack<UI_Popup> _popUpStack = new();
 
     UI_Scene _sceneUI = null;
     public GameObject Root

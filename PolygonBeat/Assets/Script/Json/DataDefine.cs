@@ -8,13 +8,16 @@ public class DataDefine
     [System.Serializable]
     public class MusicData
     {
-        public List<Music> music;
+        //public List<Music> music;
+        public Music[] music;
     }
     [System.Serializable]
     public class Music
     {
-        public List<BeatData> beatData;
-        public List<Data> data;
+        //public List<BeatData> beatData;
+        public BeatData[] beatData;
+        //public List<Data> data;
+        public Data[] data;
     }
 
     [System.Serializable]
@@ -32,7 +35,8 @@ public class DataDefine
     [System.Serializable]
     public class UserCharacterData
     {
-        public List<Characters> characters;
+        //public List<Characters> characters;
+        public Characters[] characters;
     }
     [System.Serializable]
     public class Characters
